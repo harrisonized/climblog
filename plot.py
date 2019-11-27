@@ -22,18 +22,6 @@ warm = [[0.0, "rgb(255,248,248)"],
 
 
 
-def fig_to_div(fig_json):
-  """
-  Takes the io object and converts it to a plotly figure object
-  """
-  fig = go.Figure(data = fig_json['data'], layout = fig_json['layout'])
-  #fig.layout.update(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)') # Transparency
-  div = pyo.plot(fig, output_type='div')
-
-  return div
-
-
-
 """
 Send Tracker
 """

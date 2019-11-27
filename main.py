@@ -10,7 +10,7 @@ import plotly.offline as pyo
 import plotly.graph_objs as go
 
 import get
-from plot import fig_to_div, logistic_func, plot_scatter, plot_heatmap
+from plot import logistic_func, plot_scatter, plot_heatmap
 
 
 
@@ -72,7 +72,7 @@ def heatmaps():
 	year_table_df = year_df.reset_index().pivot(index="grade_", columns="year", values="count_").fillna(0) # Pivot
 	year_table_df = year_table_df.reindex(['V6', 'V7', 'V8', 'V9', 'V10', 'V11'])
 	year_fig = plot_heatmap(year_df, year_table_df, "Year", "Grade", "Heatmap of Grades by Year")
-	year_div = fig_to_div(year_fig)
+	year_div = pyo.plot(year_fig, output_type='div')
 
 	# Grades by Wall-type
 	wall_df = get.get_wall(climbing_log)
@@ -80,7 +80,7 @@ def heatmaps():
 	wall_table_df = wall_table_df.reindex(['V6', 'V7', 'V8', 'V9', 'V10', 'V11'])
 	wall_table_df = wall_table_df[['cave', 'overhang', 'face', 'arete', 'slab', 'corner', 'variable']]
 	wall_fig = plot_heatmap(wall_df, wall_table_df, "Wall-type", "Grade", "Heatmap of Grades by Wall-type")
-	wall_div = fig_to_div(wall_fig)
+	wall_div = pyo.plot(wall_fig, output_type='div')
 
 	# Grades by Hold-type
 	hold_df = get.get_hold(climbing_log)
@@ -88,7 +88,7 @@ def heatmaps():
 	hold_table_df = hold_table_df.reindex(['V6', 'V7', 'V8', 'V9', 'V10', 'V11'])
 	hold_table_df = hold_table_df[['jug', 'crimp', 'sloper', 'pinch']]
 	hold_fig = plot_heatmap(hold_df, hold_table_df, "Hold-type", "Grade", "Heatmap of Grades by Hold-type")
-	hold_div = fig_to_div(hold_fig)
+	hold_div = pyo.plot(hold_fig, output_type='div')
 
 	# Grades by Style
 	style_df = get.get_style(climbing_log)
@@ -96,7 +96,7 @@ def heatmaps():
 	style_table_df = style_table_df.reindex(['V6', 'V7', 'V8', 'V9', 'V10', 'V11'])
 	style_table_df = style_table_df[['natural', 'dyno', 'comp', 'mantle']]
 	style_fig = plot_heatmap(style_df, style_table_df, "Style", "Grade", "Heatmap of Grades by Style")
-	style_div = fig_to_div(style_fig)
+	style_div = pyo.plot(style_fig, output_type='div')
 
 	return render_template(
     	"heatmaps.html",
