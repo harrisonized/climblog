@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.~lock*
+__pycache__
+templates/sends-over-time.html
+templates/experimental-page.html
+static/images/*
