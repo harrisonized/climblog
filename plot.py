@@ -70,13 +70,13 @@ Heatmaps
 """
 
 def plot_heatmap(df, table_df, xlabel=None, ylabel=None, title=None):
-    data = go.Heatmap(z=table_df,
+    heatmap = go.Heatmap(z=table_df,
         x=table_df.columns,
         y=table_df.index,
         colorscale=warm)
 
-    json_str = json.dumps(data, cls=plotly.utils.PlotlyJSONEncoder)
-    data = json.loads(json_str)
+    #json_str = json.dumps(heatmap, cls=plotly.utils.PlotlyJSONEncoder)
+    #data = json.loads(json_str)
 
     annotations = []
     for i in range(len(df)):
@@ -85,7 +85,10 @@ def plot_heatmap(df, table_df, xlabel=None, ylabel=None, title=None):
                                 text=str(df[df.columns[2]][i]),
                                 showarrow=False))
 
-    fig = go.Figure(data=[data])
+    #fig = go.Figure(data = [data])
+
+    fig = go.Figure()
+    fig.add_trace(heatmap)
 
     fig.layout.update(plot_bgcolor='rgba(0,0,0,0)',
                       title_text=title,
