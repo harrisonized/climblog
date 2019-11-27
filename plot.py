@@ -40,11 +40,22 @@ def plot_scatter(date_linspace, scatter_df, popt):
                          line={'color':'lightgreen'},
                          hoverinfo='skip')
 
-    all_records_scatter = go.Scatter(x=scatter_df.index,
-                         y=scatter_df.grade_,
-                         mode='markers', 
-                         marker={'color':scatter_df.color},
-                         name='grade')
+    hover_text = 'Grade: '+scatter_df['vgrade']+'<br>' \
+    + 'Location: '+scatter_df['location']+'<br>' \
+    + 'Setter: '+scatter_df['setter']+'<br>' \
+    + 'Wall-type: '+scatter_df['wall_type'] +'<br>' \
+    + 'Hold-type: '+scatter_df['hold_type'] +'<br>' \
+    + 'Style: '+scatter_df['style'] +'<br>' \
+    + 'Description: '+scatter_df['description'] +'<br>'
+
+    all_records_scatter = go.Scatter(x=scatter_df.date_,
+        y=scatter_df.grade_,
+        mode='markers',
+        marker={'color':scatter_df.color},
+        text=hover_text,
+        hovertemplate = "Date: %{x}<br>"
+        "%{text}<br>" +
+        "<extra></extra>")
 
     fig.add_trace(new_grades_scatter)
     fig.add_trace(all_records_scatter)

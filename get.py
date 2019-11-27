@@ -69,12 +69,19 @@ def get_scatter(climbing_log, color_dict):
       CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
       WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
       ELSE grade END AS grade_,
-      color
+      color,
+      location,
+      setter,
+      description,
+      grade AS vgrade,
+      wall_type,
+      hold_type,
+      style
     FROM dataframe;
     """
-    df = execute_query(query, climbing_log, 'date_', replace_grade=True)
-    df.color = df.color.replace(color_dict) # Replace colors with hex codes
-    return df
+    scatter_df = execute_query(query, climbing_log, replace_grade=True)
+    scatter_df.color = scatter_df.color.replace(color_dict) # Replace colors with hex codes
+    return scatter_df
 
 
 
