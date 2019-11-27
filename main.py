@@ -58,7 +58,7 @@ def send_tracker():
 
 	# Plot
 	fig = plot_scatter(date_linspace, scatter_df, popt)
-	send_tracker_div = fig_to_div(fig)
+	send_tracker_div = convert_json(fig)
 
 	return render_template(
 		'send-tracker.html',
