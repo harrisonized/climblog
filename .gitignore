@@ -5,3 +5,5 @@ __pycache__
 templates/sends-over-time.html
 templates/experimental-page.html
 static/images/*
+.DS_Store
+*/.DS_Store
