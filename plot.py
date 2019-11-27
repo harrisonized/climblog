@@ -46,8 +46,10 @@ def plot_scatter(date_linspace, scatter_df, popt):
     + 'Wall-type: '+scatter_df['wall_type'].apply(lambda x: str(x)) +'<br>' \
     + 'Hold-type: '+scatter_df['hold_type'].apply(lambda x: str(x)) +'<br>' \
     + 'Style: '+scatter_df['style'].apply(lambda x: str(x)) +'<br>' \
-    + 'Description: '+scatter_df['description'].apply(lambda x: str(x)) +'<br>'
-
+    + 'Description: '+ '<br>' \
+    + scatter_df['description'].apply(lambda x: x.split()).apply(
+    	lambda x: ' '.join(x[0:10]) + '<br>' + ' '.join(x[10: 20]) + '<br>' + ' '.join(x[20: 30])  + '<br>' + ' '.join(x[30: 40])
+    	) +'<br>'
     all_records_scatter = go.Scatter(x=scatter_df.date_,
         y=scatter_df.grade_,
         mode='markers',
