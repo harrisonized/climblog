@@ -85,7 +85,7 @@ def plot_heatmap(df, table_df, xlabel=None, ylabel=None, title=None):
                                 text=str(df[df.columns[2]][i]),
                                 showarrow=False))
 
-    fig = go.Figure(data=data)
+    fig = go.Figure(data=[data])
 
     fig.layout.update(plot_bgcolor='rgba(0,0,0,0)',
                       title_text=title,
