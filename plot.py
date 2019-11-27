@@ -40,13 +40,13 @@ def plot_scatter(date_linspace, scatter_df, popt):
                          line={'color':'lightgreen'},
                          hoverinfo='skip')
 
-    hover_text = 'Grade: '+scatter_df['vgrade']+'<br>' \
-    + 'Location: '+scatter_df['location']+'<br>' \
-    + 'Setter: '+scatter_df['setter']+'<br>' \
-    + 'Wall-type: '+scatter_df['wall_type'] +'<br>' \
-    + 'Hold-type: '+scatter_df['hold_type'] +'<br>' \
-    + 'Style: '+scatter_df['style'] +'<br>' \
-    + 'Description: '+scatter_df['description'] +'<br>'
+    hover_text = 'Grade: '+scatter_df['vgrade'].apply(lambda x: str(x))+'<br>' \
+    + 'Location: '+scatter_df['location'].apply(lambda x: str(x))+'<br>' \
+    + 'Setter: '+scatter_df['setter'].apply(lambda x: str(x))+'<br>' \
+    + 'Wall-type: '+scatter_df['wall_type'].apply(lambda x: str(x)) +'<br>' \
+    + 'Hold-type: '+scatter_df['hold_type'].apply(lambda x: str(x)) +'<br>' \
+    + 'Style: '+scatter_df['style'].apply(lambda x: str(x)) +'<br>' \
+    + 'Description: '+scatter_df['description'].apply(lambda x: str(x)) +'<br>'
 
     all_records_scatter = go.Scatter(x=scatter_df.date_,
         y=scatter_df.grade_,
