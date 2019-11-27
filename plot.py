@@ -2,6 +2,7 @@
 Note this file contains _NO_ flask functionality.
 Instead, it isolates all the plotting functions so that main.py has less clutter.
 """
+import json
 import numpy as np
 import pandas as pd
 import pandas.io.sql as pd_sql
@@ -10,6 +11,7 @@ import datetime as dt
 import matplotlib.dates as mdates
 import plotly.offline as pyo
 import plotly.graph_objs as go
+import plotly
 
 
 
@@ -96,6 +98,12 @@ def plot_heatmap(df, table_df, xlabel=None, ylabel=None, title=None):
     
     return fig
 
+def convert_json(fig):
+    json_str = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+    fig_dict = json.loads(json_str)
+    fig_go = go.Figure(data = fig_dict['data'], layout = fig_dict['layout'])
+    div = pyo.plot(fig_go, output_type='div')
+    return div
 
 
 if __name__ == '__main__':
