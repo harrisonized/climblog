@@ -101,8 +101,8 @@ def plot_heatmap(df, table_df, xlabel=None, ylabel=None, title=None):
 def convert_json(fig):
     json_str = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     fig_dict = json.loads(json_str)
-    fig_go = go.Figure(data = fig_dict['data'], layout = fig_dict['layout'])
-    div = pyo.plot(fig_go, output_type='div')
+    #fig_go = go.Figure(data = fig_dict['data'], layout = fig_dict['layout'])
+    div = pyo.plot(fig_dict, output_type='div')
     return div
 
 
