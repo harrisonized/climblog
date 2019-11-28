@@ -22,7 +22,12 @@ warm = [[0.0, "rgb(255,248,248)"],
         [0.8, "rgb(215,48,39)"],
         [1.0, "rgb(165,0,38)"]]
 
-
+def word_wrap(string, n):
+    string_list = string.split()
+    parsed_list = [string_list[n*i:n*(i+1)] for i in range((len(string_list)+n-1)//n)]
+    joined_string_list = [' '.join(parsed_list[i]) for i in range(len(parsed_list))]
+    final_list = ['<br>'.join(joined_string_list)]
+    return final_list[0]
 
 """
 Send Tracker
@@ -47,9 +52,8 @@ def plot_scatter(date_linspace, scatter_df, popt):
     + 'Hold-type: '+scatter_df['hold_type'].apply(lambda x: str(x)) +'<br>' \
     + 'Style: '+scatter_df['style'].apply(lambda x: str(x)) +'<br>' \
     + 'Description: '+ '<br>' \
-    + scatter_df['description'].apply(lambda x: x.split()).apply(
-    	lambda x: ' '.join(x[0:10]) + '<br>' + ' '.join(x[10: 20]) + '<br>' + ' '.join(x[20: 30])  + '<br>' + ' '.join(x[30: 40])
-    	) +'<br>'
+    + scatter_df['description'].apply(lambda x: word_wrap(x, 10)) +'<br>'
+
     all_records_scatter = go.Scatter(x=scatter_df.date_,
         y=scatter_df.grade_,
         mode='markers',
@@ -82,23 +86,32 @@ def plot_scatter(date_linspace, scatter_df, popt):
 Heatmaps
 """
 
-def plot_heatmap(df, table_df, xlabel=None, ylabel=None, title=None):
-    heatmap = go.Heatmap(z=table_df,
-        x=table_df.columns,
-        y=table_df.index,
-        colorscale=warm)
-
-    #json_str = json.dumps(heatmap, cls=plotly.utils.PlotlyJSONEncoder)
-    #data = json.loads(json_str)
-
+def plot_heatmap(df, table_df, reorder_list, xlabel=None, ylabel=None, title=None):
+    
+    hover_text = 'FIRST RECORDED SEND<br>' \
+    + 'Date: '+df.pivot(index="grade_", columns=df.columns[0], values="date_").applymap(str)+'<br>' \
+    + 'Grade: '+df.pivot(index="grade_", columns=df.columns[0], values="grade_").applymap(str)+'<br>' \
+    + 'Location: '+df.pivot(index="grade_", columns=df.columns[0], values="location").applymap(str)+'<br>' \
+    + 'Setter: '+df.pivot(index="grade_", columns=df.columns[0], values="setter").applymap(str)+'<br>' \
+    + 'Wall-type: '+df.pivot(index="grade_", columns=df.columns[0], values="wall_type").applymap(str)+'<br>' \
+    + 'Hold-type: '+df.pivot(index="grade_", columns=df.columns[0], values="hold_type").applymap(str)+'<br>' \
+    + 'Style: '+df.pivot(index="grade_", columns=df.columns[0], values="style").applymap(str)+'<br>' \
+    + 'Description: '+'<br>' \
+    + df.pivot(index="grade_", columns=df.columns[0], values="description")+'<br>'
+       
+    heatmap=go.Heatmap(z=table_df,
+                    x=table_df.columns,
+                    y=table_df.index,
+                    hoverinfo='text',
+                    text=hover_text.reindex(['V6', 'V7', 'V8', 'V9', 'V10', 'V11'])[reorder_list],
+                    colorscale=warm)
+    
     annotations = []
     for i in range(len(df)):
         annotations.append(dict(x=df[df.columns[0]][i],
                                 y=df[df.columns[1]][i],
                                 text=str(df[df.columns[2]][i]),
                                 showarrow=False))
-
-    #fig = go.Figure(data = [data])
 
     fig = go.Figure()
     fig.add_trace(heatmap)
@@ -114,7 +127,6 @@ def plot_heatmap(df, table_df, xlabel=None, ylabel=None, title=None):
                                'tickvals': table_df.index,
                                'ticktext': table_df.index},
                       annotations=annotations)
-    
     return fig
 
 def convert_json(fig):

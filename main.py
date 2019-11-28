@@ -28,6 +28,12 @@ color_dict = {'black': '#000000',
               'white': '#7f7f7f',
               'yellow': '#FFFF00'}
 
+def word_wrap(string, n):
+    string_list = string.split()
+    parsed_list = [string_list[n*i:n*(i+1)] for i in range((len(string_list)+n-1)//n)]
+    joined_string_list = [' '.join(parsed_list[i]) for i in range(len(parsed_list))]
+    final_list = ['<br>'.join(joined_string_list)]
+    return final_list[0]
 
 
 # Initialize the app
@@ -70,33 +76,45 @@ def heatmaps():
 
 	# Grades by Year
 	year_df = get.get_year(climbing_log)
+	year_df.description = year_df.description.apply(lambda x: word_wrap(x, 10))
 	year_table_df = year_df.reset_index().pivot(index="grade_", columns="year", values="count_").fillna(0) # Pivot
 	year_table_df = year_table_df.reindex(['V6', 'V7', 'V8', 'V9', 'V10', 'V11'])
-	year_fig = plot_heatmap(year_df, year_table_df, "Year", "Grade", "Heatmap of Grades by Year")
+	year_fig = plot_heatmap(year_df, year_table_df,
+		['2016', '2017', '2018', '2019'],
+		"Year", "Grade", "Heatmap of Grades by Year")
 	year_div = convert_json(year_fig)
 
 	# Grades by Wall-type
 	wall_df = get.get_wall(climbing_log)
+	wall_df.description = wall_df.description.apply(lambda x: word_wrap(x, 10))
 	wall_table_df = wall_df.reset_index().pivot(index="grade_", columns="wall_type", values="count_").fillna(0) # Pivot
 	wall_table_df = wall_table_df.reindex(['V6', 'V7', 'V8', 'V9', 'V10', 'V11'])
 	wall_table_df = wall_table_df[['cave', 'overhang', 'face', 'arete', 'slab', 'corner', 'variable']]
-	wall_fig = plot_heatmap(wall_df, wall_table_df, "Wall-type", "Grade", "Heatmap of Grades by Wall-type")
+	wall_fig = plot_heatmap(wall_df, wall_table_df,
+		['cave', 'overhang', 'face', 'arete', 'slab', 'corner', 'variable'],
+		"Wall-type", "Grade", "Heatmap of Grades by Wall-type")
 	wall_div = convert_json(wall_fig)
 
 	# Grades by Hold-type
 	hold_df = get.get_hold(climbing_log)
+	hold_df.description = hold_df.description.apply(lambda x: word_wrap(x, 10))
 	hold_table_df = hold_df.reset_index().pivot(index="grade_", columns="hold_type", values="count_").fillna(0) # Pivot
 	hold_table_df = hold_table_df.reindex(['V6', 'V7', 'V8', 'V9', 'V10', 'V11'])
 	hold_table_df = hold_table_df[['jug', 'crimp', 'sloper', 'pinch']]
-	hold_fig = plot_heatmap(hold_df, hold_table_df, "Hold-type", "Grade", "Heatmap of Grades by Hold-type")
+	hold_fig = plot_heatmap(hold_df, hold_table_df,
+		['jug', 'crimp', 'sloper', 'pinch'],
+		"Hold-type", "Grade", "Heatmap of Grades by Hold-type")
 	hold_div = convert_json(hold_fig)
 
 	# Grades by Style
 	style_df = get.get_style(climbing_log)
-	style_table_df = style_df.reset_index().pivot(index="grade_", columns="style_", values="count_").fillna(0) # Pivot
+	style_df.description = style_df.description.apply(lambda x: word_wrap(x, 10)) 
+	style_table_df = style_df.reset_index().pivot(index="grade_", columns="style", values="count_").fillna(0) # Pivot
 	style_table_df = style_table_df.reindex(['V6', 'V7', 'V8', 'V9', 'V10', 'V11'])
 	style_table_df = style_table_df[['natural', 'dyno', 'comp', 'mantle']]
-	style_fig = plot_heatmap(style_df, style_table_df, "Style", "Grade", "Heatmap of Grades by Style")
+	style_fig = plot_heatmap(style_df, style_table_df,
+		['natural', 'dyno', 'comp', 'mantle'],
+		"Style", "Grade", "Heatmap of Grades by Style")
 	style_div = convert_json(style_fig)
 
 	return render_template(
