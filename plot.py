@@ -73,7 +73,7 @@ def plot_scatter(date_linspace, scatter_df, popt):
                  'range': None},
         yaxis = {'title_text': "Grade",
                  'showgrid': True, 'gridcolor': '#E4EAF2', 'zeroline': False,
-                 'range': [5, 12]},
+                 'range': None},
         plot_bgcolor='rgba(0,0,0,0)',
         showlegend=False
     )
@@ -86,7 +86,7 @@ def plot_scatter(date_linspace, scatter_df, popt):
 Heatmaps
 """
 
-def plot_heatmap(df, table_df, reorder_list, xlabel=None, ylabel=None, title=None):
+def plot_heatmap(df, table_df, reindex_list, reorder_list, xlabel=None, ylabel=None, title=None):
     
     hover_text = 'FIRST RECORDED SEND<br>' \
     + 'Date: '+df.pivot(index="grade_", columns=df.columns[0], values="date_").applymap(str)+'<br>' \
@@ -103,7 +103,7 @@ def plot_heatmap(df, table_df, reorder_list, xlabel=None, ylabel=None, title=Non
                     x=table_df.columns,
                     y=table_df.index,
                     hoverinfo='text',
-                    text=hover_text.reindex(['V6', 'V7', 'V8', 'V9', 'V10', 'V11'])[reorder_list],
+                    text=hover_text.reindex(reindex_list)[reorder_list],
                     colorscale=warm)
     
     annotations = []
