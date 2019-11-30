@@ -264,7 +264,7 @@ def get_hold(climbing_log):
       description,
       sep_hold_type,
       rest) AS
-    
+
     (SELECT date_,
       grade,
       location,
@@ -294,17 +294,17 @@ def get_hold(climbing_log):
     FROM split 
     WHERE sep_hold_type <> ''
     ORDER BY date_, sep_hold_type),
-    
+
     count_table AS
-    (SELECT sep_hold_type AS hold_type,
+    (SELECT sep_hold_type,
         grade AS grade_,
         COUNT(sep_hold_type) AS count_
     FROM unnested_hold_table
     GROUP BY sep_hold_type, grade
     ORDER BY count_ DESC),
-    
+
     filter_table AS
-    (SELECT sep_hold_type AS hold_type,
+    (SELECT sep_hold_type,
       CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
       WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
       ELSE grade END AS grade_,
@@ -317,9 +317,9 @@ def get_hold(climbing_log):
       style
     FROM unnested_hold_table
     ORDER BY sep_hold_type, grade_),
-    
-    hover_info AS
-    (SELECT hold_type, grade_,
+
+    unnested_hover_info AS
+    (SELECT sep_hold_type, grade_,
       date_,
       location,
       setter,
@@ -327,20 +327,27 @@ def get_hold(climbing_log):
       style,
       wall_type
     FROM filter_table
-    GROUP BY hold_type, grade_
+    GROUP BY sep_hold_type, grade_
     HAVING MIN(date_)
-    ORDER BY date_)
-    
-    SELECT c.hold_type AS hold_type, c.grade_, c.count_,
-      h.date_,
-      h.location,
-      h.setter,
-      h.description,
-      h.wall_type,
-      h.style
+    ORDER BY date_),
+
+    hover_info AS
+    (SELECT hold_type, date_, description
+    FROM dataframe)
+
+    SELECT c.sep_hold_type, c.grade_, c.count_,
+      u.date_,
+      u.location,
+      u.setter,
+      u.description,
+      u.wall_type,
+      u.style,
+      h.hold_type
     FROM count_table c
-    LEFT JOIN hover_info h
-    ON c.hold_type=h.hold_type AND c.grade_=h.grade_    
+    LEFT JOIN unnested_hover_info u
+    ON c.sep_hold_type=u.sep_hold_type AND c.grade_=u.grade_ 
+    JOIN hover_info h
+    ON u.date_=h.date_ AND u.description=h.description
     ;
     """
     df = execute_query(query, climbing_log, replace_grade=True)

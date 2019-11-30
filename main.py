@@ -92,7 +92,7 @@ def indoors():
 	# Grades by Hold-type
 	hold_df = get.get_hold(climbing_log_indoors)
 	hold_df.description = hold_df.description.apply(lambda x: word_wrap(x, 10))
-	hold_table_df = hold_df.reset_index().pivot(index="grade_", columns="hold_type", values="count_").fillna(0) # Pivot
+	hold_table_df = hold_df.reset_index().pivot(index="grade_", columns="sep_hold_type", values="count_").fillna(0) # Pivot
 	hold_table_df.index = hold_table_df.index.map(lambda x: 'V'+str(x))
 	hold_table_df = hold_table_df[['jug', 'crimp', 'sloper', 'pinch']]
 	hold_fig = plot_heatmap(hold_df, hold_table_df,
@@ -171,7 +171,7 @@ def outdoors():
 	# Grades by Hold-type
 	hold_df = get.get_hold(climbing_log_outdoors)
 	hold_df.description = hold_df.description.apply(lambda x: word_wrap(x, 10))
-	hold_table_df = hold_df.reset_index().pivot(index="grade_", columns="hold_type", values="count_").fillna(0) # Pivot
+	hold_table_df = hold_df.reset_index().pivot(index="grade_", columns="sep_hold_type", values="count_").fillna(0) # Pivot
 	hold_table_df.index = hold_table_df.index.map(lambda x: 'V'+str(x))
 	hold_table_df = hold_table_df[['jug', 'crimp', 'sloper', 'pinch']]
 	hold_fig = plot_heatmap(hold_df, hold_table_df,
