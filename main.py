@@ -50,7 +50,8 @@ def indoors():
 	scatter_df = get.get_scatter(climbing_log_indoors, color_dict)
 	grades_hist_df = get.get_hist(climbing_log_indoors, color_dict)
 	grades_hist_filter_df = grades_hist_df[grades_hist_df.grade_-grades_hist_df.grade_.shift().fillna(0) > 0]
-	
+	grades_hist_df = grades_hist_df.sort_values('grade_').reset_index(drop=True)[['grade_', 'date_']]
+
 	# Curve fit on new grades
 	date_linspace = np.linspace(
     	mdates.date2num(dt.datetime.strptime(grades_hist_filter_df.date_.min(), "%Y-%m-%d")), # Date min
@@ -103,7 +104,7 @@ def indoors():
 	style_df.description = style_df.description.apply(lambda x: word_wrap(x, 10)) 
 	style_table_df = style_df.reset_index().pivot(index="grade_", columns="style", values="count_").fillna(0) # Pivot
 	style_table_df.index = style_table_df.index.map(lambda x: 'V'+str(x))
-	style_table_df = style_table_df[['natural', 'dyno', 'comp', 'mantle']]
+	style_table_df = style_table_df[['mantle', 'natural', 'dyno', 'comp']]
 	style_fig = plot_heatmap(style_df, style_table_df,
 		"Style", "Grade", "Heatmap of Grades by Style")
 	style_div = convert_json(style_fig)
@@ -126,8 +127,9 @@ def outdoors():
 	# Scatter
 	scatter_df = get.get_scatter(climbing_log_outdoors, color_dict)
 	grades_hist_df = get.get_hist(climbing_log_outdoors, color_dict)
-	grades_hist_filter_df = grades_hist_df[grades_hist_df.grade_-grades_hist_df.grade_.shift().fillna(0) > 0]
-	
+	grades_hist_filter_df = grades_hist_df[grades_hist_df.grade_-grades_hist_df.grade_.shift().fillna(0) > 0][['grade_', 'date_']]
+	grades_hist_df = grades_hist_df.sort_values('grade_').reset_index(drop=True)
+
 	# Curve fit on new grades
 	date_linspace = np.linspace(
     	mdates.date2num(dt.datetime.strptime(grades_hist_filter_df.date_.min(), "%Y-%m-%d")), # Date min
@@ -161,7 +163,7 @@ def outdoors():
 	wall_df.description = wall_df.description.apply(lambda x: word_wrap(x, 10))
 	wall_table_df = wall_df.reset_index().pivot(index="grade_", columns="wall_type", values="count_").fillna(0) # Pivot
 	wall_table_df.index = wall_table_df.index.map(lambda x: 'V'+str(x))
-	wall_table_df = wall_table_df[['cave', 'overhang', 'face', 'arete', 'slab']]
+	wall_table_df = wall_table_df[['cave', 'overhang', 'face', 'arete', 'slab', 'corner', 'crack', 'variable']]
 	wall_fig = plot_heatmap(wall_df, wall_table_df,
 		"Wall-type", "Grade", "Heatmap of Grades by Wall-type")
 	wall_div = convert_json(wall_fig)
@@ -181,7 +183,7 @@ def outdoors():
 	style_df.description = style_df.description.apply(lambda x: word_wrap(x, 10)) 
 	style_table_df = style_df.reset_index().pivot(index="grade_", columns="style", values="count_").fillna(0) # Pivot
 	style_table_df.index = style_table_df.index.map(lambda x: 'V'+str(x))
-	style_table_df = style_table_df[['natural', 'dyno', 'comp']]
+	style_table_df = style_table_df[['mantle', 'natural', 'dyno', 'comp']]
 	style_fig = plot_heatmap(style_df, style_table_df,
 		"Style", "Grade", "Heatmap of Grades by Style")
 	style_div = convert_json(style_fig)
