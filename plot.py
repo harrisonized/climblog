@@ -98,7 +98,7 @@ def plot_hist(df, title, xlabel, ylabel):
     + 'Hold-type: '+df.hold_type.apply(str)+'<br>' \
     + 'Style: '+df['style'].apply(str)+'<br>' \
     + 'Description: '+'<br>' \
-    + df.description.apply(str)+'<br>'
+    + df.description.apply(str).apply(lambda x: word_wrap(x, 10))+'<br>'
 
     df[df.columns[0]] = df[df.columns[0]].apply(lambda x: 'V'+str(x) if type(x)==int else x)
 
