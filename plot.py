@@ -36,7 +36,7 @@ Send Tracker
 def logistic_func(x, a, b, c, d):
     return a*np.log(b*x+c)+d
 
-def plot_scatter(date_linspace, scatter_df, popt):
+def plot_scatter(df, date_linspace, popt):
     fig = go.Figure()
 
     new_grades_scatter = go.Scatter(x=mdates.num2date(date_linspace),
@@ -45,19 +45,19 @@ def plot_scatter(date_linspace, scatter_df, popt):
                          line={'color':'lightgreen'},
                          hoverinfo='skip')
 
-    hover_text = 'Grade: '+scatter_df['vgrade'].apply(lambda x: str(x))+'<br>' \
-    + 'Location: '+scatter_df['location'].apply(lambda x: str(x))+'<br>' \
-    + 'Setter: '+scatter_df['setter'].apply(lambda x: str(x))+'<br>' \
-    + 'Wall-type: '+scatter_df['wall_type'].apply(lambda x: str(x)) +'<br>' \
-    + 'Hold-type: '+scatter_df['hold_type'].apply(lambda x: str(x)) +'<br>' \
-    + 'Style: '+scatter_df['style'].apply(lambda x: str(x)) +'<br>' \
+    hover_text = 'Grade: '+df['vgrade'].apply(lambda x: str(x))+'<br>' \
+    + 'Location: '+df['location'].apply(lambda x: str(x))+'<br>' \
+    + 'Setter: '+df['setter'].apply(lambda x: str(x))+'<br>' \
+    + 'Wall-type: '+df['wall_type'].apply(lambda x: str(x)) +'<br>' \
+    + 'Hold-type: '+df['hold_type'].apply(lambda x: str(x)) +'<br>' \
+    + 'Style: '+df['style'].apply(lambda x: str(x)) +'<br>' \
     + 'Description: '+ '<br>' \
-    + scatter_df['description'].apply(lambda x: word_wrap(x, 10)) +'<br>'
+    + df['description'].apply(lambda x: word_wrap(x, 10)) +'<br>'
 
-    all_records_scatter = go.Scatter(x=scatter_df.date_,
-        y=scatter_df.grade_,
+    all_records_scatter = go.Scatter(x=df.date_,
+        y=df.grade_,
         mode='markers',
-        marker={'color':scatter_df.color},
+        marker={'color':df.color},
         text=hover_text,
         hovertemplate = "Date: %{x}<br>"
         "%{text}<br>" +
@@ -73,7 +73,7 @@ def plot_scatter(date_linspace, scatter_df, popt):
                  'range': None},
         yaxis = {'title_text': "Grade",
                  'showgrid': True, 'gridcolor': '#E4EAF2', 'zeroline': False,
-                 'range': None},
+                 'range': [df.grade_.min()-0.5, df.grade_.max()+0.5]},
         plot_bgcolor='rgba(0,0,0,0)',
         showlegend=False
     )
@@ -83,14 +83,58 @@ def plot_scatter(date_linspace, scatter_df, popt):
 
 
 """
+Histgram
+"""
+
+def plot_hist(df, title, xlabel, ylabel):
+    df[df.columns[0]] = df[df.columns[0]].apply(lambda x: int(x[1:]) if type(x)==str else x)
+        
+    hover_text = 'FIRST RECORDED SEND<br>' \
+    + 'Date: '+df.date_.apply(str)+'<br>' \
+    + 'Grade: '+df.grade.apply(str)+'<br>' \
+    + 'Location: '+df.location.apply(str)+'<br>' \
+    + 'Setter: '+df.setter.apply(str)+'<br>' \
+    + 'Wall-type: '+df.wall_type.apply(str)+'<br>' \
+    + 'Hold-type: '+df.hold_type.apply(str)+'<br>' \
+    + 'Style: '+df['style'].apply(str)+'<br>' \
+    + 'Description: '+'<br>' \
+    + df.description.apply(str)+'<br>'
+
+    df[df.columns[0]] = df[df.columns[0]].apply(lambda x: 'V'+str(x) if type(x)==int else x)
+
+    grades_hist = go.Bar(x=df.grade_, y=df.count_,
+                         hovertext=hover_text,
+                         marker_color=df.color)
+
+    fig = go.Figure()
+    fig.add_trace(grades_hist)
+
+    fig.layout.update(plot_bgcolor='rgba(0,0,0,0)',
+                      title_text=title,
+                      xaxis = {'title': xlabel,
+                               'showgrid': False},
+                      yaxis = {'title': ylabel,
+                               'showgrid': False})
+
+    return fig
+
+"""
 Heatmaps
 """
 
-def plot_heatmap(df, table_df, reindex_list, reorder_list, xlabel=None, ylabel=None, title=None):
-    
+def plot_heatmap(df, table_df, xlabel=None, ylabel=None, title=None):
+
+    df[df.columns[1]] = df[df.columns[1]].apply(lambda x: int(x[1:]) if type(x)==str else x)
+
+    grade_table = df.pivot(index="grade_", columns=df.columns[0], values="grade_") \
+      .applymap(str).applymap(lambda x: x.replace('.0', '')) \
+      .applymap(lambda x: 'V'+str(x)) \
+      .applymap(lambda x: x.replace('Vnan', 'nan')) \
+      .applymap(lambda x: float(x) if x=='nan' else x)
+        
     hover_text = 'FIRST RECORDED SEND<br>' \
     + 'Date: '+df.pivot(index="grade_", columns=df.columns[0], values="date_").applymap(str)+'<br>' \
-    + 'Grade: '+df.pivot(index="grade_", columns=df.columns[0], values="grade_").applymap(str)+'<br>' \
+    + 'Grade: '+grade_table+'<br>' \
     + 'Location: '+df.pivot(index="grade_", columns=df.columns[0], values="location").applymap(str)+'<br>' \
     + 'Setter: '+df.pivot(index="grade_", columns=df.columns[0], values="setter").applymap(str)+'<br>' \
     + 'Wall-type: '+df.pivot(index="grade_", columns=df.columns[0], values="wall_type").applymap(str)+'<br>' \
@@ -98,12 +142,15 @@ def plot_heatmap(df, table_df, reindex_list, reorder_list, xlabel=None, ylabel=N
     + 'Style: '+df.pivot(index="grade_", columns=df.columns[0], values="style").applymap(str)+'<br>' \
     + 'Description: '+'<br>' \
     + df.pivot(index="grade_", columns=df.columns[0], values="description")+'<br>'
-       
+    
+    hover_text.index = hover_text.index.map(lambda x: 'V'+str(x) if type(x)==int else x)
+    df[df.columns[1]] = df[df.columns[1]].apply(lambda x: 'V'+str(x) if type(x)==int else x)
+    
     heatmap=go.Heatmap(z=table_df,
                     x=table_df.columns,
                     y=table_df.index,
                     hoverinfo='text',
-                    text=hover_text.reindex(reindex_list)[reorder_list],
+                    text=hover_text[list(table_df.columns)],
                     colorscale=warm)
     
     annotations = []

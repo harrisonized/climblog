@@ -8,11 +8,11 @@
 <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
 
 <head>
-  <title>Heatmaps</title>
+  <title>Send Tracker</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--===============================================================================================-->
-   <link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
   <!--===============================================================================================-->
   <link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
   <!--===============================================================================================-->
@@ -36,34 +36,40 @@
       background-size: 20%;
       background-attachment: inherit;
       background-repeat: no-repeat, no-repeat;
-      background-color: #E6E2E1;
+      background-color: #e6e2e1;
     }
   </style>
 
   <div style="text-align: center;">
-    <h1 class="headertext">Heatmaps</h1>
+    <h1 class="headertext">Send Tracker</h1>
   </div>
 
   <center>
-
     <script>
-      var graph_1 = {{year_div | safe}}
+      var graph_1 = {{scatter_div | safe}}
     </script>
 
     <script>
-      var graph_2 = {{wall_div | safe}}
+      var graph_2 = {{histogram_div | safe}}
     </script>
 
     <script>
-      var graph_3 = {{hold_div | safe}}
+      var graph_3 = {{year_div | safe}}
     </script>
 
     <script>
-      var graph_4 = {{style_div | safe}}
+      var graph_4 = {{wall_div | safe}}
+    </script>
+
+    <script>
+      var graph_5 = {{hold_div | safe}}
+    </script>
+
+    <script>
+      var graph_6 = {{style_div | safe}}
     </script>
 
   </center>
-
 
 
   <!--===============================================================================================-->

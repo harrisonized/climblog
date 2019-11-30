@@ -63,6 +63,55 @@ def get_new_grades(climbing_log, color_dict):
     df.color = df.color.replace(color_dict) # Replace colors with hex codes
     return df
 
+def get_hist(climbing_log, color_dict):
+    query = """
+    WITH count_table AS
+    (SELECT CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
+      WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
+      ELSE grade END AS grade_,
+      COUNT(strftime("%Y", date_)) AS count_
+    FROM dataframe
+    GROUP BY grade_
+    ORDER BY grade_),
+
+    hover_info AS
+    (SELECT CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
+      WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
+      ELSE grade END AS grade_,
+      date_,
+      grade,
+      location,
+      setter,
+      wall_type,
+      hold_type,
+      style,
+      description,
+      color
+    FROM dataframe
+    GROUP BY grade_
+    HAVING MIN(date_)
+    ORDER BY date_)
+
+    SELECT c.grade_, c.count_,
+      h.date_,
+      h.grade,
+      h.location,
+      h.setter,
+      h.wall_type,
+      h.hold_type,
+      h.style,
+      h.description,
+      color
+    FROM count_table c
+    LEFT JOIN hover_info h
+    ON c.grade_=h.grade_
+    ORDER BY h.date_
+    ;
+    """
+    df = execute_query(query, climbing_log, replace_grade=True)
+    df.color = df.color.replace(color_dict)
+    return df
+
 def get_scatter(climbing_log, color_dict):
     query = """
     SELECT date_,
@@ -144,7 +193,7 @@ def get_year(climbing_log):
     ON c.grade_=h.grade_ AND c.year=h.year
     ;
     """
-    df = execute_query(query, climbing_log)
+    df = execute_query(query, climbing_log, replace_grade=True)
     return df
 
 def get_wall(climbing_log):
@@ -200,7 +249,7 @@ def get_wall(climbing_log):
     ON c.wall_type=h.wall_type AND c.grade_=h.grade_
     ;
     """
-    df = execute_query(query, climbing_log)
+    df = execute_query(query, climbing_log, replace_grade=True)
     return df
 
 def get_hold(climbing_log):
@@ -294,7 +343,7 @@ def get_hold(climbing_log):
     ON c.hold_type=h.hold_type AND c.grade_=h.grade_    
     ;
     """
-    df = execute_query(query, climbing_log)
+    df = execute_query(query, climbing_log, replace_grade=True)
     return df
 
 def get_style(climbing_log):
@@ -349,7 +398,7 @@ def get_style(climbing_log):
     ON c.style=h.style AND c.grade_=h.grade_
     ;
     """
-    style_df = execute_query(query, climbing_log)
+    style_df = execute_query(query, climbing_log, replace_grade=True)
     return style_df
 
 
