@@ -49,8 +49,8 @@ def indoors():
 	# Scatter
 	scatter_df = get.get_scatter(climbing_log_indoors, color_dict)
 	grades_hist_df = get.get_hist(climbing_log_indoors, color_dict)
-	grades_hist_filter_df = grades_hist_df[grades_hist_df.grade_-grades_hist_df.grade_.shift().fillna(0) > 0]
-	grades_hist_df = grades_hist_df.sort_values('grade_').reset_index(drop=True)[['grade_', 'date_']]
+	grades_hist_filter_df = grades_hist_df[grades_hist_df.grade_-grades_hist_df.grade_.shift().fillna(0) > 0][['grade_', 'date_']]
+	grades_hist_df = grades_hist_df.sort_values('grade_').reset_index(drop=True)
 
 	# Curve fit on new grades
 	date_linspace = np.linspace(
