@@ -48,9 +48,9 @@ date_,color,description,hold_type,wall_type,style,grade,setter,location
 2017-05-21,green,The Best Damn,crimp,slab,natural,V1,,Mount Tamalpais
 2017-05-21,green,Contact High,crimp,slab,natural,V1,,Mount Tamalpais
 2017-05-21,blue,The Old Man Card,sloper,face,mantle,V2,,Mount Tamalpais
-2017-05-31,blue,Auto-Gedden (Jesus Chrysler Traverse),"jug, crimp",overhang,natural,V2,,Bishop
-2017-05-31,green,Monkey Hang,jug,cave,natural,V3,,Bishop
-2017-05-31,blue,Impulse Control,"crimp, sloper",overhang,natural,V4,,Bishop
+2017-05-31,blue,Auto-Gedden (Jesus Chrysler Traverse),"jug, crimp",overhang,natural,V2,,Bishop Happy Boulders
+2017-05-31,green,Monkey Hang,jug,cave,natural,V3,,Bishop Happy Boulders
+2017-05-31,blue,Impulse Control,"crimp, sloper",overhang,natural,V4,,Bishop Happy Boulders
 2017-06-04,green,Diagonal Ramp on the Orange Buddha Boulder,crimp,face,natural,V1,,Mickey’s Beach
 2017-06-04,green,Baseball on the Orange Buddha Boulder (used to be V4),crimp,face,natural,V2,,Mickey’s Beach
 2017-06-04,green,"Don’t worry, be slappy (used to be V6)",crimp,face,natural,V1,,Mickey’s Beach
@@ -98,46 +98,46 @@ date_,color,description,hold_type,wall_type,style,grade,setter,location
 2017-12-18,blue,Unnamed Warm-up on the Tile Boulder,crimp,face,natural,V2,,Yosemite
 2017-12-18,blue,Zorro,"jug, crimp",face,dyno,V4,,Yosemite
 2017-12-19,blue,Tendon’s Give,"jug, crimp",overhang,dyno,V4,,Yosemite
-2017-12-23,blue,A Birthing Experience,crimp,overhang,comp,V1,,Bishop
-2017-12-23,orange,Devoted Traverse,"jug, crimp",overhang,natural,V5,,Bishop
-2017-12-26,green,Sheepherder,sloper,face,natural,V2,,Bishop
-2017-12-26,blue,Birthday Direct,crimp,face,natural,V3,,Bishop
-2017-12-27,blue,Heavenly Path,crimp,slab,natural,V1,,Bishop
-2017-12-27,blue,Kling and Smirk,"crimp, sloper",overhang,natural,V2,,Bishop
-2017-12-27,blue,Ketron Classic,crimp,overhang,natural,V4,,Bishop
-2017-12-27,blue,Serengeti,crimp,overhang,natural,V5,,Bishop
-2017-12-27,orange,"Acid Wash Right, Stand Start",crimp,overhang,natural,V7,,Bishop
-2017-12-28,green,Brown Slab,crimp,slab,natural,V0,,Bishop
-2017-12-28,green,World Shut Your Mouth,crimp,face,natural,V2,,Bishop
-2017-12-28,blue,Molly Dyno,crimp,face,dyno,V5,,Bishop
-2017-12-28,green,Hands-Free Slab,crimp,slab,natural,V0,,Bishop
-2017-12-28,green,Hands-on Slab,crimp,slab,natural,V0,,Bishop
-2017-12-29,green,The Prow,jug,face,natural,V2,,Bishop
-2017-12-29,orange,Fly Boy Arete,crimp,arete,natural,V5,,Bishop
-2017-12-30,orange,Solarium,crimp,face,natural,V4,,Bishop
-2017-12-30,orange,The Hulk,crimp,overhang,natural,V6,,Bishop
-2017-12-30,orange,Sucker Punch,crimp,face,natural,V5,,Bishop
-2017-12-31,green,Gotta Be Kidding Me Slab,jug,slab,natural,V0,,Bishop
-2017-12-31,blue,Hauck a Loogie,crimp,overhang,natural,V3,,Bishop
-2017-12-31,green,Flush VB,jug,slab,natural,V0,,Bishop
-2017-12-31,orange,The Gleaner,crimp,overhang,natural,V6,,Bishop
-2018-01-01,green,Unnamed Sunshine Slab,crimp,slab,natural,V0,,Bishop
-2018-01-01,green,Good Morning Sunshine,crimp,slab,natural,V1,,Bishop
-2018-01-01,blue,Green Wall Essential,crimp,face,natural,V2,,Bishop
-2018-01-01,blue,Iron Man Traverse,jug,overhang,natural,V4,,Bishop
-2018-01-01,blue,Robinson’s Rubber Tester,sloper,slab,natural,V0,,Bishop
-2018-01-02,blue,Maximum Relaximum,jug,cave,natural,V3,,Bishop
-2018-01-03,blue,"Buttermilks Stem, Stand Start",sloper,corner,natural,V1,,Bishop
-2018-01-03,blue,"Buttermilks Stem, Sit Start","jug, sloper",overhang,natural,V4,,Bishop
+2017-12-23,blue,A Birthing Experience,crimp,overhang,comp,V1,,Bishop Buttermilks
+2017-12-23,orange,Devoted Traverse,"jug, crimp",overhang,natural,V5,,Bishop Buttermilks
+2017-12-26,green,Sheepherder,sloper,face,natural,V2,,Bishop Buttermilks
+2017-12-26,blue,Birthday Direct,crimp,face,natural,V3,,Bishop Buttermilks
+2017-12-27,blue,Heavenly Path,crimp,slab,natural,V1,,Bishop Happy Boulders
+2017-12-27,blue,Kling and Smirk,"crimp, sloper",overhang,natural,V2,,Bishop Happy Boulders
+2017-12-27,blue,Ketron Classic,crimp,overhang,natural,V4,,Bishop Happy Boulders
+2017-12-27,blue,Serengeti,crimp,overhang,natural,V5,,Bishop Happy Boulders
+2017-12-27,orange,"Acid Wash Right, Stand Start",crimp,overhang,natural,V7,,Bishop Happy Boulders
+2017-12-28,green,Brown Slab,crimp,slab,natural,V0,,Bishop Sad Boulders
+2017-12-28,green,World Shut Your Mouth,crimp,face,natural,V2,,Bishop Sad Boulders
+2017-12-28,blue,Molly Dyno,crimp,face,dyno,V5,,Bishop Sad Boulders
+2017-12-28,green,Hands-Free Slab,crimp,slab,natural,V0,,Bishop Sad Boulders
+2017-12-28,green,Hands-on Slab,crimp,slab,natural,V0,,Bishop Sad Boulders
+2017-12-29,green,The Prow,jug,face,natural,V2,,Bishop Buttermilks
+2017-12-29,orange,Fly Boy Arete,crimp,arete,natural,V5,,Bishop Buttermilks
+2017-12-30,orange,Solarium,crimp,face,natural,V4,,Bishop Happy Boulders
+2017-12-30,orange,The Hulk,crimp,overhang,natural,V6,,Bishop Happy Boulders
+2017-12-30,orange,Sucker Punch,crimp,face,natural,V5,,Bishop Happy Boulders
+2017-12-31,green,Gotta Be Kidding Me Slab,jug,slab,natural,V0,,Bishop Sad Boulders
+2017-12-31,blue,Hauck a Loogie,crimp,overhang,natural,V3,,Bishop Sad Boulders
+2017-12-31,green,Flush VB,jug,slab,natural,V0,,Bishop Sad Boulders
+2017-12-31,orange,The Gleaner,crimp,overhang,natural,V6,,Bishop Happy Boulders
+2018-01-01,green,Unnamed Sunshine Slab,crimp,slab,natural,V0,,Bishop Buttermilks
+2018-01-01,green,Good Morning Sunshine,crimp,slab,natural,V1,,Bishop Buttermilks
+2018-01-01,blue,Green Wall Essential,crimp,face,natural,V2,,Bishop Buttermilks
+2018-01-01,blue,Iron Man Traverse,jug,overhang,natural,V4,,Bishop Buttermilks
+2018-01-01,blue,Robinson’s Rubber Tester,sloper,slab,natural,V0,,Bishop Buttermilks
+2018-01-02,blue,Maximum Relaximum,jug,cave,natural,V3,,Bishop Sad Boulders
+2018-01-03,blue,"Buttermilks Stem, Stand Start",sloper,corner,natural,V1,,Bishop Buttermilks
+2018-01-03,blue,"Buttermilks Stem, Sit Start","jug, sloper",overhang,natural,V4,,Bishop Buttermilks
 2018-03-12,green,Run and Jump in the Nature Nazi Area,jug,face,comp,V0,,Castle Rock
 2018-03-12,green,"Naked Nazi, Stand Start",crimp,arete,natural,V2,,Castle Rock
-2018-04-01,green,Totty Corridor Traverse,crimp,face,natural,V1,,Bishop
-2018-04-01,green,Strange Quotations,jug,face,natural,V0,,Bishop
-2018-04-01,blue,"Exit the Rat, Sti Start",crimp,face,natural,V2,,Bishop
-2018-04-02,blue,"Birthday Left, Sit Start",crimp,face,natural,V1,,Bishop
-2018-04-01,green,Hero Roof,jug,overhang,natural,V0,,Bishop
-2018-04-02,green,"Big Brown Slab, East Center Face",crimp,face,natural,V0,,Bishop
-2018-04-03,green,Yo Basecamp,crimp,slab,natural,V0,,Bishop
+2018-04-01,green,Totty Corridor Traverse,crimp,face,natural,V1,,Bishop Happy Boulders
+2018-04-01,green,Strange Quotations,jug,face,natural,V0,,Bishop Happy Boulders
+2018-04-01,blue,"Exit the Rat, Sit Start",crimp,face,natural,V2,,Bishop Happy Boulders
+2018-04-01,green,Yo Basecamp,crimp,slab,natural,V0,,Bishop Buttermilks
+2018-04-01,blue,"Birthday Left, Sit Start",crimp,face,natural,V1,,Bishop Buttermilks
+2018-04-01,green,Hero Roof,jug,overhang,natural,V0,,Bishop Buttermilks
+2018-04-02,green,"Big Brown Slab, East Center Face",crimp,face,natural,V0,,Bishop Sad Boulders
 2018-04-16,green,Slap Happy,jug,overhang,natural,V3,,Bishop Happy Boulders
 2018-04-23,green,Overhanging Lieback,jug,overhang,natural,V2,,Castle Rock
 2018-04-23,green,"The Direct, Nature Nazi Boulders",crimp,overhang,natural,V2,,Castle Rock
