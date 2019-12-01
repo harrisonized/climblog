@@ -64,6 +64,9 @@ def indoors():
 		p0=(3.29367465e+00,  1.22369278e+01, -9.00439720e+06, -2.10297837e+01))
 
 	scatter_df.date_ = scatter_df.date_.apply(lambda x: dt.datetime.strptime(x, '%Y-%m-%d')) # Convert to datetime
+	scatter_df.date_ = scatter_df.date_.apply(lambda x: x+dt.timedelta(seconds=59*random.random())) # Jitter
+	scatter_df.grade_ = scatter_df.grade_.apply(lambda x: x-0.15+0.3*random.random()) # Jitter
+
 	fig = plot_scatter(scatter_df, date_linspace, popt)
 	scatter_div = convert_json(fig)
 
@@ -143,7 +146,9 @@ def outdoors():
 		p0=(1.69557320e+00,  1.23573774e+01, -9.09837912e+06, -7.49917188e+00))
 
 	scatter_df.date_ = scatter_df.date_.apply(lambda x: dt.datetime.strptime(x, '%Y-%m-%d')) # Convert to datetime
+	scatter_df.date_ = scatter_df.date_.apply(lambda x: x+dt.timedelta(seconds=59*random.random())) # Jitter
 	scatter_df.grade_ = scatter_df.grade_.apply(lambda x: x-0.15+0.3*random.random()) # Jitter
+
 	fig = plot_scatter(scatter_df, date_linspace, popt)
 	scatter_div = convert_json(fig)
 
