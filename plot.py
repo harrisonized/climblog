@@ -75,7 +75,8 @@ def plot_scatter(df, date_linspace, popt):
                  'showgrid': True, 'gridcolor': '#E4EAF2', 'zeroline': False,
                  'range': [df.grade_.min()-0.5, df.grade_.max()+0.5]},
         plot_bgcolor='rgba(0,0,0,0)',
-        showlegend=False
+        showlegend=False,
+        hovermode='closest'
     )
         
     return fig
