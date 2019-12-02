@@ -63,7 +63,7 @@ def get_new_grades(climbing_log, color_dict):
     df.color = df.color.replace(color_dict) # Replace colors with hex codes
     return df
 
-def get_hist(climbing_log, color_dict):
+def get_histogram(climbing_log, color_dict):
     query = """
     WITH count_table AS
     (SELECT CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
