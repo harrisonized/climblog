@@ -130,7 +130,7 @@ def plot_histogram(df, title=None, xlabel=None, ylabel=None):
     grades_hist = go.Bar(x=df.grade_, y=df.count_,
         marker_color=df.color,
         text=hover_text,
-        hovertemplate = "Number of Sends: %{y}<br>"
+        hovertemplate = "Number of Recorded Sends: %{y}<br>"
                         +"%{text}<br>"
                         +"<extra></extra>")
 
