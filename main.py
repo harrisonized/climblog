@@ -38,6 +38,8 @@ def word_wrap(string, n):
     final_list = ['<br>'.join(joined_string_list)]
     return final_list[0]
 
+
+
 """
 Indoors
 """
@@ -209,7 +211,6 @@ def indoors():
 
 @app.route("/outdoors", methods=["POST", "GET"])
 def outdoors():
-
 	return render_template(
     	"page.html",
     	scatter_div = Markup(scatter_outdoors_div),
