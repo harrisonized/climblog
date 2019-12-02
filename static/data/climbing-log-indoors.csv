@@ -19,7 +19,7 @@ date_,color,description,hold_type,wall_type,style,grade,setter,location
 2016-10-30,black,Black Sloper Crimps,crimp,slab,natural,V7-V8,Chris,Mesa Rim Mission Valley
 2016-11-08,white,"White holds, pentagon start",crimp,face,natural,V6-V7,Casey,Mesa Rim Mira Mesa
 2016-11-11,blue,Blue roof then balance.,crimp,overhang,natural,V6,,Mission Cliffs
-2016-11-14,pink,Pink pinches,PINCH,face,natural,V5,Leo,Mesa Rim Mission Valley
+2016-11-14,pink,Pink pinches,pinch,face,natural,V5,Leo,Mesa Rim Mission Valley
 2016-11-29,green,Green crimps deadpoint finish,crimp,overhang,natural,V6-V7,Aron,Mesa Rim Mission Valley
 2016-12-02,brown,"Brown sit start, sloper finish, natural",sloper,face,natural,V6-V7,Nick,Mesa Rim Mission Valley
 2016-12-05,pink,"Pink crimps, traverse deadpoint traverse dyno","crimp, pinch",face,natural,V7-V8,Casey,Mesa Rim Mira Mesa
@@ -188,7 +188,7 @@ date_,color,description,hold_type,wall_type,style,grade,setter,location
 2018-11-23,white,"White swinging jump dyno to an undercling on the left, pinch finish. “6 Minute Drill”","jug, pinch",face,comp,V6,Skilla,Earthtreks Rockville
 2018-11-23,pink,"Pink bat hang to a face climb on pinches, soft",pinch,overhang,natural,V7,Shane,Earthtreks Rockville
 2018-11-29,blue,"Blue swinging jump dyno to a jug, crimp finish, Women’s Comp Final #1","jug, crimp",overhang,comp,V7,Sean Nanos,Dogpatch
-2018-11-30,yellow,Yellow run and jump to pipes,yellow,face,comp,V6,,Planet Granite Sunnyvale
+2018-11-30,yellow,Yellow run and jump to pipes,jug,face,comp,V6,,Planet Granite Sunnyvale
 2018-12-16,orange,Orange run and jump to the right,pinch,face,comp,V6,Kessler,The Studio Climbing
 2018-12-19,blue,"Blue dynamic moves to a shelf, then a difficult mantle","crimp, sloper",overhang,dyno,V9,Radu Popescu,Dogpatch
 2019-01-04,green,"Green crimps to pinches, traverse left to finish hold","crimp, pinch",face,natural,V7,,Climb Central Manilla
