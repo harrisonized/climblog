@@ -41,27 +41,25 @@ def execute_query(query, dataframe, index_name=None, index_list=None, replace_gr
 Sends by Date Scatter
 """
 
-def get_new_grades(climbing_log, color_dict):
+def get_scatter(climbing_log, color_dict):
     query = """
-    WITH all_records AS
-    (SELECT date_,
+    SELECT date_,
       CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
       WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
       ELSE grade END AS grade_,
-      color
-    FROM dataframe
-    ORDER BY date_)
-
-    SELECT date_, grade_, color
-    FROM all_records
-    GROUP BY grade_
-    HAVING MIN(date_)
-    ORDER BY date_
-    ;
+      LOWER(color) AS color,
+      location,
+      setter,
+      description,
+      grade AS vgrade,
+      LOWER(wall_type) AS wall_type,
+      LOWER(hold_type) AS hold_type,
+      LOWER(style) AS style
+    FROM dataframe;
     """
-    df = execute_query(query, climbing_log, replace_grade=True)
-    df.color = df.color.replace(color_dict) # Replace colors with hex codes
-    return df
+    scatter_df = execute_query(query, climbing_log, replace_grade=True)
+    scatter_df.color = scatter_df.color.replace(color_dict) # Replace colors with hex codes
+    return scatter_df
 
 def get_histogram(climbing_log, color_dict):
     query = """
@@ -82,11 +80,11 @@ def get_histogram(climbing_log, color_dict):
       grade,
       location,
       setter,
-      wall_type,
-      hold_type,
-      style,
+      LOWER(wall_type) AS wall_type,
+      LOWER(hold_type) AS hold_type,
+      LOWER(style) AS style,
       description,
-      color
+      LOWER(color) AS color
     FROM dataframe
     GROUP BY grade_
     HAVING MIN(date_)
@@ -112,25 +110,7 @@ def get_histogram(climbing_log, color_dict):
     df.color = df.color.replace(color_dict)
     return df
 
-def get_scatter(climbing_log, color_dict):
-    query = """
-    SELECT date_,
-      CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
-      WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
-      ELSE grade END AS grade_,
-      color,
-      location,
-      setter,
-      description,
-      grade AS vgrade,
-      wall_type,
-      hold_type,
-      style
-    FROM dataframe;
-    """
-    scatter_df = execute_query(query, climbing_log, replace_grade=True)
-    scatter_df.color = scatter_df.color.replace(color_dict) # Replace colors with hex codes
-    return scatter_df
+
 
 
 
@@ -160,9 +140,9 @@ def get_year(climbing_log):
       setter,
       description,
       grade AS vgrade,
-      wall_type,
-      hold_type,
-      style
+      LOWER(wall_type) AS wall_type,
+      LOWER(hold_type) AS hold_type,
+      LOWER(style) AS style
     FROM dataframe
     ORDER BY year, grade_),
 
@@ -218,9 +198,9 @@ def get_wall(climbing_log):
       setter,
       description,
       grade AS vgrade,
-      wall_type,
-      hold_type,
-      style
+      LOWER(wall_type) AS wall_type,
+      LOWER(hold_type) AS hold_type,
+      LOWER(style) AS style
     FROM dataframe
     ORDER BY wall_type, grade_),
 
@@ -287,10 +267,10 @@ def get_hold(climbing_log):
       ELSE grade END AS grade,
       location,
       setter,
-      wall_type,
-      style,
+      LOWER(wall_type) AS wall_type,
+      LOWER(style) AS style,
       description,
-      sep_hold_type
+      LOWER(sep_hold_type) AS sep_hold_type
     FROM split 
     WHERE sep_hold_type <> ''
     ORDER BY date_, sep_hold_type),
@@ -366,7 +346,7 @@ def get_style(climbing_log):
     ORDER BY count_ DESC),
 
     filter_table AS
-    (SELECT style,
+    (SELECT LOWER(style) AS style,
       CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
       WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
       ELSE grade END AS grade_,
@@ -375,8 +355,8 @@ def get_style(climbing_log):
       setter,
       description,
       grade AS vgrade,
-      wall_type,
-      hold_type
+      LOWER(wall_type) AS wall_type,
+      LOWER(hold_type) AS hold_type
     FROM dataframe
     ORDER BY wall_type, grade_),
 
