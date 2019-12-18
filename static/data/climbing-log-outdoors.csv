@@ -11,7 +11,8 @@ date_,color,description,hold_type,wall_type,style,grade,setter,location
 2017-01-14,green,Fluffer,jug,face,natural,V2,,Red Rocks
 2017-01-14,blue,Potato Chips,crimp,overhang,natural,V2,,Red Rocks
 2017-01-14,green,Perked Up,crimp,arete,natural,V2,,Red Rocks
-2017-01-15,green,Unnamed Vertical Face on the Downstream Boulders,crimp,face,natural,V2,,Henderson Boulders
+2017-01-15,green,Unnamed Left Face on the Downstream Boulders,crimp,face,natural,V3,,Henderson Boulders
+2017-01-15,green,Unnamed Right Face on the Downstream Boulders,crimp,face,natural,V2,,Henderson Boulders
 2017-01-15,blue,Ultra Classic,"jug, crimp",overhang,natural,V2,,Henderson Boulders
 2017-02-13,blue,Domino Theory,crimp,face,natural,V2,,Castle Rock
 2017-02-13,green,Mrs. Magoo Groove,sloper,slab,natural,V1,,Castle Rock
@@ -247,7 +248,8 @@ date_,color,description,hold_type,wall_type,style,grade,setter,location
 2019-10-21,orange,Silent Spotter,crimp,overhang,natural,V6,,Yosemite
 2019-10-21,blue,Unnamed Lip Traverse,sloper,overhang,dyno,V4,,Yosemite
 2019-10-26,orange,Blue Suede Shoes,crimp,slab,natural,V5,,Yosemite
-2019-11-03,orange,Molly,crimp,face,natural,V5,,Yosemite
+2019-11-03,blue,"Loaded, Eliminate",crimp,slab,natural,V1,,Bishop Happy Boulders
+2019-11-03,orange,Molly,crimp,face,natural,V5,,Bishop Happy Boulders
 2019-11-11,blue,Let’s Get Hurt,"jug, sloper",face,mantle,V3,,Castle Rock
 2019-11-11,blue,"Coz Daddy, Early Exit","crimp, pinch",overhang,natural,V4,,Castle Rock
 2019-11-11,green,The Edge,crimp,face,dyno,V2,,Castle Rock

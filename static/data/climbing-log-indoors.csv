@@ -35,14 +35,14 @@ date_,color,description,hold_type,wall_type,style,grade,setter,location
 2017-02-08,red,"Red throw up to sidepull, then gaston to right",crimp,slab,natural,V7,Sean Nanos,Dogpatch
 2017-02-09,red,"Red high right foot, sidepull top.",crimp,face,natural,V6,Radu Popescu,Dogpatch
 2017-02-10,green,Green slab traverse on crimps,crimp,slab,natural,V5,Radu Popescu,Dogpatch
-2017-02-13,blue,Blue crimps on slab,crimp,slab,natural,V6,John-Jdub,Dogpatch
+2017-02-13,blue,Blue crimps on slab,crimp,slab,natural,V6,Jonathan Wright,Dogpatch
 2017-02-14,blue,"Blue high undercling start, slab finish",crimp,slab,natural,V6,Ben-BD,Dogpatch
 2017-02-15,blue,Blue dyno comp problem,jug,overhang,comp,V6,Radu Popescu,Dogpatch
 2017-02-15,blue,Blue dyno comp problem,jug,overhang,mantle,V6,Radu Popescu,Dogpatch
 2017-02-18,yellow,Yellow Crimp Double Traverse,crimp,face,natural,V6,Zak Grinstead,Dogpatch
-2017-02-18,pink,Pink Sloper Dyno,sloper,face,dyno,V6,John-Jdub,Dogpatch
+2017-02-18,pink,Pink Sloper Dyno,sloper,face,dyno,V6,Jonathan Wright,Dogpatch
 2017-02-19,blue,"Blue Dropknee Start, Slab finish on slopers",sloper,slab,natural,V6,Hiro,Dogpatch
-2017-02-20,black,Black Sloper Dynos,sloper,face,dyno,V6,John-Jdub,Dogpatch
+2017-02-20,black,Black Sloper Dynos,sloper,face,dyno,V6,Jonathan Wright,Dogpatch
 2017-02-20,blue,Blue Traverse Wall,crimp,face,mantle,V6,Hiro,Dogpatch
 2017-02-20,orange,"Orange Arete, Undercling start",crimp,arete,natural,V6,Colin Baxter Green,Dogpatch
 2017-02-21,orange,Orange overhanging crimps on volumes,crimp,overhang,natural,V7,Morgan McGehee,Dogpatch
@@ -138,7 +138,7 @@ date_,color,description,hold_type,wall_type,style,grade,setter,location
 2017-10-28,purple,Purple rainbow rocket emulator,jug,face,comp,V8,Kessler,Studio Climbing
 2017-11-13,blue,"Blue throw to an arete, toe hook arete, big move to a jug, rose move through a pinch onto slopers",jug,arete,natural,V8,Cath,Planet Granite Belmont
 2017-11-16,green,Green pipes,"pinch, jug",cave,natural,V7,,Planet Granite Belmont
-2017-11-18,purple,"Purple slopers, super soft",sloper,overhang,natural,V8,Jdub,Dogpatch
+2017-11-18,purple,"Purple slopers, super soft",sloper,overhang,natural,V8,Jonathan Wright,Dogpatch
 2017-11-19,orange,"Orange dyno to a jug, easy topout",jug,overhang,dyno,V5,Max Krimmer,Dogpatch
 2017-11-21,orange,Orange crimps,crimp,face,natural,V8,Chaj,Planet Granite Belmont
 2017-12-03,yellow,"Yellow Comp Problem, back wall, overhang",crimp,overhang,comp,V7,Woman Up,Dogpatch
@@ -218,3 +218,5 @@ date_,color,description,hold_type,wall_type,style,grade,setter,location
 2019-11-24,purple,"Purple crimps, hulk-like right hand cross deadpoint to a crimp, traverse right on crimps",crimp,face,natural,V7,Alex Brown,Sportrock Alexandria
 2019-11-24,red,"Red jump across the mat onto a jug, pinchy, compression top, Male #2",pinch,overhang,comp,V6,,Sportrock Alexandria
 2019-11-29,green,"Green undercling to some crimps, traverse right on pinch blocks, desperate last two moves",pinch,face,natural,V8,Jeremiah D Cantrell,Sportrock Alexandria
+2019-12-15,red,"Red overhanging crimps, toe-hook two moves in",crimp,overhang,natural,V8,,Berkeley Ironworks
+2019-12-16,green,"Green jugs underneath roof, come out onto crimps, dyno for a jug, crimp traverse left to finish",crimp,overhang,natural,V8,Kurt Jalapeno,Diablo Rock
