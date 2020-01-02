@@ -168,6 +168,7 @@ def plot_heatmap(df, title=None, xlabel=None, ylabel=None, column_list=None):
     df.description = df.description.apply(lambda x: word_wrap(x, 10))
     table_df = df.reset_index().pivot(index=df.columns[1], columns=df.columns[0], values="count_").fillna(0) # Pivot
     table_df.index = table_df.index.map(lambda x: 'V'+str(x)) # Add V to Vgrades
+    column_list = [item for item in column_list if item in table_df.columns]  # Filter out missing columns
     table_df = table_df[column_list] # Organize columns
     
     # Hover text
