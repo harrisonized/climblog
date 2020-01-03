@@ -61,7 +61,7 @@ def plot_scatter(df, popt, title=None, xlabel=None, ylabel=None):
     + 'Hold-type: '+df['hold_type'].apply(lambda x: str(x)) +'<br>' \
     + 'Style: '+df['style'].apply(lambda x: str(x)) +'<br>' \
     + 'Description: '+ '<br>' \
-    + df['description'].apply(lambda x: word_wrap(x, 10)) +'<br>'
+    + df['description'].apply(lambda x: word_wrap(str(x), 10)) +'<br>'
 
     all_records_scatter = go.Scatter(x=df.date_,
                                      y=df.grade_,
@@ -123,7 +123,7 @@ def plot_histogram(df, title=None, xlabel=None, ylabel=None):
     + 'Hold-type: '+df.hold_type.apply(str)+'<br>' \
     + 'Style: '+df['style'].apply(str)+'<br>' \
     + 'Description: '+'<br>' \
-    + df.description.apply(str).apply(lambda x: word_wrap(x, 10))+'<br>'
+    + df.description.apply(str).apply(lambda x: word_wrap(str(x), 10))+'<br>'
 
     df[df.columns[0]] = df[df.columns[0]].apply(lambda x: 'V'+str(x) if type(x)==int else x)
 
@@ -165,7 +165,7 @@ def plot_heatmap(df, title=None, xlabel=None, ylabel=None, column_list=None):
     
     # Derive raw input data
     df = df[df[df.columns[0]].isin(column_list)].reset_index(drop=True) # Filter
-    df.description = df.description.apply(lambda x: word_wrap(x, 10))
+    df.description = df.description.apply(lambda x: word_wrap(str(x), 10))
     table_df = df.reset_index().pivot(index=df.columns[1], columns=df.columns[0], values="count_").fillna(0) # Pivot
     table_df.index = table_df.index.map(lambda x: 'V'+str(x)) # Add V to Vgrades
     column_list = [item for item in column_list if item in table_df.columns]  # Filter out missing columns
