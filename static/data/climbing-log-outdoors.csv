@@ -189,7 +189,7 @@ date_,color,description,hold_type,wall_type,style,grade,setter,location
 2018-09-11,green,Face climb,crimp,face,natural,V1,FA,"Bishop, Sky Rock Area"
 2018-09-23,green,Emma’s Problem,crimp,overhang,natural,V2,,Bishop Sad Boulders
 2018-09-23,blue,The Fang,crimp,cave,natural,V4,,Bishop Sad Boulders
-2018-09-24,green,City of Daggers,crimp,face,natural,V1,,"Bishop, Sky Rock Area"
+2018-09-24,green,City of Daggers,crimp,face,natural,V1,FA,"Bishop, Sky Rock Area"
 2018-10-22,orange,"Dead End, Right Exit",crimp,face,natural,V6,,"Mitake Boulders, Japan"
 2018-12-01,green,Brittle Skidaddle,crimp,face,natural,V0,,"Bishop, Sky Rock Area"
 2018-12-08,orange,French Press,"crimp, sloper",slab,natural,V6,,Bishop Sad Boulders
@@ -262,4 +262,12 @@ date_,color,description,hold_type,wall_type,style,grade,setter,location
 2019-12-28,green,The Black Bitch,crimp,slab,natural,V2,,Red Rocks
 2019-12-29,orange,"Southeast Face of The Butt Crack Boulder, Sit Start",crimp,face,natural,V5,,Red Rocks
 2019-12-31,red,Red Wave,crimp,overhang,dyno,V10,,Red Rocks
-2020-01-01,blue,St. Louis,crimp,overhang,natural,V4,,Red Rocks
+2020-01-01,orange,St. Louis,crimp,overhang,natural,V4,,Red Rocks
+2020-01-02,orange,Monkey Wrench,crimp,overhang,natural,V7,,Red Rocks
+2020-01-02,orange,Equinox,crimp,face,natural,V6,,Red Rocks
+2020-01-03,green,Arete V1 on the Sorange Boulder,jug,face,natural,V1,,Red Rocks
+2020-01-03,green,Heart and Sole Left V1/2,crimp,slab,natural,V1,,Red Rocks
+2020-01-03,green,Arete left V1/2 on the Warm Up Boulder,jug,face,natural,V1,,Red Rocks
+2020-01-03,orange,Welcome to Detroit,"jug, crimp",variable,mantle,V5,,Red Rocks
+2020-01-04,orange,Right Face of the My Tan Boulder (V6/7),crimp,face,natural,V7,,Red Rocks
+2020-01-04,blue,Avian Flu,jug,cave,natural,V4,,Red Rocks
