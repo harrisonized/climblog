@@ -1,9 +1,6 @@
-.ipynb_checkpoints
-*/.ipynb_checkpoints/*
-.~lock*
-__pycache__
-templates/sends-over-time.html
-templates/experimental-page.html
-static/images/*
 .DS_Store
 */.DS_Store
+.~lock*
+__pycache__
+*/__pycache__
+static/vendor/*

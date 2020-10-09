@@ -1,0 +1,49 @@
+WITH count_table AS
+(SELECT style, 
+  CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
+  WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
+  ELSE grade END AS grade_,
+  COUNT(style) AS count_
+FROM dataframe
+GROUP BY style, grade_
+ORDER BY count_ DESC),
+
+filter_table AS
+(SELECT LOWER(style) AS style,
+  CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
+  WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
+  ELSE grade END AS grade_,
+  date_,
+  location,
+  setter,
+  description,
+  grade AS vgrade,
+  LOWER(wall_type) AS wall_type,
+  LOWER(hold_type) AS hold_type
+FROM dataframe
+ORDER BY wall_type, grade_),
+
+hover_info AS
+(SELECT style, grade_,
+  date_,
+  location,
+  setter,
+  description,
+  hold_type,
+  wall_type
+FROM filter_table
+GROUP BY style, grade_
+HAVING MIN(date_)
+ORDER BY date_)
+
+SELECT c.style, c.grade_, c.count_,
+  h.date_,
+  h.location,
+  h.setter,
+  h.description,
+  h.hold_type,
+  h.wall_type
+FROM count_table c
+LEFT JOIN hover_info h
+ON c.style=h.style AND c.grade_=h.grade_
+;

@@ -1,0 +1,95 @@
+WITH unnested_hold_table AS
+(WITH RECURSIVE SPLIT(date_,
+  grade,
+  location,
+  setter,
+  wall_type,
+  style,
+  description,
+  sep_hold_type,
+  rest) AS
+
+(SELECT date_,
+  grade,
+  location,
+  setter,
+  wall_type,
+  style,
+  description, '', hold_type || ','
+  FROM dataframe
+  WHERE date_
+  UNION ALL
+  SELECT date_, grade, location, setter, wall_type, style, description,
+    TRIM(SUBSTR(rest, 0, INSTR(rest, ','))),
+    TRIM(SUBSTR(rest, INSTR(rest, ',')+1))
+  FROM split
+  WHERE rest <> '')
+
+SELECT date_,
+  CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
+  WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
+  ELSE grade END AS grade,
+  location,
+  setter,
+  LOWER(wall_type) AS wall_type,
+  LOWER(style) AS style,
+  description,
+  LOWER(sep_hold_type) AS sep_hold_type
+FROM split 
+WHERE sep_hold_type <> ''
+ORDER BY date_, sep_hold_type),
+
+count_table AS
+(SELECT sep_hold_type,
+    grade AS grade_,
+    COUNT(sep_hold_type) AS count_
+FROM unnested_hold_table
+GROUP BY sep_hold_type, grade
+ORDER BY count_ DESC),
+
+filter_table AS
+(SELECT sep_hold_type,
+  CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
+  WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
+  ELSE grade END AS grade_,
+  date_,
+  location,
+  setter,
+  description,
+  grade AS vgrade,
+  wall_type,
+  style
+FROM unnested_hold_table
+ORDER BY sep_hold_type, grade_),
+
+unnested_hover_info AS
+(SELECT sep_hold_type, grade_,
+  date_,
+  location,
+  setter,
+  description,
+  style,
+  wall_type
+FROM filter_table
+GROUP BY sep_hold_type, grade_
+HAVING MIN(date_)
+ORDER BY date_),
+
+hover_info AS
+(SELECT hold_type, date_, description
+FROM dataframe)
+
+SELECT c.sep_hold_type, c.grade_, c.count_,
+  u.date_,
+  u.location,
+  u.setter,
+  u.description,
+  u.wall_type,
+  u.style,
+  h.hold_type
+FROM count_table c
+LEFT JOIN unnested_hover_info u
+ON c.sep_hold_type=u.sep_hold_type AND c.grade_=u.grade_ 
+JOIN hover_info h
+ON u.date_=h.date_ AND u.description=h.description
+;

@@ -1,0 +1,52 @@
+WITH count_table AS
+(SELECT strftime("%Y", date_) AS year,
+  CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
+  WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
+  ELSE grade END AS grade_,
+  COUNT(strftime("%Y", date_)) AS count_
+FROM dataframe
+GROUP BY year, grade_
+ORDER BY year, grade_),
+
+filter_table AS
+(SELECT strftime("%Y", date_) AS year,
+  CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
+  WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
+  ELSE grade END AS grade_,
+  date_,
+  location,
+  setter,
+  description,
+  grade AS vgrade,
+  LOWER(wall_type) AS wall_type,
+  LOWER(hold_type) AS hold_type,
+  LOWER(style) AS style
+FROM dataframe
+ORDER BY year, grade_),
+
+hover_info AS
+(SELECT year, grade_,
+  date_,
+  location,
+  setter,
+  description,
+  wall_type,
+  hold_type,
+  style
+FROM filter_table
+GROUP BY year, grade_
+HAVING MIN(year)
+ORDER BY year)
+
+SELECT c.year, c.grade_, c.count_,
+  h.date_,
+  h.location,
+  h.setter,
+  h.description,
+  h.wall_type,
+  h.hold_type,
+  h.style
+FROM count_table c
+LEFT JOIN hover_info h
+ON c.grade_=h.grade_ AND c.year=h.year
+;
