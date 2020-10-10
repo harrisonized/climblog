@@ -55,8 +55,8 @@ def outdoors():
         style_div=Markup(style_outdoors_div)
     )
 
-@app.route("/test", methods=["POST", "GET"])
-def test():
+@app.route("/load", methods=["POST", "GET"])
+def load():
 
     climbing_log_outdoors = pd.read_csv('data/climbing-log-outdoors.csv')  # Read in data
     div, fig = refresh_scatter(climbing_log_outdoors)
@@ -64,6 +64,19 @@ def test():
     # Save
     with open(f'tmp/outdoors/sends-by-date.json', 'w') as outfile:
         json.dump(fig, outfile, cls=plotly.utils.PlotlyJSONEncoder)
+
+    return render_template(
+        "page.html",
+        #scatter_div=Markup(scatter_outdoors_div),
+        # histogram_div=Markup(histogram_outdoors_div),
+        # year_div=Markup(year_outdoors_div),
+        # wall_div=Markup(wall_outdoors_div),
+        # hold_div=Markup(hold_outdoors_div),
+        # style_div=Markup(style_outdoors_div)
+    )
+
+@app.route("/display", methods=["POST", "GET"])
+def display():
 
     # Read in saved data
     with open('tmp/outdoors/sends-by-date.json') as json_file:
