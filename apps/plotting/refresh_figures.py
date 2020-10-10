@@ -35,7 +35,7 @@ def refresh_scatter(df):
     fig = plot_scatter(scatter_df, popt, "Sends by Date", "Date", "Grade")
     scatter_div = div_for_fig(fig)
 
-    return scatter_div
+    return scatter_div, fig
 
 
 def refresh_heatmap(df):
