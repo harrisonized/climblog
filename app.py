@@ -62,11 +62,11 @@ def test():
     div, fig = refresh_scatter(climbing_log_outdoors)
 
     # Save
-    with open(f'figures/outdoors/sends-by-date.json', 'w') as outfile:
+    with open(f'tmp/outdoors/sends-by-date.json', 'w') as outfile:
         json.dump(fig, outfile, cls=plotly.utils.PlotlyJSONEncoder)
 
     # Read in saved data
-    with open('figures/outdoors/sends-by-date.json') as json_file:
+    with open('tmp/outdoors/sends-by-date.json') as json_file:
         fig_json = json.load(json_file)
     fig = go.Figure(data = fig_json['data'], layout = fig_json['layout'])
     scatter_outdoors_div = pyo.plot(fig, output_type='div')
