@@ -1,6 +1,6 @@
 # Harrison's Climbing App
 
-This [live web application](https://harrisonized-climbing-app.herokuapp.com/) is a dashboard that executes SQL queries on [data](https://github.com/harrisonized/climbing-app-heroku/tree/master/data) from CSV files and creates interactive visualizations using Plotly. Everything takes place on the server side. Note that Heroku may take up to 30 seconds to come out of a sleeping website state.
+This [live web application](https://harrisonized-climbing-app.herokuapp.com/) is a dashboard that executes SQL queries on [data](https://github.com/harrisonized/harrisonized-climbing-app/tree/master/data) from CSV files and creates interactive visualizations using Plotly. Everything takes place on the server side. Note that Heroku may take up to 30 seconds to come out of a sleeping website state.
 
 In the latest update, I added a cache for figures so if they are already generated, they can be retrieved directly from Heroku's ephemeral storage rather than being regenerated from the data.
 
