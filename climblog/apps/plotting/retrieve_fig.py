@@ -3,6 +3,7 @@ import datetime as dt
 import json
 import numpy as np
 import pandas as pd
+import pandas.io.sql as pd_sql
 import matplotlib.dates as mdates
 import plotly
 import plotly.graph_objs as go
@@ -23,7 +24,8 @@ from .queries import SENDS_BY_DATE, GRADES_HISTOGRAM, GRADES_BY_YEAR, GRADES_BY_
 # # retrieve_grades_by_style_heatmap
 
 
-def retrieve_sends_by_date_scatter(fig_dir, data_path):
+def retrieve_sends_by_date_scatter(fig_dir, csv_path=None,
+                                   connection_uri=None, location_type=None):
     """If figure file is found in tmp folder, read in figure file and generate div
     Else read in data and generate figure and save in tmp folder
     """
@@ -40,7 +42,20 @@ def retrieve_sends_by_date_scatter(fig_dir, data_path):
     else:
 
         # get data
-        climbing_log_df = pd.read_csv(data_path)
+        if csv_path and not connection_uri:
+            climbing_log_df = pd.read_csv(csv_path)
+        elif connection_uri:
+            query = f"""
+            SELECT *
+            FROM climbing_log
+            WHERE location_type = '{location_type}'
+            ;
+            """
+            climbing_log_df = pd_sql.read_sql(query, connection_uri)
+            assert climbing_log_df.empty is False, 'No data returned'
+        else:
+            assert csv_path or connection_uri, 'No csv_path or connection_uri provided.'
+
         scatter_df = execute_query_on_df(SENDS_BY_DATE, climbing_log_df, replace_grade=True)
         scatter_df['date_'] = scatter_df['date_'].apply(lambda date: dt.datetime.strptime(date, '%Y-%m-%d'))  # Convert to datetime
         scatter_df['color'] = scatter_df['color'].replace(color_dict)  # Replace colors with hex codes
@@ -85,7 +100,7 @@ def retrieve_sends_by_date_scatter(fig_dir, data_path):
     return div
 
 
-def retrieve_grades_histogram(fig_dir, data_path):
+def retrieve_grades_histogram(fig_dir, csv_path):
     """If figure file is found in tmp folder, read in figure file and generate div
     Else read in data and generate figure and save in tmp folder
     """
@@ -102,7 +117,7 @@ def retrieve_grades_histogram(fig_dir, data_path):
     else:
 
         # get data
-        climbing_log_df = pd.read_csv(data_path)
+        climbing_log_df = pd.read_csv(csv_path)
         grades_histogram_df = execute_query_on_df(GRADES_HISTOGRAM, climbing_log_df, replace_grade=True)
         grades_histogram_df['color'] = grades_histogram_df['color'].replace(color_dict)
 
@@ -135,7 +150,7 @@ def retrieve_grades_histogram(fig_dir, data_path):
     return div
 
 
-def retrieve_grades_by_year_heatmap(fig_dir, data_path):
+def retrieve_grades_by_year_heatmap(fig_dir, csv_path):
     """If figure file is found in tmp folder, read in figure file and generate div
     Else read in data and generate figure and save in tmp folder
     """
@@ -152,7 +167,7 @@ def retrieve_grades_by_year_heatmap(fig_dir, data_path):
     else:
 
         # get data
-        df = pd.read_csv(data_path)
+        df = pd.read_csv(csv_path)
         year_df = execute_query_on_df(GRADES_BY_YEAR, df, replace_grade=True)
 
         table_df = year_df.reset_index().pivot(index=year_df.columns[1], columns=year_df.columns[0], values="count_").fillna(0)
@@ -174,7 +189,7 @@ def retrieve_grades_by_year_heatmap(fig_dir, data_path):
     return div
 
 
-def retrieve_grades_by_wall_heatmap(fig_dir, data_path):
+def retrieve_grades_by_wall_heatmap(fig_dir, csv_path):
     """If figure file is found in tmp folder, read in figure file and generate div
     Else read in data and generate figure and save in tmp folder
     """
@@ -191,7 +206,7 @@ def retrieve_grades_by_wall_heatmap(fig_dir, data_path):
     else:
 
         # get data
-        df = pd.read_csv(data_path)
+        df = pd.read_csv(csv_path)
         wall_df = execute_query_on_df(GRADES_BY_WALL, df, replace_grade=True)
 
         columns = ['cave', 'overhang', 'face', 'arete', 'slab', 'corner', 'variable']
@@ -216,7 +231,7 @@ def retrieve_grades_by_wall_heatmap(fig_dir, data_path):
     return div
 
 
-def retrieve_grades_by_hold_heatmap(fig_dir, data_path):
+def retrieve_grades_by_hold_heatmap(fig_dir, csv_path):
     """If figure file is found in tmp folder, read in figure file and generate div
     Else read in data and generate figure and save in tmp folder
     """
@@ -233,7 +248,7 @@ def retrieve_grades_by_hold_heatmap(fig_dir, data_path):
     else:
 
         # get data
-        df = pd.read_csv(data_path)
+        df = pd.read_csv(csv_path)
         hold_df = execute_query_on_df(GRADES_BY_HOLD, df, replace_grade=True)
 
         columns = ['jug', 'crimp', 'sloper', 'pinch']
@@ -257,7 +272,7 @@ def retrieve_grades_by_hold_heatmap(fig_dir, data_path):
     return div
 
 
-def retrieve_grades_by_style_heatmap(fig_dir, data_path):
+def retrieve_grades_by_style_heatmap(fig_dir, csv_path):
     """If figure file is found in tmp folder, read in figure file and generate div
     Else read in data and generate figure and save in tmp folder
     """
@@ -274,7 +289,7 @@ def retrieve_grades_by_style_heatmap(fig_dir, data_path):
     else:
 
         # get data
-        df = pd.read_csv(data_path)
+        df = pd.read_csv(csv_path)
         style_df = execute_query_on_df(GRADES_BY_STYLE, df, replace_grade=True)
 
         columns = ['mantle', 'natural', 'dyno', 'comp']

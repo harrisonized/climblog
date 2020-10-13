@@ -15,8 +15,12 @@ from apps.plotting.retrieve_fig import (retrieve_sends_by_date_scatter,
 from apps.auth.connections import postgres_connection
 
 
-# Initialize the app
-app = Flask(__name__)
+
+DATABASE_URL = os.environ['HEROKU_POSTGRESQL_PINK_URL']
+INI_KEY = os.environ['INI_KEY']
+
+
+app = Flask(__name__)  # Initialize the app
 # bootstrap = Bootstrap(app)
 
 
@@ -70,4 +74,20 @@ def outdoors():
         wall_div=Markup(wall_div),
         hold_div=Markup(hold_div),
         style_div=Markup(style_div)
+    )
+
+@app.route("/test", methods=["POST", "GET"])
+def test():
+
+    # connection_uri = postgres_connection('harrisonized_climbing_app')
+
+    fig_dir = 'figures/indoors'
+    data_path = 'data/climbing-log-indoors.csv'
+
+    scatter_div = retrieve_sends_by_date_scatter(fig_dir, data_path,
+                                                 DATABASE_URL, 'indoor')
+
+    return render_template(
+        "figures.html",
+        scatter_div=Markup(scatter_div),
     )
