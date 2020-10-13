@@ -18,8 +18,15 @@ def postgres_connection(database=None,
 
     Make sure the config.ini file exists in your project
     """
+    assert os.path.exists(cfg_path), f'Missing file at {cfg_path}'
+    
     cfg = ConfigParser()
     cfg.read(cfg_path)
+    
+    assert cfg.has_section(section), f'Missing section at [{section}]'
+    
+    for key in ['username', 'password', 'host', 'port']:
+        assert cfg.has_option(section, key), f'Missing key at {key}'
 
     username, password, host, port = (
         decrypt_message(cfg.get(section, key), INI_KEY)
