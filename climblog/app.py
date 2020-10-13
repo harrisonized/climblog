@@ -85,7 +85,7 @@ def test():
     data_path = 'data/climbing-log-indoors.csv'
 
     scatter_div = retrieve_sends_by_date_scatter(fig_dir, data_path,
-                                                 DATABASE_URL, 'indoor')
+                                                 DATABASE_URL, 'indoors')
 
     return render_template(
         "figures.html",
