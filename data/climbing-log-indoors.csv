@@ -1,234 +1,234 @@
-date_,color,description,hold_type,wall_type,style,grade,setter,location
-2016-06-13,pink,Pink crimps,crimp,overhang,natural,V6-V7,Enrico,Mesa Rim Mira Mesa
-2016-06-19,purple,"Purple crimps, easy",crimp,face,natural,V6-V7,Casey,Mesa Rim Mission Valley
-2016-07-08,white,"White sloper, easy transition out of sloper",sloper,face,natural,V6-V7,Casey,Mesa Rim Mission Valley
-2016-07-11,pink,"Pink corner, hard first move, easy rest of it",crimp,corner,natural,V6-V7,Enrico,Mesa Rim Mission Valley
-2016-07-24,yellow,Yellow Mushrooms,jug,cave,natural,V6-V7,Enrico,Mesa Rim Mission Valley
-2016-08-06,black,"Black mantle, one-move wonder",jug,face,mantle,V6-V7,Enrico,Mesa Rim Mission Valley
-2016-08-14,green,"Green, easy start, hard finish","crimp, pinch",face,natural,V6-V7,Leo,Mesa Rim Mission Valley
-2016-08-20,yellow,"Yellow crimps, dyno finish",crimp,face,natural,V6-V7,Enrico,Mesa Rim Mission Valley
-2016-08-21,brown,"Brown crimps, sloper finish","crimp, sloper",face,natural,V6-V7,Chris,Mesa Rim Mission Valley
-2016-08-22,green,"Green pinches, then slopers","pinch, sloper",face,natural,V6-V7,Chris,Mesa Rim Mission Valley
-2016-08-28,yellow,Yellow zigzag crossover,crimp,face,natural,V6-V7,Chris,Mesa Rim Mission Valley
-2016-09-04,green,"Green, upside-down",jug,overhang,comp,V6-V7,Leo,Mesa Rim Mission Valley
-2016-09-15,pink,"Pink, natural",crimp,face,natural,V6-V7,Casey,Mesa Rim Mission Valley
-2016-09-24,yellow,"Yellow, sloper then crimps","crimp, pinch, sloper",face,natural,V6-V7,Enrico,Mesa Rim Mission Valley
-2016-09-24,black,"Black, Jug followed by crimps","jug, crimp",face,natural,V6-V7,Chris,Mesa Rim Mission Valley
-2016-09-26,blue,Blue heel-hook start,crimp,overhang,natural,V6-V7,Curtis,Mesa Rim Mission Valley
-2016-10-17,green,Green slopers,sloper,face,natural,V6-V7,Chris,Mesa Rim Mira Mesa
-2016-10-30,black,Black Sloper Crimps,crimp,slab,natural,V7-V8,Chris,Mesa Rim Mission Valley
-2016-11-08,white,"White holds, pentagon start",crimp,face,natural,V6-V7,Casey,Mesa Rim Mira Mesa
-2016-11-11,blue,Blue roof then balance.,crimp,overhang,natural,V6,,Mission Cliffs
-2016-11-14,pink,Pink pinches,pinch,face,natural,V5,Leo,Mesa Rim Mission Valley
-2016-11-29,green,Green crimps deadpoint finish,crimp,overhang,natural,V6-V7,Aron,Mesa Rim Mission Valley
-2016-12-02,brown,"Brown sit start, sloper finish, natural",sloper,face,natural,V6-V7,Nick,Mesa Rim Mission Valley
-2016-12-05,pink,"Pink crimps, traverse deadpoint traverse dyno","crimp, pinch",face,natural,V7-V8,Casey,Mesa Rim Mira Mesa
-2016-12-22,yellow,"Yellow Flakes, two traverses",crimp,face,natural,V6,Ben Polanco,Dogpatch
-2017-01-18,purple,"Purple Sloper Dyno Start, Mantel finish","sloper, jug",variable,dyno,V6,Radu Popescu,Dogpatch
-2017-01-26,pink,"Pink corner back wall, swinging move",sloper,face,natural,V6,,Dogpatch
-2017-01-30,orange,Orange overhanging,pinch,overhang,natural,V6,Sean Nanos,Dogpatch
-2017-01-30,blue,"Blue crimps overhanging, toehook roof",crimp,overhang,natural,V6,,Dogpatch
-2017-02-01,pink,Pink piano move,sloper,variable,natural,V6,Ben-BD,Dogpatch
-2017-02-03,orange,"Orange crimps, balancey traverse left",crimp,face,natural,V5,Sean Nanos,Dogpatch
-2017-02-04,blue,"Blue juggy roof, followed by crimps, first flash",jug,overhang,natural,V6,Hiro,Dogpatch
-2017-02-05,yellow,Yellow Slab,crimp,slab,natural,V6,Ben-BD,Dogpatch
-2017-02-08,red,"Red throw up to sidepull, then gaston to right",crimp,slab,natural,V7,Sean Nanos,Dogpatch
-2017-02-09,red,"Red high right foot, sidepull top.",crimp,face,natural,V6,Radu Popescu,Dogpatch
-2017-02-10,green,Green slab traverse on crimps,crimp,slab,natural,V5,Radu Popescu,Dogpatch
-2017-02-13,blue,Blue crimps on slab,crimp,slab,natural,V6,Jonathan Wright,Dogpatch
-2017-02-14,blue,"Blue high undercling start, slab finish",crimp,slab,natural,V6,Ben-BD,Dogpatch
-2017-02-15,blue,Blue dyno comp problem,jug,overhang,comp,V6,Radu Popescu,Dogpatch
-2017-02-15,blue,Blue dyno comp problem,jug,overhang,mantle,V6,Radu Popescu,Dogpatch
-2017-02-18,yellow,Yellow Crimp Double Traverse,crimp,face,natural,V6,Zak Grinstead,Dogpatch
-2017-02-18,pink,Pink Sloper Dyno,sloper,face,dyno,V6,Jonathan Wright,Dogpatch
-2017-02-19,blue,"Blue Dropknee Start, Slab finish on slopers",sloper,slab,natural,V6,Hiro,Dogpatch
-2017-02-20,black,Black Sloper Dynos,sloper,face,dyno,V6,Jonathan Wright,Dogpatch
-2017-02-20,blue,Blue Traverse Wall,crimp,face,mantle,V6,Hiro,Dogpatch
-2017-02-20,orange,"Orange Arete, Undercling start",crimp,arete,natural,V6,Colin Baxter Green,Dogpatch
-2017-02-21,orange,Orange overhanging crimps on volumes,crimp,overhang,natural,V7,Morgan McGehee,Dogpatch
-2017-02-26,green,"Green slopers, finish on arete",sloper,arete,natural,V6,,Ironworks
-2017-02-26,white,"White crimps, traverse finish",crimp,face,natural,V7,,Ironworks
-2017-02-27,green,"Green Comp Problem dyno start, balancey finish",crimp,face,comp,V7,Radu Popescu,Dogpatch
-2017-02-28,yellow,Yellow rose move,crimp,cave,natural,V6,Jeremy Ho,Dogpatch
-2017-02-28,white,White Mirror Ape Traverse,"sloper, crimp",overhang,dyno,V7,Led Zep,Dogpatch
-2017-03-02,black,Black Crimps Reachy Moves,crimp,overhang,natural,V7,Sean Nanos,Dogpatch
-2017-03-07,blue,Blue hanging traverse start,crimp,overhang,natural,V6,Morgan McGehee,Dogpatch
-2017-03-07,green,Green crimps,crimp,face,natural,V6,Hiro,Dogpatch
-2017-03-07,pink,Pink cave traverse,jug,cave,natural,V6,Ben Polanco,Dogpatch
-2017-03-07,blue,"Blue Crimps, shitty finish",crimp,face,natural,V6,LM,Dogpatch
-2017-03-07,red,"Red crimps, can toehook crimp start hold",crimp,face,natural,V6,Ben-BD,Dogpatch
-2017-03-10,blue,"Blue undercling volume start, crimpy finish",crimp,face,natural,V6,SFG,Dogpatch
-2017-03-10,yellow,"Yellow straight dyno, then sideways dyno",jug,cave,dyno,V6,Hiro,Dogpatch
-2017-03-10,green,"Green crimps, second flash",crimp,face,natural,V6,Buck Yedor,Dogpatch
-2017-03-13,white,"White arete, slab finish",crimp,arete,natural,V6,Zak Grinstead,Dogpatch
-2017-03-14,pink,Pink jugs similar to outdoor climbing,sloper,face,natural,V7,Hiro,Dogpatch
-2017-03-15,blue,"Blue Arete Comp Problem, Cave Start, Roof Finish","crimp, sloper",cave,comp,V6,Radu Popescu,Dogpatch
-2017-03-15,purple,"Purple Sloper Mantle around Arete, Crimp finish",sloper,arete,natural,V6,LM,Dogpatch
-2017-03-15,yellow,"Yellow traverse to a sideways dyno, short arete onto a sloper, finish out right on crimps",sloper,arete,natural,V7,Ben-BD,Dogpatch
-2017-03-17,black,"Black Overhanging Crimps, powerful throw from an undercling, traverse to finish",crimp,overhang,natural,V6,Radu Popescu,Dogpatch
-2017-03-28,yellow,"Yellow Crimps, Finish on some jugs",crimp,cave,dyno,V6,Craig,Dogpatch
-2017-03-28,blue,"Black Dyno Start, Finish on roofs",jug,overhang,dyno,V6,Sean Nanos,Dogpatch
-2017-10-15,green,"Green overhanging sidepull start, crimpy finish, flash",crimp,overhang,natural,V6,Buck Yedor,Dogpatch
-2017-04-04,black,"Black Sidepull Foot Dyno, Sloper Finish",sloper,face,dyno,V7,LM,Dogpatch
-2017-04-04,orange,Orange arete crimps,crimp,arete,natural,V6,Hiro,Dogpatch
-2017-04-07,orange,"Orange corner back wall, swinging move","crimp, pinch",overhang,natural,V8,Zack-ZD,Dogpatch
-2017-04-08,purple,"Purple Arete, traverse start, powerful move to a sidepull, traverse to slopers, crimp finish","sloper, crimp",face,natural,V7,Radu Popescu,Dogpatch
-2017-04-10,purple,Purple overhanging crimps,crimp,overhang,natural,V6,Zak Grinstead,Dogpatch
-2017-04-11,white,"White overhanging crimps, reachy moves",crimp,overhang,natural,V7,Zak Grinstead,Dogpatch
-2017-04-11,white,White bat hang on crimps,crimp,overhang,dyno,V6,Morgan McGehee,Dogpatch
-2017-04-13,blue,"Blue powerful sidepulls, sketchy mantle",sloper,overhang,natural,V6,Ski,Dogpatch
-2017-04-13,orange,Orange sloper arete,sloper,arete,natural,V6,Eric Sanchez,Dogpatch
-2017-04-13,yellow,Yellow crimp arete (hard),crimp,arete,natural,V7,Colin Baxter Green,Dogpatch
-2017-04-13,green,"Green arete, throw to a sloper, cut feet, label said V9 but was super soft",sloper,face,dyno,V7,Ben Polanco,Dogpatch
-2017-04-16,red,Red crimps and pinches on the back flat wall,crimp,overhang,natural,V8,Zak Grinstead,Dogpatch
-2017-04-17,blue,"Blue crimp dyno to an undercling, crimp finish",crimp,face,natural,V7,Sean Nanos,Dogpatch
-2017-04-18,purple,"Purple crimps, heel hook starting crimp, left hand into another crimp, dyno to topout",crimp,face,natural,V5,Joshua-Ski,Dogpatch
-2017-04-26,green,"Green start on sidepulls, dyno to a jug, crimpy finish","crimp, jug",overhang,dyno,V5,Radu Popescu,Dogpatch
-2017-04-28,green,"Green so-ill slopers, traverse right",sloper,slab,natural,V6,Zak Grinstead,Dogpatch
-2017-05-02,purple,"Purple dragon ball holds, mantle",sloper,face,mantle,V5,LM,Dogpatch
-2017-05-02,white,"White crimps on the front arch, soft, finished in 12 seconds",crimp,overhang,natural,V6,Ben-BD,Dogpatch
-2017-05-03,black,Easy black comp problem with large sloper volumes (misgraded as V8),sloper,overhang,comp,V6,Radu Popescu,Dogpatch
-2017-05-09,purple,Purple three dynos in a row,jug,face,dyno,V7,Sean Nanos,Dogpatch
-2017-05-13,white,White sidepull on slopers,sloper,slab,natural,V6,Justin Alarcon,Dogpatch
-2017-05-13,orange,Orange pinches to crimps,"pinch, crimp",face,natural,V6,Zak Grinstead,Dogpatch
-2017-05-18,yellow,"Yellow volumes, mantle onto first volume, push on a ceiling, dyno to the top",jug,face,mantle,V6,Sean Nanos,Dogpatch
-2017-05-19,orange,Orange pinches all the way,pinch,overhang,natural,V8,Ben Polanco,Dogpatch
-2017-05-19,red,"Red cave dyno, slopers at the lip","jug, sloper, crimp",cave,dyno,V8,Sean Nanos,Dogpatch
-2017-05-22,purple,"Purple Sideways Dyno, then dyno finish",jug,overhang,dyno,V7,Zak Grinstead,Dogpatch
-2017-05-31,yellow,Yellow jugs on the low roof,jug,cave,natural,V5,Hiro,Dogpatch
-2017-06-01,yellow,"Yellow arete in Mission Cliffs, big reaches, big holds",jug,arete,natural,V7,LM,Mission Cliffs
-2017-06-02,red,"Red, traverse around arete, two opposing sidepulls",crimp,face,natural,V7,LM,Dogpatch
-2017-06-05,black,"Black balancey moves, double clutch finish",sloper,face,comp,V8,Radu Popescu,Dogpatch
-2017-06-07,orange,"Orange dyno to a jug, then bathang, traverse underneath, crimp and pinch finish",sloper,cave,dyno,V7,Sean Nanos,Dogpatch
-2017-06-12,blue,"Blue crimpy, balancey start to a sloper, undercling dyno to the top, kid's wall",crimp,slab,natural,V7,Zak Grinstead,Dogpatch
-2017-06-13,yellow,"Yellow traverse to arete, bicycle a pinch, then dyno finish from a sidepull",crimp,slab,natural,V7,Ben-BD,Dogpatch
-2017-06-13,yellow,Yellow run and jump,jug,slab,dyno,V7,Clinic,Dogpatch
-2017-06-21,white,"White traverse right, then traverse left, campus on crimps",crimp,face,natural,V7,Max Krimmer,Ironworks
-2017-07-17,orange,"Orange run and jump, comp problem 58",jug,face,comp,V7,Woman Up,Dogpatch
-2017-07-23,black,Black dyno to half crescent jug on the wave,"jug, sloper",face,dyno,V7,Max Krimmer,Dogpatch
-2017-07-25,white,"White Comp Problem Number 61, dyno from an undercling, ",pinch,overhang,natural,V8,Woman Up,Dogpatch
-2017-08-01,black,Black dyno to a half crescent sloper on the back wall,"jug, sloper",face,dyno,V7,Max Krimmer,Dogpatch
-2017-08-09,pink,"Pink Comp Problem Number 52, Dynamic movements between jugs",jug,overhang,comp,V7,Woman Up,Dogpatch
-2017-08-16,green,"Green Zak, two dynos to the top",sloper,overhang,dyno,V7,Zak Grinstead,Dogpatch
-2017-08-18,green,"Green Comp Problem Number 56, So-Ill bubbles",sloper,face,comp,V7,Woman Up,Dogpatch
-2017-08-20,pink,"Pink deadpoint to a right hand sloper, reachy left hand before top out",sloper,face,natural,V7,Max Krimmer,Dogpatch
-2017-08-20,orange,"Orange Comp Problem Number 54, Jug start, left hand crimp to a hand jam, then crimps up. First V7 flash",crimp,face,comp,V7,Woman Up,Dogpatch
-2017-08-20,white,"White undercling start, dynamic move to a pinch, match on sloper, dynamic move to crimp, crimpy finish","crimp, pinch",overhang,natural,V9,Morgan McGehee,Dogpatch
-2017-08-22,yellow,Yellow Comp Final #1,sloper,slab,comp,V7,Woman Up,Dogpatch
-2017-08-27,pink,"Pink crimps, knee bar through intro, then crimpy finish","crimp, pinch, sloper",overhang,natural,V8,Sean Nanos,Dogpatch
-2017-08-27,yellow,"Yellow Comp Problem, Dyno Start, Mantel on a crimp to a sidepull jug","jug, crimp",face,dyno,V7,Radu Popescu,Dogpatch
-2017-09-10,green,Green dyno onto two pipes,jug,overhang,dyno,V6,DC,Cliffs of Id
-2017-09-12,orange,Orange overhanging dyno to a bad pinch,pinch,overhang,dyno,V8,Max Krimmer,Dogpatch
-2017-09-13,green,Green overhanging traverse twice,jug,overhang,natural,V8,Ben Polanco,Dogpatch
-2017-09-18,purple,Purple overhang crimp to pinch,"crimp, pinch",overhang,natural,V8,Mark Heal,Dogpatch
-2017-09-18,orange,"Orange Comp Problem, do a sideways fall into a volume, then dyno from a crimp to a distant mushroom around the arete",jug,face,comp,V7,,Dogpatch
-2017-09-21,purple,"Purple slopers with crimps behind them, face climbing","sloper, crimp",face,natural,V7,Colin Baxter Green,Dogpatch
-2017-09-26,green,Light Green Roof Comp Problem,jug,cave,natural,V7,Woman Up,Dogpatch
-2017-09-26,pink,"Pink face climb, dyno to an undercling sidepull, then some jugs, then a dyno finish","sloper, pinch",face,dyno,V7,Zak Grinstead,Dogpatch
-2017-09-26,green,"Dark Green Roof Problem, good holds all the way through, finish on some crimps","jug, crimp",cave,natural,V7,Max Krimmer,Dogpatch
-2017-09-27,pink,"Pink two dynos, mantle to the right for topout",jug,overhang,dyno,V7,Max Krimmer,Dogpatch
-2017-09-28,yellow,Soft yellow crimp ladder on the mushroom,crimp,overhang,natural,V7,Max Krimmer,Dogpatch
-2017-09-28,blue,"Blue one move wonder start, bump left hand to a crimp and hold the swing, easy topout",crimp,overhang,natural,V8,Buck Yedor,Dogpatch
-2017-09-30,yellow,"Yellow lieback on a jug, do a rose move while upside-down to a pinch, reach over to a crimp, then swing over. Difficult mantel after the semi-knee bar, slabby topout.","pinch, crimp",overhang,natural,V8,Radu Popescu,Dogpatch
-2017-10-02,green,Green typical Max problem with dyno and mantle,sloper,face,comp,V7,Max Krimmer,Dogpatch
-2017-10-03,purple,"Purple arete, overhanging start, powerful move to a crimp, bump up to sloper, traverse left to slopers by toe hooking the sloper, reachy finish","crimp, sloper",arete,natural,V7,,Peak of Fremont
-2017-10-07,red,"Red dyno/deadpoint to a sloper, move onto crimps, dyno finish, grade was inflated to V9","sloper, crimp",overhang,dyno,V8,Art,Studio Climbing
-2017-10-09,black,"Black crimps, Advanced Route #1",crimp,overhang,natural,V7,,Metrorock Everette
-2017-10-21,black,Black arete on slopers,sloper,arete,natural,V7,,The Cliffs at LIC
-2017-10-28,purple,Purple rainbow rocket emulator,jug,face,comp,V8,Kessler,Studio Climbing
-2017-11-13,blue,"Blue throw to an arete, toe hook arete, big move to a jug, rose move through a pinch onto slopers",jug,arete,natural,V8,Cath,Planet Granite Belmont
-2017-11-16,green,Green pipes,"pinch, jug",cave,natural,V7,,Planet Granite Belmont
-2017-11-18,purple,"Purple slopers, super soft",sloper,overhang,natural,V8,Jonathan Wright,Dogpatch
-2017-11-19,orange,"Orange dyno to a jug, easy topout",jug,overhang,dyno,V5,Max Krimmer,Dogpatch
-2017-11-21,orange,Orange crimps,crimp,face,natural,V8,Chaj,Planet Granite Belmont
-2017-12-03,yellow,"Yellow Comp Problem, back wall, overhang",crimp,overhang,comp,V7,Woman Up,Dogpatch
-2017-12-08,black,"Black pinches on the mushroom, dyno into a sloper, mantle the topout",pinch,overhang,dyno,V7,Max Krimmer,Dogpatch
-2017-12-05,orange,"Orange crimps on back topout near the downclimb ladders, sketchy",crimp,slab,comp,V5,Buck Yedor,Dogpatch
-2017-12-10,green,Green crimps on the wave,crimp,face,natural,V8,Radu Popescu,Dogpatch
-2017-12-22,orange,"Orange run and jump to pinches, heel-hook dynamic move to a pinch, easy topout",pinch,face,comp,V7,Nilo Batle,Dogpatch
-2018-01-06,orange,"Orange volumes on the wave, no hands entire route",crimp,slab,natural,V6,,Dogpatch
-2018-01-13,pink,"Pink jugs to crimps, easy topout, Comp Problem # 50","jug, crimp",overhang,natural,V5,,Dogpatch
-2018-01-15,blue,Blue comp problem with a dyno and a crimp,crimp,overhang,natural,V8,Radu Popescu,Dogpatch
-2018-01-15,blue,"Blue crimps, easy intro, hard deadpoint finish",crimp,overhang,natural,V9,Justin Alarcon?,Dogpatch
-2018-01-17,purple,Purple grapes on the slab,crimp,slab,natural,V5,Radu Popescu,Dogpatch
-2018-01-20,green,"Green crimps, traverse left, difficult finish",crimp,face,natural,V6,,The Cliffs at LIC
-2018-01-28,blue,"Blue, two deadpoint moves on crimps underneath the arch, eases up on flakes to a finish jug","crimp, jug",overhang,natural,V8,Ari,Dogpatch
-2018-02-11,pink,"Pink crimps, rose move to an arete, then a tricky lockoff to a sloper crimp",crimp,face,natural,V10,Nilo Batle,Dogpatch
-2018-02-13,pink,"Pink crimps to jugs, full campus","crimp, jug",overhang,natural,V6,Max Krimmer,Dogpatch
-2018-02-24,purple,"Purple dyno to a jug, then up to a plate crimps, then top",jug,face,dyno,V6,Nick Noel,Dogpatch
-2018-02-27,yellow,Yellow step-up dyno eliminate,jug,face,comp,V5,Zak Grinstead,Dogpatch
-2018-03-03,blue,"Blue crimps on the cave, full campus",crimp,overhang,natural,V6,Sean Keehan,Dogpatch
-2018-03-09,black,"Black slopers, come out from under the roof, campus to another sloper, mantle around an arete on a pinch",sloper,cave,natural,V8,Zak Grinstead,Dogpatch
-2018-03-18,green,"Green so-ill slopers, easy beginning, sketchy top traverse",sloper,face,natural,V8,Zak Grinstead,Dogpatch
-2018-03-27,purple,Purple run and jump on pinches,pinch,slab,comp,V5,Nick Noel,Dogpatch
-2018-03-27,black,"Black pinches, dyno for jug at the end",pinch,face,dyno,V6,Ben Polanco,Dogpatch
-2018-04-09,green,Green everything,"crimp, pinch, sloper",overhang,natural,V7,Ben Polanco,Mission Cliffs
-2018-04-13,white,White comp dyno,sloper,face,comp,V8,EZ,Dogpatch
-2018-04-24,orange,"Orange dyno to sloper, arete",sloper,overhang,natural,V8,Nilo Batle,Dogpatch
-2018-04-26,green,Green Crimps,crimp,overhang,natural,V7,Nilo Batle,Mission Cliffs
-2018-05-15,yellow,Yellow slab dyno with crimp finish,jug,slab,dyno,V8,Nick Noel,Dogpatch
-2018-05-22,black,"Black sloper arete, cut free three times",sloper,arete,natural,V9,Nilo Batle,Dogpatch
-2018-05-31,purple,"Purple dyno to a crimp rail, then up the face of an arete, dyno finish",crimp,face,natural,V9,Zak Grinstead,Dogpatch
-2018-06-04,pink,"Pink comp dyno, easy finish",jug,face,comp,V8,Nick Noel,Dogpatch
-2018-06-09,blue,"Blue blocks, dynamic moves, dyno finish",jug,face,dyno,V8,Ezzy,Dogpatch
-2018-06-12,orange,"Orange pinches in the cave, crimp finish",pinch,cave,natural,V8,Morgan McGehee,Dogpatch
-2018-06-13,blue,Blue comp dyno,jug,cave,comp,V7,Nilo Batle,Dogpatch
-2018-06-17,green,Green jug haul on barrel,jug,overhang,natural,V8,Max Krimmer,Ironworks
-2018-07-11,pink,Pink triple dyno,sloper,face,comp,V7,Morgan McGehee,Dogpatch
-2018-07-22,blue,"Blue jugs, super inflated, nearly flashed",jug,face,natural,V8,,Peak of Fremont
-2018-07-31,yellow,"Yellow crimps, super inflated, first V8 flash",crimp,overhang,natural,V8,Morgan McGehee,Dogpatch
-2018-08-14,green,"Green crimps on the back wall, campus’ed the crimps",crimp,overhang,natural,V8,Kat Gentry,Dogpatch
-2018-08-21,green,"Green step up dyno to a sloper, had to two hand grab the finish hold",sloper,face,comp,V8,TCS,Ironworks
-2018-08-28,red,"Red undercling to two separate crimps, swing feet from left to right, crimp sloper pinch, dyno finish",crimp,overhang,natural,V10,Ben Polanco,Mission
-2018-09-30,green,"Green slopers, traverse left then right, can also skip holds on the arete",sloper,face,comp,V8,Nick Noel,Ironworks
-2018-10-05,pink,"Pink prow problem, lock off on right lip crimp, grab a left lip crimp, dynamic move to a sidepull, grab a gaston",crimp,overhang,natural,V9,EZ,Great Western
-2018-10-09,black,"Black start on sloper, grab a crimp, grab another crimp to prevent a swing, dyno to a donut, mantle to finish hold","crimp, sloper",overhang,natural,V9,Ski,Diablo Rock
-2018-10-28,purple,"Rainbow rocket emulator, step-up dyno",jug,face,comp,V8,Kessler,The Studio Climbing
-2018-11-02,pink,"Pink dyno to a sloper on the lip, back wall",sloper,overhang,natural,V9,Radu Popescu,Dogpatch
-2018-11-23,white,"White swinging jump dyno to an undercling on the left, pinch finish. “6 Minute Drill”","jug, pinch",face,comp,V6,Skilla,Earthtreks Rockville
-2018-11-23,pink,"Pink bat hang to a face climb on pinches, soft",pinch,overhang,natural,V7,Shane,Earthtreks Rockville
-2018-11-29,blue,"Blue swinging jump dyno to a jug, crimp finish, Women’s Comp Final #1","jug, crimp",overhang,comp,V7,Sean Nanos,Dogpatch
-2018-11-30,yellow,Yellow run and jump to pipes,jug,face,comp,V6,,Planet Granite Sunnyvale
-2018-12-16,orange,Orange run and jump to the right,pinch,face,comp,V6,Kessler,The Studio Climbing
-2018-12-19,blue,"Blue dynamic moves to a shelf, then a difficult mantle","crimp, sloper",overhang,dyno,V9,Radu Popescu,Dogpatch
-2019-01-04,green,"Green crimps to pinches, traverse left to finish hold","crimp, pinch",face,natural,V7,,Climb Central Manilla
-2019-01-12,white,"White dyno start, crimpy finish, on expansion overhang","crimp, sloper",overhang,dyno,V8,Kurt Jalapeno,Dogpatch
-2019-02-09,purple,"Purple comp dyno to the right, easy finish on jugs",jug,overhang,comp,V6,Kurt Jalapeno,Dogpatch
-2019-02-26,blue,Blue crimps on the wave,crimp,face,natural,V9,Morgan McGehee,Dogpatch
-2019-03-05,purple,Purple crimps in the back,crimp,slab,natural,V9,Nilo Batle,Dogpatch
-2019-03-06,purple,"Purple dyno to a jug, jump dyno to the left, easy finish",jug,face,comp,V7,Nick Noel,Dogpatch
-2018-04-09,purple,Purple comp dyno,sloper,face,comp,V8,,Diablo Rock
-2019-05-03,orange,Orange overhung pinches,pinch,overhang,natural,V9,Max Krimmer,Dogpatch
-2019-05-04,colorless,"Two dynos, followed by sketchy crimps",crimp,overhang,dyno,V9,James Shen,The Studio Climbing
-2019-05-10,white,"White undercling start, sideways dyno, followed by straight up dyno high off the ground",jug,overhang,natural,V9,Max Krimmer,Dogpatch
-2019-05-17,orange,Powerful orange pinches,pinch,overhang,natural,V10,Nilo Batle,Great Western
-2019-06-14,purple,Purple foot chips,crimp,slab,natural,V6,Nilo Batle,Dogpatch
-2019-06-18,red,"Red crimps, dyno to a jug",crimp,face,natural,V7,Colin Baxter Green,Diablo Rock
-2019-06-19,orange,"Orange pinches, double-clutch dyno to the left",pinch,overhang,dyno,V6,,Great Western
-2019-06-24,white,"White dyno start, crimpy finish, on the arch",crimp,overhang,dyno,V9,Max Krimmer,Dogpatch
-2019-07-21,purple,"Purple plate crimps, dyno to the right, hold the swing, Womxn Up Comp Problem # 58",crimp,overhang,natural,V7,,Dogpatch
-2019-07-21,blue,"Blue jump dyno to the left, sketchy topout, Womxn Up Comp Problem # 58",crimp,face,comp,V8,,Dogpatch
-2019-07-23,black,"Black pinches on 30 degree wall, dyno to the top, Womxn Up Comp Problem # 59",pinch,overhang,natural,V8,Zoey Grinstead,Dogpatch
-2019-08-12,orange,"Orange crimps and pinches, dynamic","crimp, pinch",overhang,natural,V11,,Dogpatch
-2019-09-28,black,"Black plate crimps, double dyno to the left",crimp,face,dyno,V6,,Berkeley Ironworks
-2019-10-23,orange,"Orange pinches, pogo dyno, easy mantle",pinch,overhang,dyno,V9,Kurt Jalapeno,Dogpatch
-2019-11-14,white,"White undercling start, left hand to a plate crimp, pogo to a double clutch, simple dyno to finish",crimp,overhang,comp,V7,EZ,Berkeley Ironworks
-2019-11-24,red,Red jump-and-catch double clutch dyno,jug,face,comp,V5,,Sportrock Alexandria
-2019-11-24,red,"Red crimps, traverse left, then straight up an arete, very difficult flash",crimp,face,natural,V6,Alex Brown,Sportrock Alexandria
-2019-11-24,purple,"Purple crimps, hulk-like right hand cross deadpoint to a crimp, traverse right on crimps",crimp,face,natural,V7,Alex Brown,Sportrock Alexandria
-2019-11-24,red,"Red jump across the mat onto a jug, pinchy, compression top, Male #2",pinch,overhang,comp,V6,,Sportrock Alexandria
-2019-11-29,green,"Green undercling to some crimps, traverse right on pinch blocks, desperate last two moves",pinch,face,natural,V8,Jeremiah D Cantrell,Sportrock Alexandria
-2019-12-15,red,"Red overhanging crimps, toe-hook two moves in",crimp,overhang,natural,V8,,Berkeley Ironworks
-2019-12-16,green,"Green jugs underneath roof, come out onto crimps, dyno for a jug, crimp traverse left to finish",crimp,overhang,natural,V8,Kurt Jalapeno,Diablo Rock
-2019-12-22,purple,"Purple crimps and pinches on a face, difficult traverse in the middle","crimp, pinch",face,natural,V7,Nolan,Mesa Rim Mission Valley
-2019-12-22,white,"White crimps, perch on bad foot to reach a far-left sidepull gaston",crimp,face,natural,V8,Leo,Mesa Rim Mission Valley
-2019-12-23,purple,"Purple big moves on  crimps, sketchy top way off the deck, pumpy and long","crimp, pinch",cave,natural,V7,,Grotto Climbing
-2020-01-07,green,"Green pinches, dynamic moves across an overhang",pinch,overhang,natural,V9,KSO,Berkeley Ironworks
-2020-01-14,yellow,"Yellow comp style pinches, huge windmill dyno to a sloper",pinch,arete,comp,V8,,Dogpatch
-2020-01-23,purple,"Purple compression roof, large power moves with cut feet","crimp, jug",cave,natural,V8,YIM,Dogpatch
-2020-01-25,white,"White left pogo to catch a crimp, grab a sloper, then traverse right to hold a barndoor using a gaston, desperate",crimp,face,natural,V8,,Berkeley Ironworks
-2020-01-28,blue,"Blue start underneath in the cave, big move out, compress on crimps",crimp,overhang,natural,V9,Morgan McGehee,Mission Cliffs
-2020-02-13,green,Green crimps along arete. Traverse left through a sloper to some crimps.,crimp,arete,natural,V8,Kris Vidal,Mission Cliffs
-2020-02-16,blue,"Blue start underneath a roof with a knee bar, reach out to sloper, big move to a sloper, crimp finish",sloper,overhang,natural,V9,,Planet Granite Santa Clara
-2020-02-18,blue,"Blue compression problem in overhang section of on back topout, big move to the lip, campus, then easy mantle finish",crimp,overhang,natural,V9,WWF,Dogpatch
-2020-02-27,black,"Black compression arete on slopers, balancey finish hold.",sloper,arete,natural,V8,JK,Ironworks
+date_,color,description,hold_type,wall_type,style,grade,setter,set_year,location,location_type
+2016-06-13,pink,Pink crimps,crimp,overhang,natural,V6-V7,Enrico,,Mesa Rim Mira Mesa,indoor
+2016-06-19,purple,"Purple crimps, easy",crimp,face,natural,V6-V7,Casey,,Mesa Rim Mission Valley,indoor
+2016-07-08,white,"White sloper, easy transition out of sloper",sloper,face,natural,V6-V7,Casey,,Mesa Rim Mission Valley,indoor
+2016-07-11,pink,"Pink corner, hard first move, easy rest of it",crimp,corner,natural,V6-V7,Enrico,,Mesa Rim Mission Valley,indoor
+2016-07-24,yellow,Yellow Mushrooms,jug,cave,natural,V6-V7,Enrico,,Mesa Rim Mission Valley,indoor
+2016-08-06,black,"Black mantle, one-move wonder",jug,face,mantle,V6-V7,Enrico,,Mesa Rim Mission Valley,indoor
+2016-08-14,green,"Green, easy start, hard finish","crimp, pinch",face,natural,V6-V7,Leo,,Mesa Rim Mission Valley,indoor
+2016-08-20,yellow,"Yellow crimps, dyno finish",crimp,face,natural,V6-V7,Enrico,,Mesa Rim Mission Valley,indoor
+2016-08-21,brown,"Brown crimps, sloper finish","crimp, sloper",face,natural,V6-V7,Chris,,Mesa Rim Mission Valley,indoor
+2016-08-22,green,"Green pinches, then slopers","pinch, sloper",face,natural,V6-V7,Chris,,Mesa Rim Mission Valley,indoor
+2016-08-28,yellow,Yellow zigzag crossover,crimp,face,natural,V6-V7,Chris,,Mesa Rim Mission Valley,indoor
+2016-09-04,green,"Green, upside-down",jug,overhang,comp,V6-V7,Leo,,Mesa Rim Mission Valley,indoor
+2016-09-15,pink,"Pink, natural",crimp,face,natural,V6-V7,Casey,,Mesa Rim Mission Valley,indoor
+2016-09-24,yellow,"Yellow, sloper then crimps","crimp, pinch, sloper",face,natural,V6-V7,Enrico,,Mesa Rim Mission Valley,indoor
+2016-09-24,black,"Black, Jug followed by crimps","jug, crimp",face,natural,V6-V7,Chris,,Mesa Rim Mission Valley,indoor
+2016-09-26,blue,Blue heel-hook start,crimp,overhang,natural,V6-V7,Curtis,,Mesa Rim Mission Valley,indoor
+2016-10-17,green,Green slopers,sloper,face,natural,V6-V7,Chris,,Mesa Rim Mira Mesa,indoor
+2016-10-30,black,Black Sloper Crimps,crimp,slab,natural,V7-V8,Chris,,Mesa Rim Mission Valley,indoor
+2016-11-08,white,"White holds, pentagon start",crimp,face,natural,V6-V7,Casey,,Mesa Rim Mira Mesa,indoor
+2016-11-11,blue,Blue roof then balance.,crimp,overhang,natural,V6,,,Mission Cliffs,indoor
+2016-11-14,pink,Pink pinches,pinch,face,natural,V5,Leo,,Mesa Rim Mission Valley,indoor
+2016-11-29,green,Green crimps deadpoint finish,crimp,overhang,natural,V6-V7,Aron,,Mesa Rim Mission Valley,indoor
+2016-12-02,brown,"Brown sit start, sloper finish, natural",sloper,face,natural,V6-V7,Nick,,Mesa Rim Mission Valley,indoor
+2016-12-05,pink,"Pink crimps, traverse deadpoint traverse dyno","crimp, pinch",face,natural,V7-V8,Casey,,Mesa Rim Mira Mesa,indoor
+2016-12-22,yellow,"Yellow Flakes, two traverses",crimp,face,natural,V6,Ben Polanco,,Dogpatch,indoor
+2017-01-18,purple,"Purple Sloper Dyno Start, Mantel finish","sloper, jug",variable,dyno,V6,Radu Popescu,,Dogpatch,indoor
+2017-01-26,pink,"Pink corner back wall, swinging move",sloper,face,natural,V6,,,Dogpatch,indoor
+2017-01-30,orange,Orange overhanging,pinch,overhang,natural,V6,Sean Nanos,,Dogpatch,indoor
+2017-01-30,blue,"Blue crimps overhanging, toehook roof",crimp,overhang,natural,V6,,,Dogpatch,indoor
+2017-02-01,pink,Pink piano move,sloper,variable,natural,V6,Ben-BD,,Dogpatch,indoor
+2017-02-03,orange,"Orange crimps, balancey traverse left",crimp,face,natural,V5,Sean Nanos,,Dogpatch,indoor
+2017-02-04,blue,"Blue juggy roof, followed by crimps, first flash",jug,overhang,natural,V6,Hiro,,Dogpatch,indoor
+2017-02-05,yellow,Yellow Slab,crimp,slab,natural,V6,Ben-BD,,Dogpatch,indoor
+2017-02-08,red,"Red throw up to sidepull, then gaston to right",crimp,slab,natural,V7,Sean Nanos,,Dogpatch,indoor
+2017-02-09,red,"Red high right foot, sidepull top.",crimp,face,natural,V6,Radu Popescu,,Dogpatch,indoor
+2017-02-10,green,Green slab traverse on crimps,crimp,slab,natural,V5,Radu Popescu,,Dogpatch,indoor
+2017-02-13,blue,Blue crimps on slab,crimp,slab,natural,V6,Jonathan Wright,,Dogpatch,indoor
+2017-02-14,blue,"Blue high undercling start, slab finish",crimp,slab,natural,V6,Ben-BD,,Dogpatch,indoor
+2017-02-15,blue,Blue dyno comp problem,jug,overhang,comp,V6,Radu Popescu,,Dogpatch,indoor
+2017-02-15,blue,Blue dyno comp problem,jug,overhang,mantle,V6,Radu Popescu,,Dogpatch,indoor
+2017-02-18,yellow,Yellow Crimp Double Traverse,crimp,face,natural,V6,Zak Grinstead,,Dogpatch,indoor
+2017-02-18,pink,Pink Sloper Dyno,sloper,face,dyno,V6,Jonathan Wright,,Dogpatch,indoor
+2017-02-19,blue,"Blue Dropknee Start, Slab finish on slopers",sloper,slab,natural,V6,Hiro,,Dogpatch,indoor
+2017-02-20,black,Black Sloper Dynos,sloper,face,dyno,V6,Jonathan Wright,,Dogpatch,indoor
+2017-02-20,blue,Blue Traverse Wall,crimp,face,mantle,V6,Hiro,,Dogpatch,indoor
+2017-02-20,orange,"Orange Arete, Undercling start",crimp,arete,natural,V6,Colin Baxter Green,,Dogpatch,indoor
+2017-02-21,orange,Orange overhanging crimps on volumes,crimp,overhang,natural,V7,Morgan McGehee,,Dogpatch,indoor
+2017-02-26,green,"Green slopers, finish on arete",sloper,arete,natural,V6,,,Ironworks,indoor
+2017-02-26,white,"White crimps, traverse finish",crimp,face,natural,V7,,,Ironworks,indoor
+2017-02-27,green,"Green Comp Problem dyno start, balancey finish",crimp,face,comp,V7,Radu Popescu,,Dogpatch,indoor
+2017-02-28,yellow,Yellow rose move,crimp,cave,natural,V6,Jeremy Ho,,Dogpatch,indoor
+2017-02-28,white,White Mirror Ape Traverse,"sloper, crimp",overhang,dyno,V7,Led Zep,,Dogpatch,indoor
+2017-03-02,black,Black Crimps Reachy Moves,crimp,overhang,natural,V7,Sean Nanos,,Dogpatch,indoor
+2017-03-07,blue,Blue hanging traverse start,crimp,overhang,natural,V6,Morgan McGehee,,Dogpatch,indoor
+2017-03-07,green,Green crimps,crimp,face,natural,V6,Hiro,,Dogpatch,indoor
+2017-03-07,pink,Pink cave traverse,jug,cave,natural,V6,Ben Polanco,,Dogpatch,indoor
+2017-03-07,blue,"Blue Crimps, shitty finish",crimp,face,natural,V6,LM,,Dogpatch,indoor
+2017-03-07,red,"Red crimps, can toehook crimp start hold",crimp,face,natural,V6,Ben-BD,,Dogpatch,indoor
+2017-03-10,blue,"Blue undercling volume start, crimpy finish",crimp,face,natural,V6,SFG,,Dogpatch,indoor
+2017-03-10,yellow,"Yellow straight dyno, then sideways dyno",jug,cave,dyno,V6,Hiro,,Dogpatch,indoor
+2017-03-10,green,"Green crimps, second flash",crimp,face,natural,V6,Buck Yedor,,Dogpatch,indoor
+2017-03-13,white,"White arete, slab finish",crimp,arete,natural,V6,Zak Grinstead,,Dogpatch,indoor
+2017-03-14,pink,Pink jugs similar to outdoor climbing,sloper,face,natural,V7,Hiro,,Dogpatch,indoor
+2017-03-15,blue,"Blue Arete Comp Problem, Cave Start, Roof Finish","crimp, sloper",cave,comp,V6,Radu Popescu,,Dogpatch,indoor
+2017-03-15,purple,"Purple Sloper Mantle around Arete, Crimp finish",sloper,arete,natural,V6,LM,,Dogpatch,indoor
+2017-03-15,yellow,"Yellow traverse to a sideways dyno, short arete onto a sloper, finish out right on crimps",sloper,arete,natural,V7,Ben-BD,,Dogpatch,indoor
+2017-03-17,black,"Black Overhanging Crimps, powerful throw from an undercling, traverse to finish",crimp,overhang,natural,V6,Radu Popescu,,Dogpatch,indoor
+2017-03-28,yellow,"Yellow Crimps, Finish on some jugs",crimp,cave,dyno,V6,Craig,,Dogpatch,indoor
+2017-03-28,blue,"Black Dyno Start, Finish on roofs",jug,overhang,dyno,V6,Sean Nanos,,Dogpatch,indoor
+2017-10-15,green,"Green overhanging sidepull start, crimpy finish, flash",crimp,overhang,natural,V6,Buck Yedor,,Dogpatch,indoor
+2017-04-04,black,"Black Sidepull Foot Dyno, Sloper Finish",sloper,face,dyno,V7,LM,,Dogpatch,indoor
+2017-04-04,orange,Orange arete crimps,crimp,arete,natural,V6,Hiro,,Dogpatch,indoor
+2017-04-07,orange,"Orange corner back wall, swinging move","crimp, pinch",overhang,natural,V8,Zack-ZD,,Dogpatch,indoor
+2017-04-08,purple,"Purple Arete, traverse start, powerful move to a sidepull, traverse to slopers, crimp finish","sloper, crimp",face,natural,V7,Radu Popescu,,Dogpatch,indoor
+2017-04-10,purple,Purple overhanging crimps,crimp,overhang,natural,V6,Zak Grinstead,,Dogpatch,indoor
+2017-04-11,white,"White overhanging crimps, reachy moves",crimp,overhang,natural,V7,Zak Grinstead,,Dogpatch,indoor
+2017-04-11,white,White bat hang on crimps,crimp,overhang,dyno,V6,Morgan McGehee,,Dogpatch,indoor
+2017-04-13,blue,"Blue powerful sidepulls, sketchy mantle",sloper,overhang,natural,V6,Ski,,Dogpatch,indoor
+2017-04-13,orange,Orange sloper arete,sloper,arete,natural,V6,Eric Sanchez,,Dogpatch,indoor
+2017-04-13,yellow,Yellow crimp arete (hard),crimp,arete,natural,V7,Colin Baxter Green,,Dogpatch,indoor
+2017-04-13,green,"Green arete, throw to a sloper, cut feet, label said V9 but was super soft",sloper,face,dyno,V7,Ben Polanco,,Dogpatch,indoor
+2017-04-16,red,Red crimps and pinches on the back flat wall,crimp,overhang,natural,V8,Zak Grinstead,,Dogpatch,indoor
+2017-04-17,blue,"Blue crimp dyno to an undercling, crimp finish",crimp,face,natural,V7,Sean Nanos,,Dogpatch,indoor
+2017-04-18,purple,"Purple crimps, heel hook starting crimp, left hand into another crimp, dyno to topout",crimp,face,natural,V5,Joshua-Ski,,Dogpatch,indoor
+2017-04-26,green,"Green start on sidepulls, dyno to a jug, crimpy finish","crimp, jug",overhang,dyno,V5,Radu Popescu,,Dogpatch,indoor
+2017-04-28,green,"Green so-ill slopers, traverse right",sloper,slab,natural,V6,Zak Grinstead,,Dogpatch,indoor
+2017-05-02,purple,"Purple dragon ball holds, mantle",sloper,face,mantle,V5,LM,,Dogpatch,indoor
+2017-05-02,white,"White crimps on the front arch, soft, finished in 12 seconds",crimp,overhang,natural,V6,Ben-BD,,Dogpatch,indoor
+2017-05-03,black,Easy black comp problem with large sloper volumes (misgraded as V8),sloper,overhang,comp,V6,Radu Popescu,,Dogpatch,indoor
+2017-05-09,purple,Purple three dynos in a row,jug,face,dyno,V7,Sean Nanos,,Dogpatch,indoor
+2017-05-13,white,White sidepull on slopers,sloper,slab,natural,V6,Justin Alarcon,,Dogpatch,indoor
+2017-05-13,orange,Orange pinches to crimps,"pinch, crimp",face,natural,V6,Zak Grinstead,,Dogpatch,indoor
+2017-05-18,yellow,"Yellow volumes, mantle onto first volume, push on a ceiling, dyno to the top",jug,face,mantle,V6,Sean Nanos,,Dogpatch,indoor
+2017-05-19,orange,Orange pinches all the way,pinch,overhang,natural,V8,Ben Polanco,,Dogpatch,indoor
+2017-05-19,red,"Red cave dyno, slopers at the lip","jug, sloper, crimp",cave,dyno,V8,Sean Nanos,,Dogpatch,indoor
+2017-05-22,purple,"Purple Sideways Dyno, then dyno finish",jug,overhang,dyno,V7,Zak Grinstead,,Dogpatch,indoor
+2017-05-31,yellow,Yellow jugs on the low roof,jug,cave,natural,V5,Hiro,,Dogpatch,indoor
+2017-06-01,yellow,"Yellow arete in Mission Cliffs, big reaches, big holds",jug,arete,natural,V7,LM,,Mission Cliffs,indoor
+2017-06-02,red,"Red, traverse around arete, two opposing sidepulls",crimp,face,natural,V7,LM,,Dogpatch,indoor
+2017-06-05,black,"Black balancey moves, double clutch finish",sloper,face,comp,V8,Radu Popescu,,Dogpatch,indoor
+2017-06-07,orange,"Orange dyno to a jug, then bathang, traverse underneath, crimp and pinch finish",sloper,cave,dyno,V7,Sean Nanos,,Dogpatch,indoor
+2017-06-12,blue,"Blue crimpy, balancey start to a sloper, undercling dyno to the top, kid's wall",crimp,slab,natural,V7,Zak Grinstead,,Dogpatch,indoor
+2017-06-13,yellow,"Yellow traverse to arete, bicycle a pinch, then dyno finish from a sidepull",crimp,slab,natural,V7,Ben-BD,,Dogpatch,indoor
+2017-06-13,yellow,Yellow run and jump,jug,slab,dyno,V7,Clinic,,Dogpatch,indoor
+2017-06-21,white,"White traverse right, then traverse left, campus on crimps",crimp,face,natural,V7,Max Krimmer,,Ironworks,indoor
+2017-07-17,orange,"Orange run and jump, comp problem 58",jug,face,comp,V7,Woman Up,,Dogpatch,indoor
+2017-07-23,black,Black dyno to half crescent jug on the wave,"jug, sloper",face,dyno,V7,Max Krimmer,,Dogpatch,indoor
+2017-07-25,white,"White Comp Problem Number 61, dyno from an undercling, ",pinch,overhang,natural,V8,Woman Up,,Dogpatch,indoor
+2017-08-01,black,Black dyno to a half crescent sloper on the back wall,"jug, sloper",face,dyno,V7,Max Krimmer,,Dogpatch,indoor
+2017-08-09,pink,"Pink Comp Problem Number 52, Dynamic movements between jugs",jug,overhang,comp,V7,Woman Up,,Dogpatch,indoor
+2017-08-16,green,"Green Zak, two dynos to the top",sloper,overhang,dyno,V7,Zak Grinstead,,Dogpatch,indoor
+2017-08-18,green,"Green Comp Problem Number 56, So-Ill bubbles",sloper,face,comp,V7,Woman Up,,Dogpatch,indoor
+2017-08-20,pink,"Pink deadpoint to a right hand sloper, reachy left hand before top out",sloper,face,natural,V7,Max Krimmer,,Dogpatch,indoor
+2017-08-20,orange,"Orange Comp Problem Number 54, Jug start, left hand crimp to a hand jam, then crimps up. First V7 flash",crimp,face,comp,V7,Woman Up,,Dogpatch,indoor
+2017-08-20,white,"White undercling start, dynamic move to a pinch, match on sloper, dynamic move to crimp, crimpy finish","crimp, pinch",overhang,natural,V9,Morgan McGehee,,Dogpatch,indoor
+2017-08-22,yellow,Yellow Comp Final #1,sloper,slab,comp,V7,Woman Up,,Dogpatch,indoor
+2017-08-27,pink,"Pink crimps, knee bar through intro, then crimpy finish","crimp, pinch, sloper",overhang,natural,V8,Sean Nanos,,Dogpatch,indoor
+2017-08-27,yellow,"Yellow Comp Problem, Dyno Start, Mantel on a crimp to a sidepull jug","jug, crimp",face,dyno,V7,Radu Popescu,,Dogpatch,indoor
+2017-09-10,green,Green dyno onto two pipes,jug,overhang,dyno,V6,DC,,Cliffs of Id,indoor
+2017-09-12,orange,Orange overhanging dyno to a bad pinch,pinch,overhang,dyno,V8,Max Krimmer,,Dogpatch,indoor
+2017-09-13,green,Green overhanging traverse twice,jug,overhang,natural,V8,Ben Polanco,,Dogpatch,indoor
+2017-09-18,purple,Purple overhang crimp to pinch,"crimp, pinch",overhang,natural,V8,Mark Heal,,Dogpatch,indoor
+2017-09-18,orange,"Orange Comp Problem, do a sideways fall into a volume, then dyno from a crimp to a distant mushroom around the arete",jug,face,comp,V7,,,Dogpatch,indoor
+2017-09-21,purple,"Purple slopers with crimps behind them, face climbing","sloper, crimp",face,natural,V7,Colin Baxter Green,,Dogpatch,indoor
+2017-09-26,green,Light Green Roof Comp Problem,jug,cave,natural,V7,Woman Up,,Dogpatch,indoor
+2017-09-26,pink,"Pink face climb, dyno to an undercling sidepull, then some jugs, then a dyno finish","sloper, pinch",face,dyno,V7,Zak Grinstead,,Dogpatch,indoor
+2017-09-26,green,"Dark Green Roof Problem, good holds all the way through, finish on some crimps","jug, crimp",cave,natural,V7,Max Krimmer,,Dogpatch,indoor
+2017-09-27,pink,"Pink two dynos, mantle to the right for topout",jug,overhang,dyno,V7,Max Krimmer,,Dogpatch,indoor
+2017-09-28,yellow,Soft yellow crimp ladder on the mushroom,crimp,overhang,natural,V7,Max Krimmer,,Dogpatch,indoor
+2017-09-28,blue,"Blue one move wonder start, bump left hand to a crimp and hold the swing, easy topout",crimp,overhang,natural,V8,Buck Yedor,,Dogpatch,indoor
+2017-09-30,yellow,"Yellow lieback on a jug, do a rose move while upside-down to a pinch, reach over to a crimp, then swing over. Difficult mantel after the semi-knee bar, slabby topout.","pinch, crimp",overhang,natural,V8,Radu Popescu,,Dogpatch,indoor
+2017-10-02,green,Green typical Max problem with dyno and mantle,sloper,face,comp,V7,Max Krimmer,,Dogpatch,indoor
+2017-10-03,purple,"Purple arete, overhanging start, powerful move to a crimp, bump up to sloper, traverse left to slopers by toe hooking the sloper, reachy finish","crimp, sloper",arete,natural,V7,,,Peak of Fremont,indoor
+2017-10-07,red,"Red dyno/deadpoint to a sloper, move onto crimps, dyno finish, grade was inflated to V9","sloper, crimp",overhang,dyno,V8,Art,,Studio Climbing,indoor
+2017-10-09,black,"Black crimps, Advanced Route #1",crimp,overhang,natural,V7,,,Metrorock Everette,indoor
+2017-10-21,black,Black arete on slopers,sloper,arete,natural,V7,,,The Cliffs at LIC,indoor
+2017-10-28,purple,Purple rainbow rocket emulator,jug,face,comp,V8,Kessler,,Studio Climbing,indoor
+2017-11-13,blue,"Blue throw to an arete, toe hook arete, big move to a jug, rose move through a pinch onto slopers",jug,arete,natural,V8,Cath,,Planet Granite Belmont,indoor
+2017-11-16,green,Green pipes,"pinch, jug",cave,natural,V7,,,Planet Granite Belmont,indoor
+2017-11-18,purple,"Purple slopers, super soft",sloper,overhang,natural,V8,Jonathan Wright,,Dogpatch,indoor
+2017-11-19,orange,"Orange dyno to a jug, easy topout",jug,overhang,dyno,V5,Max Krimmer,,Dogpatch,indoor
+2017-11-21,orange,Orange crimps,crimp,face,natural,V8,Chaj,,Planet Granite Belmont,indoor
+2017-12-03,yellow,"Yellow Comp Problem, back wall, overhang",crimp,overhang,comp,V7,Woman Up,,Dogpatch,indoor
+2017-12-08,black,"Black pinches on the mushroom, dyno into a sloper, mantle the topout",pinch,overhang,dyno,V7,Max Krimmer,,Dogpatch,indoor
+2017-12-05,orange,"Orange crimps on back topout near the downclimb ladders, sketchy",crimp,slab,comp,V5,Buck Yedor,,Dogpatch,indoor
+2017-12-10,green,Green crimps on the wave,crimp,face,natural,V8,Radu Popescu,,Dogpatch,indoor
+2017-12-22,orange,"Orange run and jump to pinches, heel-hook dynamic move to a pinch, easy topout",pinch,face,comp,V7,Nilo Batle,,Dogpatch,indoor
+2018-01-06,orange,"Orange volumes on the wave, no hands entire route",crimp,slab,natural,V6,,,Dogpatch,indoor
+2018-01-13,pink,"Pink jugs to crimps, easy topout, Comp Problem # 50","jug, crimp",overhang,natural,V5,,,Dogpatch,indoor
+2018-01-15,blue,Blue comp problem with a dyno and a crimp,crimp,overhang,natural,V8,Radu Popescu,,Dogpatch,indoor
+2018-01-15,blue,"Blue crimps, easy intro, hard deadpoint finish",crimp,overhang,natural,V9,Justin Alarcon?,,Dogpatch,indoor
+2018-01-17,purple,Purple grapes on the slab,crimp,slab,natural,V5,Radu Popescu,,Dogpatch,indoor
+2018-01-20,green,"Green crimps, traverse left, difficult finish",crimp,face,natural,V6,,,The Cliffs at LIC,indoor
+2018-01-28,blue,"Blue, two deadpoint moves on crimps underneath the arch, eases up on flakes to a finish jug","crimp, jug",overhang,natural,V8,Ari,,Dogpatch,indoor
+2018-02-11,pink,"Pink crimps, rose move to an arete, then a tricky lockoff to a sloper crimp",crimp,face,natural,V10,Nilo Batle,,Dogpatch,indoor
+2018-02-13,pink,"Pink crimps to jugs, full campus","crimp, jug",overhang,natural,V6,Max Krimmer,,Dogpatch,indoor
+2018-02-24,purple,"Purple dyno to a jug, then up to a plate crimps, then top",jug,face,dyno,V6,Nick Noel,,Dogpatch,indoor
+2018-02-27,yellow,Yellow step-up dyno eliminate,jug,face,comp,V5,Zak Grinstead,,Dogpatch,indoor
+2018-03-03,blue,"Blue crimps on the cave, full campus",crimp,overhang,natural,V6,Sean Keehan,,Dogpatch,indoor
+2018-03-09,black,"Black slopers, come out from under the roof, campus to another sloper, mantle around an arete on a pinch",sloper,cave,natural,V8,Zak Grinstead,,Dogpatch,indoor
+2018-03-18,green,"Green so-ill slopers, easy beginning, sketchy top traverse",sloper,face,natural,V8,Zak Grinstead,,Dogpatch,indoor
+2018-03-27,purple,Purple run and jump on pinches,pinch,slab,comp,V5,Nick Noel,,Dogpatch,indoor
+2018-03-27,black,"Black pinches, dyno for jug at the end",pinch,face,dyno,V6,Ben Polanco,,Dogpatch,indoor
+2018-04-09,green,Green everything,"crimp, pinch, sloper",overhang,natural,V7,Ben Polanco,,Mission Cliffs,indoor
+2018-04-13,white,White comp dyno,sloper,face,comp,V8,EZ,,Dogpatch,indoor
+2018-04-24,orange,"Orange dyno to sloper, arete",sloper,overhang,natural,V8,Nilo Batle,,Dogpatch,indoor
+2018-04-26,green,Green Crimps,crimp,overhang,natural,V7,Nilo Batle,,Mission Cliffs,indoor
+2018-05-15,yellow,Yellow slab dyno with crimp finish,jug,slab,dyno,V8,Nick Noel,,Dogpatch,indoor
+2018-05-22,black,"Black sloper arete, cut free three times",sloper,arete,natural,V9,Nilo Batle,,Dogpatch,indoor
+2018-05-31,purple,"Purple dyno to a crimp rail, then up the face of an arete, dyno finish",crimp,face,natural,V9,Zak Grinstead,,Dogpatch,indoor
+2018-06-04,pink,"Pink comp dyno, easy finish",jug,face,comp,V8,Nick Noel,,Dogpatch,indoor
+2018-06-09,blue,"Blue blocks, dynamic moves, dyno finish",jug,face,dyno,V8,Ezzy,,Dogpatch,indoor
+2018-06-12,orange,"Orange pinches in the cave, crimp finish",pinch,cave,natural,V8,Morgan McGehee,,Dogpatch,indoor
+2018-06-13,blue,Blue comp dyno,jug,cave,comp,V7,Nilo Batle,,Dogpatch,indoor
+2018-06-17,green,Green jug haul on barrel,jug,overhang,natural,V8,Max Krimmer,,Ironworks,indoor
+2018-07-11,pink,Pink triple dyno,sloper,face,comp,V7,Morgan McGehee,,Dogpatch,indoor
+2018-07-22,blue,"Blue jugs, super inflated, nearly flashed",jug,face,natural,V8,,,Peak of Fremont,indoor
+2018-07-31,yellow,"Yellow crimps, super inflated, first V8 flash",crimp,overhang,natural,V8,Morgan McGehee,,Dogpatch,indoor
+2018-08-14,green,"Green crimps on the back wall, campus’ed the crimps",crimp,overhang,natural,V8,Kat Gentry,,Dogpatch,indoor
+2018-08-21,green,"Green step up dyno to a sloper, had to two hand grab the finish hold",sloper,face,comp,V8,TCS,,Ironworks,indoor
+2018-08-28,red,"Red undercling to two separate crimps, swing feet from left to right, crimp sloper pinch, dyno finish",crimp,overhang,natural,V10,Ben Polanco,,Mission,indoor
+2018-09-30,green,"Green slopers, traverse left then right, can also skip holds on the arete",sloper,face,comp,V8,Nick Noel,,Ironworks,indoor
+2018-10-05,pink,"Pink prow problem, lock off on right lip crimp, grab a left lip crimp, dynamic move to a sidepull, grab a gaston",crimp,overhang,natural,V9,EZ,,Great Western,indoor
+2018-10-09,black,"Black start on sloper, grab a crimp, grab another crimp to prevent a swing, dyno to a donut, mantle to finish hold","crimp, sloper",overhang,natural,V9,Ski,,Diablo Rock,indoor
+2018-10-28,purple,"Rainbow rocket emulator, step-up dyno",jug,face,comp,V8,Kessler,,The Studio Climbing,indoor
+2018-11-02,pink,"Pink dyno to a sloper on the lip, back wall",sloper,overhang,natural,V9,Radu Popescu,,Dogpatch,indoor
+2018-11-23,white,"White swinging jump dyno to an undercling on the left, pinch finish. “6 Minute Drill”","jug, pinch",face,comp,V6,Skilla,,Earthtreks Rockville,indoor
+2018-11-23,pink,"Pink bat hang to a face climb on pinches, soft",pinch,overhang,natural,V7,Shane,,Earthtreks Rockville,indoor
+2018-11-29,blue,"Blue swinging jump dyno to a jug, crimp finish, Women’s Comp Final #1","jug, crimp",overhang,comp,V7,Sean Nanos,,Dogpatch,indoor
+2018-11-30,yellow,Yellow run and jump to pipes,jug,face,comp,V6,,,Planet Granite Sunnyvale,indoor
+2018-12-16,orange,Orange run and jump to the right,pinch,face,comp,V6,Kessler,,The Studio Climbing,indoor
+2018-12-19,blue,"Blue dynamic moves to a shelf, then a difficult mantle","crimp, sloper",overhang,dyno,V9,Radu Popescu,,Dogpatch,indoor
+2019-01-04,green,"Green crimps to pinches, traverse left to finish hold","crimp, pinch",face,natural,V7,,,Climb Central Manilla,indoor
+2019-01-12,white,"White dyno start, crimpy finish, on expansion overhang","crimp, sloper",overhang,dyno,V8,Kurt Jalapeno,,Dogpatch,indoor
+2019-02-09,purple,"Purple comp dyno to the right, easy finish on jugs",jug,overhang,comp,V6,Kurt Jalapeno,,Dogpatch,indoor
+2019-02-26,blue,Blue crimps on the wave,crimp,face,natural,V9,Morgan McGehee,,Dogpatch,indoor
+2019-03-05,purple,Purple crimps in the back,crimp,slab,natural,V9,Nilo Batle,,Dogpatch,indoor
+2019-03-06,purple,"Purple dyno to a jug, jump dyno to the left, easy finish",jug,face,comp,V7,Nick Noel,,Dogpatch,indoor
+2018-04-09,purple,Purple comp dyno,sloper,face,comp,V8,,,Diablo Rock,indoor
+2019-05-03,orange,Orange overhung pinches,pinch,overhang,natural,V9,Max Krimmer,,Dogpatch,indoor
+2019-05-04,colorless,"Two dynos, followed by sketchy crimps",crimp,overhang,dyno,V9,James Shen,,The Studio Climbing,indoor
+2019-05-10,white,"White undercling start, sideways dyno, followed by straight up dyno high off the ground",jug,overhang,natural,V9,Max Krimmer,,Dogpatch,indoor
+2019-05-17,orange,Powerful orange pinches,pinch,overhang,natural,V10,Nilo Batle,,Great Western,indoor
+2019-06-14,purple,Purple foot chips,crimp,slab,natural,V6,Nilo Batle,,Dogpatch,indoor
+2019-06-18,red,"Red crimps, dyno to a jug",crimp,face,natural,V7,Colin Baxter Green,,Diablo Rock,indoor
+2019-06-19,orange,"Orange pinches, double-clutch dyno to the left",pinch,overhang,dyno,V6,,,Great Western,indoor
+2019-06-24,white,"White dyno start, crimpy finish, on the arch",crimp,overhang,dyno,V9,Max Krimmer,,Dogpatch,indoor
+2019-07-21,purple,"Purple plate crimps, dyno to the right, hold the swing, Womxn Up Comp Problem # 58",crimp,overhang,natural,V7,,,Dogpatch,indoor
+2019-07-21,blue,"Blue jump dyno to the left, sketchy topout, Womxn Up Comp Problem # 58",crimp,face,comp,V8,,,Dogpatch,indoor
+2019-07-23,black,"Black pinches on 30 degree wall, dyno to the top, Womxn Up Comp Problem # 59",pinch,overhang,natural,V8,Zoey Grinstead,,Dogpatch,indoor
+2019-08-12,orange,"Orange crimps and pinches, dynamic","crimp, pinch",overhang,natural,V11,,,Dogpatch,indoor
+2019-09-28,black,"Black plate crimps, double dyno to the left",crimp,face,dyno,V6,,,Berkeley Ironworks,indoor
+2019-10-23,orange,"Orange pinches, pogo dyno, easy mantle",pinch,overhang,dyno,V9,Kurt Jalapeno,,Dogpatch,indoor
+2019-11-14,white,"White undercling start, left hand to a plate crimp, pogo to a double clutch, simple dyno to finish",crimp,overhang,comp,V7,EZ,,Berkeley Ironworks,indoor
+2019-11-24,red,Red jump-and-catch double clutch dyno,jug,face,comp,V5,,,Sportrock Alexandria,indoor
+2019-11-24,red,"Red crimps, traverse left, then straight up an arete, very difficult flash",crimp,face,natural,V6,Alex Brown,,Sportrock Alexandria,indoor
+2019-11-24,purple,"Purple crimps, hulk-like right hand cross deadpoint to a crimp, traverse right on crimps",crimp,face,natural,V7,Alex Brown,,Sportrock Alexandria,indoor
+2019-11-24,red,"Red jump across the mat onto a jug, pinchy, compression top, Male #2",pinch,overhang,comp,V6,,,Sportrock Alexandria,indoor
+2019-11-29,green,"Green undercling to some crimps, traverse right on pinch blocks, desperate last two moves",pinch,face,natural,V8,Jeremiah D Cantrell,,Sportrock Alexandria,indoor
+2019-12-15,red,"Red overhanging crimps, toe-hook two moves in",crimp,overhang,natural,V8,,,Berkeley Ironworks,indoor
+2019-12-16,green,"Green jugs underneath roof, come out onto crimps, dyno for a jug, crimp traverse left to finish",crimp,overhang,natural,V8,Kurt Jalapeno,,Diablo Rock,indoor
+2019-12-22,purple,"Purple crimps and pinches on a face, difficult traverse in the middle","crimp, pinch",face,natural,V7,Nolan,,Mesa Rim Mission Valley,indoor
+2019-12-22,white,"White crimps, perch on bad foot to reach a far-left sidepull gaston",crimp,face,natural,V8,Leo,,Mesa Rim Mission Valley,indoor
+2019-12-23,purple,"Purple big moves on  crimps, sketchy top way off the deck, pumpy and long","crimp, pinch",cave,natural,V7,,,Grotto Climbing,indoor
+2020-01-07,green,"Green pinches, dynamic moves across an overhang",pinch,overhang,natural,V9,KSO,,Berkeley Ironworks,indoor
+2020-01-14,yellow,"Yellow comp style pinches, huge windmill dyno to a sloper",pinch,arete,comp,V8,,,Dogpatch,indoor
+2020-01-23,purple,"Purple compression roof, large power moves with cut feet","crimp, jug",cave,natural,V8,YIM,,Dogpatch,indoor
+2020-01-25,white,"White left pogo to catch a crimp, grab a sloper, then traverse right to hold a barndoor using a gaston, desperate",crimp,face,natural,V8,,,Berkeley Ironworks,indoor
+2020-01-28,blue,"Blue start underneath in the cave, big move out, compress on crimps",crimp,overhang,natural,V9,Morgan McGehee,,Mission Cliffs,indoor
+2020-02-13,green,Green crimps along arete. Traverse left through a sloper to some crimps.,crimp,arete,natural,V8,Kris Vidal,,Mission Cliffs,indoor
+2020-02-16,blue,"Blue start underneath a roof with a knee bar, reach out to sloper, big move to a sloper, crimp finish",sloper,overhang,natural,V9,,,Planet Granite Santa Clara,indoor
+2020-02-18,blue,"Blue compression problem in overhang section of on back topout, big move to the lip, campus, then easy mantle finish",crimp,overhang,natural,V9,WWF,,Dogpatch,indoor
+2020-02-27,black,"Black compression arete on slopers, balancey finish hold.",sloper,arete,natural,V8,JK,,Ironworks,indoor

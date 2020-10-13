@@ -7,3 +7,6 @@ pandasql==0.7.3
 plotly==3.10.0
 flask==1.1.1
 gunicorn==19.9.0
+cryptography==3.1.1
+configparser==5.0.0
+psycopg2==2.8.4

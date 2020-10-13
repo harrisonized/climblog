@@ -12,6 +12,7 @@ from apps.plotting.retrieve_fig import (retrieve_sends_by_date_scatter,
                                         retrieve_grades_by_wall_heatmap,
                                         retrieve_grades_by_hold_heatmap,
                                         retrieve_grades_by_style_heatmap)
+from apps.auth.connections import postgres_connection
 
 
 # Initialize the app
