@@ -1,4 +1,7 @@
-from flask import request, Response, send_file, render_template, Markup, Flask
+import os
+from flask import (Flask, request, Response,
+	               send_file, render_template,
+	               Markup)
 # from flask_bootstrap import Bootstrap
 from apps.dashboard.retrieve_fig import (retrieve_sends_by_date_scatter,
                                          retrieve_grades_histogram,
@@ -6,6 +9,10 @@ from apps.dashboard.retrieve_fig import (retrieve_sends_by_date_scatter,
                                          retrieve_grades_by_wall_heatmap,
                                          retrieve_grades_by_hold_heatmap,
                                          retrieve_grades_by_style_heatmap)
+
+real_path = os.path.realpath(__file__)
+dir_name = os.path.dirname(real_path)
+
 
 app = Flask(__name__)  # Initialize the app
 
@@ -15,7 +22,7 @@ app = Flask(__name__)  # Initialize the app
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template("index.html")
 
 
 @app.route("/indoor", methods=["POST", "GET"])
@@ -28,7 +35,7 @@ def indoor():
     style_div = retrieve_grades_by_style_heatmap('indoor')
 
     return render_template(
-        "figures.html",
+        "dashboard.html",
         scatter_div=Markup(scatter_div),
         histogram_div=Markup(histogram_div),
         year_div=Markup(year_div),
@@ -48,7 +55,7 @@ def outdoor():
     style_div = retrieve_grades_by_style_heatmap('outdoor')
 
     return render_template(
-        "figures.html",
+        "dashboard.html",
         scatter_div=Markup(scatter_div),
         histogram_div=Markup(histogram_div),
         year_div=Markup(year_div),
@@ -60,6 +67,8 @@ def outdoor():
 
 @app.route("/test", methods=["POST", "GET"])
 def test():
-    return render_template(
-        "figures.html",
+    scatter_div = retrieve_sends_by_date_scatter('outdoor')
+
+    return render_template("template.html",
+                           scatter_div=Markup(scatter_div),
     )
