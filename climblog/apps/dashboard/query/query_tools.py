@@ -1,16 +1,15 @@
 import pandasql as ps
 
+
 # Functions included in this file:
 # # execute_query_on_df
 
-def execute_query_on_df(query, dataframe,
-                        index_name=None, index_list=None,
-                        replace_grade=True):
-    df = ps.sqldf(query, locals())
 
-    # Replace grade
-    if replace_grade:
-        df['grade_'] = df['grade_'].apply(lambda x: x.replace('V', '')).astype(int)
+def execute_query_on_df(query, dataframe,
+                        index_name=None, index_list=None):
+    """Convenience function
+    """
+    df = ps.sqldf(query, locals())
 
     # Set index column
     if index_name:
