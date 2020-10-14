@@ -22,7 +22,7 @@ app = Flask(__name__)  # Initialize the app
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("home.html")
 
 
 @app.route("/indoor", methods=["POST", "GET"])
@@ -67,8 +67,9 @@ def outdoor():
 
 @app.route("/test", methods=["POST", "GET"])
 def test():
+
     scatter_div = retrieve_sends_by_date_scatter('outdoor')
 
-    return render_template("template.html",
+    return render_template("home.html",
                            scatter_div=Markup(scatter_div),
     )
