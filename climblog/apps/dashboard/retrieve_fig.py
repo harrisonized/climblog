@@ -1,6 +1,7 @@
 import os
 import json
 import plotly.offline as pyo
+from apps.config.config import get_defaults_from_ini
 from .get_data import (get_data_for_sends_by_date_scatter_from_csv,
                        get_data_for_sends_by_date_scatter_from_postgres,
                        get_data_for_grades_histogram_from_csv,
@@ -22,9 +23,11 @@ from .create_fig import (create_sends_by_date_scatter,
 from .plotting.plotly import export_fig_to_json
 from .math.curve_fit import curve_fit_new_grades
 
+
 # test settings
-to_save=True
-use_csv_backup=True
+default_settings = get_defaults_from_ini()
+to_export_fig = default_settings.getboolean('to_export_fig')
+use_csv_backup = default_settings.getboolean('use_csv_backup')
 
 
 # Functions included in this file:
@@ -44,7 +47,7 @@ If postgres is unavailable, use data from csv to create figures (backup)
 
 
 def retrieve_sends_by_date_scatter(location_type,
-                                   to_save=to_save, use_csv_backup=use_csv_backup):
+                                   to_export_fig=to_export_fig, use_csv_backup=use_csv_backup):
 
     fig_dir = f'tmp/figures/{location_type}'
     filename = 'sends-by-date'
@@ -66,7 +69,7 @@ def retrieve_sends_by_date_scatter(location_type,
         logistic_params = curve_fit_new_grades(grades_histogram_df)
         fig = create_sends_by_date_scatter(scatter_df, logistic_params)
 
-        if to_save:
+        if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
 
     div = pyo.plot(fig, output_type='div')  # div for fig
@@ -75,7 +78,7 @@ def retrieve_sends_by_date_scatter(location_type,
 
 
 def retrieve_grades_histogram(location_type,
-                              to_save=to_save, use_csv_backup=use_csv_backup):
+                              to_export_fig=to_export_fig, use_csv_backup=use_csv_backup):
 
     fig_dir = f'tmp/figures/{location_type}'
     filename = 'grades-histogram'
@@ -94,7 +97,7 @@ def retrieve_grades_histogram(location_type,
 
         fig = create_grades_histogram(grades_histogram_df)
 
-        if to_save:
+        if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
 
     div = pyo.plot(fig, output_type='div')  # div for fig
@@ -103,7 +106,7 @@ def retrieve_grades_histogram(location_type,
 
 
 def retrieve_grades_by_year_heatmap(location_type,
-                                    to_save=to_save, use_csv_backup=use_csv_backup):
+                                    to_export_fig=to_export_fig, use_csv_backup=use_csv_backup):
 
     fig_dir = f'tmp/figures/{location_type}'
     filename = 'grades-by-year'
@@ -122,7 +125,7 @@ def retrieve_grades_by_year_heatmap(location_type,
 
         fig = create_grades_by_year_heatmap(table_df, year_df)
 
-        if to_save:
+        if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
 
     div = pyo.plot(fig, output_type='div')  # div for fig
@@ -131,7 +134,7 @@ def retrieve_grades_by_year_heatmap(location_type,
 
 
 def retrieve_grades_by_wall_heatmap(location_type,
-                                    to_save=to_save, use_csv_backup=use_csv_backup):
+                                    to_export_fig=to_export_fig, use_csv_backup=use_csv_backup):
 
     fig_dir = f'tmp/figures/{location_type}'
     filename = 'grades-by-wall-type'
@@ -150,7 +153,7 @@ def retrieve_grades_by_wall_heatmap(location_type,
 
         fig = create_grades_by_wall_heatmap(table_df, wall_df)
 
-        if to_save:
+        if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
 
     div = pyo.plot(fig, output_type='div')  # div for fig
@@ -159,7 +162,7 @@ def retrieve_grades_by_wall_heatmap(location_type,
 
 
 def retrieve_grades_by_hold_heatmap(location_type,
-                                    to_save=to_save, use_csv_backup=use_csv_backup):
+                                    to_export_fig=to_export_fig, use_csv_backup=use_csv_backup):
 
     fig_dir = f'tmp/figures/{location_type}'
     filename = 'grades-by-hold-type'
@@ -178,7 +181,7 @@ def retrieve_grades_by_hold_heatmap(location_type,
 
         fig = create_grades_by_hold_heatmap(table_df, hold_df)
 
-        if to_save:
+        if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
 
     div = pyo.plot(fig, output_type='div')  # div for fig
@@ -187,7 +190,7 @@ def retrieve_grades_by_hold_heatmap(location_type,
 
 
 def retrieve_grades_by_style_heatmap(location_type,
-                                     to_save=to_save, use_csv_backup=use_csv_backup):
+                                     to_export_fig=to_export_fig, use_csv_backup=use_csv_backup):
 
     fig_dir = f'tmp/figures/{location_type}'
     filename = 'grades-by-style'
@@ -206,7 +209,7 @@ def retrieve_grades_by_style_heatmap(location_type,
 
         fig = create_grades_by_style_heatmap(table_df, style_df)
 
-        if to_save:
+        if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
 
     div = pyo.plot(fig, output_type='div')  # div for fig
