@@ -36,6 +36,7 @@ def indoor():
 
     return render_template(
         "dashboard.html",
+        location_type="Indoor",
         scatter_div=Markup(scatter_div),
         histogram_div=Markup(histogram_div),
         year_div=Markup(year_div),
@@ -56,20 +57,11 @@ def outdoor():
 
     return render_template(
         "dashboard.html",
+        location_type="Outdoor",
         scatter_div=Markup(scatter_div),
         histogram_div=Markup(histogram_div),
         year_div=Markup(year_div),
         wall_div=Markup(wall_div),
         hold_div=Markup(hold_div),
         style_div=Markup(style_div)
-    )
-
-
-@app.route("/test", methods=["POST", "GET"])
-def test():
-
-    scatter_div = retrieve_sends_by_date_scatter('outdoor')
-
-    return render_template("home.html",
-                           scatter_div=Markup(scatter_div),
     )

@@ -1,35 +1,79 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<!--
+    Dimension by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
     <head>
-        <title>Send Tracker</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="static/css/main.css">
+        <title>Harrison's Climbing App</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="static/html5up-dimension/assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="static/html5up-dimension/assets/css/noscript.css" /></noscript>
     </head>
-    <body>
-        <style>
-        body{
-        background-size: auto;
-        background-position: 95% 10%, 5% 10%;
-        /* background-position: right center, left center; */
-        background-size: 20%;
-        background-attachment: inherit;
-        background-repeat: no-repeat, no-repeat;
-        background-color: #e6e2e1;
-        }
-        </style>
-        <div style="text-align: center;">
-            <h1 class="headertext">Send Tracker</h1>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Header -->
+            <header id="header">
+                <div class="logo">
+                    <span class="icon fa-gem"></span>
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <h1>{{location_type}} Sends</h1>
+                        <p>Welcome to my send-tracker.</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#timeseries">Scatter</a></li>
+                        <li><a href="#histogram">Histogram</a></li>
+                        <li><a href="#heatmaps">Heatmaps</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- Main -->
+            <div id="main">
+                <!-- Timeseries -->
+                <article id="timeseries">
+                    <h2 class="major">Sends by Date</h2>
+                    {{scatter_div | safe}}
+                    <br>
+                </article>
+                <!-- Histogram -->
+                <article id="histogram">
+                    <h2 class="major">Grades Histogram</h2>
+                    {{histogram_div | safe}}
+                    <br>
+                </article>
+                <!-- Heatmaps -->
+                <article id="heatmaps">
+                    <h2 class="major">Heatmaps</h2>
+                    {{year_div | safe}}
+                    <br>
+                    {{wall_div | safe}}
+                    <br>
+                    {{hold_div | safe}}
+                    <br>
+                    {{style_div | safe}}
+                    <br>
+                </article>
+            </div>
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Harrison Wang. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            </footer>
         </div>
-        <center>
-        {{scatter_div | safe}}
-        {{histogram_div | safe}}
-        {{year_div | safe}}
-        {{wall_div | safe}}
-        {{hold_div | safe}}
-        {{style_div | safe}}
-        </center>
-        <script src="static/js/main.js"></script>
+        <!-- BG -->
+        <div id="bg"></div>
+        <!-- Scripts -->
+        <script src="static/html5up-dimension/assets/js/jquery.min.js"></script>
+        <script src="static/html5up-dimension/assets/js/browser.min.js"></script>
+        <script src="static/html5up-dimension/assets/js/breakpoints.min.js"></script>
+        <script src="static/html5up-dimension/assets/js/util.js"></script>
+        <script src="static/html5up-dimension/assets/js/main.js"></script>
         <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
     </body>
 </html>
