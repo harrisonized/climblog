@@ -6,13 +6,13 @@ Note that Heroku may take up to 30 seconds to come out of a sleeping website sta
 
 Here are some of the latest updates in reverse-chronological order:
 
-1. Improve the look and feel of the app. Fix bug in which javascript from HTML5UP and Plotly were interfering with each other. Fix bug in which iframe wasn't being displayed correctly on phone.
-2. Add logic to preferentially get data from Postgres database, then use the data from CSV files if Postgres is unavailable.
-3. Create Heroku Postgres database and swap out datasource from CSV files to newly created database
-4. Add an auth module to encrypt database URIs and unit test for database connections
-5. Add figure caching
+1. Generate routes dynamically
+2. Improve the look and feel of the app. Fix bug in which javascript from HTML5UP and Plotly were interfering with each other. Fix bug in which iframe wasn't being displayed correctly on phone.
+3. Add logic to preferentially get data from Postgres database, then use the data from CSV files if Postgres is unavailable.
+4. Create Heroku Postgres database and swap out datasource from CSV files to newly created database
+5. Add an auth module to encrypt database URIs and unit test for database connections
+6. Add figure caching
 
 Future goals for this project include:
 
-1. Generate routes dynamically
 2. Have figures generated in the background when the app is started for the first time
