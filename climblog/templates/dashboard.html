@@ -22,7 +22,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 </div>
                 <div class="content">
                     <div class="inner">
-                        <h1>{{location_type}} Sends</h1>
+                        <h1>{{ location_type.title }} Sends</h1>
                         <p>Welcome to my send-tracker.</p>
                     </div>
                 </div>
@@ -39,8 +39,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <!-- Timeseries -->
                 <article id="timeseries">
                     <h2 class="major">Sends by Date</h2>
-                    <div class="embed-responsive" id="scatter" name="scatter" style="width: 100%; height: 100%;">
-                        <iframe class="embed-responsive-item" src="/fig/{{location_type}}/scatter" style="width: 100%; height: 480px;" scrolling="no" frameborder="0" ></iframe>
+                    <div class="embed-responsive" id="timeseries" name="timeseries" style="width: 100%; height: 100%;">
+                        <iframe class="embed-responsive-item" src="/fig/{{ location_type.lower }}/timeseries" style="width: 100%; height: 480px;" scrolling="no" frameborder="0" ></iframe>
                     </div>
                     <br>
                 </article>
@@ -48,7 +48,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <article id="histogram">
                     <h2 class="major">Grades Histogram</h2>
                     <div class="embed-responsive" id="histogram" name="histogram" style="width: 100%; height: 100%;">
-                        <iframe class="embed-responsive-item" src="/fig/{{location_type}}/histogram" style="position: relative; width: 100%; height: 480px;" scrolling="no" frameborder="0" ></iframe>
+                        <iframe class="embed-responsive-item" src="/fig/{{ location_type.lower }}/histogram" style="position: relative; width: 100%; height: 480px;" scrolling="no" frameborder="0" ></iframe>
                     </div>
                     <br>
                 </article>
@@ -56,19 +56,19 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <article id="heatmaps">
                     <h2 class="major">Heatmaps</h2>
                     <div class="embed-responsive" id="year" name="year" style="width: 100%; height: 100%;">
-                        <iframe class="embed-responsive-item" src="/fig/{{location_type}}/year" style="position: relative; width: 100%; height: 480px;" scrolling="no" frameborder="0" ></iframe>
+                        <iframe class="embed-responsive-item" src="/fig/{{ location_type.lower }}/year" style="position: relative; width: 100%; height: 480px;" scrolling="no" frameborder="0" ></iframe>
                     </div>
                     <br>
                     <div class="embed-responsive" id="wall" name="wall" style="width: 100%; height: 100%;">
-                        <iframe class="embed-responsive-item" src="/fig/{{location_type}}/wall" style="position: relative; width: 100%; height: 480px;" scrolling="no" frameborder="0" ></iframe>
+                        <iframe class="embed-responsive-item" src="/fig/{{ location_type.lower }}/wall" style="position: relative; width: 100%; height: 480px;" scrolling="no" frameborder="0" ></iframe>
                     </div>
                     <br>
                     <div class="embed-responsive" id="hold" name="hold" style="width: 100%; height: 100%;">
-                        <iframe class="embed-responsive-item" src="/fig/{{location_type}}/hold" style="position: relative; width: 100%; height: 480px;" scrolling="no" frameborder="0" ></iframe>
+                        <iframe class="embed-responsive-item" src="/fig/{{ location_type.lower }}/hold" style="position: relative; width: 100%; height: 480px;" scrolling="no" frameborder="0" ></iframe>
                     </div>
                     <br>
                     <div class="embed-responsive" id="style" name="style" style="width: 100%; height: 100%;">
-                        <iframe class="embed-responsive-item" src="/fig/{{location_type}}/style" style="position: relative; width: 100%; height: 480px;" scrolling="no" frameborder="0" ></iframe>
+                        <iframe class="embed-responsive-item" src="/fig/{{ location_type.lower }}/style" style="position: relative; width: 100%; height: 480px;" scrolling="no" frameborder="0" ></iframe>
                     </div>
                     <br>
                 </article>

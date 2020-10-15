@@ -29,164 +29,171 @@ def home():
 
 @app.route("/indoor", methods=["GET"])
 def indoor():
+
+    location_type = {'title': 'Indoor',
+                     'lower': 'indoor',}
+
     return render_template(
         "dashboard.html",
-        location_type="Indoor",
+        location_type=location_type,
     )
 
 
 @app.route("/outdoor", methods=["GET"])
 def outdoor():
 
+    location_type = {'title': 'Outdoor',
+                     'lower': 'outdoor',}
+
     return render_template(
         "dashboard.html",
-        location_type="Outdoor",
+        location_type=location_type,
     )
 
 
-@app.route("/test", methods=["GET"])
-def test():
+# @app.route("/test", methods=["GET"])
+# def test():
 
-    scatter_div = retrieve_sends_by_date_scatter('indoor')
+#     scatter_div = retrieve_sends_by_date_scatter('indoor')
 
-    return render_template(
-        "test.html",
-        location_type='Indoor',
-        div=Markup(scatter_div)
-    )
+#     return render_template(
+#         "test.html",
+#         location_type='indoor',
+#         div=Markup(scatter_div)
+#     )
 
 
 """
 Figures
 """
 
-@app.route("/fig/Indoor/scatter", methods=["GET"])
-def indoor_scatter():
+@app.route("/fig/indoor/timeseries", methods=["GET"])
+def indoor_timeseries():
 
-    scatter_div = retrieve_sends_by_date_scatter('indoor')
+    div = retrieve_sends_by_date_scatter('indoor')
 
     return render_template(
         "fig.html",
-        div=Markup(scatter_div)
+        div=Markup(div)
     )
 
 
-@app.route("/fig/Indoor/histogram", methods=["GET"])
+@app.route("/fig/indoor/histogram", methods=["GET"])
 def indoor_histogram():
 
-    histogram_div = retrieve_grades_histogram('indoor')
+    div = retrieve_grades_histogram('indoor')
 
     return render_template(
         "fig.html",
-        div=Markup(histogram_div)
+        div=Markup(div)
     )
 
 
-@app.route("/fig/Indoor/year", methods=["GET"])
+@app.route("/fig/indoor/year", methods=["GET"])
 def indoor_year():
 
-    year_div = retrieve_grades_by_year_heatmap('indoor')
+    div = retrieve_grades_by_year_heatmap('indoor')
 
     return render_template(
         "fig.html",
-        div=Markup(year_div)
+        div=Markup(div)
     )
 
 
-@app.route("/fig/Indoor/wall", methods=["GET"])
+@app.route("/fig/indoor/wall", methods=["GET"])
 def indoor_wall():
 
-    wall_div = retrieve_grades_by_wall_heatmap('indoor')
+    div = retrieve_grades_by_wall_heatmap('indoor')
 
     return render_template(
         "fig.html",
-        div=Markup(wall_div)
+        div=Markup(div)
     )
 
 
-@app.route("/fig/Indoor/hold", methods=["GET"])
+@app.route("/fig/indoor/hold", methods=["GET"])
 def indoor_hold():
 
-    hold_div = retrieve_grades_by_hold_heatmap('indoor')
+    div = retrieve_grades_by_hold_heatmap('indoor')
 
     return render_template(
         "fig.html",
-        div=Markup(hold_div)
+        div=Markup(div)
     )
 
 
-@app.route("/fig/Indoor/style", methods=["GET"])
+@app.route("/fig/indoor/style", methods=["GET"])
 def indoor_style():
 
-    style_div = retrieve_grades_by_style_heatmap('indoor')
+    div = retrieve_grades_by_style_heatmap('indoor')
 
     return render_template(
         "fig.html",
-        div=Markup(style_div)
+        div=Markup(div)
     )
 
 
-@app.route("/fig/Outdoor/scatter", methods=["GET"])
-def outdoor_scatter():
+@app.route("/fig/outdoor/timeseries", methods=["GET"])
+def outdoor_timeseries():
 
-    scatter_div = retrieve_sends_by_date_scatter('outdoor')
+    div = retrieve_sends_by_date_scatter('outdoor')
 
     return render_template(
         "fig.html",
-        div=Markup(scatter_div)
+        div=Markup(div)
     )
 
 
-@app.route("/fig/Outdoor/histogram", methods=["GET"])
+@app.route("/fig/outdoor/histogram", methods=["GET"])
 def outdoor_histogram():
 
-    histogram_div = retrieve_grades_histogram('outdoor')
+    div = retrieve_grades_histogram('outdoor')
 
     return render_template(
         "fig.html",
-        div=Markup(histogram_div)
+        div=Markup(div)
     )
 
 
-@app.route("/fig/Outdoor/year", methods=["GET"])
+@app.route("/fig/outdoor/year", methods=["GET"])
 def outdoor_year():
 
-    year_div = retrieve_grades_by_year_heatmap('outdoor')
+    div = retrieve_grades_by_year_heatmap('outdoor')
 
     return render_template(
         "fig.html",
-        div=Markup(year_div)
+        div=Markup(div)
     )
 
 
-@app.route("/fig/Outdoor/wall", methods=["GET"])
+@app.route("/fig/outdoor/wall", methods=["GET"])
 def outdoor_wall():
 
-    wall_div = retrieve_grades_by_wall_heatmap('outdoor')
+    div = retrieve_grades_by_wall_heatmap('outdoor')
 
     return render_template(
         "fig.html",
-        div=Markup(wall_div)
+        div=Markup(div)
     )
 
 
-@app.route("/fig/Outdoor/hold", methods=["GET"])
+@app.route("/fig/outdoor/hold", methods=["GET"])
 def outdoor_hold():
 
-    hold_div = retrieve_grades_by_hold_heatmap('outdoor')
+    div = retrieve_grades_by_hold_heatmap('outdoor')
 
     return render_template(
         "fig.html",
-        div=Markup(hold_div)
+        div=Markup(div)
     )
 
 
-@app.route("/fig/Outdoor/style", methods=["GET"])
+@app.route("/fig/outdoor/style", methods=["GET"])
 def outdoor_style():
 
-    style_div = retrieve_grades_by_style_heatmap('outdoor')
+    div = retrieve_grades_by_style_heatmap('outdoor')
 
     return render_template(
         "fig.html",
-        div=Markup(style_div)
+        div=Markup(div)
     )
