@@ -1,14 +1,16 @@
 <!DOCTYPE HTML>
 <!--
-    Dimension by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Dimension by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
 <html>
     <head>
         <title>Harrison's Climbing App</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="static/css/main.css">
         <link rel="stylesheet" href="static/html5up-dimension/assets/css/main.css" />
         <noscript><link rel="stylesheet" href="static/html5up-dimension/assets/css/noscript.css" /></noscript>
     </head>
@@ -39,25 +41,49 @@
                 <!-- Timeseries -->
                 <article id="timeseries">
                     <h2 class="major">Sends by Date</h2>
-                    {{scatter_div | safe}}
+                    <div class="plotly-graph-div js-plotly-plot" style="height:100%; width:100%;">
+                        <div class="svg-container" style="position: relative; width: 100%; height: 480px;">
+                            <iframe frameborder="0" scrolling="yes" src="/fig/{{location_type}}/scatter"></iframe>
+                        </div>
+                    </div>
                     <br>
                 </article>
                 <!-- Histogram -->
                 <article id="histogram">
                     <h2 class="major">Grades Histogram</h2>
-                    {{histogram_div | safe}}
+                    <div class="plotly-graph-div js-plotly-plot" style="height:100%; width:100%;">
+                        <div class="svg-container" style="position: relative; width: 100%; height: 480px;">
+                            <iframe frameborder="0" scrolling="yes" src="/fig/{{location_type}}/histogram"></iframe>
+                        </div>
+                    </div>
                     <br>
                 </article>
                 <!-- Heatmaps -->
                 <article id="heatmaps">
                     <h2 class="major">Heatmaps</h2>
-                    {{year_div | safe}}
+                    <div class="plotly-graph-div js-plotly-plot" style="height:100%; width:100%;">
+                        <div class="svg-container" style="position: relative; width: 100%; height: 480px;">
+                            <iframe frameborder="0" scrolling="yes" src="/fig/{{location_type}}/year"></iframe>
+                        </div>
+                    </div>
                     <br>
-                    {{wall_div | safe}}
+                    <div class="plotly-graph-div js-plotly-plot" style="height:100%; width:100%;">
+                        <div class="svg-container" style="position: relative; width: 100%; height: 480px;">
+                            <iframe frameborder="0" scrolling="yes" src="/fig/{{location_type}}/wall"></iframe>
+                        </div>
+                    </div>
                     <br>
-                    {{hold_div | safe}}
+                    <div class="plotly-graph-div js-plotly-plot" style="height:100%; width:100%;">
+                        <div class="svg-container" style="position: relative; width: 100%; height: 480px;">
+                            <iframe frameborder="0" scrolling="yes" src="/fig/{{location_type}}/hold"></iframe>
+                        </div>
+                    </div>
                     <br>
-                    {{style_div | safe}}
+                    <div class="plotly-graph-div js-plotly-plot" style="height:100%; width:100%;">
+                        <div class="svg-container" style="position: relative; width: 100%; height: 480px;">
+                            <iframe frameborder="0" scrolling="yes" src="/fig/{{location_type}}/style"></iframe>
+                        </div>
+                    </div>
                     <br>
                 </article>
             </div>
@@ -69,11 +95,11 @@
         <!-- BG -->
         <div id="bg"></div>
         <!-- Scripts -->
+        <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
         <script src="static/html5up-dimension/assets/js/jquery.min.js"></script>
         <script src="static/html5up-dimension/assets/js/browser.min.js"></script>
         <script src="static/html5up-dimension/assets/js/breakpoints.min.js"></script>
         <script src="static/html5up-dimension/assets/js/util.js"></script>
         <script src="static/html5up-dimension/assets/js/main.js"></script>
-        <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
     </body>
 </html>

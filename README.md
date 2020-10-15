@@ -6,12 +6,8 @@ Note that Heroku may take up to 30 seconds to come out of a sleeping website sta
 
 Here are some of the latest updates in reverse-chronological order:
 
-1. Improve the look and feel of the app.
+1. Improve the look and feel of the app. Fix bug in which Javascript from HTML5UP and Plotly interfered with each other.
 2. Add logic to preferentially get data from Postgres database, then use the data from CSV files if Postgres is unavailable.
 3. Create Heroku Postgres database and swap out datasource from CSV files to newly created database
 4. Add an auth module to encrypt database URIs and unit test for database connections
 5. Add figure caching
-
- Future goals I have for this app are:
-
-3. Add drop-downs or menus for selecting figures on the Figure pages.

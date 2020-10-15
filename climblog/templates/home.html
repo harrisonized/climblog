@@ -50,7 +50,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <thead class="thead">
                             <tr>
                                 <th scope="col">No.</th>
-                                <th scope="col">Location type</th>
+                                <th scope="col">Location</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -75,7 +75,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <br><br>
                         On a more detailed-level, here's how I made the app run more smoothly:
                         <ol>
-                            <li>When opening a dashboard page for the first time after bringing the app out of a sleeping website state, the app opens a connection to a Heroku Postgres database and attempts to retrieve the data. If the connection is dropped or no data is returned, the app instead retrieves the data from the CSV files saved on the disk. Finally, the app generates the figures and saves it to Heroku's ephemeral disk, then displays the figures on the webpage.</li>
+                            <li>When opening a dashboard page for the first time after bringing the app out of a sleeping website state, the app opens a connection to a Heroku Postgres database and attempts to retrieve the data. If the connection is dropped or no data is returned, the app instead retrieves the data from the CSV files saved on the ephemeral disk. Finally, the app generates the figures and saves it to Heroku's ephemeral disk, then displays the figures on the webpage.</li>
                             <li>When refreshing a dashboard page while the app is still active, the app reads in the figure directly from Heroku's ephemeral disk instead of regenerating it.</li>
                         </ol> 
                     </span>

@@ -1,0 +1,11 @@
+/* See here: https://stackoverflow.com/questions/17153310/fitting-iframe-inside-a-div */
+
+div iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
