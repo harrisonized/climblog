@@ -15,4 +15,7 @@ Here are some of the latest updates in reverse-chronological order:
 
 Future goals for this project include:
 
-2. Have figures generated in the background when the app is started for the first time
+1. Add error logging
+2. Be able to export data from CSV files
+3. Generate figures in the background when the app is started
+4. Enable users to upload their own CSVs and generate their own figures
