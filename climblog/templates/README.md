@@ -1,0 +1,3 @@
+Notes:
+
+1.  The improper HTML for fig.html is to allow Instagram's (Facebook's) browser on your phone display the Plotly images correctly. Despite this, the Heatmaps page still does not work, possibly because Facebook does not allow displaying multiple iframes from the same source. If you are opening this app via my Instagram page, please use the option to open it in an actual web browser such as Firefox or Chrome.

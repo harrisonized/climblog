@@ -27,7 +27,7 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/indoor", methods=["POST", "GET"])
+@app.route("/indoor", methods=["GET"])
 def indoor():
     return render_template(
         "dashboard.html",
@@ -35,7 +35,7 @@ def indoor():
     )
 
 
-@app.route("/outdoor", methods=["POST", "GET"])
+@app.route("/outdoor", methods=["GET"])
 def outdoor():
 
     return render_template(
@@ -44,11 +44,23 @@ def outdoor():
     )
 
 
+@app.route("/test", methods=["GET"])
+def test():
+
+    scatter_div = retrieve_sends_by_date_scatter('indoor')
+
+    return render_template(
+        "test.html",
+        location_type='Indoor',
+        div=Markup(scatter_div)
+    )
+
+
 """
 Figures
 """
 
-@app.route("/fig/indoor/scatter", methods=["POST", "GET"])
+@app.route("/fig/Indoor/scatter", methods=["GET"])
 def indoor_scatter():
 
     scatter_div = retrieve_sends_by_date_scatter('indoor')
@@ -59,7 +71,7 @@ def indoor_scatter():
     )
 
 
-@app.route("/fig/Indoor/histogram", methods=["POST", "GET"])
+@app.route("/fig/Indoor/histogram", methods=["GET"])
 def indoor_histogram():
 
     histogram_div = retrieve_grades_histogram('indoor')
@@ -70,7 +82,7 @@ def indoor_histogram():
     )
 
 
-@app.route("/fig/Indoor/year", methods=["POST", "GET"])
+@app.route("/fig/Indoor/year", methods=["GET"])
 def indoor_year():
 
     year_div = retrieve_grades_by_year_heatmap('indoor')
@@ -81,7 +93,7 @@ def indoor_year():
     )
 
 
-@app.route("/fig/Indoor/wall", methods=["POST", "GET"])
+@app.route("/fig/Indoor/wall", methods=["GET"])
 def indoor_wall():
 
     wall_div = retrieve_grades_by_wall_heatmap('indoor')
@@ -92,7 +104,7 @@ def indoor_wall():
     )
 
 
-@app.route("/fig/Indoor/hold", methods=["POST", "GET"])
+@app.route("/fig/Indoor/hold", methods=["GET"])
 def indoor_hold():
 
     hold_div = retrieve_grades_by_hold_heatmap('indoor')
@@ -103,7 +115,7 @@ def indoor_hold():
     )
 
 
-@app.route("/fig/Indoor/style", methods=["POST", "GET"])
+@app.route("/fig/Indoor/style", methods=["GET"])
 def indoor_style():
 
     style_div = retrieve_grades_by_style_heatmap('indoor')
@@ -114,7 +126,7 @@ def indoor_style():
     )
 
 
-@app.route("/fig/Outdoor/scatter", methods=["POST", "GET"])
+@app.route("/fig/Outdoor/scatter", methods=["GET"])
 def outdoor_scatter():
 
     scatter_div = retrieve_sends_by_date_scatter('outdoor')
@@ -125,7 +137,7 @@ def outdoor_scatter():
     )
 
 
-@app.route("/fig/Outdoor/histogram", methods=["POST", "GET"])
+@app.route("/fig/Outdoor/histogram", methods=["GET"])
 def outdoor_histogram():
 
     histogram_div = retrieve_grades_histogram('outdoor')
@@ -136,7 +148,7 @@ def outdoor_histogram():
     )
 
 
-@app.route("/fig/Outdoor/year", methods=["POST", "GET"])
+@app.route("/fig/Outdoor/year", methods=["GET"])
 def outdoor_year():
 
     year_div = retrieve_grades_by_year_heatmap('outdoor')
@@ -147,7 +159,7 @@ def outdoor_year():
     )
 
 
-@app.route("/fig/Outdoor/wall", methods=["POST", "GET"])
+@app.route("/fig/Outdoor/wall", methods=["GET"])
 def outdoor_wall():
 
     wall_div = retrieve_grades_by_wall_heatmap('outdoor')
@@ -158,7 +170,7 @@ def outdoor_wall():
     )
 
 
-@app.route("/fig/Outdoor/hold", methods=["POST", "GET"])
+@app.route("/fig/Outdoor/hold", methods=["GET"])
 def outdoor_hold():
 
     hold_div = retrieve_grades_by_hold_heatmap('outdoor')
@@ -169,7 +181,7 @@ def outdoor_hold():
     )
 
 
-@app.route("/fig/Outdoor/style", methods=["POST", "GET"])
+@app.route("/fig/Outdoor/style", methods=["GET"])
 def outdoor_style():
 
     style_div = retrieve_grades_by_style_heatmap('outdoor')
