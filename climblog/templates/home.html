@@ -1,130 +1,101 @@
-<!DOCTYPE HTML>
-<!--
-Dimension by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-    <head>
-        <title>Harrison's Climbing App</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="static/html5up-dimension/assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="static/html5up-dimension/assets/css/noscript.css" /></noscript>
-    </head>
-    <body class="is-preload">
-        <!-- Wrapper -->
-        <div id="wrapper">
-            <!-- Header -->
-            <header id="header">
-                <div class="logo">
-                    <span class="icon fa-gem"></span>
-                </div>
-                <div class="content">
-                    <div class="inner">
-                        <h1>Harrison's Climbing App</h1>
-                        <p>Welcome to my send-tracker.</p>
-                    </div>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#intro">Intro</a></li>
-                        <li><a href="#dashboard">Dashboard</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <!--<li><a href="#elements">Elements</a></li>-->
-                    </ul>
-                </nav>
-            </header>
-            <!-- Main -->
-            <div id="main">
-                <!-- Intro -->
-                <article id="intro">
-                    <h2 class="major">Intro</h2>
-                    <p>In June of 2016, 15 months after I started climbing, I sent my first V6-V7 at Mesa Rim Mira Mesa and officially began documenting my sends. Please visit the <a href="https://github.com/harrisonized/harrisonized-climbing-app">Github repository</a> to see how I built this Flask app, and follow my <a href="https://www.instagram.com/harrisonized/">Instagram page</a> to see my latest sends.</p>
-
-                    Note: If you followed the link from Instagram, please reopen this app in a full web browser like Firefox or Chrome to see the full content.
-                </article>
-                <!-- Dashboard -->
-                <article id="dashboard">
-                    <h2 class="major">Dashboard</h2>
-                    <table class="table table-dark">
-                        <thead class="thead">
-                            <tr>
-                                <th scope="col">No.</th>
-                                <th scope="col">Location</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td><a href="/indoor">Indoor</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td><a href="/outdoor">Outdoor</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </article>
-                <!-- About -->
-                <article id="about">
-                    <h2 class="major">About this App</h2>
-                    <span>
-                        I built this app to keep track of my climbing progress. Although there are already many tracking apps on the market, mine collects much more data compared to other apps, so it made sense for me to build a custom solution.
-                        <br><br>
-                        On a high-level, this app executes SQL queries on data stored in a Heroku Postgres database, then uses the returned results to generate visualizations using Plotly.
-                        <br><br>
-                        On a more detailed-level, here's how I made the app run more smoothly:
-                        <ol>
-                            <li>When opening a dashboard page for the first time after bringing the app out of a sleeping website state, the app opens a connection to a Heroku Postgres database and attempts to retrieve the data. If the connection is dropped or no data is returned, the app instead retrieves the data from the CSV files saved on the ephemeral disk. Finally, the app generates the figures and saves it to Heroku's ephemeral disk, then displays the figures on the webpage.</li>
-                            <li>When refreshing a dashboard page while the app is still active, the app reads in the figure directly from Heroku's ephemeral disk instead of regenerating it.</li>
-                        </ol> 
-                    </span>
-                </article>
-                <!-- Contact -->
-                <article id="contact">
-                    <h2 class="major">Contact</h2>
-                    <form method="post" action="mailto:harrison.c.wang@gmail.com">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" />
-                            </div>
-                            <div class="field half">
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email" />
-                            </div>
-                            <div class="field">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" placeholder="Hi Harrison. I'm really interested in making apps like this one for my business. Can you help?" rows="4" ></textarea>
-                            </div>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary" /></li>
-                            <li><input type="reset" value="Reset" /></li>
-                        </ul>
-                    </form>
-                    <ul class="icons">
-                        <li><a href="https://www.linkedin.com/in/harrisonized/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-                        <li><a href="https://github.com/harrisonized/harrisonized-climbing-app" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                        <li><a href="https://harrisonized.github.io/about" class="fas fa-blog"><span class="label"></span></a></li>
-                        <li><a href="https://www.instagram.com/harrisonized/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                    </ul>
-                </article>
-            </div>
-            <!-- Footer -->
-            <footer id="footer">
-                <p class="copyright">&copy; Harrison Wang. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-            </footer>
+{% extends "layout.html" %}
+{% block content %}
+<!-- Header -->
+<header id="header">
+    <div class="logo">
+        <span class="icon fa-gem"></span>
+    </div>
+    <div class="content">
+        <div class="inner">
+            <h1>Harrison's Climbing App</h1>
+            <p>Welcome to my send-tracker.</p>
         </div>
-        <!-- BG -->
-        <div id="bg"></div>
-        <!-- Scripts -->
-        <script src="static/html5up-dimension/assets/js/jquery.min.js"></script>
-        <script src="static/html5up-dimension/assets/js/browser.min.js"></script>
-        <script src="static/html5up-dimension/assets/js/breakpoints.min.js"></script>
-        <script src="static/html5up-dimension/assets/js/util.js"></script>
-        <script src="static/html5up-dimension/assets/js/main.js"></script>
-    </body>
-</html>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!--<li><a href="#elements">Elements</a></li>-->
+        </ul>
+    </nav>
+</header>
+<!-- Main -->
+<div id="main">
+    <!-- Intro -->
+    <article id="intro">
+        <h2 class="major">Intro</h2>
+        <p>In June of 2016, 15 months after I started climbing, I sent my first V6-V7 at Mesa Rim Mira Mesa and officially began documenting my sends. Please visit the <a href="https://github.com/harrisonized/harrisonized-climbing-app">Github repository</a> to see how I built this Flask app, and follow my <a href="https://www.instagram.com/harrisonized/">Instagram page</a> to see my latest sends.</p>
+
+        Note: If you followed the link from Instagram, please reopen this app in a full web browser like Firefox or Chrome to see the full content.
+    </article>
+    <!-- Dashboard -->
+    <article id="dashboard">
+        <h2 class="major">Dashboard</h2>
+        <table class="table table-dark">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><a href="/indoor">Indoor</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><a href="/outdoor">Outdoor</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+    <!-- About -->
+    <article id="about">
+        <h2 class="major">About this App</h2>
+        <span>
+            I built this app to keep track of my climbing progress. Although there are already many tracking apps on the market, mine collects much more data compared to other apps, so it made sense for me to build a custom solution.
+            <br><br>
+            On a high-level, this app executes SQL queries on data stored in a Heroku Postgres database, then uses the returned results to generate visualizations using Plotly.
+            <br><br>
+            On a more detailed-level, here's how I made the app run more smoothly:
+            <ol>
+                <li>When opening a dashboard page for the first time after bringing the app out of a sleeping website state, the app opens a connection to a Heroku Postgres database and attempts to retrieve the data. If the connection is dropped or no data is returned, the app instead retrieves the data from the CSV files saved on the ephemeral disk. Finally, the app generates the figures and saves it to Heroku's ephemeral disk, then displays the figures on the webpage.</li>
+                <li>When refreshing a dashboard page while the app is still active, the app reads in the figure directly from Heroku's ephemeral disk instead of regenerating it.</li>
+            </ol> 
+        </span>
+    </article>
+    <!-- Contact -->
+    <article id="contact">
+        <h2 class="major">Contact</h2>
+        <form method="post" action="mailto:harrison.c.wang@gmail.com">
+            <div class="fields">
+                <div class="field half">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" />
+                </div>
+                <div class="field half">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" />
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Hi Harrison. I'm really interested in making apps like this one for my business. Can you help?" rows="4" ></textarea>
+                </div>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" value="Send Message" class="primary" /></li>
+                <li><input type="reset" value="Reset" /></li>
+            </ul>
+        </form>
+        <ul class="icons">
+            <li><a href="https://www.linkedin.com/in/harrisonized/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+            <li><a href="https://github.com/harrisonized/harrisonized-climbing-app" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="https://harrisonized.github.io/about" class="fas fa-blog"><span class="label"></span></a></li>
+            <li><a href="https://www.instagram.com/harrisonized/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        </ul>
+    </article>
+</div>
+{% endblock content %}
