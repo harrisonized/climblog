@@ -1,16 +1,15 @@
 import os
 from flask import Flask, render_template, Markup
 from dashboard.routes import fig_bp
+from error_handler.routes import errors
 
 real_path = os.path.realpath(__file__)
 dir_name = os.path.dirname(real_path)
 
-app = Flask(__name__)  # Initialize the app
+# Initialize the app
+app = Flask(__name__)
 app.register_blueprint(fig_bp)
-
-"""
-Main Pages
-"""
+app.register_blueprint(errors)
 
 
 @app.route("/")

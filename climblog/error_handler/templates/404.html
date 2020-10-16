@@ -1,25 +1,27 @@
 <!DOCTYPE HTML>
-<!--
-Dimension by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
     <head>
-        <title>Harrison's Climbing App</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="static/html5up-dimension/assets/css/main.css" />
         <noscript><link rel="stylesheet" href="static/html5up-dimension/assets/css/noscript.css" /></noscript>
     </head>
-    <body class="is-preload">
-        <!-- Wrapper -->
+    <body>
         <div id="wrapper">
-            {% block content %}{% endblock %}
+            <p style="font-family: verdana; color: white;">
+                This page or resource does not exist.
+                <br><br>
+                If you are trying to retrieve a figure, please refresh the page to try again.
+                <br>
+                If the problem persists, please reach out to harrison.c.wang@gmail.com to report the issue.
+                <br>
+                Otherwise, please click <a href="/">here</a> to return to the main page.
+                <br><br><br><br>
+                {{ error_message }}
+            </p>
         </div>
         <!-- BG -->
         <div id="bg"></div>
-        <!-- Scripts -->
         <script src="static/html5up-dimension/assets/js/jquery.min.js"></script>
         <script src="static/html5up-dimension/assets/js/browser.min.js"></script>
         <script src="static/html5up-dimension/assets/js/breakpoints.min.js"></script>
