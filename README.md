@@ -6,7 +6,7 @@ Note that Heroku may take up to 30 seconds to come out of a sleeping website sta
 
 Here are some of the latest updates in reverse-chronological order:
 
-1. Add error handling
+1. Add error handling and logging
 2. Generate routes dynamically
 3. Improve the look and feel of the app. Fix bug in which javascript from HTML5UP and Plotly were interfering with each other. Fix bug in which iframe wasn't being displayed correctly on phone.
 4. Add logic to preferentially get data from Postgres database, then use the data from CSV files if Postgres is unavailable.
