@@ -60,10 +60,14 @@ def retrieve_sends_by_date_scatter(location_type,
 
         try:
             scatter_df = get_data_for_sends_by_date_scatter_from_postgres(location_type)
-            grades_histogram_df = get_data_for_grades_histogram_from_postgres(location_type)
         except:
             if use_csv_backup:
                 scatter_df = get_data_for_sends_by_date_scatter_from_csv(location_type)
+                
+        try:
+            grades_histogram_df = get_data_for_grades_histogram_from_postgres(location_type)
+        except:
+            if use_csv_backup:
                 grades_histogram_df = get_data_for_grades_histogram_from_csv(location_type)
 
         logistic_params = curve_fit_new_grades(grades_histogram_df)

@@ -19,47 +19,47 @@ from .math.curve_fit import logistic_func
 def labels_for_heatmap(df, column_list=None):
     
     # sort
-    if df.columns[0] == 'year' and column_list is None:
-        column_list = df[df.columns[0]].unique()
-    elif df.columns[0] == 'year':
+    if df.columns[1] == 'year' and column_list is None:
+        column_list = df[df.columns[1]].unique()
+    elif df.columns[1] == 'year':
         column_list = column_list.sort()
     elif column_list is None:
-        column_list = df[df.columns[0]].value_counts().index
+        column_list = df[df.columns[1]].value_counts().index
     else:
         pass
 
     # derive raw input data
-    df = df[df[df.columns[0]].isin(column_list)].reset_index(drop=True)  # Filter
+    df = df[df[df.columns[1]].isin(column_list)].reset_index(drop=True)  # Filter
     df.description = df.description.apply(lambda x: word_wrap(str(x), 10))
 
     # Hover text
-    df[df.columns[1]] = df[df.columns[1]].apply(lambda x: int(x[1:]) if type(x) == str else x)
+    df[df.columns[0]] = df[df.columns[0]].apply(lambda x: int(x[1:]) if type(x) == str else x)
 
-    grade_table = df.pivot(index="grade_", columns=df.columns[0], values="grade_") \
+    grade_table = df.pivot(index="grade_", columns=df.columns[1], values="grade_") \
         .applymap(str).applymap(lambda x: x.replace('.0', '')) \
         .applymap(lambda x: 'V' + str(x)) \
         .applymap(lambda x: x.replace('Vnan', 'nan')) \
         .applymap(lambda x: float(x) if x == 'nan' else x)
 
     hover_text = 'FIRST RECORDED SEND<br>' \
-                 + 'Date: ' + df.pivot(index="grade_", columns=df.columns[0], values="date_").applymap(str) + '<br>' \
+                 + 'Date: ' + df.pivot(index="grade_", columns=df.columns[1], values="date_").applymap(str) + '<br>' \
                  + 'Grade: ' + grade_table + '<br>' \
-                 + 'Location: ' + df.pivot(index="grade_", columns=df.columns[0], values="location").applymap(str) + '<br>' \
-                 + 'Setter: ' + df.pivot(index="grade_", columns=df.columns[0], values="setter").applymap(str) + '<br>' \
-                 + 'Wall-type: ' + df.pivot(index="grade_", columns=df.columns[0], values="wall_type").applymap(str) + '<br>' \
-                 + 'Hold-type: ' + df.pivot(index="grade_", columns=df.columns[0], values="hold_type").applymap(str) + '<br>' \
-                 + 'Style: ' + df.pivot(index="grade_", columns=df.columns[0], values="style").applymap(str) + '<br>' \
+                 + 'Location: ' + df.pivot(index="grade_", columns=df.columns[1], values="location").applymap(str) + '<br>' \
+                 + 'Setter: ' + df.pivot(index="grade_", columns=df.columns[1], values="setter").applymap(str) + '<br>' \
+                 + 'Wall-type: ' + df.pivot(index="grade_", columns=df.columns[1], values="wall_type").applymap(str) + '<br>' \
+                 + 'Hold-type: ' + df.pivot(index="grade_", columns=df.columns[1], values="hold_type").applymap(str) + '<br>' \
+                 + 'Style: ' + df.pivot(index="grade_", columns=df.columns[1], values="style").applymap(str) + '<br>' \
                  + 'Description: ' + '<br>' \
-                 + df.pivot(index="grade_", columns=df.columns[0], values="description") + '<br>'
+                 + df.pivot(index="grade_", columns=df.columns[1], values="description") + '<br>'
 
     hover_text.index = hover_text.index.map(lambda x: 'V' + str(x) if type(x) == int else x)
-    df[df.columns[1]] = df[df.columns[1]].apply(lambda x: 'V' + str(x) if type(x) == int else x)
+    df[df.columns[0]] = df[df.columns[0]].apply(lambda x: 'V' + str(x) if type(x) == int else x)
 
     # Annotations
     annotations = []
     for i in range(len(df)):
-        annotations.append(dict(x=df[df.columns[0]][i],
-                                y=df[df.columns[1]][i],
+        annotations.append(dict(x=df[df.columns[1]][i],
+                                y=df[df.columns[0]][i],
                                 text=str(df[df.columns[2]][i]),
                                 showarrow=False))
 
