@@ -24,36 +24,40 @@
     <!-- Timeseries -->
     <article id="timeseries">
         <h2 class="major">Sends by Date</h2>
-        <div class="embed-responsive" id="timeseries" style="width: 100%; height: 100%;">
-            <iframe class="embed-responsive-item" src="/fig/{{ location_type.lower }}/timeseries" style="width: 100%; height: 480px;" scrolling="yes" frameborder="0" ></iframe>
+        <div class="embed-responsive" id="timeseries" style="width: 100%; height: 500px;">
+            <iframe name="scatter" class="embed-responsive-item" src="/fig/{{ location_type.lower }}/timeseries" style="width: 100%; height: 540px;" scrolling="yes" frameborder="0" ></iframe>
         </div>
         <br>
     </article>
     <!-- Histogram -->
     <article id="histogram">
         <h2 class="major">Grades Histogram</h2>
-        <div class="embed-responsive" id="histogram" style="width: 100%; height: 100%;">
-            <iframe class="embed-responsive-item" src="/fig/{{ location_type.lower }}/histogram" style="position: relative; width: 100%; height: 480px;" scrolling="yes" frameborder="0" ></iframe>
+        <div class="embed-responsive" id="histogram" style="width: 100%; height: 500px;">
+            <iframe name="histogram" class="embed-responsive-item" src="/fig/{{ location_type.lower }}/histogram" style="width: 100%; height: 540px;" scrolling="yes" frameborder="0" ></iframe>
         </div>
         <br>
     </article>
     <!-- Heatmaps -->
     <article id="heatmaps">
         <h2 class="major">Heatmaps</h2>
-        <div class="embed-responsive" id="year" style="width: 100%; height: 100%;">
-            <iframe class="embed-responsive-item" src="/fig/{{ location_type.lower }}/year" style="position: relative; width: 100%; height: 480px;" scrolling="yes" frameborder="0" ></iframe>
+        <div class="embed-responsive" id="year" style="width: 100%; height: 500px;">
+            <iframe name="year" class="embed-responsive-item" src="/fig/{{ location_type.lower }}/year"
+            style="width: 100%; height: 540px;" scrolling="yes" frameborder="0" ></iframe>
         </div>
         <br>
-        <div class="embed-responsive" id="wall" style="width: 100%; height: 100%;">
-            <iframe class="embed-responsive-item" src="/fig/{{ location_type.lower }}/wall" style="position: relative; width: 100%; height: 480px;" scrolling="yes" frameborder="0" ></iframe>
+        <div class="embed-responsive" id="wall" style="width: 100%; height: 500px;">
+            <iframe name="wall" class="embed-responsive-item" src="/fig/{{ location_type.lower }}/wall"
+            style="width: 100%; height: 540px;" scrolling="yes" frameborder="0" ></iframe>
         </div>
         <br>
-        <div class="embed-responsive" id="hold" style="width: 100%; height: 100%;">
-            <iframe class="embed-responsive-item" src="/fig/{{ location_type.lower }}/hold" style="position: relative; width: 100%; height: 480px;" scrolling="yes" frameborder="0" ></iframe>
+        <div class="embed-responsive" id="hold" style="width: 100%; height: 500px;">
+            <iframe name="hold" class="embed-responsive-item" src="/fig/{{ location_type.lower }}/hold"
+            style="width: 100%; height: 540px;" scrolling="yes" frameborder="0" ></iframe>
         </div>
         <br>
-        <div class="embed-responsive" id="style" style="width: 100%; height: 100%;">
-            <iframe class="embed-responsive-item" src="/fig/{{ location_type.lower }}/style" style="position: relative; width: 100%; height: 480px;" scrolling="yes" frameborder="0" ></iframe>
+        <div class="embed-responsive" id="style" style="width: 100%; height: 500px;">
+            <iframe name="style" class="embed-responsive-item" src="/fig/{{ location_type.lower }}/style"
+            style="width: 100%; height: 540px;" scrolling="yes" frameborder="0" ></iframe>
         </div>
         <br>
     </article>

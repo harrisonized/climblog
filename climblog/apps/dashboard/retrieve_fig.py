@@ -1,6 +1,7 @@
 import os
 import json
 import plotly.offline as pyo
+import plotly.io as pio
 from apps.config.config import get_defaults_from_ini
 from .get_data import (get_data_for_sends_by_date_scatter_from_csv,
                        get_data_for_sends_by_date_scatter_from_postgres,
@@ -132,7 +133,8 @@ def retrieve_grades_by_year_heatmap(location_type,
         if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
 
-    div = pyo.plot(fig, output_type='div')  # div for fig
+    # div = pyo.plot(fig, output_type='div')  # div for fig
+    div = pio.to_html(fig, full_html=True, include_plotlyjs=True, default_height=500)
 
     return div
 
@@ -160,7 +162,8 @@ def retrieve_grades_by_wall_heatmap(location_type,
         if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
 
-    div = pyo.plot(fig, output_type='div')  # div for fig
+    # div = pyo.plot(fig, output_type='div')  # div for fig
+    div = pio.to_html(fig, full_html=True, include_plotlyjs=True, default_height=500)
 
     return div
 
@@ -188,7 +191,8 @@ def retrieve_grades_by_hold_heatmap(location_type,
         if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
 
-    div = pyo.plot(fig, output_type='div')  # div for fig
+    # div = pyo.plot(fig, output_type='div')  # div for fig
+    div = pio.to_html(fig, full_html=True, include_plotlyjs=True, default_height=500)
 
     return div
 
@@ -216,6 +220,7 @@ def retrieve_grades_by_style_heatmap(location_type,
         if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
 
-    div = pyo.plot(fig, output_type='div')  # div for fig
+    # div = pyo.plot(fig, output_type='div')  # div for fig
+    div = pio.to_html(fig, full_html=True, include_plotlyjs=True, default_height=500)
 
     return div
