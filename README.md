@@ -6,13 +6,15 @@ Note that Heroku may take up to 30 seconds to come out of a sleeping website sta
 
 Here are some of the latest updates in reverse-chronological order:
 
-1. Add error handling and logging
-2. Generate routes dynamically
-3. Improve the look and feel of the app. Fix bug in which javascript from HTML5UP and Plotly were interfering with each other. Fix bug in which iframe wasn't being displayed correctly on phone.
-4. Add logic to preferentially get data from Postgres database, then use the data from CSV files if Postgres is unavailable.
-5. Create Heroku Postgres database and swap out datasource from CSV files to newly created database
-6. Add an auth module to encrypt database URIs and unit test for database connections
-7. Add figure caching
+1. Upgrade potential security issue (cryptography>=3.2)
+2. Fix Google Chrome iframe axis scaling bug (See: [here](https://community.plotly.com/t/cant-show-heatmap-inside-div-error-something-went-wrong-with-axis-scaling/30616))
+3. Add error handling and logging
+4. Generate routes dynamically
+5. Improve the look and feel of the app. Fix bug in which javascript from HTML5UP and Plotly were interfering with each other. Fix bug in which iframe wasn't being displayed correctly on phone.
+6. Add logic to preferentially get data from Postgres database, then use the data from CSV files if Postgres is unavailable.
+7. Create Heroku Postgres database and swap out datasource from CSV files to newly created database
+8. Add an auth module to encrypt database URIs and unit test for database connections
+9. Add figure caching
 
 Future goals for this project include:
 
