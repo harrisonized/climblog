@@ -6,7 +6,7 @@ Note that Heroku may take up to 30 seconds to come out of a sleeping website sta
 
 Here are some of the latest updates in reverse-chronological order:
 
-1. Upgrade potential security issue (cryptography>=3.2)
+1. Upgrade library with potential security issue (cryptography>=3.2)
 2. Fix Google Chrome iframe axis scaling bug (See: [here](https://community.plotly.com/t/cant-show-heatmap-inside-div-error-something-went-wrong-with-axis-scaling/30616))
 3. Add error handling and logging
 4. Generate routes dynamically
