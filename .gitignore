@@ -7,3 +7,4 @@ static/vendor/*
 tmp/*
 legacy/*
 */legacy/*
+test.html
