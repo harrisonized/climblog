@@ -1,25 +1,24 @@
 import numpy as np
 import matplotlib.dates as mdates
 import plotly.graph_objs as go
-from .plotting.plotly import plot_scatter, plot_bar, plot_heatmap
-from .formatting.text_tools import word_wrap
-from .math.curve_fit import logistic_func
+from apps.utils.plotting.plotly import plot_scatter, plot_bar, plot_heatmap
+from apps.utils.formatting.text_tools import word_wrap
+from apps.utils.math.curve_fit import logistic_func
 
 
 # Functions included in this file:
 # # hovertext_for_heatmap
-# # create_sends_by_date_scatter
-# # create_grades_histogram
-# # create_grades_by_year_heatmap
-# # create_grades_by_wall_heatmap
-# # create_grades_by_hold_heatmap
-# # create_grades_by_style_heatmap
-
-
-
+# # fig_for_sends_by_date_scatter
+# # fig_for_grades_histogram
+# # fig_for_grades_by_year_heatmap
+# # fig_for_grades_by_wall_heatmap
+# # fig_for_grades_by_hold_heatmap
+# # fig_for_grades_by_style_heatmap
 
 
 def hovertext_for_heatmap(df, column_list=None):
+    """Used in all heatmap functions
+    """
     
     # sort
     if df.columns[1] == 'year' and column_list is None:
@@ -69,7 +68,7 @@ def hovertext_for_heatmap(df, column_list=None):
     return hover_text, annotations
 
 
-def create_sends_by_date_scatter(scatter_df, logistic_params):
+def fig_for_sends_by_date_scatter(scatter_df, logistic_params):
 
     # plot main figure
     hover_text = 'Grade: ' + scatter_df['vgrade'].apply(str) + '<br>' \
@@ -99,7 +98,7 @@ def create_sends_by_date_scatter(scatter_df, logistic_params):
     return fig
 
 
-def create_grades_histogram(grades_histogram_df):
+def fig_for_grades_histogram(grades_histogram_df):
     """df should look like the following:
     """
 
@@ -126,7 +125,7 @@ def create_grades_histogram(grades_histogram_df):
     return fig
 
 
-def create_grades_by_year_heatmap(year_table_df, year_df):
+def fig_for_grades_by_year_heatmap(year_table_df, year_df):
 
     # plot main figure
     hover_text, annotations = hovertext_for_heatmap(year_df)
@@ -137,7 +136,7 @@ def create_grades_by_year_heatmap(year_table_df, year_df):
     return fig
 
 
-def create_grades_by_wall_heatmap(wall_table_df, wall_df):
+def fig_for_grades_by_wall_heatmap(wall_table_df, wall_df):
 
     # plot main figure
     columns = ['cave', 'overhang', 'face', 'arete', 'slab', 'corner', 'variable']
@@ -149,7 +148,7 @@ def create_grades_by_wall_heatmap(wall_table_df, wall_df):
     return fig
 
 
-def create_grades_by_hold_heatmap(hold_table_df, hold_df):
+def fig_for_grades_by_hold_heatmap(hold_table_df, hold_df):
 
     # plot main figure
     columns = ['jug', 'crimp', 'sloper', 'pinch']
@@ -161,7 +160,7 @@ def create_grades_by_hold_heatmap(hold_table_df, hold_df):
     return fig
 
 
-def create_grades_by_style_heatmap(style_table_df, style_df):
+def fig_for_grades_by_style_heatmap(style_table_df, style_df):
 
     # plot main figure
     columns = ['mantle', 'natural', 'dyno', 'comp']

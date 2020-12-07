@@ -16,12 +16,12 @@ retrieve_plot = {'timeseries': retrieve_sends_by_date_scatter,
                  'style': retrieve_grades_by_style_heatmap,}
 
 
-fig_bp = Blueprint('fig_bp', __name__,
+dashboard = Blueprint('dashboard', __name__,
                    template_folder='templates',
                    static_folder='static')
 
 
-@fig_bp.route("/fig/<location_type>/<plot_type>", methods=["GET"])
+@dashboard.route("/fig/<location_type>/<plot_type>", methods=["GET"])
 def plot(location_type, plot_type):
 
     div = retrieve_plot[plot_type](location_type)

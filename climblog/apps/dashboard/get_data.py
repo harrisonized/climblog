@@ -2,9 +2,9 @@ import os
 import datetime as dt
 import pandas as pd
 import pandas.io.sql as pd_sql
-from apps.dashboard.query.query_tools import execute_query_on_df
 from apps.auth.connections import postgres_connection
-from .plotting.colors import color_dict
+from apps.utils.query.query_tools import execute_query_on_df
+from apps.utils.plotting.colors import color_name_to_hex
 from .queries import (GET_PRIMARY_DATA,
                       COUNT_GRADES,
                       COUNT_GRADES_BY_YEAR_FROM_DF,
@@ -39,7 +39,7 @@ def get_data_for_sends_by_date_scatter_from_csv(location_type):
 
     df['grade_'] = df['grade'].apply(lambda x: x.split('-')[0]).apply(lambda x: x.replace('V', '')).astype(int)
     df['date_'] = df['date_'].apply(lambda date: dt.datetime.strptime(date, '%Y-%m-%d'))
-    df['color'] = df['color'].replace(color_dict)  # Replace colors with hex codes
+    df['color'] = df['color'].replace(color_name_to_hex)  # Replace colors with hex codes
     df = df.rename(columns = {'grade': 'vgrade'})
 
     return df
@@ -48,12 +48,12 @@ def get_data_for_sends_by_date_scatter_from_csv(location_type):
 def get_data_for_sends_by_date_scatter_from_postgres(location_type):
 
     df = pd_sql.read_sql(
-        GET_PRIMARY_DATA.format(datasource='route_info', location_type=location_type), connection_uri)
+        GET_PRIMARY_DATA.format(datasource='boulders', location_type=location_type), connection_uri)
     assert df.empty is False, 'No data returned'
 
     df['grade_'] = df['grade_'].apply(lambda x: x.replace('V', '')).astype(int)
     df['date_'] = df['date_'].apply(lambda date: dt.datetime.strptime(date, '%Y-%m-%d'))  # Convert to datetime
-    df['color'] = df['color'].replace(color_dict)  # Replace colors with hex codes
+    df['color'] = df['color'].replace(color_name_to_hex)  # Replace colors with hex codes
     
     return df
 
@@ -68,7 +68,7 @@ def get_data_for_grades_histogram_from_csv(location_type):
     
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
     df['grade_'] = df['grade_'].apply(lambda x: x.replace('V', '')).astype(int)
-    df['color'] = df['color'].replace(color_dict)
+    df['color'] = df['color'].replace(color_name_to_hex)
 
     return df
 
@@ -76,12 +76,12 @@ def get_data_for_grades_histogram_from_csv(location_type):
 def get_data_for_grades_histogram_from_postgres(location_type):
 
     df = pd_sql.read_sql(
-       COUNT_GRADES.format(datasource='route_info', location_type=location_type), connection_uri)
+       COUNT_GRADES.format(datasource='boulders', location_type=location_type), connection_uri)
     assert df.empty is False, 'No data returned'
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
     df['grade_'] = df['grade_'].apply(lambda x: x.replace('V', '')).astype(int)
-    df['color'] = df['color'].replace(color_dict)  # Replace colors with hex codes
+    df['color'] = df['color'].replace(color_name_to_hex)  # Replace colors with hex codes
     
     return df
 
@@ -106,7 +106,7 @@ def get_data_for_grades_by_year_heatmap_from_csv(location_type):
 def get_data_for_grades_by_year_heatmap_from_postgres(location_type):
 
     df = pd_sql.read_sql(
-       COUNT_GRADES_BY_YEAR_FROM_PG.format(location_type=location_type), connection_uri)
+       COUNT_GRADES_BY_YEAR_FROM_PG.format(datasource='boulders', location_type=location_type), connection_uri)
     assert df.empty is False, 'No data returned'
     
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
@@ -138,7 +138,7 @@ def get_data_for_grades_by_wall_heatmap_from_csv(location_type):
 def get_data_for_grades_by_wall_heatmap_from_postgres(location_type):
 
     df = pd.read_sql(
-        COUNT_GRADES_BY_WALL.format(datasource='route_info', location_type=location_type), connection_uri)
+        COUNT_GRADES_BY_WALL.format(datasource='boulders', location_type=location_type), connection_uri)
     assert df.empty is False, 'No data returned'
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
@@ -174,7 +174,7 @@ def get_data_for_grades_by_hold_heatmap_from_csv(location_type):
 def get_data_for_grades_by_hold_heatmap_from_postgres(location_type):
 
     df = pd_sql.read_sql(
-        COUNT_GRADES_BY_HOLD_FROM_PG.format(location_type=location_type), connection_uri)
+        COUNT_GRADES_BY_HOLD_FROM_PG.format(datasource='boulders', location_type=location_type), connection_uri)
     assert df.empty is False, 'No data returned'
     
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
@@ -210,7 +210,7 @@ def get_data_for_grades_by_style_heatmap_from_csv(location_type):
 def get_data_for_grades_by_style_heatmap_from_postgres(location_type):
     
     df = pd.read_sql(
-        COUNT_GRADES_BY_STYLE.format(datasource='route_info', location_type=location_type), connection_uri)
+        COUNT_GRADES_BY_STYLE.format(datasource='boulders', location_type=location_type), connection_uri)
     assert df.empty is False, 'No data returned'
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])

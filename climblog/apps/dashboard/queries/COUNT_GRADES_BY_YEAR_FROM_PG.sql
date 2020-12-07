@@ -14,7 +14,7 @@ WITH primary_data AS
    LOWER(hold_type) AS hold_type,
    LOWER(style) AS style,
    EXTRACT(YEAR FROM date_::DATE) AS year  --postgresql only
- FROM route_info
+ FROM {datasource}
  WHERE location_type = '{location_type}'
  ORDER BY date_),
 

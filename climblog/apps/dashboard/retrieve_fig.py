@@ -2,7 +2,9 @@ import os
 import json
 import plotly.offline as pyo
 import plotly.io as pio
-from apps.config.config import get_defaults_from_ini
+from apps.config.settings import get_defaults_from_ini
+from apps.utils.plotting.plotly import export_fig_to_json
+from apps.utils.math.curve_fit import curve_fit_new_grades
 from .get_data import (get_data_for_sends_by_date_scatter_from_csv,
                        get_data_for_sends_by_date_scatter_from_postgres,
                        get_data_for_grades_histogram_from_csv,
@@ -15,14 +17,12 @@ from .get_data import (get_data_for_sends_by_date_scatter_from_csv,
                        get_data_for_grades_by_hold_heatmap_from_postgres,
                        get_data_for_grades_by_style_heatmap_from_csv,
                        get_data_for_grades_by_style_heatmap_from_postgres)
-from .create_fig import (create_sends_by_date_scatter,
-                         create_grades_histogram,
-                         create_grades_by_year_heatmap,
-                         create_grades_by_wall_heatmap,
-                         create_grades_by_hold_heatmap,
-                         create_grades_by_style_heatmap)
-from .plotting.plotly import export_fig_to_json
-from .math.curve_fit import curve_fit_new_grades
+from .plot_fig import (fig_for_sends_by_date_scatter,
+                       fig_for_grades_histogram,
+                       fig_for_grades_by_year_heatmap,
+                       fig_for_grades_by_wall_heatmap,
+                       fig_for_grades_by_hold_heatmap,
+                       fig_for_grades_by_style_heatmap)
 
 
 # test settings
@@ -48,7 +48,8 @@ If postgres is unavailable, use data from csv to create figures (backup)
 
 
 def retrieve_sends_by_date_scatter(location_type,
-                                   to_export_fig=to_export_fig, use_csv_backup=use_csv_backup):
+                                   to_export_fig=to_export_fig,
+                                   use_csv_backup=use_csv_backup):
 
     fig_dir = f'tmp/figures/{location_type}'
     filename = 'sends-by-date'
@@ -72,7 +73,7 @@ def retrieve_sends_by_date_scatter(location_type,
                 grades_histogram_df = get_data_for_grades_histogram_from_csv(location_type)
 
         logistic_params = curve_fit_new_grades(grades_histogram_df)
-        fig = create_sends_by_date_scatter(scatter_df, logistic_params)
+        fig = fig_for_sends_by_date_scatter(scatter_df, logistic_params)
 
         if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
@@ -83,7 +84,8 @@ def retrieve_sends_by_date_scatter(location_type,
 
 
 def retrieve_grades_histogram(location_type,
-                              to_export_fig=to_export_fig, use_csv_backup=use_csv_backup):
+                              to_export_fig=to_export_fig,
+                              use_csv_backup=use_csv_backup):
 
     fig_dir = f'tmp/figures/{location_type}'
     filename = 'grades-histogram'
@@ -100,7 +102,7 @@ def retrieve_grades_histogram(location_type,
             if use_csv_backup:
                 grades_histogram_df = get_data_for_grades_histogram_from_csv(location_type)
 
-        fig = create_grades_histogram(grades_histogram_df)
+        fig = fig_for_grades_histogram(grades_histogram_df)
 
         if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
@@ -111,7 +113,8 @@ def retrieve_grades_histogram(location_type,
 
 
 def retrieve_grades_by_year_heatmap(location_type,
-                                    to_export_fig=to_export_fig, use_csv_backup=use_csv_backup):
+                                    to_export_fig=to_export_fig,
+                                    use_csv_backup=use_csv_backup):
 
     fig_dir = f'tmp/figures/{location_type}'
     filename = 'grades-by-year'
@@ -128,7 +131,7 @@ def retrieve_grades_by_year_heatmap(location_type,
             if use_csv_backup:
                 table_df, year_df = get_data_for_grades_by_year_heatmap_from_csv(location_type)
 
-        fig = create_grades_by_year_heatmap(table_df, year_df)
+        fig = fig_for_grades_by_year_heatmap(table_df, year_df)
 
         if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
@@ -140,7 +143,8 @@ def retrieve_grades_by_year_heatmap(location_type,
 
 
 def retrieve_grades_by_wall_heatmap(location_type,
-                                    to_export_fig=to_export_fig, use_csv_backup=use_csv_backup):
+                                    to_export_fig=to_export_fig,
+                                    use_csv_backup=use_csv_backup):
 
     fig_dir = f'tmp/figures/{location_type}'
     filename = 'grades-by-wall-type'
@@ -157,7 +161,7 @@ def retrieve_grades_by_wall_heatmap(location_type,
             if use_csv_backup:
                 table_df, wall_df = get_data_for_grades_by_wall_heatmap_from_csv(location_type)
 
-        fig = create_grades_by_wall_heatmap(table_df, wall_df)
+        fig = fig_for_grades_by_wall_heatmap(table_df, wall_df)
 
         if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
@@ -169,7 +173,8 @@ def retrieve_grades_by_wall_heatmap(location_type,
 
 
 def retrieve_grades_by_hold_heatmap(location_type,
-                                    to_export_fig=to_export_fig, use_csv_backup=use_csv_backup):
+                                    to_export_fig=to_export_fig,
+                                    use_csv_backup=use_csv_backup):
 
     fig_dir = f'tmp/figures/{location_type}'
     filename = 'grades-by-hold-type'
@@ -186,7 +191,7 @@ def retrieve_grades_by_hold_heatmap(location_type,
             if use_csv_backup:
                 table_df, hold_df = get_data_for_grades_by_hold_heatmap_from_csv(location_type)
 
-        fig = create_grades_by_hold_heatmap(table_df, hold_df)
+        fig = fig_for_grades_by_hold_heatmap(table_df, hold_df)
 
         if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)
@@ -198,7 +203,8 @@ def retrieve_grades_by_hold_heatmap(location_type,
 
 
 def retrieve_grades_by_style_heatmap(location_type,
-                                     to_export_fig=to_export_fig, use_csv_backup=use_csv_backup):
+                                     to_export_fig=to_export_fig,
+                                     use_csv_backup=use_csv_backup):
 
     fig_dir = f'tmp/figures/{location_type}'
     filename = 'grades-by-style'
@@ -215,7 +221,7 @@ def retrieve_grades_by_style_heatmap(location_type,
             if use_csv_backup:
                 table_df, style_df = get_data_for_grades_by_style_heatmap_from_csv(location_type)
 
-        fig = create_grades_by_style_heatmap(table_df, style_df)
+        fig = fig_for_grades_by_style_heatmap(table_df, style_df)
 
         if to_export_fig:
             export_fig_to_json(fig, fig_dir=fig_dir, filename=filename)

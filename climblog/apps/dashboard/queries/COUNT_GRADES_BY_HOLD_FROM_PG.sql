@@ -13,7 +13,7 @@ WITH primary_data AS
    LOWER(wall_type) AS wall_type,
    LOWER(style) AS style,
    LOWER(hold_type) AS hold_type
- FROM route_info
+ FROM {datasource}
  WHERE location_type = '{location_type}'),
 
 unnested_primary_data AS
