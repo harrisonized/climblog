@@ -8,3 +8,4 @@ tmp/*
 legacy/*
 */legacy/*
 test.html
+.idea/*

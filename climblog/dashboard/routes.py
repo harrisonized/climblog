@@ -13,12 +13,35 @@ retrieve_plot = {'timeseries': retrieve_sends_by_date_scatter,
                  'year': retrieve_grades_by_year_heatmap,
                  'wall': retrieve_grades_by_wall_heatmap,
                  'hold': retrieve_grades_by_hold_heatmap,
-                 'style': retrieve_grades_by_style_heatmap,}
+                 'style': retrieve_grades_by_style_heatmap,
+                 }
 
 
 dashboard = Blueprint('dashboard', __name__,
-                   template_folder='templates',
-                   static_folder='static')
+                      template_folder='templates',
+                      static_folder='static')
+
+
+@dashboard.route("/indoor", methods=["GET"])
+def indoor():
+    location_type = {'title': 'Indoor',
+                     'lower': 'indoor', }
+
+    return render_template(
+        "dashboard.html",
+        location_type=location_type,
+    )
+
+
+@dashboard.route("/outdoor", methods=["GET"])
+def outdoor():
+    location_type = {'title': 'Outdoor',
+                     'lower': 'outdoor', }
+
+    return render_template(
+        "dashboard.html",
+        location_type=location_type,
+    )
 
 
 @dashboard.route("/fig/<location_type>/<plot_type>", methods=["GET"])

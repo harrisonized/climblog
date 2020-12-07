@@ -14,27 +14,34 @@ Note that Heroku may take up to 30 seconds to come out of a sleeping website sta
 
 
 
+## Getting Started
+
+1. Install the requirements
+2. Run the Jekyll server:  `python climblog/main.py`
+3. Access the server: http://localhost:5000
+
+
+
 ## Latest Updates
 
 Reverse-chronological order:
 
-1. Upgrade library with potential security issue (cryptography>=3.2)
-2. Fix Google Chrome iframe axis scaling bug (See: [here](https://community.plotly.com/t/cant-show-heatmap-inside-div-error-something-went-wrong-with-axis-scaling/30616))
-3. Add error handling and logging
-4. Generate routes dynamically
-5. Improve the look and feel of the app. Fix bug in which javascript from HTML5UP and Plotly were interfering with each other. Fix bug in which iframe wasn't being displayed correctly on phone.
-6. Add logic to preferentially get data from Postgres database, then use the data from CSV files if Postgres is unavailable.
-7. Create Heroku Postgres database and swap out datasource from CSV files to newly created database
-8. Add an auth module to encrypt database URIs and unit test for database connections
-9. Add figure caching
+1. Add read-only SQL terminal
+2. Upgrade library with potential security issue (cryptography>=3.2)
+3. Fix Google Chrome iframe axis scaling bug (See: [here](https://community.plotly.com/t/cant-show-heatmap-inside-div-error-something-went-wrong-with-axis-scaling/30616))
+4. Add error handling and logging
+5. Generate routes dynamically
+6. Improve the look and feel of the app. Fix bug in which javascript from HTML5UP and Plotly were interfering with each other. Fix bug in which iframe wasn't being displayed correctly on phone.
+7. Add logic to preferentially get data from Postgres database, then use the data from CSV files if Postgres is unavailable.
+8. Create Heroku Postgres database and swap out datasource from CSV files to newly created database
+9. Add an auth module to encrypt database URIs and unit test for database connections
+10. Add figure caching
 
 
 
 ## Future Goals
 
-1. Be able to export data to CSV files
-2. Generate figures in the background when the app is started
-3. Enable users to upload their own CSVs and generate their own figures
+3. Enable users to upload their own CSVs to generate their own figures
 
 
 

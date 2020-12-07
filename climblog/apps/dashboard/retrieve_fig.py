@@ -2,7 +2,7 @@ import os
 import json
 import plotly.offline as pyo
 import plotly.io as pio
-from apps.config.settings import get_defaults_from_ini
+from apps.utils.config.settings import get_defaults_from_ini
 from apps.utils.plotting.plotly import export_fig_to_json
 from apps.utils.math.curve_fit import curve_fit_new_grades
 from .get_data import (get_data_for_sends_by_date_scatter_from_csv,

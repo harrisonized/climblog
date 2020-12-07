@@ -1,4 +1,8 @@
+import os
 import pandasql as ps
+from apps.utils.auth.connections import postgres_connection
+
+connection_uri = os.getenv('DATABASE_URL') or postgres_connection('climblog')  # test locally
 
 
 # Functions included in this file:

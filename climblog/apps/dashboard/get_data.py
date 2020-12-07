@@ -2,7 +2,7 @@ import os
 import datetime as dt
 import pandas as pd
 import pandas.io.sql as pd_sql
-from apps.auth.connections import postgres_connection
+from apps.utils.auth.connections import postgres_connection
 from apps.utils.query.query_tools import execute_query_on_df
 from apps.utils.plotting.colors import color_name_to_hex
 from .queries import (GET_PRIMARY_DATA,

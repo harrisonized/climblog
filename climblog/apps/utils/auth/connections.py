@@ -1,7 +1,6 @@
 import os
 from configparser import ConfigParser
 from .encryption_tools import decrypt_message
-import psycopg2 as pg
 
 INI_KEY = os.getenv('INI_KEY')  # Make sure this is in your ~/.bashrc
 assert INI_KEY, 'No INI_KEY'
@@ -10,7 +9,6 @@ assert INI_KEY, 'No INI_KEY'
 # Functions included in this file:
 # # postgres_connection
 # # heroku_postgres_connection
-# # connection_fetch_close
 
 
 def postgres_connection(database=None,
@@ -67,17 +65,3 @@ def heroku_postgres_connection(section='heroku-postgres', cfg_path='conf/cred.in
     connection_uri = f'postgres://{username}:{password}@{host}:{port}/{database}'
 
     return connection_uri
-
-
-def postgres_connection_fetch_close(query, connection_uri, dbname=None):
-    """Opens a new connection, fetches the data, then closes the connection
-    Provide the connection_uri returned by postgres_connection
-    Use dbname to change the database
-    """
-    connection = pg.connect(dsn=connection_uri, dbname=dbname)  # connect
-    cursor = connection.cursor()
-    cursor.execute(query)
-    results = cursor.fetchall()
-    connection.close()
-    
-    return results

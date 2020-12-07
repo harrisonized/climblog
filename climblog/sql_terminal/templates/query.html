@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Header -->
+<header id="header">
+    <div class="logo">
+        <span class="icon fa-gem"></span>
+    </div>
+    <div class="content">
+        <div class="inner">
+            <h1>Harrison's Climbing App</h1>
+            <p>Welcome to my send-tracker.</p>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#query">Query</a></li>
+            <li><a href="/">Go Back</a></li>
+            <!--<li><a href="#elements">Elements</a></li>-->
+        </ul>
+    </nav>
+</header>
+<!-- Main -->
+<div id="main">
+    <!-- SQL Terminal -->
+    <article id="query">
+        <h2 class="major">Query</h2>
+        <form method="post"action="/download">
+            <div class="fields">
+                <div class="field">
+                    <label for="query">Query</label>
+                    <textarea name="query" id="query" placeholder="SELECT *
+FROM boulders
+LIMIT 5;" rows="3" ></textarea>
+                </div>
+            </div>
+            <ul class="actions">
+                <!-- submit button should also prompt download -->
+                <li><input type="submit" value="Execute Query" class="primary" /></li>
+                <li><input type="reset" value="Reset" /></li>
+                <li><input type="button" value="Go Back" onclick="location.href='/query';" /></li>
+            </ul>
+        </form>
+        <!--  doesn't work -->
+        {% if display %}
+        <div style="overflow:scroll; height:100%;">
+            <p>{{ display | safe }}</p>>
+        </div>
+        {% endif %}
+
+    </article>
+</div>
+<!-- Footer -->
+<footer id="footer">
+    <p class="copyright">&copy; Harrison Wang. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+{% endblock content %}
