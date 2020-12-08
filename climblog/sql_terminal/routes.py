@@ -1,6 +1,6 @@
-import pandas as pd
-from flask import Blueprint, render_template, request, Response
+from flask import Blueprint, request, render_template, Response
 from apps.sql_terminal.retrieve_data import postgres_connect_fetch_close
+
 
 sql_terminal = Blueprint('sql_terminal', __name__,
                          template_folder='templates',

@@ -7,7 +7,7 @@
     </div>
     <div class="content">
         <div class="inner">
-            <h1>Harrison's Climbing App</h1>
+            <h1>Harrison's Climb Log</h1>
             <p>Welcome to my send-tracker.</p>
         </div>
     </div>
@@ -23,14 +23,16 @@
 <div id="main">
     <!-- SQL Terminal -->
     <article id="query">
-        <h2 class="major">Query</h2>
+        <h2 class="major">Read-Only SQL Terminal</h2>
         <form method="post"action="/download">
             <div class="fields">
                 <div class="field">
                     <label for="query">Query</label>
-                    <textarea name="query" id="query" placeholder="SELECT *
+                    <textarea name="query" id="query" placeholder="SELECT date_, grade, location, description,  location_type
 FROM boulders
-LIMIT 5;" rows="3" ></textarea>
+WHERE date_ >= '2020-10-25'
+ORDER BY date_ ASC, location_type DESC
+;" rows="5" ></textarea>
                 </div>
             </div>
             <ul class="actions">
