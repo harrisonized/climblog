@@ -17,7 +17,9 @@
                 <br><br>
                 Please click <a href="/">here</a> to return to the main page.
                 <br><br><br><br>
-                {{ error_message }}
+                {% if error_message %}
+                    {{ error_message }}
+                {% endif %}
             </p>
         </div>
         <!-- BG -->

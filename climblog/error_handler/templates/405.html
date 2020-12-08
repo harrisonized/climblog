@@ -7,14 +7,16 @@
         <noscript><link rel="stylesheet" href="static/html5up-dimension/assets/css/noscript.css" /></noscript>
     </head>
     <body>
-        <div id="wrapper">
-            <p style="font-family: verdana; color: white;">
+        <div id="wrapper" >
+            <p style="font-family: verdana; color: white; vertical-align: text-top;">
                 You have reached this page because you followed a link to get here instead of submitting a query.
                 <br><br>
                 Please click <a href="/query#query">here</a> to return to the query page.
                 <br><br><br>
-                {{ error_message }}
-            </p>            
+                {% if error_message %}
+                    {{ error_message }}
+                {% endif %}
+            </p>      
         </div>
         <!-- BG -->
         <div id="bg"></div>
