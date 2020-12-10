@@ -1,0 +1,1 @@
+This is a template for any new modules. Copy this folder and change the name.

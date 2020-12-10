@@ -1,0 +1,22 @@
+index,date_,color,hold_type,wall_type,style,grade
+200356,2020-10-25,blue,crimp,overhang,natural,V5
+200357,2020-10-25,red,crimp,overhang,natural,V7
+200358,2020-10-26,blue,jug,overhang,natural,V5
+200359,2020-10-26,orange,jug,overhang,natural,V6
+200360,2020-10-26,orange,crimp,variable,natural,V5
+200361,2020-10-27,green,crimp,slab,natural,V4
+200362,2020-10-27,green,crimp,slab,natural,V4
+200363,2020-10-27,blue,crimp,slab,natural,V4
+200364,2020-10-28,blue,jug,overhang,natural,V5
+200365,2020-10-28,blue,crimp,face,natural,V6
+200366,2020-10-28,blue,crimp,face,natural,V3
+200367,2020-10-28,red,crimp,overhang,natural,V7
+200368,2020-10-28,orange,jug,face,dyno,V7
+200369,2020-10-29,orange,"crimp, sloper",overhang,natural,V6
+200370,2020-10-29,blue,jug,overhang,natural,V4
+200371,2020-10-29,blue,crimp,face,dyno,V4
+200372,2020-10-30,blue,sloper,face,natural,V2
+200373,2020-10-30,orange,crimp,face,natural,V6
+200374,2020-10-30,blue,jug,face,mantle,V3
+200375,2020-11-11,green,crimp,face,natural,V1
+200376,2020-11-11,orange,"crimp, sloper",overhang,dyno,V7

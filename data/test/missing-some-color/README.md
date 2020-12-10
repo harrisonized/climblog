@@ -1,0 +1,1 @@
+Delete some entries in the color column to check that original color inputs are not overwritten.

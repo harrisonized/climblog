@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Header -->
+<header id="header">
+    <div class="logo">
+        <span class="icon fa-gem"></span>
+    </div>
+    <div class="content">
+        <div class="inner">
+            <h1>Your Climb Log</h1>
+            <p>Welcome to your send-tracker.</p>
+        </div>
+    </div>
+    <nav>
+        <ul>
+        	<li><a href="#upload">Upload</a></li>
+            <li><a href="#apps">Apps</a></li>
+            <li><a href="#howto">How to</a></li>
+            <li><a href="/">Go Back</a></li>
+            <!--<li><a href="#elements">Elements</a></li>-->
+        </ul>
+    </nav>
+</header>
+<!-- Main -->
+<div id="main">
+	<!-- Upload Form -->
+    <article id="upload">
+        <h2 class="major">Upload Your Data</h2>
+        <p>Upload climbing-log-indoor.csv, climbing-log-outdoor.csv, or both.<br>Only files with the correct filenames will be uploaded.</p>
+        <p>Uploaded files:
+        	{% if upload_indoor %}
+        	<br>{{upload_indoor | safe}}
+            {% endif %}
+            {% if upload_outdoor %}
+            <br>{{upload_outdoor | safe}}
+            {% endif %}
+        </p>
+        <form method="post" action="/upload" enctype="multipart/form-data">
+            <ul class="actions">
+                <li><input type="file" name="file" id="csv_file" multiple="" /></li>
+                <li><input type="submit" value="Upload" /></li>
+            </ul>
+        </form>
+        <form method="post" action="/delete" enctype="multipart/form-data">
+            <ul class="actions">
+                <li><input type="submit" value="Clear Your Data" class="primary" /></li>
+            </ul>
+        </form>
+    </article>
+    <!-- Apps -->
+    <article id="apps">
+        <h2 class="major">Apps</h2>
+        <p>If you have <a href="/guest_portal#upload">uploaded</a> your data, please continue.</p>
+        <table class="table table-dark">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">App</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><a href="/guest_portal/indoor">Your Indoor Boulders</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><a href="/guest_portal/outdoor">Your Outdoor Boulders</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+    <!-- Instructions -->
+    <article id="howto">
+        <h2 class="major">Instructions</h2>
+        <p>Please read this carefully before uploading any data. This table describes how you should structure your CSV file. At minimum, you should have the date_ and grade columns. If you do, you will be able to see the scatterplot, grades histogram, and grades by year heatmap.
+        <br><br>
+        To see an example of how this works, please use the <a href="/query#query">SQL Terminal</a> to download some sample data.</p>
+        <table class="table table-dark">
+            <thead class="thead">
+                <tr>
+                    <th scope="col">Field</th>
+                    <th scope="col">Required?</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">date_</th>
+                    <td>yes</td>
+                    <td>Enter this in the format YYYY-MM-DD (eg. 2020-12-09). Make sure in your CSV file that you name this column "date_" and not "date", because "date" is a reserved keyword in this app.</td>
+                </tr>
+                <tr>
+                    <th scope="row">color</th>
+                    <td>no</td>
+                    <td>Default options: pink, red, orange, yellow, green, blue, purple, brown, black, and white. Enter this all lowercase.
+                    <br><br>If you do not select a color, the default colors from the <a href="https://www.blackmountainbouldering.com/grades">Black Mountain Bouldering</a> will be applied. If you select a color not listed the default options, please be aware that your data might not be displayed. To get an idea of what colors are available, click <a href="https://www.w3.org/TR/css-color-3/#svg-color">here</a> to see a list of color keywords.</td>
+                </tr>
+                <tr>
+                    <th scope="row">description</th>
+                    <td>no</td>
+                    <td>Used in hover text only. Enter anything or nothing.</td>
+                </tr>
+                <tr>
+                    <th scope="row">hold_type</th>
+                    <td>no</td>
+                    <td>Available options: jug, crimp, sloper, crimp. Enter this as a comma-separated string (eg. "jug, crimp" without the quotes). If you repeat any holds (eg. "jug, jug, crimp"), there will be double-counting.</td>
+                </tr>
+                <tr>
+                    <th scope="row">wall_type</th>
+                    <td>no</td>
+                    <td>Available options: cave, overhang, face, arete, slab, corner, variable. Enter this all lowercase.</td>
+                </tr>
+                <tr>
+                    <th scope="row">style</th>
+                    <td>no</td>
+                    <td>Available options: mantle, natural, dyno, comp. Enter this all lowercase. If you don't know, it's probably natural. Comp will everntually be depreciated in favor of parkour.</td>
+                </tr>
+                <tr>
+                    <th scope="row">grade</th>
+                    <td>yes</td>
+                    <td>Enter this as a V-grade (eg. V6). If you have a ranged grade (eg. V6-V7), the lower grade will be applied.
+                    <br><br>Sorry rope-climbers!</td>
+                </tr>
+                <tr>
+                    <th scope="row">setter</th>
+                    <td>no</td>
+                    <td>Used in hover text only. Enter anything or nothing.</td>
+                </tr>
+                <tr>
+                    <th scope="row">set_year</th>
+                    <td>no</td>
+                    <td>Used in hover text only. Enter anything or nothing.</td>
+                </tr>
+                <tr>
+                    <th scope="row">location</th>
+                    <td>no</td>
+                    <td>Used in hover text only. Enter anything or nothing.</td>
+                </tr>
+                <tr>
+                    <th scope="row">location_type</th>
+                    <td>no</td>
+                    <td>Available options: indoor, outdoor. This will be generated for you based on the filename. For example, it is assumed that climbing-log-indoor.csv will contain indoor climbs. If you have anything here other than what it's supposed to be, it will be overwritten.</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</div>
+<!-- Footer -->
+<footer id="footer">
+    <p class="copyright">&copy; Harrison Wang. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+{% endblock content %}

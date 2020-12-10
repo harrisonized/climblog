@@ -48,7 +48,11 @@
                     <td><a href="/outdoor">Harrison's Outdoor Boulders</a></td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
+                    <th scope="row">3</th>
+                    <td><a href="/guest_portal">Guest Portal *New!*</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
                     <td><a href="/query">SQL Terminal *New!*</a></td>
                 </tr>
             </tbody>
@@ -64,7 +68,7 @@
             <br><br>
             On a more detailed-level, here's how I made the app run more smoothly:
             <ol>
-                <li>When opening a dashboard page for the first time after bringing the app out of a sleeping website state, the app opens a connection to a Heroku Postgres database and attempts to retrieve the data. If the connection is dropped or no data is returned, the app instead retrieves the data from the CSV files saved on the ephemeral disk. Finally, the app generates the figures and saves it to Heroku's ephemeral disk, then displays the figures on the webpage.</li>
+                <li>When opening a dashboard page for the first time after bringing the app out of a <a href="https://devcenter.heroku.com/articles/free-dyno-hours#dyno-sleeping">sleeping website state</a>, the app opens a connection to a Heroku Postgres database and attempts to retrieve the data. If the connection is dropped or no data is returned, the app instead retrieves the data from the CSV files saved on the ephemeral disk. Finally, the app generates the figures and saves it to Heroku's ephemeral disk, then displays the figures on the webpage.</li>
                 <li>When refreshing a dashboard page while the app is still active, the app reads in the figure directly from Heroku's ephemeral disk instead of regenerating it.</li>
             </ol> 
         </span>

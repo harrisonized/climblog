@@ -68,7 +68,7 @@ def hovertext_for_heatmap(df, column_list=None):
     return hover_text, annotations
 
 
-def fig_for_sends_by_date_scatter(scatter_df, logistic_params):
+def fig_for_sends_by_date_scatter(scatter_df, logistic_params=None):
 
     # plot main figure
     hover_text = 'Grade: ' + scatter_df['vgrade'].apply(str) + '<br>' \
@@ -83,17 +83,17 @@ def fig_for_sends_by_date_scatter(scatter_df, logistic_params):
     fig = plot_scatter(scatter_df, x="date_", y="grade_", color='color',
                        xlabel="Date", ylabel="Grade", title="Sends by Date",
                        hovertext=hover_text, hovertemplate=hover_template)
-
-    date_linspace = np.linspace(
-        mdates.date2num(scatter_df['date_'].min()),  # Date min
-        mdates.date2num(scatter_df['date_'].max()),  # Date max
-        num=25)
-    new_grades_scatter = go.Scatter(x=mdates.num2date(date_linspace),
-                                    y=logistic_func(date_linspace, *logistic_params),
-                                    mode='lines',
-                                    line={'color': 'lightgreen'},
-                                    hoverinfo='skip')
-    fig.add_trace(new_grades_scatter)
+    if logistic_params is not None:
+        date_linspace = np.linspace(
+            mdates.date2num(scatter_df['date_'].min()),  # Date min
+            mdates.date2num(scatter_df['date_'].max()),  # Date max
+            num=25)
+        new_grades_scatter = go.Scatter(x=mdates.num2date(date_linspace),
+                                        y=logistic_func(date_linspace, *logistic_params),
+                                        mode='lines',
+                                        line={'color': 'lightgreen'},
+                                        hoverinfo='skip')
+        fig.add_trace(new_grades_scatter)
 
     return fig
 

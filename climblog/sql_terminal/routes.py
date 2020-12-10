@@ -19,4 +19,4 @@ def download():
     data = df.to_csv(index=False, header=True, sep=",")
     return Response(data,
                     mimetype="text/csv",
-                    headers={"Content-disposition": "attachment; filename=data.csv"})
+                    headers={"Content-disposition": "attachment; filename=climbing-log.csv"})

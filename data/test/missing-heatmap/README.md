@@ -1,0 +1,1 @@
+Delete the hold_type, wall_type, and style columns.

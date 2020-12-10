@@ -1,6 +1,6 @@
 import unittest
 import pandas.io.sql as pd_sql
-from climblog.apps.auth.connections import postgres_connection
+from climblog.apps.utils.auth.connections import postgres_connection
 
 
 class TestConnections(unittest.TestCase):

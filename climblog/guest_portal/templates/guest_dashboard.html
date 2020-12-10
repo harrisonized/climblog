@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Header -->
+<header id="header">
+    <div class="logo">
+        <span class="icon fa-gem"></span>
+    </div>
+    <div class="content">
+        <div class="inner">
+            <h1>{{ location_type.title }} Boulders</h1>
+            <p>Welcome to your send-tracker.</p>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#timeseries">Scatter</a></li>
+            <li><a href="#histogram">Histogram</a></li>
+            <li><a href="#heatmaps">Heatmaps</a></li>
+            <li><a href="/guest_portal">Go Back</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- Main -->
+<div id="main">
+    <!-- Timeseries -->
+    <article id="timeseries">
+        <h2 class="major">Sends by Date</h2>
+        <div class="embed-responsive" id="timeseries" style="width: 100%; height: 500px;">
+            <iframe name="scatter" class="embed-responsive-item" src="/fig/guest_portal/{{ location_type.lower }}/timeseries" style="width: 100%; height: 540px;" scrolling="yes" frameborder="0" ></iframe>
+        </div>
+        <br>
+    </article>
+    <!-- Histogram -->
+    <article id="histogram">
+        <h2 class="major">Grades Histogram</h2>
+        <div class="embed-responsive" id="histogram" style="width: 100%; height: 500px;">
+            <iframe name="histogram" class="embed-responsive-item" src="/fig/guest_portal/{{ location_type.lower }}/histogram" style="width: 100%; height: 540px;" scrolling="yes" frameborder="0" ></iframe>
+        </div>
+        <br>
+    </article>
+    <!-- Heatmaps -->
+    <article id="heatmaps">
+        <h2 class="major">Heatmaps</h2>
+        <div class="embed-responsive" id="year" style="width: 100%; height: 500px;">
+            <iframe name="year" class="embed-responsive-item" src="/fig/guest_portal/{{ location_type.lower }}/year"
+            style="width: 100%; height: 540px;" scrolling="yes" frameborder="0" ></iframe>
+        </div>
+        <br>
+        <div class="embed-responsive" id="wall" style="width: 100%; height: 500px;">
+            <iframe name="wall" class="embed-responsive-item" src="/fig/guest_portal/{{ location_type.lower }}/wall"
+            style="width: 100%; height: 540px;" scrolling="yes" frameborder="0" ></iframe>
+        </div>
+        <br>
+        <div class="embed-responsive" id="hold" style="width: 100%; height: 500px;">
+            <iframe name="hold" class="embed-responsive-item" src="/fig/guest_portal/{{ location_type.lower }}/hold"
+            style="width: 100%; height: 540px;" scrolling="yes" frameborder="0" ></iframe>
+        </div>
+        <br>
+        <div class="embed-responsive" id="style" style="width: 100%; height: 500px;">
+            <iframe name="style" class="embed-responsive-item" src="/fig/guest_portal/{{ location_type.lower }}/style"
+            style="width: 100%; height: 540px;" scrolling="yes" frameborder="0" ></iframe>
+        </div>
+        <br>
+    </article>
+</div>
+<!-- Footer -->
+<footer id="footer">
+    <p class="copyright">&copy; Harrison Wang. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
+{% endblock content %}

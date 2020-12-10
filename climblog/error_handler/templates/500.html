@@ -13,9 +13,11 @@
                 <br><br>
                 1. You attempted to execute a broken query.
                 <br>
-                2. You attempted to execute non-read-only SQL command.
+                2. You attempted to execute query that is NOT read-only.
+                <br>
+                3. Your figure could not be generated from your input data.
                 <br><br>
-                Please click <a href="/query#query">here</a> to return to the query page.
+                Please click <a href="javascript:history.back()">here</a> to go back.
                 <br><br><br>
                 {% if error_message %}
                     {{ error_message }}

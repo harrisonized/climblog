@@ -1,0 +1,22 @@
+index,date_,color,description,hold_type,wall_type,style,grade,setter,set_year,location,location_type
+200356,2020-10-25,asdf,Kill by Numbers,crimp,overhang,natural,V5,,,"Joe’s Valley, Left Fork",outdoor
+200357,2020-10-25,asdf,Big Joe,crimp,overhang,natural,V7,,,"Joe’s Valley, Left Fork",outdoor
+200358,2020-10-26,asdf,The Goose,jug,overhang,natural,V5,,,Moe’s Valley,outdoor
+200359,2020-10-26,asdf,Pink Lady,jug,overhang,natural,V6,,,Moe’s Valley,outdoor
+200360,2020-10-26,asdf,Backhoe Traverse,crimp,variable,natural,V5,,,Moe’s Valley,outdoor
+200361,2020-10-27,asdf,K-Town,crimp,slab,natural,V4,,,"Joe’s Valley, Left Fork",outdoor
+200362,2020-10-27,asdf,Unnamed V4,crimp,slab,natural,V4,,,"Joe’s Valley, Left Fork",outdoor
+200363,2020-10-27,asdf,Shit,crimp,slab,natural,V4,,,"Joe’s Valley, Left Fork",outdoor
+200364,2020-10-28,asdf,Stumble Bum Traverse,jug,overhang,natural,V5,,,"Joe’s Valley, New Joe’s",outdoor
+200365,2020-10-28,asdf,Fart Fig,crimp,face,natural,V6,,,"Joe’s Valley, New Joe’s",outdoor
+200366,2020-10-28,asdf,Joe Cool,crimp,face,natural,V3,,,"Joe’s Valley, New Joe’s",outdoor
+200367,2020-10-28,asdf,Big Boy,crimp,overhang,natural,V7,,,"Joe’s Valley, New Joe’s",outdoor
+200368,2020-10-28,asdf,Pocket Rocket,jug,face,dyno,V7,,,"Joe’s Valley, New Joe’s",outdoor
+200369,2020-10-29,asdf,Wills of Fire,"crimp, sloper",overhang,natural,V6,,,"Joe’s Valley, Left Fork",outdoor
+200370,2020-10-29,asdf,Caveman,jug,overhang,natural,V4,,,"Joe’s Valley, Right Fork",outdoor
+200371,2020-10-29,asdf,Sling Blade,crimp,face,dyno,V4,,,"Joe’s Valley, Right Fork",outdoor
+200372,2020-10-30,asdf,The Angler,sloper,face,natural,V2,,,"Joe’s Valley, Left Fork",outdoor
+200373,2020-10-30,asdf,Vertical Ice,crimp,face,natural,V6,,,"Joe’s Valley, Dairy Canyon",outdoor
+200374,2020-10-30,asdf,Vertical Limit,jug,face,mantle,V3,,,"Joe’s Valley, Dairy Canyon",outdoor
+200375,2020-11-11,asdf,Tractor Pull Traverse,crimp,face,natural,V1,,,Grizzly Peak,outdoor
+200376,2020-11-11,asdf,Scott’s Roof,"crimp, sloper",overhang,dyno,V7,,,Grizzly Peak,outdoor

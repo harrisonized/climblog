@@ -17,6 +17,26 @@ color_name_to_hex = {'blue': '#1f77b4',
                      'white': '#7f7f7f',
                      'black': '#000000'}
 
+# color scheme from Black Mountain Bouldering
+color_grade_to_name = {0: 'green',
+                       1: 'green',
+                       2: 'green',
+                       3: 'blue',
+                       4: 'blue',
+                       5: 'blue',
+                       6: 'orange',
+                       7: 'orange',
+                       8: 'orange',
+                       9: 'red',
+                       10: 'red',
+                       11: 'red',
+                       12: 'purple',
+                       13: 'purple',
+                       14: 'purple',
+                       15: 'black',
+                       16: 'black',
+                       17: 'black'}
+
 
 default_colors = list(color_name_to_hex.values())
 

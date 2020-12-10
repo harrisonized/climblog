@@ -24,26 +24,31 @@
     <!-- SQL Terminal -->
     <article id="query">
         <h2 class="major">Read-Only SQL Terminal</h2>
-        <form method="post" action="/download">
+        <form method="post"action="/download">
             <div class="fields">
                 <div class="field">
                     <label for="query">Query</label>
-                    <textarea name="query" id="query" placeholder="SELECT date_, grade, location, description, location_type
+                    <textarea name="query" id="query" placeholder="SELECT date_, grade, location, description,  location_type
 FROM boulders
 WHERE date_ >= '2020-10-25'
-  AND location_type = 'outdoor'
-ORDER BY date_ ASC
-;" rows="6" ></textarea>
+ORDER BY date_ ASC, location_type DESC
+;" rows="5" ></textarea>
                 </div>
             </div>
             <ul class="actions">
-                <!-- submit button should prompt download -->
+                <!-- submit button should also prompt download -->
                 <li><input type="submit" value="Execute Query" class="primary" /></li>
                 <li><input type="reset" value="Reset" /></li>
                 <li><input type="button" value="Go Back" onclick="location.href='/query';" /></li>
-                <li><input type="button" value="Guest Portal" onclick="location.href='/guest_portal';" /></li>
             </ul>
         </form>
+        <!--  doesn't work -->
+        {% if display %}
+        <div style="overflow:scroll; height:100%;">
+            <p>{{ display | safe }}</p>>
+        </div>
+        {% endif %}
+
     </article>
 </div>
 <!-- Footer -->
