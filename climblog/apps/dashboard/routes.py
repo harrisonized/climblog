@@ -1,11 +1,11 @@
 from flask import Blueprint, Markup
 from flask import render_template
-from apps.dashboard.retrieve_fig import (retrieve_sends_by_date_scatter,
-                                         retrieve_grades_histogram,
-                                         retrieve_grades_by_year_heatmap,
-                                         retrieve_grades_by_wall_heatmap,
-                                         retrieve_grades_by_hold_heatmap,
-                                         retrieve_grades_by_style_heatmap)
+from climblog.apps.dashboard.retrieve_fig import (retrieve_sends_by_date_scatter,
+                                                  retrieve_grades_histogram,
+                                                  retrieve_grades_by_year_heatmap,
+                                                  retrieve_grades_by_wall_heatmap,
+                                                  retrieve_grades_by_hold_heatmap,
+                                                  retrieve_grades_by_style_heatmap)
 
 
 retrieve_plot = {'timeseries': retrieve_sends_by_date_scatter,

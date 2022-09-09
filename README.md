@@ -17,7 +17,7 @@ Note that Heroku may take up to 30 seconds to come out of a [sleeping website st
 ## Getting Started
 
 1. Install the requirements
-2. Run the Jekyll server:  `python climblog/main.py`
+2. Run the server:  `python climblog/main.py`
 3. Access the server: http://localhost:5000
 
 

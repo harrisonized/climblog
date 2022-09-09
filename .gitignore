@@ -11,3 +11,4 @@ test.html
 .idea/*
 *.egg-info
 *.egg-info/*
+env/*

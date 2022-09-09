@@ -12,7 +12,7 @@ assert INI_KEY, 'No INI_KEY'
 
 
 def postgres_connection(database=None,
-                        section='postgres', cfg_path='conf/cred.ini'):
+                        section='postgres', cfg_path='configs/cred.ini'):
     """Given an INI file with a ['postgres'] section
     Returns the sqlalchemy connection args 
 
@@ -41,7 +41,7 @@ def postgres_connection(database=None,
     return connection_uri
 
 
-def heroku_postgres_connection(section='heroku-postgres', cfg_path='conf/cred.ini'):
+def heroku_postgres_connection(section='heroku-postgres', cfg_path='configs/cred.ini'):
     """Given an INI file with a ['heroku-postgres'] section
     Returns the sqlalchemy connection args 
 

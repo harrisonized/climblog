@@ -2,21 +2,21 @@ import os
 import json
 import plotly.offline as pyo
 import plotly.io as pio
-from apps.utils.config.settings import get_defaults_from_ini
-from apps.utils.plotting.plotly import export_fig_to_json
-from apps.utils.math.curve_fit import curve_fit_new_grades
-from apps.dashboard.get_data import (get_data_for_sends_by_date_scatter_from_csv,
-                                     get_data_for_grades_histogram_from_csv,
-                                     get_data_for_grades_by_year_heatmap_from_csv,
-                                     get_data_for_grades_by_wall_heatmap_from_csv,
-                                     get_data_for_grades_by_hold_heatmap_from_csv,
-                                     get_data_for_grades_by_style_heatmap_from_csv)
-from apps.dashboard.plot_fig import (fig_for_sends_by_date_scatter,
-                                     fig_for_grades_histogram,
-                                     fig_for_grades_by_year_heatmap,
-                                     fig_for_grades_by_wall_heatmap,
-                                     fig_for_grades_by_hold_heatmap,
-                                     fig_for_grades_by_style_heatmap)
+from climblog.utils.file_handler import get_defaults_from_ini
+from climblog.utils.plotting import export_fig_to_json
+from climblog.utils.math.curve_fit import curve_fit_new_grades
+from climblog.apps.dashboard.get_data import (get_data_for_sends_by_date_scatter_from_csv,
+                                         get_data_for_grades_histogram_from_csv,
+                                         get_data_for_grades_by_year_heatmap_from_csv,
+                                         get_data_for_grades_by_wall_heatmap_from_csv,
+                                         get_data_for_grades_by_hold_heatmap_from_csv,
+                                         get_data_for_grades_by_style_heatmap_from_csv)
+from climblog.apps.dashboard.plot_fig import (fig_for_sends_by_date_scatter,
+                                         fig_for_grades_histogram,
+                                         fig_for_grades_by_year_heatmap,
+                                         fig_for_grades_by_wall_heatmap,
+                                         fig_for_grades_by_hold_heatmap,
+                                         fig_for_grades_by_style_heatmap)
 
 # test settings
 default_settings = get_defaults_from_ini()

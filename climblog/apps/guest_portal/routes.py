@@ -3,9 +3,9 @@ import shutil
 from glob import glob
 import json
 import pandas as pd
-from apps.utils.data.data_tools import append_standard_df
 from flask import Blueprint, render_template, request, redirect, Markup
-from apps.guest_portal.retrieve_fig import (retrieve_sends_by_date_scatter,
+from climblog.utils.data_handler import append_standard_df
+from climblog.apps.guest_portal.retrieve_fig import (retrieve_sends_by_date_scatter,
                                             retrieve_grades_histogram,
                                             retrieve_grades_by_year_heatmap,
                                             retrieve_grades_by_wall_heatmap,

@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import psycopg2 as pg
-from apps.utils.auth.connections import postgres_connection
+from climblog.utils.auth.connections import postgres_connection
 
 connection_uri = os.getenv('DATABASE_URL') or postgres_connection('climblog')  # test locally
 

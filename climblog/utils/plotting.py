@@ -3,7 +3,7 @@ import json
 import random
 import plotly
 import plotly.graph_objs as go
-from .colors import warm
+from climblog.etc.colors import warm
 
 # Objects included in this file:
 
