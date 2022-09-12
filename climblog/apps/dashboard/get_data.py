@@ -2,10 +2,10 @@ import os
 import datetime as dt
 import pandas as pd
 import pandas.io.sql as pd_sql
-from climblog.etc.columns import default_columns
 from climblog.utils.auth.connections import postgres_connection
-from climblog.utils.data_handler import execute_query_on_df
+from climblog.utils.handlers.data_handler import execute_query_on_df
 from climblog.etc.colors import color_name_to_hex, color_grade_to_name
+from climblog.etc.columns import default_columns
 from climblog.factories import queries
 
 connection_uri = os.getenv('DATABASE_URL') or postgres_connection('climblog')  # test locally

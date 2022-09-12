@@ -2,9 +2,9 @@ import os
 import json
 import plotly.offline as pyo
 import plotly.io as pio
-from climblog.utils.file_handler import get_defaults_from_ini
+from climblog.utils.handlers.file_handler import get_defaults_from_ini
+from climblog.utils.curve_fit import curve_fit_new_grades
 from climblog.utils.plotting import export_fig_to_json
-from climblog.utils.math.curve_fit import curve_fit_new_grades
 from .get_data import (get_data_for_sends_by_date_scatter_from_csv,
                        get_data_for_sends_by_date_scatter_from_postgres,
                        get_data_for_grades_histogram_from_csv,

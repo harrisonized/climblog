@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 from werkzeug.debug import get_current_traceback
 import logging
-from climblog.utils.file_handler import get_defaults_from_ini
+from climblog.utils.handlers.file_handler import get_defaults_from_ini
 
 default_settings = get_defaults_from_ini()
 show_traceback = default_settings.getboolean('show_traceback')

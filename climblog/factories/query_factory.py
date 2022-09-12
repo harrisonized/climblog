@@ -5,7 +5,7 @@ Eg:
 >>> from climblog.queries import counts
 """
 from os.path import abspath, sep
-from climblog.utils.file_handler import dirname_n_times, read_folder_as_dict
+from climblog.utils.handlers.file_handler import dirname_n_times, read_folder_as_dict
 
 root_dir = dirname_n_times(abspath(__file__), 3)
 

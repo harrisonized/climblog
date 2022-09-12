@@ -1,5 +1,5 @@
 from flask import Blueprint, request, render_template, Response
-from apps.sql_terminal.retrieve_data import postgres_connect_fetch_close
+from climblog.utils.auth.connections import postgres_connect_fetch_close
 
 
 sql_terminal = Blueprint('sql_terminal', __name__,

@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.dates as mdates
 import plotly.graph_objs as go
 from climblog.utils.plotting import plot_scatter, plot_bar, plot_heatmap
-from climblog.utils.data_handler import word_wrap
-from climblog.utils.math.curve_fit import logistic_func
+from climblog.utils.handlers.data_handler import word_wrap
+from climblog.utils.curve_fit import logistic_func
 
 
 # Functions included in this file:
