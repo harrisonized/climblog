@@ -6,7 +6,7 @@ from climblog.etc.columns import default_columns
 from climblog.utils.auth.connections import postgres_connection
 from climblog.utils.data_handler import execute_query_on_df
 from climblog.etc.colors import color_name_to_hex, color_grade_to_name
-from climblog.utils.queries import queries
+from climblog.factories import queries
 
 connection_uri = os.getenv('DATABASE_URL') or postgres_connection('climblog')  # test locally
 data_dir = 'data'
@@ -76,7 +76,7 @@ def get_data_for_grades_histogram_from_csv(location_type, is_tmp=False):
     raw_df['location_type'] = location_type
 
     df = execute_query_on_df(
-        queries['COUNT_GRADES'].format(datasource='dataframe', location_type=location_type), raw_df)
+        queries['counts']['COUNT_GRADES'].format(datasource='dataframe', location_type=location_type), raw_df)
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
     df['grade_'] = df['grade_'].apply(lambda x: x.replace('V', '')).astype(int)
@@ -89,7 +89,7 @@ def get_data_for_grades_histogram_from_csv(location_type, is_tmp=False):
 
 def get_data_for_grades_histogram_from_postgres(location_type):
     df = pd_sql.read_sql(
-        queries['COUNT_GRADES'].format(datasource='boulders', location_type=location_type), connection_uri)
+        queries['counts']['COUNT_GRADES'].format(datasource='boulders', location_type=location_type), connection_uri)
     assert df.empty is False, 'No data returned'
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
@@ -113,7 +113,7 @@ def get_data_for_grades_by_year_heatmap_from_csv(location_type, is_tmp=False):
     raw_df['location_type'] = location_type
 
     df = execute_query_on_df(
-        queries['COUNT_GRADES_BY_YEAR_FROM_DF'].format(location_type=location_type), raw_df)
+        queries['counts']['COUNT_GRADES_BY_YEAR_FROM_DF'].format(location_type=location_type), raw_df)
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
     df['grade_'] = df['grade_'].apply(lambda x: x.replace('V', '')).astype(int)
@@ -127,7 +127,7 @@ def get_data_for_grades_by_year_heatmap_from_csv(location_type, is_tmp=False):
 
 def get_data_for_grades_by_year_heatmap_from_postgres(location_type):
     df = pd_sql.read_sql(
-        queries['COUNT_GRADES_BY_YEAR_FROM_PG'].format(datasource='boulders', location_type=location_type), connection_uri)
+        queries['counts']['COUNT_GRADES_BY_YEAR_FROM_PG'].format(datasource='boulders', location_type=location_type), connection_uri)
     assert df.empty is False, 'No data returned'
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
@@ -152,7 +152,7 @@ def get_data_for_grades_by_wall_heatmap_from_csv(location_type, is_tmp=False):
     raw_df['location_type'] = location_type
 
     df = execute_query_on_df(
-        queries['COUNT_GRADES_BY_WALL'].format(datasource='dataframe', location_type=location_type), raw_df)
+        queries['counts']['COUNT_GRADES_BY_WALL'].format(datasource='dataframe', location_type=location_type), raw_df)
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
     df['grade_'] = df['grade_'].apply(lambda x: x.replace('V', '')).astype(int)
@@ -167,7 +167,7 @@ def get_data_for_grades_by_wall_heatmap_from_csv(location_type, is_tmp=False):
 
 def get_data_for_grades_by_wall_heatmap_from_postgres(location_type):
     df = pd.read_sql(
-        queries['COUNT_GRADES_BY_WALL'].format(datasource='boulders', location_type=location_type), connection_uri)
+        queries['counts']['COUNT_GRADES_BY_WALL'].format(datasource='boulders', location_type=location_type), connection_uri)
     assert df.empty is False, 'No data returned'
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
@@ -195,7 +195,7 @@ def get_data_for_grades_by_hold_heatmap_from_csv(location_type, is_tmp=False):
     raw_df['location_type'] = location_type
 
     df = execute_query_on_df(
-        queries['COUNT_GRADES_BY_HOLD_FROM_DF'].format(location_type=location_type), raw_df)
+        queries['counts']['COUNT_GRADES_BY_HOLD_FROM_DF'].format(location_type=location_type), raw_df)
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
     df['grade_'] = df['grade_'].apply(lambda x: x.replace('V', '')).astype(int)
@@ -210,7 +210,7 @@ def get_data_for_grades_by_hold_heatmap_from_csv(location_type, is_tmp=False):
 
 def get_data_for_grades_by_hold_heatmap_from_postgres(location_type):
     df = pd_sql.read_sql(
-        queries['COUNT_GRADES_BY_HOLD_FROM_PG'].format(datasource='boulders', location_type=location_type), connection_uri)
+        queries['counts']['COUNT_GRADES_BY_HOLD_FROM_PG'].format(datasource='boulders', location_type=location_type), connection_uri)
     assert df.empty is False, 'No data returned'
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
@@ -238,7 +238,7 @@ def get_data_for_grades_by_style_heatmap_from_csv(location_type, is_tmp=False):
     raw_df['location_type'] = location_type
 
     df = execute_query_on_df(
-        queries['COUNT_GRADES_BY_STYLE'].format(datasource='dataframe', location_type=location_type), raw_df)
+        queries['counts']['COUNT_GRADES_BY_STYLE'].format(datasource='dataframe', location_type=location_type), raw_df)
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
     df['grade_'] = df['grade_'].apply(lambda x: x.replace('V', '')).astype(int)
@@ -253,7 +253,7 @@ def get_data_for_grades_by_style_heatmap_from_csv(location_type, is_tmp=False):
 
 def get_data_for_grades_by_style_heatmap_from_postgres(location_type):
     df = pd.read_sql(
-        queries['COUNT_GRADES_BY_STYLE'].format(datasource='boulders', location_type=location_type), connection_uri)
+        queries['counts']['COUNT_GRADES_BY_STYLE'].format(datasource='boulders', location_type=location_type), connection_uri)
     assert df.empty is False, 'No data returned'
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])

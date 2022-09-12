@@ -1,0 +1,1 @@
+Store queries as .sql files in this folder. Filenames are read as dictionary keys with data as the values. Folders are read as subdictionaries.
