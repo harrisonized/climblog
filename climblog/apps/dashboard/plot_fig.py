@@ -125,6 +125,21 @@ def plot_fig_for_grades_histogram(grades_histogram_df):
     return fig
 
 
+def plot_fig_for_grades_by_heatmap(heatmap_input_df,
+                                   hovertext_input_df,
+                                   xlabel,
+                                   ylabel='Grade',
+                                   columns=None):
+
+    # columns = [col for col in columns if col in hovertext_input_df.columns]
+    hover_text, annotations = hovertext_for_heatmap(hovertext_input_df, columns)
+    fig = plot_heatmap(heatmap_input_df,
+                       xlabel=xlabel, ylabel=ylabel, title=f"Heatmap of {ylabel}s by {xlabel}",
+                       hovertext=hover_text, annotations=annotations)
+
+    return fig
+
+
 def plot_fig_for_grades_by_year_heatmap(year_table_df, year_df):
 
     # plot main figure

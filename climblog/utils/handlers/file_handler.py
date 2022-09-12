@@ -1,8 +1,9 @@
 import os
-from os.path import sep
+from os.path import abspath, dirname, sep
 from configparser import ConfigParser
 from .data_handler import build_nested_dict, merge_dict_with_subdicts
 
+ROOT_DIR = dirname(dirname(dirname(dirname(abspath(__file__)))))
 
 # Functions
 # # walk
@@ -25,7 +26,7 @@ def walk(main_dir):
 def dirname_n_times(path, n=1):
 
     for i in range(n):
-        path = os.path.dirname(path)
+        path = dirname(path)
     return path
 
 
@@ -56,9 +57,8 @@ def read_folder_as_dict(dirpath, ext='.sql'):
     return text_dict
 
 
-def get_defaults_from_ini(section='default', cfg_path='configs/settings.ini'):
+def get_defaults_from_ini(section='default', cfg_path=f'{ROOT_DIR}/configs/settings.ini'):
     """To be used with conf/settings.ini"""
-
     assert os.path.exists(cfg_path), f'Missing file at {cfg_path}'
     
     cfg = ConfigParser()

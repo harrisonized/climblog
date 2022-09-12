@@ -24,9 +24,7 @@ dashboard = Blueprint('dashboard', __name__,
 
 @dashboard.route("/indoor", methods=["GET"])
 def indoor():
-    location_type = {'title': 'Indoor',
-                     'lower': 'indoor', }
-
+    location_type = {'title': 'Indoor', 'lower': 'indoor', }
     return render_template(
         "dashboard.html",
         location_type=location_type,
@@ -35,9 +33,7 @@ def indoor():
 
 @dashboard.route("/outdoor", methods=["GET"])
 def outdoor():
-    location_type = {'title': 'Outdoor',
-                     'lower': 'outdoor', }
-
+    location_type = {'title': 'Outdoor', 'lower': 'outdoor', }
     return render_template(
         "dashboard.html",
         location_type=location_type,

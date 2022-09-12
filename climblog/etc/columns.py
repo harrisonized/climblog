@@ -9,3 +9,7 @@ default_columns = ["date_",
                    "location",
                    "location_type"
                    ]
+
+grades_by_wall_heatmap_columns = ['cave', 'overhang', 'face', 'arete', 'slab', 'corner', 'variable']
+grades_by_hold_heatmap_columns = ['jug', 'crimp', 'sloper', 'pinch']
+grades_by_style_heatmap_columns = ['mantle', 'natural', 'dyno', 'comp']

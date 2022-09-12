@@ -5,13 +5,15 @@ import json
 import pandas as pd
 from flask import Blueprint, render_template, request, redirect, Markup
 from climblog.utils.handlers.data_handler import append_standard_df
-from climblog.apps.guest_portal.retrieve_fig import (retrieve_sends_by_date_scatter,
-                                            retrieve_grades_histogram,
-                                            retrieve_grades_by_year_heatmap,
-                                            retrieve_grades_by_wall_heatmap,
-                                            retrieve_grades_by_hold_heatmap,
-                                            retrieve_grades_by_style_heatmap)
+from climblog.etc.columns import default_columns
+from climblog.apps.dashboard.retrieve_fig import (retrieve_sends_by_date_scatter,
+                                                  retrieve_grades_histogram,
+                                                  retrieve_grades_by_year_heatmap,
+                                                  retrieve_grades_by_wall_heatmap,
+                                                  retrieve_grades_by_hold_heatmap,
+                                                  retrieve_grades_by_style_heatmap)
 
+fig_dir = 'figures/guest_portal'
 retrieve_fig = {'timeseries': retrieve_sends_by_date_scatter,
                 'histogram': retrieve_grades_histogram,
                 'year': retrieve_grades_by_year_heatmap,
@@ -48,8 +50,8 @@ def upload():
             try:
                 raw_df = pd.read_csv(file)
             except:
-                raw_df = pd.DataFrame()
-            df = append_standard_df(raw_df)
+                raw_df = pd.DataFrame(default_columns)
+            df = append_standard_df(raw_df, columns=default_columns)
 
             if not df.empty:
                 os.makedirs('tmp/data', exist_ok=True)  # make sure folder exists
@@ -77,7 +79,7 @@ def indoor():
 
     return render_template(
         "guest_dashboard.html",
-        location_type=location_type,
+        location_type=location_type
     )
 
 
@@ -88,14 +90,14 @@ def outdoor():
 
     return render_template(
         "guest_dashboard.html",
-        location_type=location_type,
+        location_type=location_type
     )
 
 
 @guest_portal.route("/fig/guest_portal/<location_type>/<plot_type>", methods=["GET"])
 def plot(location_type, plot_type):
 
-    div = retrieve_fig[plot_type](location_type)
+    div = retrieve_fig[plot_type](location_type, fig_dir=fig_dir, is_tmp=True)
 
     return render_template(
         "fig.html",
