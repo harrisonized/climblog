@@ -8,12 +8,12 @@ from climblog.utils.curve_fit import logistic_func
 
 # Functions included in this file:
 # # hovertext_for_heatmap
-# # fig_for_sends_by_date_scatter
-# # fig_for_grades_histogram
-# # fig_for_grades_by_year_heatmap
-# # fig_for_grades_by_wall_heatmap
-# # fig_for_grades_by_hold_heatmap
-# # fig_for_grades_by_style_heatmap
+# # plot_fig_for_sends_by_date_scatter
+# # plot_fig_for_grades_histogram
+# # plot_fig_for_grades_by_year_heatmap
+# # plot_fig_for_grades_by_wall_heatmap
+# # plot_fig_for_grades_by_hold_heatmap
+# # plot_fig_for_grades_by_style_heatmap
 
 
 def hovertext_for_heatmap(df, column_list=None):
@@ -68,7 +68,7 @@ def hovertext_for_heatmap(df, column_list=None):
     return hover_text, annotations
 
 
-def fig_for_sends_by_date_scatter(scatter_df, logistic_params=None):
+def plot_fig_for_sends_by_date_scatter(scatter_df, logistic_params=None):
 
     # plot main figure
     hover_text = 'Grade: ' + scatter_df['vgrade'].apply(str) + '<br>' \
@@ -98,7 +98,7 @@ def fig_for_sends_by_date_scatter(scatter_df, logistic_params=None):
     return fig
 
 
-def fig_for_grades_histogram(grades_histogram_df):
+def plot_fig_for_grades_histogram(grades_histogram_df):
     """df should look like the following:
     """
 
@@ -125,7 +125,7 @@ def fig_for_grades_histogram(grades_histogram_df):
     return fig
 
 
-def fig_for_grades_by_year_heatmap(year_table_df, year_df):
+def plot_fig_for_grades_by_year_heatmap(year_table_df, year_df):
 
     # plot main figure
     hover_text, annotations = hovertext_for_heatmap(year_df)
@@ -136,7 +136,7 @@ def fig_for_grades_by_year_heatmap(year_table_df, year_df):
     return fig
 
 
-def fig_for_grades_by_wall_heatmap(wall_table_df, wall_df):
+def plot_fig_for_grades_by_wall_heatmap(wall_table_df, wall_df):
 
     # plot main figure
     columns = ['cave', 'overhang', 'face', 'arete', 'slab', 'corner', 'variable']
@@ -148,7 +148,7 @@ def fig_for_grades_by_wall_heatmap(wall_table_df, wall_df):
     return fig
 
 
-def fig_for_grades_by_hold_heatmap(hold_table_df, hold_df):
+def plot_fig_for_grades_by_hold_heatmap(hold_table_df, hold_df):
 
     # plot main figure
     columns = ['jug', 'crimp', 'sloper', 'pinch']
@@ -160,7 +160,7 @@ def fig_for_grades_by_hold_heatmap(hold_table_df, hold_df):
     return fig
 
 
-def fig_for_grades_by_style_heatmap(style_table_df, style_df):
+def plot_fig_for_grades_by_style_heatmap(style_table_df, style_df):
 
     # plot main figure
     columns = ['mantle', 'natural', 'dyno', 'comp']
