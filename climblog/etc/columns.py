@@ -5,6 +5,7 @@ default_columns = ["date_",
                    "wall_type",
                    "style",
                    "grade",
+                   "display_grade",
                    "setter",
                    "location",
                    "location_type"

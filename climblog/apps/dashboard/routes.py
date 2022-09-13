@@ -13,8 +13,7 @@ retrieve_plot = {'timeseries': retrieve_sends_by_date_scatter,
                  'year': retrieve_grades_by_year_heatmap,
                  'wall': retrieve_grades_by_wall_heatmap,
                  'hold': retrieve_grades_by_hold_heatmap,
-                 'style': retrieve_grades_by_style_heatmap,
-                 }
+                 'style': retrieve_grades_by_style_heatmap}
 
 
 dashboard = Blueprint('dashboard', __name__,

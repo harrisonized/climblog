@@ -1,10 +1,8 @@
 WITH primary_data AS
 (SELECT
    date_,
-   CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
-        WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
-        ELSE grade END AS grade_,
-   grade AS vgrade,
+   grade,
+   display_grade,
    location,
    setter,
    description,
@@ -13,26 +11,26 @@ WITH primary_data AS
    LOWER(style) AS style
  FROM {datasource}
  WHERE location_type = '{location_type}'
- ORDER BY wall_type, grade_),
+ ORDER BY wall_type, grade),
 
 count_table AS
 (SELECT
-   grade_,
+   grade,
    wall_type,
    COUNT(wall_type) AS count_
  FROM primary_data
- GROUP BY grade_, wall_type),
+ GROUP BY grade, wall_type),
 
 first_send AS
 (SELECT
-   grade_,
+   grade,
    wall_type,
    MIN(date_) as date_
  FROM primary_data
- GROUP BY grade_, wall_type)
+ GROUP BY grade, wall_type)
 
 SELECT
-  f.grade_,
+  f.grade,
   f.wall_type,
   c.count_,
   f.date_,
@@ -42,7 +40,7 @@ SELECT
   p.hold_type,
   p.style
 FROM first_send f
-LEFT JOIN count_table c ON f.grade_ = c.grade_ AND f.wall_type = c.wall_type
-LEFT JOIN primary_data p ON f.date_ = p.date_ AND f.grade_ = p.grade_ AND f.wall_type = p.wall_type
-ORDER BY f.date_, f.grade_, f.wall_type
+LEFT JOIN count_table c ON f.grade = c.grade AND f.wall_type = c.wall_type
+LEFT JOIN primary_data p ON f.date_ = p.date_ AND f.grade = p.grade AND f.wall_type = p.wall_type
+ORDER BY f.date_, f.grade, f.wall_type
 ;

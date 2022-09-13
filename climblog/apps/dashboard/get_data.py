@@ -26,7 +26,7 @@ def get_data_for_sends_by_date_scatter(location_type, is_tmp=False):
         assert df.empty is False, 'No data returned'
 
     except:
-        csv_path = f'{data_dir}/climbing-log-{location_type}.csv'
+        csv_path = f'{data_dir}/climbing-log.csv'
 
         if is_tmp:
             csv_path = f'tmp/{csv_path}'
@@ -36,12 +36,10 @@ def get_data_for_sends_by_date_scatter(location_type, is_tmp=False):
         except:
             df = pd.DataFrame(columns=default_columns)
 
-        df['location_type'] = location_type
-        df = df.rename(columns={'grade': 'vgrade'})
+        df = df[(df['location_type'] == location_type)].copy()
 
-    df['grade_'] = df['vgrade'].apply(lambda x: x.split('-')[0]).apply(lambda x: x.replace('V', '')).astype(int)
     df['date_'] = df['date_'].apply(lambda date: dt.datetime.strptime(date, '%Y-%m-%d'))
-    df.loc[df['color'].isna(), ['color']] = df.loc[df['color'].isna()]['grade_'].replace(color_grade_to_name)  # add a color if null
+    df.loc[df['color'].isna(), 'color'] = df.loc[df['color'].isna(), 'grade'].replace(color_grade_to_name)  # add a color if null
     df['color'] = df['color'].replace(color_name_to_hex)  # Replace colors with hex codes
     
     return df
@@ -51,11 +49,11 @@ def get_data_for_grades_histogram(location_type, is_tmp=False):
 
     try:
         df = pd_sql.read_sql(
-            queries['counts']['COUNT_GRADES'].format(datasource='boulders', location_type=location_type), connection_uri)
+            queries['histogram']['COUNT_GRADES'].format(datasource='boulders', location_type=location_type), connection_uri)
         assert df.empty is False, 'No data returned'
 
     except:
-        csv_path = f'{data_dir}/climbing-log-{location_type}.csv'
+        csv_path = f'{data_dir}/climbing-log.csv'
 
         if is_tmp:
             csv_path = f'tmp/{csv_path}'
@@ -65,15 +63,13 @@ def get_data_for_grades_histogram(location_type, is_tmp=False):
         except:
             raw_df = pd.DataFrame(columns=default_columns)
         
-        raw_df['location_type'] = location_type
         df = execute_query_on_df(
-            queries['counts']['COUNT_GRADES'].format(datasource='dataframe', location_type=location_type),
+            queries['histogram']['COUNT_GRADES'].format(datasource='dataframe', location_type=location_type),
             raw_df
         )
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
-    df['grade_'] = df['grade_'].apply(lambda x: x.replace('V', '')).astype(int)
-    df.loc[df['color'].isna(), ['color']] = df.loc[df['color'].isna()]['grade_'].replace(color_grade_to_name)
+    df.loc[df['color'].isna(), 'color'] = df.loc[df['color'].isna(), 'grade'].replace(color_grade_to_name)
     df['color'] = df['color'].replace(color_name_to_hex)
 
     return df
@@ -83,15 +79,16 @@ def get_data_for_grades_by_heatmap(location_type,
                                    query_pg,
                                    query_df,
                                    columns=None,
+                                   query_dir='heatmap',
                                    is_tmp=False):
 
     try:
         df = pd_sql.read_sql(
-            queries['counts'][query_pg].format(datasource='boulders', location_type=location_type), connection_uri)
+            queries[query_dir][query_pg].format(datasource='boulders', location_type=location_type), connection_uri)
         assert df.empty is False, 'No data returned'        
 
     except:
-        csv_path = f'{data_dir}/climbing-log-{location_type}.csv'
+        csv_path = f'{data_dir}/climbing-log.csv'
 
         if is_tmp:
             csv_path = f'tmp/{csv_path}'
@@ -101,15 +98,13 @@ def get_data_for_grades_by_heatmap(location_type,
         except:
             raw_df = pd.DataFrame(columns=default_columns)
 
-        raw_df['location_type'] = location_type
-
         df = execute_query_on_df(
-            queries['counts'][query_df].format(datasource='dataframe', location_type=location_type),
+            queries[query_dir][query_df].format(datasource='dataframe', location_type=location_type),
             raw_df
         )
 
     df = df.drop_duplicates(subset=[df.columns[0], df.columns[1]])
-    df['grade_'] = df['grade_'].apply(lambda x: x.replace('V', '')).astype(int)
+    # df['grade'] = df['grade'].apply(lambda x: x.replace('V', '')).astype(int)
     table_df = df.reset_index().pivot(index=df.columns[0], columns=df.columns[1], values="count_").fillna(0)
     table_df.index = table_df.index.map(lambda x: 'V' + str(x))  # Add V to Vgrades
 

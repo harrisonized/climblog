@@ -9,18 +9,14 @@ import json
 import plotly.offline as pyo
 import plotly.io as pio
 from climblog.utils.handlers.file_handler import get_defaults_from_ini
-from climblog.utils.curve_fit import curve_fit_new_grades
 from climblog.utils.plotting import export_fig_to_json
 from .get_data import (get_data_for_sends_by_date_scatter,
                        get_data_for_grades_histogram,
                        get_data_for_grades_by_heatmap)
-from .plot_fig import (plot_fig_for_sends_by_date_scatter,
+from .plot_fig import (curve_fit_new_grades,
+                       plot_fig_for_sends_by_date_scatter,
                        plot_fig_for_grades_histogram,
-                       plot_fig_for_grades_by_heatmap,
-                       plot_fig_for_grades_by_year_heatmap,
-                       plot_fig_for_grades_by_wall_heatmap,
-                       plot_fig_for_grades_by_hold_heatmap,
-                       plot_fig_for_grades_by_style_heatmap)
+                       plot_fig_for_grades_by_heatmap)
 
 from climblog.etc.params import heatmap_params
 from climblog.factories import queries
@@ -29,7 +25,6 @@ from climblog.factories import queries
 default_settings = get_defaults_from_ini()
 to_export_fig = default_settings.getboolean('to_export_fig')
 use_csv_backup = default_settings.getboolean('use_csv_backup')
-
 
 fig_dir = 'figures'
 
@@ -66,14 +61,13 @@ def retrieve_sends_by_date_scatter(location_type,
                                    is_tmp=False,
                                    ):
     
-    fig = retrieve_fig_from_tmp_json(filename, location_type)
-
+    # fig = retrieve_fig_from_tmp_json(filename, location_type)
+    fig = None
     if not fig:
-
         scatter_df = get_data_for_sends_by_date_scatter(location_type)
-        grades_histogram_df = get_data_for_grades_histogram(location_type)
 
         try:
+            grades_histogram_df = get_data_for_grades_histogram(location_type)
             logistic_params = curve_fit_new_grades(grades_histogram_df)
         except:
             logistic_params = None
@@ -122,6 +116,7 @@ def retrieve_grades_by_heatmap(location_type,
                                query_pg,  # from params
                                query_df,  # from params
                                columns=None,  # from params
+                               query_dir='heatmap', # params
                                fig_dir = 'figures',
                                to_export_fig=to_export_fig,
                                use_csv_backup=use_csv_backup,
@@ -135,16 +130,18 @@ def retrieve_grades_by_heatmap(location_type,
 
     # if figure not found, generate from raw data
     if not fig:
-        table_df, df = get_data_for_grades_by_heatmap(
+        heatmap_input_df, hovertext_input_df = get_data_for_grades_by_heatmap(
             location_type=location_type,
             query_pg=query_pg,
             query_df=query_df,
             columns=columns,
+            query_dir=query_dir,
         )
         fig = plot_fig_for_grades_by_heatmap(
-            table_df, df,
+            heatmap_input_df,
+            hovertext_input_df,
             xlabel=xlabel,
-            columns=columns
+            columns=columns,
         )
 
         if to_export_fig:

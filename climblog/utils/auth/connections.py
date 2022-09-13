@@ -1,9 +1,11 @@
 import os
 import pandas as pd
 import psycopg2 as pg
+from os.path import abspath, dirname
 from configparser import ConfigParser
 from .encryption_tools import decrypt_message
 
+ROOT_DIR = dirname(dirname(dirname(dirname(abspath(__file__)))))
 INI_KEY = os.getenv('INI_KEY')  # Make sure this is in your ~/.bashrc
 assert INI_KEY, 'No INI_KEY'
 
@@ -14,7 +16,7 @@ assert INI_KEY, 'No INI_KEY'
 
 
 def postgres_connection(database=None,
-                        section='postgres', cfg_path='configs/cred.ini'):
+                        section='postgres', cfg_path=f'{ROOT_DIR}/configs/cred.ini'):
     """Given an INI file with a ['postgres'] section
     Returns the sqlalchemy connection args 
 

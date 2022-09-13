@@ -1,0 +1,648 @@
+index_,date_,location_type,grade,display_grade,location,color,description,hold_type,wall_type,style,setter
+100001,2016-06-13,indoor,6,V6-V7,Mesa Rim Mira Mesa,pink,Pink crimps,crimp,overhang,natural,Enrico
+100002,2016-06-19,indoor,6,V6-V7,Mesa Rim Mission Valley,purple,"Purple crimps, easy",crimp,face,natural,Casey
+100003,2016-07-08,indoor,6,V6-V7,Mesa Rim Mission Valley,white,"White sloper, easy transition out of sloper",sloper,face,natural,Casey
+100004,2016-07-11,indoor,6,V6-V7,Mesa Rim Mission Valley,pink,"Pink corner, hard first move, easy rest of it",crimp,corner,natural,Enrico
+100005,2016-07-24,indoor,6,V6-V7,Mesa Rim Mission Valley,yellow,Yellow Mushrooms,jug,cave,natural,Enrico
+100006,2016-08-06,indoor,6,V6-V7,Mesa Rim Mission Valley,black,"Black mantle, one-move wonder",jug,face,mantle,Enrico
+100007,2016-08-14,indoor,6,V6-V7,Mesa Rim Mission Valley,green,"Green, easy start, hard finish","crimp, pinch",face,natural,Leo
+100008,2016-08-20,indoor,6,V6-V7,Mesa Rim Mission Valley,yellow,"Yellow crimps, dyno finish",crimp,face,natural,Enrico
+100009,2016-08-21,indoor,6,V6-V7,Mesa Rim Mission Valley,brown,"Brown crimps, sloper finish","crimp, sloper",face,natural,Chris
+100010,2016-08-22,indoor,6,V6-V7,Mesa Rim Mission Valley,green,"Green pinches, then slopers","pinch, sloper",face,natural,Chris
+100011,2016-08-28,indoor,6,V6-V7,Mesa Rim Mission Valley,yellow,Yellow zigzag crossover,crimp,face,natural,Chris
+100012,2016-09-04,indoor,6,V6-V7,Mesa Rim Mission Valley,green,"Green, upside-down",jug,overhang,comp,Leo
+100013,2016-09-15,indoor,6,V6-V7,Mesa Rim Mission Valley,pink,"Pink, natural",crimp,face,natural,Casey
+100014,2016-09-24,indoor,6,V6-V7,Mesa Rim Mission Valley,yellow,"Yellow, sloper then crimps","crimp, pinch, sloper",face,natural,Enrico
+100015,2016-09-24,indoor,6,V6-V7,Mesa Rim Mission Valley,black,"Black, Jug followed by crimps","crimp, jug",face,natural,Chris
+100016,2016-09-26,indoor,6,V6-V7,Mesa Rim Mission Valley,blue,Blue heel-hook start,crimp,overhang,natural,Curtis
+100017,2016-10-17,indoor,6,V6-V7,Mesa Rim Mira Mesa,green,Green slopers,sloper,face,natural,Chris
+100018,2016-10-30,indoor,7,V7-V8,Mesa Rim Mission Valley,black,Black Sloper Crimps,crimp,slab,natural,Chris
+100019,2016-11-08,indoor,6,V6-V7,Mesa Rim Mira Mesa,white,"White holds, pentagon start",crimp,face,natural,Casey
+100020,2016-11-11,indoor,6,V6,Mission Cliffs,blue,Blue roof then balance.,crimp,overhang,natural,
+100021,2016-11-14,indoor,5,V5,Mesa Rim Mission Valley,pink,Pink pinches,pinch,face,natural,Leo
+100022,2016-11-29,indoor,6,V6-V7,Mesa Rim Mission Valley,green,Green crimps deadpoint finish,crimp,overhang,natural,Aron
+100023,2016-12-02,indoor,6,V6-V7,Mesa Rim Mission Valley,brown,"Brown sit start, sloper finish, natural",sloper,face,natural,Nick
+100024,2016-12-05,indoor,7,V7-V8,Mesa Rim Mira Mesa,pink,"Pink crimps, traverse deadpoint traverse dyno","crimp, pinch",face,natural,Casey
+100025,2016-12-22,indoor,6,V6,Dogpatch,yellow,"Yellow Flakes, two traverses",crimp,face,natural,Ben Polanco
+100026,2017-01-18,indoor,6,V6,Dogpatch,purple,"Purple Sloper Dyno Start, Mantel finish","jug, sloper",variable,dyno,Radu Popescu
+100027,2017-01-26,indoor,6,V6,Dogpatch,pink,"Pink corner back wall, swinging move",sloper,face,natural,
+100028,2017-01-30,indoor,6,V6,Dogpatch,orange,Orange overhanging,pinch,overhang,natural,Sean Nanos
+100029,2017-01-30,indoor,6,V6,Dogpatch,blue,"Blue crimps overhanging, toehook roof",crimp,overhang,natural,
+100030,2017-02-01,indoor,6,V6,Dogpatch,pink,Pink piano move,sloper,variable,natural,Ben-BD
+100031,2017-02-03,indoor,5,V5,Dogpatch,orange,"Orange crimps, balancey traverse left",crimp,face,natural,Sean Nanos
+100032,2017-02-04,indoor,6,V6,Dogpatch,blue,"Blue juggy roof, followed by crimps, first flash",jug,overhang,natural,Hiro
+100033,2017-02-05,indoor,6,V6,Dogpatch,yellow,Yellow Slab,crimp,slab,natural,Ben-BD
+100034,2017-02-08,indoor,7,V7,Dogpatch,red,"Red throw up to sidepull, then gaston to right",crimp,slab,natural,Sean Nanos
+100035,2017-02-09,indoor,6,V6,Dogpatch,red,"Red high right foot, sidepull top.",crimp,face,natural,Radu Popescu
+100036,2017-02-10,indoor,5,V5,Dogpatch,green,Green slab traverse on crimps,crimp,slab,natural,Radu Popescu
+100037,2017-02-13,indoor,6,V6,Dogpatch,blue,Blue crimps on slab,crimp,slab,natural,Jonathan Wright
+100038,2017-02-14,indoor,6,V6,Dogpatch,blue,"Blue high undercling start, slab finish",crimp,slab,natural,Ben-BD
+100039,2017-02-15,indoor,6,V6,Dogpatch,blue,Blue dyno comp problem,jug,overhang,comp,Radu Popescu
+100040,2017-02-15,indoor,6,V6,Dogpatch,blue,Blue dyno comp problem,jug,overhang,mantle,Radu Popescu
+100041,2017-02-18,indoor,6,V6,Dogpatch,yellow,Yellow Crimp Double Traverse,crimp,face,natural,Zak Grinstead
+100042,2017-02-18,indoor,6,V6,Dogpatch,pink,Pink Sloper Dyno,sloper,face,dyno,Jonathan Wright
+100043,2017-02-19,indoor,6,V6,Dogpatch,blue,"Blue Dropknee Start, Slab finish on slopers",sloper,slab,natural,Hiro
+100044,2017-02-20,indoor,6,V6,Dogpatch,black,Black Sloper Dynos,sloper,face,dyno,Jonathan Wright
+100045,2017-02-20,indoor,6,V6,Dogpatch,blue,Blue Traverse Wall,crimp,face,mantle,Hiro
+100046,2017-02-20,indoor,6,V6,Dogpatch,orange,"Orange Arete, Undercling start",crimp,arete,natural,Colin Baxter Green
+100047,2017-02-21,indoor,7,V7,Dogpatch,orange,Orange overhanging crimps on volumes,crimp,overhang,natural,Morgan McGehee
+100048,2017-02-26,indoor,6,V6,Ironworks,green,"Green slopers, finish on arete",sloper,arete,natural,
+100049,2017-02-26,indoor,7,V7,Ironworks,white,"White crimps, traverse finish",crimp,face,natural,
+100050,2017-02-27,indoor,7,V7,Dogpatch,green,"Green Comp Problem dyno start, balancey finish",crimp,face,comp,Radu Popescu
+100051,2017-02-28,indoor,6,V6,Dogpatch,yellow,Yellow rose move,crimp,cave,natural,Jeremy Ho
+100052,2017-02-28,indoor,7,V7,Dogpatch,white,White Mirror Ape Traverse,"crimp, sloper",overhang,dyno,Led Zep
+100053,2017-03-02,indoor,7,V7,Dogpatch,black,Black Crimps Reachy Moves,crimp,overhang,natural,Sean Nanos
+100054,2017-03-07,indoor,6,V6,Dogpatch,blue,Blue hanging traverse start,crimp,overhang,natural,Morgan McGehee
+100055,2017-03-07,indoor,6,V6,Dogpatch,green,Green crimps,crimp,face,natural,Hiro
+100056,2017-03-07,indoor,6,V6,Dogpatch,pink,Pink cave traverse,jug,cave,natural,Ben Polanco
+100057,2017-03-07,indoor,6,V6,Dogpatch,blue,"Blue Crimps, shitty finish",crimp,face,natural,LM
+100058,2017-03-07,indoor,6,V6,Dogpatch,red,"Red crimps, can toehook crimp start hold",crimp,face,natural,Ben-BD
+100059,2017-03-10,indoor,6,V6,Dogpatch,blue,"Blue undercling volume start, crimpy finish",crimp,face,natural,SFG
+100060,2017-03-10,indoor,6,V6,Dogpatch,yellow,"Yellow straight dyno, then sideways dyno",jug,cave,dyno,Hiro
+100061,2017-03-10,indoor,6,V6,Dogpatch,green,"Green crimps, second flash",crimp,face,natural,Buck Yedor
+100062,2017-03-13,indoor,6,V6,Dogpatch,white,"White arete, slab finish",crimp,arete,natural,Zak Grinstead
+100063,2017-03-14,indoor,7,V7,Dogpatch,pink,Pink jugs similar to outdoor climbing,sloper,face,natural,Hiro
+100064,2017-03-15,indoor,6,V6,Dogpatch,blue,"Blue Arete Comp Problem, Cave Start, Roof Finish","crimp, sloper",cave,comp,Radu Popescu
+100065,2017-03-15,indoor,6,V6,Dogpatch,purple,"Purple Sloper Mantle around Arete, Crimp finish",sloper,arete,natural,LM
+100066,2017-03-15,indoor,7,V7,Dogpatch,yellow,"Yellow traverse to a sideways dyno, short arete onto a sloper, finish out right on crimps",sloper,arete,natural,Ben-BD
+100067,2017-03-17,indoor,6,V6,Dogpatch,black,"Black Overhanging Crimps, powerful throw from an undercling, traverse to finish",crimp,overhang,natural,Radu Popescu
+100068,2017-03-28,indoor,6,V6,Dogpatch,yellow,"Yellow Crimps, Finish on some jugs",crimp,cave,dyno,Craig
+100069,2017-03-28,indoor,6,V6,Dogpatch,blue,"Black Dyno Start, Finish on roofs",jug,overhang,dyno,Sean Nanos
+100070,2017-10-15,indoor,6,V6,Dogpatch,green,"Green overhanging sidepull start, crimpy finish, flash",crimp,overhang,natural,Buck Yedor
+100071,2017-04-04,indoor,7,V7,Dogpatch,black,"Black Sidepull Foot Dyno, Sloper Finish",sloper,face,dyno,LM
+100072,2017-04-04,indoor,6,V6,Dogpatch,orange,Orange arete crimps,crimp,arete,natural,Hiro
+100073,2017-04-07,indoor,8,V8,Dogpatch,orange,"Orange corner back wall, swinging move","crimp, pinch",overhang,natural,Zack-ZD
+100074,2017-04-08,indoor,7,V7,Dogpatch,purple,"Purple Arete, traverse start, powerful move to a sidepull, traverse to slopers, crimp finish","crimp, sloper",face,natural,Radu Popescu
+100075,2017-04-10,indoor,6,V6,Dogpatch,purple,Purple overhanging crimps,crimp,overhang,natural,Zak Grinstead
+100076,2017-04-11,indoor,7,V7,Dogpatch,white,"White overhanging crimps, reachy moves",crimp,overhang,natural,Zak Grinstead
+100077,2017-04-11,indoor,6,V6,Dogpatch,white,White bat hang on crimps,crimp,overhang,dyno,Morgan McGehee
+100078,2017-04-13,indoor,6,V6,Dogpatch,blue,"Blue powerful sidepulls, sketchy mantle",sloper,overhang,natural,Ski
+100079,2017-04-13,indoor,6,V6,Dogpatch,orange,Orange sloper arete,sloper,arete,natural,Eric Sanchez
+100080,2017-04-13,indoor,7,V7,Dogpatch,yellow,Yellow crimp arete (hard),crimp,arete,natural,Colin Baxter Green
+100081,2017-04-13,indoor,7,V7,Dogpatch,green,"Green arete, throw to a sloper, cut feet, label said V9 but was super soft",sloper,face,dyno,Ben Polanco
+100082,2017-04-16,indoor,8,V8,Dogpatch,red,Red crimps and pinches on the back flat wall,crimp,overhang,natural,Zak Grinstead
+100083,2017-04-17,indoor,7,V7,Dogpatch,blue,"Blue crimp dyno to an undercling, crimp finish",crimp,face,natural,Sean Nanos
+100084,2017-04-18,indoor,5,V5,Dogpatch,purple,"Purple crimps, heel hook starting crimp, left hand into another crimp, dyno to topout",crimp,face,natural,Joshua-Ski
+100085,2017-04-26,indoor,5,V5,Dogpatch,green,"Green start on sidepulls, dyno to a crimp, jugy finish","crimp, jug",overhang,dyno,Radu Popescu
+100086,2017-04-28,indoor,6,V6,Dogpatch,green,"Green so-ill slopers, traverse right",sloper,slab,natural,Zak Grinstead
+100087,2017-05-02,indoor,5,V5,Dogpatch,purple,"Purple dragon ball holds, mantle",sloper,face,mantle,LM
+100088,2017-05-02,indoor,6,V6,Dogpatch,white,"White crimps on the front arch, soft, finished in 12 seconds",crimp,overhang,natural,Ben-BD
+100089,2017-05-03,indoor,6,V6,Dogpatch,black,Easy black comp problem with large sloper volumes (misgraded as V8),sloper,overhang,comp,Radu Popescu
+100090,2017-05-09,indoor,7,V7,Dogpatch,purple,Purple three dynos in a row,jug,face,dyno,Sean Nanos
+100091,2017-05-13,indoor,6,V6,Dogpatch,white,White sidepull on slopers,sloper,slab,natural,Justin Alarcon
+100092,2017-05-13,indoor,6,V6,Dogpatch,orange,Orange pinches to crimps,"crimp, pinch",face,natural,Zak Grinstead
+100093,2017-05-18,indoor,6,V6,Dogpatch,yellow,"Yellow volumes, mantle onto first volume, push on a ceiling, dyno to the top",jug,face,mantle,Sean Nanos
+100094,2017-05-19,indoor,8,V8,Dogpatch,orange,Orange pinches all the way,pinch,overhang,natural,Ben Polanco
+100095,2017-05-19,indoor,8,V8,Dogpatch,red,"Red cave dyno, slopers at the lip","crimp, jug, sloper",cave,dyno,Sean Nanos
+100096,2017-05-22,indoor,7,V7,Dogpatch,purple,"Purple Sideways Dyno, then dyno finish",jug,overhang,dyno,Zak Grinstead
+100097,2017-05-31,indoor,5,V5,Dogpatch,yellow,Yellow jugs on the low roof,jug,cave,natural,Hiro
+100098,2017-06-01,indoor,7,V7,Mission Cliffs,yellow,"Yellow arete in Mission Cliffs, big reaches, big holds",jug,arete,natural,LM
+100099,2017-06-02,indoor,7,V7,Dogpatch,red,"Red, traverse around arete, two opposing sidepulls",crimp,face,natural,LM
+100100,2017-06-05,indoor,8,V8,Dogpatch,black,"Black balancey moves, double clutch finish",sloper,face,comp,Radu Popescu
+100101,2017-06-07,indoor,7,V7,Dogpatch,orange,"Orange dyno to a jug, then bathang, traverse underneath, crimp and pinch finish",sloper,cave,dyno,Sean Nanos
+100102,2017-06-12,indoor,7,V7,Dogpatch,blue,"Blue crimpy, balancey start to a sloper, undercling dyno to the top, kid's wall",crimp,slab,natural,Zak Grinstead
+100103,2017-06-13,indoor,7,V7,Dogpatch,yellow,"Yellow traverse to arete, bicycle a pinch, then dyno finish from a sidepull",crimp,slab,natural,Ben-BD
+100104,2017-06-13,indoor,7,V7,Dogpatch,yellow,Yellow run and jump,jug,slab,dyno,Clinic
+100105,2017-06-21,indoor,7,V7,Ironworks,white,"White traverse right, then traverse left, campus on crimps",crimp,face,natural,Max Krimmer
+100106,2017-07-17,indoor,7,V7,Dogpatch,orange,"Orange run and jump, comp problem 58",jug,face,comp,Woman Up
+100107,2017-07-23,indoor,7,V7,Dogpatch,black,Black dyno to half crescent jug on the wave,"jug, sloper",face,dyno,Max Krimmer
+100108,2017-07-25,indoor,8,V8,Dogpatch,white,"White Comp Problem Number 61, dyno from an undercling, ",pinch,overhang,natural,Woman Up
+100109,2017-08-01,indoor,7,V7,Dogpatch,black,Black dyno to a half crescent sloper on the back wall,"jug, sloper",face,dyno,Max Krimmer
+100110,2017-08-09,indoor,7,V7,Dogpatch,pink,"Pink Comp Problem Number 52, Dynamic movements between jugs",jug,overhang,comp,Woman Up
+100111,2017-08-16,indoor,7,V7,Dogpatch,green,"Green Zak, two dynos to the top",sloper,overhang,dyno,Zak Grinstead
+100112,2017-08-18,indoor,7,V7,Dogpatch,green,"Green Comp Problem Number 56, So-Ill bubbles",sloper,face,comp,Woman Up
+100113,2017-08-20,indoor,7,V7,Dogpatch,pink,"Pink deadpoint to a right hand sloper, reachy left hand before top out",sloper,face,natural,Max Krimmer
+100114,2017-08-20,indoor,7,V7,Dogpatch,orange,"Orange Comp Problem Number 54, Jug start, left hand crimp to a hand jam, then crimps up. First V7 flash",crimp,face,comp,Woman Up
+100115,2017-08-20,indoor,9,V9,Dogpatch,white,"White undercling start, dynamic move to a pinch, match on sloper, dynamic move to crimp, crimpy finish","crimp, pinch",overhang,natural,Morgan McGehee
+100116,2017-08-22,indoor,7,V7,Dogpatch,yellow,Yellow Comp Final #1,sloper,slab,comp,Woman Up
+100117,2017-08-27,indoor,8,V8,Dogpatch,pink,"Pink crimps, knee bar through intro, then crimpy finish","crimp, pinch, sloper",overhang,natural,Sean Nanos
+100118,2017-08-27,indoor,7,V7,Dogpatch,yellow,"Yellow Comp Problem, Dyno Start, Mantel on a crimp to a sidepull jug","crimp, jug",face,dyno,Radu Popescu
+100119,2017-09-10,indoor,6,V6,Cliffs of Id,green,Green dyno onto two pipes,jug,overhang,dyno,DC
+100120,2017-09-12,indoor,8,V8,Dogpatch,orange,Orange overhanging dyno to a bad pinch,pinch,overhang,dyno,Max Krimmer
+100121,2017-09-13,indoor,8,V8,Dogpatch,green,Green overhanging traverse twice,jug,overhang,natural,Ben Polanco
+100122,2017-09-18,indoor,8,V8,Dogpatch,purple,Purple overhang crimp to pinch,"crimp, pinch",overhang,natural,Mark Heal
+100123,2017-09-18,indoor,7,V7,Dogpatch,orange,"Orange Comp Problem, do a sideways fall into a volume, then dyno from a crimp to a distant mushroom around the arete",jug,face,comp,
+100124,2017-09-21,indoor,7,V7,Dogpatch,purple,"Purple slopers with crimps behind them, face climbing","crimp, sloper",face,natural,Colin Baxter Green
+100125,2017-09-26,indoor,7,V7,Dogpatch,green,Light Green Roof Comp Problem,jug,cave,natural,Woman Up
+100126,2017-09-26,indoor,7,V7,Dogpatch,pink,"Pink face climb, dyno to an undercling sidepull, then some jugs, then a dyno finish","pinch, sloper",face,dyno,Zak Grinstead
+100127,2017-09-26,indoor,7,V7,Dogpatch,green,"Dark Green Roof Problem, good holds all the way through, finish on some crimps","crimp, jug",cave,natural,Max Krimmer
+100128,2017-09-27,indoor,7,V7,Dogpatch,pink,"Pink two dynos, mantle to the right for topout",jug,overhang,dyno,Max Krimmer
+100129,2017-09-28,indoor,7,V7,Dogpatch,yellow,Soft yellow crimp ladder on the mushroom,crimp,overhang,natural,Max Krimmer
+100130,2017-09-28,indoor,8,V8,Dogpatch,blue,"Blue one move wonder start, bump left hand to a crimp and hold the swing, easy topout",crimp,overhang,natural,Buck Yedor
+100131,2017-09-30,indoor,8,V8,Dogpatch,yellow,"Yellow lieback on a jug, do a rose move while upside-down to a pinch, reach over to a crimp, then swing over. Difficult mantel after the semi-knee bar, slabby topout.","crimp, pinch",overhang,natural,Radu Popescu
+100132,2017-10-02,indoor,7,V7,Dogpatch,green,Green typical Max problem with dyno and mantle,sloper,face,comp,Max Krimmer
+100133,2017-10-03,indoor,7,V7,Peak of Fremont,purple,"Purple arete, overhanging start, powerful move to a crimp, bump up to sloper, traverse left to slopers by toe hooking the sloper, reachy finish","crimp, sloper",arete,natural,
+100134,2017-10-07,indoor,8,V8,Studio Climbing,red,"Red dyno/deadpoint to a sloper, move onto crimps, dyno finish, grade was inflated to V9","crimp, sloper",overhang,dyno,Art
+100135,2017-10-09,indoor,7,V7,Metrorock Everette,black,"Black crimps, Advanced Route #1",crimp,overhang,natural,
+100136,2017-10-21,indoor,7,V7,The Cliffs at LIC,black,Black arete on slopers,sloper,arete,natural,
+100137,2017-10-28,indoor,8,V8,Studio Climbing,purple,Purple rainbow rocket emulator,jug,face,comp,Kessler
+100138,2017-11-13,indoor,8,V8,Planet Granite Belmont,blue,"Blue throw to an arete, toe hook arete, big move to a jug, rose move through a pinch onto slopers",jug,arete,natural,Cath
+100139,2017-11-16,indoor,7,V7,Planet Granite Belmont,green,Green pipes,"pinch, jug",cave,natural,
+100140,2017-11-18,indoor,8,V8,Dogpatch,purple,"Purple slopers, super soft",sloper,overhang,natural,Jonathan Wright
+100141,2017-11-19,indoor,5,V5,Dogpatch,orange,"Orange dyno to a jug, easy topout",jug,overhang,dyno,Max Krimmer
+100142,2017-11-21,indoor,8,V8,Planet Granite Belmont,orange,Orange crimps,crimp,face,natural,Chaj
+100143,2017-12-03,indoor,7,V7,Dogpatch,yellow,"Yellow Comp Problem, back wall, overhang",crimp,overhang,comp,Woman Up
+100144,2017-12-08,indoor,7,V7,Dogpatch,black,"Black pinches on the mushroom, dyno into a sloper, mantle the topout",pinch,overhang,dyno,Max Krimmer
+100145,2017-12-05,indoor,5,V5,Dogpatch,orange,"Orange crimps on back topout near the downclimb ladders, sketchy",crimp,slab,comp,Buck Yedor
+100146,2017-12-10,indoor,8,V8,Dogpatch,green,Green crimps on the wave,crimp,face,natural,Radu Popescu
+100147,2017-12-22,indoor,7,V7,Dogpatch,orange,"Orange run and jump to pinches, heel-hook dynamic move to a pinch, easy topout",pinch,face,comp,Nilo Batle
+100148,2018-01-06,indoor,6,V6,Dogpatch,orange,"Orange volumes on the wave, no hands entire route",crimp,slab,natural,
+100149,2018-01-13,indoor,5,V5,Dogpatch,pink,"Pink jugs to crimps, easy topout, Comp Problem # 50","crimp, jug",overhang,natural,
+100150,2018-01-15,indoor,8,V8,Dogpatch,blue,Blue comp problem with a dyno and a crimp,crimp,overhang,natural,Radu Popescu
+100151,2018-01-15,indoor,9,V9,Dogpatch,blue,"Blue crimps, easy intro, hard deadpoint finish",crimp,overhang,natural,Justin Alarcon?
+100152,2018-01-17,indoor,5,V5,Dogpatch,purple,Purple grapes on the slab,crimp,slab,natural,Radu Popescu
+100153,2018-01-20,indoor,6,V6,The Cliffs at LIC,green,"Green crimps, traverse left, difficult finish",crimp,face,natural,
+100154,2018-01-28,indoor,8,V8,Dogpatch,blue,"Blue, two deadpoint moves on crimps underneath the arch, eases up on flakes to a finish jug","crimp, jug",overhang,natural,Ari
+100155,2018-02-11,indoor,10,V10,Dogpatch,pink,"Pink crimps, rose move to an arete, then a tricky lockoff to a sloper crimp",crimp,face,natural,Nilo Batle
+100156,2018-02-13,indoor,6,V6,Dogpatch,pink,"Pink crimps to jugs, full campus","crimp, jug",overhang,natural,Max Krimmer
+100157,2018-02-24,indoor,6,V6,Dogpatch,purple,"Purple dyno to a jug, then up to a plate crimps, then top",jug,face,dyno,Nick Noel
+100158,2018-02-27,indoor,5,V5,Dogpatch,yellow,Yellow step-up dyno eliminate,jug,face,comp,Zak Grinstead
+100159,2018-03-03,indoor,6,V6,Dogpatch,blue,"Blue crimps on the cave, full campus",crimp,overhang,natural,Sean Keehan
+100160,2018-03-09,indoor,8,V8,Dogpatch,black,"Black slopers, come out from under the roof, campus to another sloper, mantle around an arete on a pinch",sloper,cave,natural,Zak Grinstead
+100161,2018-03-18,indoor,8,V8,Dogpatch,green,"Green so-ill slopers, easy beginning, sketchy top traverse",sloper,face,natural,Zak Grinstead
+100162,2018-03-27,indoor,5,V5,Dogpatch,purple,Purple run and jump on pinches,pinch,slab,comp,Nick Noel
+100163,2018-03-27,indoor,6,V6,Dogpatch,black,"Black pinches, dyno for jug at the end",pinch,face,dyno,Ben Polanco
+100164,2018-04-09,indoor,7,V7,Mission Cliffs,green,Green everything,"crimp, pinch, sloper",overhang,natural,Ben Polanco
+100165,2018-04-13,indoor,8,V8,Dogpatch,white,White comp dyno,sloper,face,comp,EZ
+100166,2018-04-24,indoor,8,V8,Dogpatch,orange,"Orange dyno to sloper, arete",sloper,overhang,natural,Nilo Batle
+100167,2018-04-26,indoor,7,V7,Mission Cliffs,green,Green Crimps,crimp,overhang,natural,Nilo Batle
+100168,2018-05-15,indoor,8,V8,Dogpatch,yellow,Yellow slab dyno with crimp finish,jug,slab,dyno,Nick Noel
+100169,2018-05-22,indoor,9,V9,Dogpatch,black,"Black sloper arete, cut free three times",sloper,arete,natural,Nilo Batle
+100170,2018-05-31,indoor,9,V9,Dogpatch,purple,"Purple dyno to a crimp rail, then up the face of an arete, dyno finish",crimp,face,natural,Zak Grinstead
+100171,2018-06-04,indoor,8,V8,Dogpatch,pink,"Pink comp dyno, easy finish",jug,face,comp,Nick Noel
+100172,2018-06-09,indoor,8,V8,Dogpatch,blue,"Blue blocks, dynamic moves, dyno finish",jug,face,dyno,Ezzy
+100173,2018-06-12,indoor,8,V8,Dogpatch,orange,"Orange pinches in the cave, crimp finish",pinch,cave,natural,Morgan McGehee
+100174,2018-06-13,indoor,7,V7,Dogpatch,blue,Blue comp dyno,jug,cave,comp,Nilo Batle
+100175,2018-06-17,indoor,8,V8,Ironworks,green,Green jug haul on barrel,jug,overhang,natural,Max Krimmer
+100176,2018-07-11,indoor,7,V7,Dogpatch,pink,Pink triple dyno,sloper,face,comp,Morgan McGehee
+100177,2018-07-22,indoor,8,V8,Peak of Fremont,blue,"Blue jugs, super inflated, nearly flashed",jug,face,natural,
+100178,2018-07-31,indoor,8,V8,Dogpatch,yellow,"Yellow crimps, super inflated, first V8 flash",crimp,overhang,natural,Morgan McGehee
+100179,2018-08-14,indoor,8,V8,Dogpatch,green,"Green crimps on the back wall, campus’ed the crimps",crimp,overhang,natural,Kat Gentry
+100180,2018-08-21,indoor,8,V8,Ironworks,green,"Green step up dyno to a sloper, had to two hand grab the finish hold",sloper,face,comp,TCS
+100181,2018-08-28,indoor,10,V10,Mission,red,"Red undercling to two separate crimps, swing feet from left to right, crimp sloper pinch, dyno finish",crimp,overhang,natural,Ben Polanco
+100182,2018-09-30,indoor,8,V8,Ironworks,green,"Green slopers, traverse left then right, can also skip holds on the arete",sloper,face,comp,Nick Noel
+100183,2018-10-05,indoor,9,V9,Great Western,pink,"Pink prow problem, lock off on right lip crimp, grab a left lip crimp, dynamic move to a sidepull, grab a gaston",crimp,overhang,natural,EZ
+100184,2018-10-09,indoor,9,V9,Diablo Rock,black,"Black start on sloper, grab a crimp, grab another crimp to prevent a swing, dyno to a donut, mantle to finish hold","crimp, sloper",overhang,natural,Ski
+100185,2018-10-28,indoor,8,V8,The Studio Climbing,purple,"Rainbow rocket emulator, step-up dyno",jug,face,comp,Kessler
+100186,2018-11-02,indoor,9,V9,Dogpatch,pink,"Pink dyno to a sloper on the lip, back wall",sloper,overhang,natural,Radu Popescu
+100187,2018-11-23,indoor,6,V6,Earthtreks Rockville,white,"White swinging jump dyno to an undercling on the left, pinch finish. “6 Minute Drill”","jug, pinch",face,comp,Skilla
+100188,2018-11-23,indoor,7,V7,Earthtreks Rockville,pink,"Pink bat hang to a face climb on pinches, soft",pinch,overhang,natural,Shane
+100189,2018-11-29,indoor,7,V7,Dogpatch,blue,"Blue swinging jump dyno to a crimp, jug finish, Women’s Comp Final #1","crimp, jug",overhang,comp,Sean Nanos
+100190,2018-11-30,indoor,6,V6,Planet Granite Sunnyvale,yellow,Yellow run and jump to pipes,jug,face,comp,
+100191,2018-12-16,indoor,6,V6,The Studio Climbing,orange,Orange run and jump to the right,pinch,face,comp,Kessler
+100192,2018-12-19,indoor,9,V9,Dogpatch,blue,"Blue dynamic moves to a shelf, then a difficult mantle","crimp, sloper",overhang,dyno,Radu Popescu
+100193,2019-01-04,indoor,7,V7,Climb Central Manilla,green,"Green crimps to pinches, traverse left to finish hold","crimp, pinch",face,natural,
+100194,2019-01-12,indoor,8,V8,Dogpatch,white,"White dyno start, crimpy finish, on expansion overhang","crimp, sloper",overhang,dyno,Kurt Jalapeno
+100195,2019-02-09,indoor,6,V6,Dogpatch,purple,"Purple comp dyno to the right, easy finish on jugs",jug,overhang,comp,Kurt Jalapeno
+100196,2019-02-26,indoor,9,V9,Dogpatch,blue,Blue crimps on the wave,crimp,face,natural,Morgan McGehee
+100197,2019-03-05,indoor,9,V9,Dogpatch,purple,Purple crimps in the back,crimp,slab,natural,Nilo Batle
+100198,2019-03-06,indoor,7,V7,Dogpatch,purple,"Purple dyno to a jug, jump dyno to the left, easy finish",jug,face,comp,Nick Noel
+100199,2018-04-09,indoor,8,V8,Diablo Rock,purple,Purple comp dyno,sloper,face,comp,
+100200,2019-05-03,indoor,9,V9,Dogpatch,orange,Orange overhung pinches,pinch,overhang,natural,Max Krimmer
+100201,2019-05-04,indoor,9,V9,The Studio Climbing,colorless,"Two dynos, followed by sketchy crimps",crimp,overhang,dyno,James Shen
+100202,2019-05-10,indoor,9,V9,Dogpatch,white,"White undercling start, sideways dyno, followed by straight up dyno high off the ground",jug,overhang,natural,Max Krimmer
+100203,2019-05-17,indoor,10,V10,Great Western,orange,Powerful orange pinches,pinch,overhang,natural,Nilo Batle
+100204,2019-06-14,indoor,6,V6,Dogpatch,purple,Purple foot chips,crimp,slab,natural,Nilo Batle
+100205,2019-06-18,indoor,7,V7,Diablo Rock,red,"Red crimps, dyno to a jug",crimp,face,natural,Colin Baxter Green
+100206,2019-06-19,indoor,6,V6,Great Western,orange,"Orange pinches, double-clutch dyno to the left",pinch,overhang,dyno,
+100207,2019-06-24,indoor,9,V9,Dogpatch,white,"White dyno start, crimpy finish, on the arch",crimp,overhang,dyno,Max Krimmer
+100208,2019-07-21,indoor,7,V7,Dogpatch,purple,"Purple plate crimps, dyno to the right, hold the swing, Womxn Up Comp Problem # 58",crimp,overhang,natural,
+100209,2019-07-21,indoor,8,V8,Dogpatch,blue,"Blue jump dyno to the left, sketchy topout, Womxn Up Comp Problem # 58",crimp,face,comp,
+100210,2019-07-23,indoor,8,V8,Dogpatch,black,"Black pinches on 30 degree wall, dyno to the top, Womxn Up Comp Problem # 59",pinch,overhang,natural,Zoey Grinstead
+100211,2019-08-12,indoor,11,V11,Dogpatch,orange,"Orange crimps and pinches, dynamic","crimp, pinch",overhang,natural,
+100212,2019-09-28,indoor,6,V6,Berkeley Ironworks,black,"Black plate crimps, double dyno to the left",crimp,face,dyno,
+100213,2019-10-23,indoor,9,V9,Dogpatch,orange,"Orange pinches, pogo dyno, easy mantle",pinch,overhang,dyno,Kurt Jalapeno
+100214,2019-11-13,indoor,7,V7,Berkeley Ironworks,white,"White undercling start, left hand to a plate crimp, pogo to a double clutch, simple dyno to finish",crimp,overhang,comp,EZ
+100215,2019-11-24,indoor,5,V5,Sportrock Alexandria,red,Red jump-and-catch double clutch dyno,jug,face,comp,
+100216,2019-11-24,indoor,6,V6,Sportrock Alexandria,red,"Red crimps, traverse left, then straight up an arete, very difficult flash",crimp,face,natural,Alex Brown
+100217,2019-11-24,indoor,7,V7,Sportrock Alexandria,purple,"Purple crimps, hulk-like right hand cross deadpoint to a crimp, traverse right on crimps",crimp,face,natural,Alex Brown
+100218,2019-11-24,indoor,6,V6,Sportrock Alexandria,red,"Red jump across the mat onto a jug, pinchy, compression top, Male #2",pinch,overhang,comp,
+100219,2019-11-29,indoor,8,V8,Sportrock Alexandria,green,"Green undercling to some crimps, traverse right on pinch blocks, desperate last two moves",pinch,face,natural,Jeremiah D Cantrell
+100220,2019-12-15,indoor,8,V8,Berkeley Ironworks,red,"Red overhanging crimps, toe-hook two moves in",crimp,overhang,natural,
+100221,2019-12-16,indoor,8,V8,Diablo Rock,green,"Green jugs underneath roof, come out onto crimps, dyno for a crimp, jug traverse left to finish",crimp,overhang,natural,Kurt Jalapeno
+100222,2019-12-22,indoor,7,V7,Mesa Rim Mission Valley,purple,"Purple crimps and pinches on a face, difficult traverse in the middle","crimp, pinch",face,natural,Nolan
+100223,2019-12-22,indoor,8,V8,Mesa Rim Mission Valley,white,"White crimps, perch on bad foot to reach a far-left sidepull gaston",crimp,face,natural,Leo
+100224,2019-12-23,indoor,7,V7,Grotto Climbing,purple,"Purple big moves on  crimps, sketchy top way off the deck, pumpy and long","crimp, pinch",cave,natural,
+100225,2020-01-07,indoor,9,V9,Berkeley Ironworks,green,"Green pinches, dynamic moves across an overhang",pinch,overhang,natural,KSO
+100226,2020-01-14,indoor,8,V8,Dogpatch,yellow,"Yellow comp style pinches, huge windmill dyno to a sloper",pinch,arete,comp,
+100227,2020-01-23,indoor,8,V8,Dogpatch,purple,"Purple compression roof, large power moves with cut feet","crimp, jug",cave,natural,YIM
+100228,2020-01-25,indoor,8,V8,Berkeley Ironworks,white,"White left pogo to catch a crimp, grab a sloper, then traverse right to hold a barndoor using a gaston, desperate",crimp,face,natural,
+100229,2020-01-28,indoor,9,V9,Mission Cliffs,blue,"Blue start underneath in the cave, big move out, compress on crimps",crimp,overhang,natural,Morgan McGehee
+100230,2020-02-13,indoor,8,V8,Mission Cliffs,green,Green crimps along arete. Traverse left through a sloper to some crimps.,crimp,arete,natural,Kris Vidal
+100231,2020-02-16,indoor,9,V9,Planet Granite Santa Clara,blue,"Blue start underneath a roof with a knee bar, reach out to sloper, big move to a crimp, sloper finish",sloper,overhang,natural,
+100232,2020-02-18,indoor,9,V9,Dogpatch,blue,"Blue compression problem in overhang section of on back topout, big move to the lip, campus, then easy mantle finish",crimp,overhang,natural,WWF
+100233,2020-02-27,indoor,8,V8,Ironworks,black,"Black compression arete on slopers, balancey finish hold.",sloper,arete,natural,JK
+100234,2020-03-02,indoor,7,V7,Dogpatch,black,"Black 1-2 dyno to arete, easy finish around corner",jug,overhang,comp,Kurt Jalapeno
+100235,2020-03-02,indoor,8,V8,Dogpatch,pink,"Pink crimps, traverse to left, then right",crimp,face,natural,Nick Noel
+100236,2020-03-15,indoor,8,V8,Mission Cliffs,white,White crimps,crimp,face,natural,Colin Baxter Green
+100237,2020-06-08,indoor,5,V5,Mesa Rim Reno,yellow,Yellow dyno,jug,face,dyno,
+100238,2020-06-10,indoor,7,V7,Mesa Rim Reno,black,"Black undercling to some crimps, come out from under roof, more crimps",crimp,overhang,natural,
+100239,2020-06-10,indoor,6,V6,Mesa Rim Reno,yellow,"Yellow compression start, big moves between jugs",jug,overhang,natural,
+100240,2020-06-10,indoor,6,V6,Mesa Rim Reno,red,Red crimps,crimp,face,natural,
+100241,2020-06-12,indoor,7,V7,Mesa Rim Reno,yellow,Yellow big moves between squre pinches,pinch,overhang,natural,
+100242,2020-06-12,indoor,7,V7,Mesa Rim Reno,purple,"Purple crimps, jump required",crimp,face,natural,
+100243,2020-06-12,indoor,7,V7,Mesa Rim Reno,white,"White crimps, flash",crimp,face,natural,
+100244,2020-06-12,indoor,6,V6,Mesa Rim Reno,purple,"Purple crimps on an arete, very difficult",crimp,arete,natural,
+100245,2020-06-16,indoor,6,V6,Sacramento Pipeworks,black,"Black undercling start, crimps on an overhang",crimp,overhang,natural,
+100246,2020-06-18,indoor,6,V6,Boulder Field,orange,"Orange slab, jump from crimps to top",crimp,slab,natural,
+100247,2020-06-18,indoor,6,V6,Boulder Field,purple,Purple pinches on an overhang,pinch,overhang,natural,
+100248,2020-06-18,indoor,7,V7,Boulder Field,black,Black crimps and pockets,"crimp, pocket",face,natural,
+100249,2020-06-18,indoor,5,V5,Boulder Field,red,Red big moves between pinches,pinch,overhang,natural,
+100250,2020-06-18,indoor,6,V6,Boulder Field,purple,Purple slab with crimps,crimp,slab,natural,
+100251,2020-06-23,indoor,7,V7,Boulder Field,purple,Purple slab with crimps and pinches,"crimp, pinch",slab,natural,
+100252,2020-06-23,indoor,5,V5,Boulder Field,red,Red slab with vertical pinches,pinch,slab,natural,
+100253,2020-06-23,indoor,6,V6,Boulder Field,red,"Red slab with crimps, weird balancey move near top",crimp,slab,natural,
+100254,2020-06-26,indoor,8,V8,Mesa Rim Reno,yellow,"Yellow start on arete, move to face, mantle over a pinch near top","crimp, pinch",face,natural,
+100255,2020-06-26,indoor,6,V6,Mesa Rim Reno,purple,"Purple comp-style slab, use crimps and volumes to move over a sloper",crimp,slab,comp,
+100256,2020-06-26,indoor,6,V6,Mesa Rim Reno,orange,"Orange coordination dyno, easy top on pinches","crimp, pinch",face,comp,
+100257,2020-09-17,indoor,6,V6,Beta Bouldering,black,"Black traverse right past sloper, traverse left to finish hold",sloper,face,natural,
+100258,2020-09-27,indoor,8,V8,Planet Granite Belmont,blue,"Blue start on arete, move to compression pinches, big dyno left to a sloper","pinch, sloper",overhang,compression,
+100259,2020-10-15,indoor,6,V6,Planet Granite Sunnyvale,red,Red crimps,crimp,face,natural,
+100260,2020-10-21,indoor,9,V9,Diablo Rock,purple,"Purple cave start, move between pinches, crimp to finish","crimp, pinch",cave,natural,Jyee
+100261,2020-11-13,indoor,7,V7,Planet Granite Santa Clara,green,"Green crimps, knee bar in the middle, desperate top",crimp,overhang,natural,
+100262,2020-11-16,indoor,7,V7,Dogpatch,blue,Blue paddle-dyno,jug,overhang,comp,YIM
+100263,2020-11-16,indoor,9,V9,Dogpatch,white,"White knee bar on pinches, upside-down knee-bar to a crimp, undercling to a handjam, desperate finish on crimps","crimp, pinch",overhang,comp,Nilo Batle
+200001,2016-12-11,outdoor,0,V0,Joshua Tree,green,Discount Dyno,"crimp, sloper",face,natural,
+200002,2016-12-11,outdoor,0,V0,Joshua Tree,green,Unnamed on Discount Dyno boulder,"crimp, sloper",arete,natural,
+200003,2016-12-11,outdoor,3,V3,Joshua Tree,blue,Turnbuckle,crimp,face,natural,
+200004,2016-12-11,outdoor,0,V0,Joshua Tree,green,Unnamed slab 5.8 (#50),crimp,slab,natural,
+200005,2016-12-14,outdoor,2,V2,Joshua Tree,blue,Barker Dam Lip Traverse FA,jug,overhang,natural,FA
+200006,2016-12-14,outdoor,0,V0,Joshua Tree,green,Unnamed V0+ in The Chube cluster (#59),crimp,face,natural,
+200007,2016-12-26,outdoor,0,V0,Castle Rock,green,Unnamed V0 on Groundation boulder,jug,overhang,natural,
+200008,2017-01-14,outdoor,3,V3,Red Rocks,blue,Fin,crimp,arete,natural,
+200009,2017-01-14,outdoor,2,V2,Red Rocks,green,Put Your Shoes On Arete,crimp,arete,natural,
+200010,2017-01-14,outdoor,2,V2,Red Rocks,green,Fluffer,jug,face,natural,
+200011,2017-01-14,outdoor,2,V2,Red Rocks,blue,Potato Chips,crimp,overhang,natural,"Scott Gordon, Jon Martinet, Randal Grandstaff"
+200012,2017-01-14,outdoor,2,V2,Red Rocks,green,Perked Up,crimp,arete,natural,
+200013,2017-01-15,outdoor,3,V3,Henderson Boulders,green,Unnamed Left Face on the Downstream Boulders (#73),crimp,face,natural,
+200014,2017-01-15,outdoor,2,V2,Henderson Boulders,green,Unnamed Right Face on the Downstream Boulders (#74),crimp,face,natural,
+200015,2017-01-15,outdoor,2,V2,Henderson Boulders,blue,Ultra Classic,"crimp, jug",overhang,natural,
+200016,2017-02-13,outdoor,2,V2,Castle Rock,blue,Domino Theory,crimp,face,natural,
+200017,2017-02-13,outdoor,1,V1,Castle Rock,green,Mrs. Magoo Groove,sloper,slab,natural,
+200018,2017-02-13,outdoor,2,V2,Castle Rock,green,Mr. Magoo Face Sit Start,crimp,face,natural,
+200019,2017-02-13,outdoor,1,V1,Castle Rock,green,Dog Dish Warm-Up,crimp,face,natural,
+200020,2017-02-13,outdoor,3,V3,Castle Rock,blue,Magoo Slab,sloper,face,natural,
+200021,2017-02-13,outdoor,1,V1,Castle Rock,green,"Mr. Magoo Unnamed, to the right of overhanging lieback",jug,face,natural,
+200022,2017-02-13,outdoor,1,V1,Castle Rock,green,Mr. Magoo (with knee bar),jug,overhang,natural,
+200023,2017-02-25,outdoor,4,V4,Castle Rock,blue,Beak Traverse,"jug, pinch",face,dyno,Barry Bates
+200024,2017-02-25,outdoor,0,V0,Castle Rock,green,Unnamed V0 in Backside Boulders,jug,face,natural,
+200025,2017-02-26,outdoor,2,V2,Berkeley Indian Rock,green,Number 3 Crack,crimp,arete,natural,
+200026,2017-02-26,outdoor,2,V2,Berkeley Indian Rock,green,Little Prow,jug,arete,natural,
+200027,2017-02-26,outdoor,3,V3,Berkeley Indian Rock,green,Ape Traverse early exit,jug,overhang,natural,
+200028,2017-02-26,outdoor,1,V1,Berkeley Indian Rock,green,Pegboard,jug,face,natural,
+200029,2017-02-26,outdoor,0,V0,Castle Rock,green,Indian Face Warm-up,jug,face,natural,
+200030,2017-02-26,outdoor,0,V0,Castle Rock,green,Roid Rage,jug,face,natural,
+200031,2017-02-26,outdoor,2,V2,Castle Rock,green,Raw Honey,"jug, sloper",overhang,natural,
+200032,2017-02-26,outdoor,3,V3,Castle Rock,green,Sticky Rice,jug,overhang,natural,
+200033,2017-03-11,outdoor,5,V5,Castle Rock,blue,Bate’s Problem,"sloper, crimp",face,dyno,Barry Bates
+200034,2017-03-19,outdoor,3,V3,Castle Rock,blue,Lost Keys Face,sloper,face,mantle,
+200035,2017-04-02,outdoor,6,V6,Castle Rock,orange,Lost Keys Traverse,"jug, sloper, crimp",overhang,natural,Jeremy Meigs
+200036,2017-04-02,outdoor,4,V4,Castle Rock,blue,Santa Cruz Dude,crimp,face,natural,Chris Sharma
+200037,2017-04-02,outdoor,3,V3,Castle Rock,green,Sticky Rice Link Up,jug,overhang,natural,
+200038,2017-04-02,outdoor,1,V1,Castle Rock,green,The Shark Variation,jug,cave,natural,
+200039,2017-04-29,outdoor,1,V1,Castle Rock,green,Funky Arete in the Nature Nazi area,crimp,arete,natural,
+200040,2017-04-29,outdoor,0,V0,Castle Rock,green,Unnamed V0 slab left,crimp,slab,natural,
+200041,2017-04-29,outdoor,0,V0,Castle Rock,green,Unnamed V0 slab right,crimp,slab,natural,
+200042,2017-04-29,outdoor,2,V2,Castle Rock,blue,Minimalism,crimp,slab,natural,
+200043,2017-04-29,outdoor,4,V4,Castle Rock,blue,Santa Cruz Dude,crimp,face,dyno,Chris Sharma
+200044,2017-05-08,outdoor,1,V1,Castle Rock,green,Mr. Magoo Dyno,sloper,face,dyno,
+200045,2017-05-14,outdoor,0,V0,Columbia College,green,The Off-Width,jug,crack,natural,
+200046,2017-05-14,outdoor,3,V3,Columbia College,blue,The Gold Wall,sloper,overhang,natural,
+200047,2017-05-14,outdoor,3,V3,Columbia College,blue,Falkenstein Crack,"crimp, jug",overhang,natural,
+200048,2017-05-21,outdoor,1,V1,Mount Tamalpais,green,The Best Damn,crimp,slab,natural,
+200049,2017-05-21,outdoor,1,V1,Mount Tamalpais,green,Contact High,crimp,slab,natural,
+200050,2017-05-21,outdoor,2,V2,Mount Tamalpais,blue,The Old Man Card,sloper,face,mantle,
+200051,2017-05-31,outdoor,2,V2,Bishop Happy Boulders,blue,Auto-Gedden (Jesus Chrysler Traverse),"crimp, jug",overhang,natural,
+200052,2017-05-31,outdoor,3,V3,Bishop Happy Boulders,green,Monkey Hang,jug,cave,natural,
+200053,2017-05-31,outdoor,4,V4,Bishop Happy Boulders,blue,Impulse Control,"crimp, sloper",overhang,natural,Chris Tracy
+200054,2017-06-04,outdoor,1,V1,Mickey’s Beach,green,Diagonal Ramp on the Orange Buddha Boulder,crimp,face,natural,
+200055,2017-06-04,outdoor,2,V2,Mickey’s Beach,green,Baseball on the Orange Buddha Boulder (used to be V4),crimp,face,natural,
+200056,2017-06-04,outdoor,1,V1,Mickey’s Beach,green,"Don’t worry, be slappy (used to be V6)",crimp,face,natural,
+200057,2017-06-04,outdoor,2,V2,Stinson Beach,blue,Unnamed slab,crimp,slab,natural,
+200058,2017-06-04,outdoor,1,V1,Stinson Beach,green,Warm Up Arete,crimp,arete,natural,
+200059,2017-06-04,outdoor,1,V1,Stinson Beach,green,Unnamed south face,crimp,overhang,natural,
+200060,2017-06-11,outdoor,1,V1,Castle Rock,green,Mr. Magoo Run and Jump,jug,face,comp,
+200061,2017-06-11,outdoor,2,V2,Castle Rock,blue,Domino Theory (dyno beta),"crimp, jug",face,dyno,
+200062,2017-07-07,outdoor,3,V3,Black Mountain,blue,Gypsy’s Day Out,crimp,overhang,natural,
+200063,2017-07-07,outdoor,1,V1,Black Mountain,green,Little Saigon Left Arete,crimp,overhang,natural,
+200064,2017-07-07,outdoor,0,V0,Black Mountain,green,Unnamed 5.9 slab,crimp,slab,natural,
+200065,2017-07-07,outdoor,2,V2,Black Mountain,blue,Front Wheel Drive,crimp,slab,natural,
+200066,2017-07-07,outdoor,0,V0,Joshua Tree,green,Pork Rinds 5.8 (#9),"jug, pinch",face,natural,
+200067,2017-07-08,outdoor,0,V0,Joshua Tree,green,Pothole Mantle #2,sloper,face,mantle,
+200068,2017-07-08,outdoor,0,V0,Joshua Tree,green,Pothole Problem #2,sloper,face,mantle,
+200069,2017-07-08,outdoor,0,V0,Joshua Tree,green,Pothole Mantle #1,sloper,face,mantle,
+200070,2017-07-09,outdoor,2,V2,Grizzly Peak,green,Main Boulder East Face,"crimp, jug",overhang,natural,
+200071,2017-07-16,outdoor,2,V2,Salt Point State Park,green,Lieback,jug,overhang,natural,
+200072,2017-07-16,outdoor,2,V2,Salt Point State Park,green,Unnamed V2 to the right of The Slap,sloper,overhang,natural,
+200073,2017-07-16,outdoor,5,V5,Salt Point State Park,blue,The Slap,crimp,overhang,natural,
+200074,2017-07-16,outdoor,4,V4,Salt Point State Park,blue,Tufatafoni Traverse,jug,cave,natural,
+200075,2017-07-23,outdoor,3,V3,Salt Point State Park,blue,Quarry Traverse,jug,overhang,natural,
+200076,2017-07-23,outdoor,2,V2,Salt Point State Park,green,Mantle 101,jug,overhang,mantle,
+200077,2017-07-23,outdoor,0,V0,Salt Point State Park,green,I’m a Mountain Goat,crimp,slab,natural,FA
+200078,2017-08-14,outdoor,4,V4,Salt Point State Park,blue,Triceratops,"crimp, jug",cave,natural,
+200079,2017-08-14,outdoor,6,V6,Salt Point State Park,orange,Music Box By the Sea,crimp,cave,natural,FA
+200080,2017-09-03,outdoor,4,V4,Joshua Tree,blue,Sloper Safari,"jug, sloper",overhang,natural,
+200081,2017-09-05,outdoor,2,V2,Joshua Tree,blue,Bulgemaster,sloper,overhang,natural,
+200082,2017-09-05,outdoor,4,V4,Joshua Tree,blue,Little Chucky,"crimp, pinch",face,natural,
+200083,2017-09-05,outdoor,2,V2,Joshua Tree,green,"Dino’s Egg, Sit Down Flake",jug,overhang,natural,
+200084,2017-09-29,outdoor,1,V1,Berkeley Indian Rock,green,Watercourse,jug,face,natural,
+200085,2017-10-01,outdoor,6,V6,Grizzly Peak,orange,Tractor Pull,crimp,face,natural,
+200086,2017-10-14,outdoor,4,V4,"Lincoln Woods State Park, RI",blue,Tombstone,"crimp, jug",overhang,natural,
+200087,2017-10-14,outdoor,5,V5,"Lincoln Woods State Park, RI",blue,Try Again,jug,face,dyno,Ed Sewall
+200088,2017-10-16,outdoor,3,V3,"Lynn Woods, MA",blue,Bloody Sunset,crimp,face,natural,FA?
+200089,2017-10-21,outdoor,4,V4,"Central Park, NY",green,Sub Atomic Nuclear Penguin,crimp,face,natural,
+200090,2017-11-05,outdoor,6,V6,Red Rocks,orange,"Monkey Bars, Right","crimp, jug",overhang,natural,Danny Rider
+200091,2017-11-05,outdoor,5,V5,Red Rocks,orange,Umpa Lumpa,"crimp, sloper",variable,natural,
+200092,2017-11-06,outdoor,3,V3,Red Rocks,blue,Brown Round Crack,crimp,face,natural,
+200093,2017-11-06,outdoor,3,V3,Red Rocks,blue,Peruvian Left,crimp,slab,natural,Randal Grandstafff
+200094,2017-12-02,outdoor,7,V7,Castle Rock,orange,Bate’s Eliminate,crimp,face,dyno,Barry Bates
+200095,2017-12-10,outdoor,3,V3,Castle Rock,blue,The Swim,sloper,face,mantle,
+200096,2017-12-18,outdoor,0,V0,Yosemite,green,Slab behind Columbia Boulder,crimp,slab,natural,
+200097,2017-12-18,outdoor,0,V0,Yosemite,green,Columbia Boulder Artificial Slab 5.9,crimp,slab,natural,
+200098,2017-12-18,outdoor,2,V2,Yosemite,blue,Unnamed Warm-up on the Tile Boulder,crimp,face,natural,
+200099,2017-12-18,outdoor,4,V4,Yosemite,blue,Zorro,"crimp, jug",face,dyno,
+200100,2017-12-19,outdoor,4,V4,Yosemite,blue,Tendon’s Give,"crimp, jug",overhang,dyno,
+200101,2017-12-23,outdoor,1,V1,Bishop Buttermilks,blue,A Birthing Experience,crimp,overhang,comp,
+200102,2017-12-23,outdoor,5,V5,Bishop Buttermilks,orange,Devoted Traverse,"crimp, jug",overhang,natural,
+200103,2017-12-26,outdoor,2,V2,Bishop Buttermilks,green,Sheepherder,sloper,face,natural,
+200104,2017-12-26,outdoor,3,V3,Bishop Buttermilks,blue,Birthday Direct,crimp,face,natural,
+200105,2017-12-27,outdoor,1,V1,Bishop Happy Boulders,blue,Heavenly Path,crimp,slab,natural,
+200106,2017-12-27,outdoor,2,V2,Bishop Happy Boulders,blue,Kling and Smirk,"crimp, sloper",overhang,natural,
+200107,2017-12-27,outdoor,4,V4,Bishop Happy Boulders,blue,Ketron Classic,crimp,overhang,natural,Brian Ketron
+200108,2017-12-27,outdoor,5,V5,Bishop Happy Boulders,blue,Serengeti,crimp,overhang,natural,Marty Lewis
+200109,2017-12-27,outdoor,7,V7,Bishop Happy Boulders,orange,"Acid Wash Right, Stand Start",crimp,overhang,natural,Dustin Sabo
+200110,2017-12-28,outdoor,0,V0,Bishop Sad Boulders,green,Brown Slab,crimp,slab,natural,
+200111,2017-12-28,outdoor,2,V2,Bishop Sad Boulders,green,World Shut Your Mouth,crimp,face,natural,
+200112,2017-12-28,outdoor,5,V5,Bishop Sad Boulders,blue,Molly Dyno,crimp,face,dyno,
+200113,2017-12-28,outdoor,0,V0,Bishop Sad Boulders,green,Hands-Free Slab,crimp,slab,natural,
+200114,2017-12-28,outdoor,0,V0,Bishop Sad Boulders,green,Hands-on Slab,crimp,slab,natural,
+200115,2017-12-29,outdoor,2,V2,Bishop Buttermilks,green,The Prow,jug,face,natural,
+200116,2017-12-29,outdoor,5,V5,Bishop Buttermilks,orange,Fly Boy Arete,crimp,arete,natural,
+200117,2017-12-30,outdoor,4,V4,Bishop Happy Boulders,orange,Solarium,crimp,face,natural,Marty Lewis
+200118,2017-12-30,outdoor,6,V6,Bishop Happy Boulders,orange,The Hulk,crimp,overhang,natural,Peter Croft
+200119,2017-12-30,outdoor,5,V5,Bishop Happy Boulders,orange,Sucker Punch,crimp,face,natural,
+200120,2017-12-31,outdoor,0,V0,Bishop Sad Boulders,green,Gotta Be Kidding Me Slab,jug,slab,natural,
+200121,2017-12-31,outdoor,3,V3,Bishop Sad Boulders,blue,Hauck a Loogie,crimp,overhang,natural,
+200122,2017-12-31,outdoor,0,V0,Bishop Sad Boulders,green,Flush VB,jug,slab,natural,
+200123,2017-12-31,outdoor,6,V6,Bishop Happy Boulders,orange,The Gleaner,crimp,overhang,natural,Peter Croft
+200124,2018-01-01,outdoor,0,V0,Bishop Buttermilks,green,Unnamed Sunshine Slab,crimp,slab,natural,
+200125,2018-01-01,outdoor,1,V1,Bishop Buttermilks,green,Good Morning Sunshine,crimp,slab,natural,
+200126,2018-01-01,outdoor,2,V2,Bishop Buttermilks,blue,Green Wall Essential,crimp,face,natural,
+200127,2018-01-01,outdoor,4,V4,Bishop Buttermilks,blue,Iron Man Traverse,jug,overhang,natural,Tony Pupo
+200128,2018-01-01,outdoor,0,V0,Bishop Buttermilks,blue,Robinson’s Rubber Tester,sloper,slab,natural,
+200129,2018-01-02,outdoor,3,V3,Bishop Sad Boulders,blue,Maximum Relaxum,jug,cave,natural,
+200130,2018-01-03,outdoor,1,V1,Bishop Buttermilks,blue,"Buttermilks Stem, Stand Start",sloper,corner,natural,
+200131,2018-01-03,outdoor,4,V4,Bishop Buttermilks,blue,"Buttermilks Stem, Sit Start","jug, sloper",overhang,natural,
+200132,2018-03-12,outdoor,0,V0,Castle Rock,green,Run and Jump in the Nature Nazi Area,jug,face,comp,
+200133,2018-03-12,outdoor,2,V2,Castle Rock,green,"Naked Nazi, Stand Start",crimp,arete,natural,
+200134,2018-04-01,outdoor,1,V1,Bishop Happy Boulders,green,Totty Corridor Traverse,crimp,face,natural,
+200135,2018-04-01,outdoor,0,V0,Bishop Happy Boulders,green,Strange Quotations,jug,face,natural,
+200136,2018-04-01,outdoor,2,V2,Bishop Happy Boulders,blue,"Exit the Rat, Sit Start",crimp,face,natural,
+200137,2018-04-01,outdoor,0,V0,Bishop Buttermilks,green,Yo Basecamp,crimp,slab,natural,
+200138,2018-04-01,outdoor,1,V1,Bishop Buttermilks,blue,"Birthday Left, Sit Start",crimp,face,natural,
+200139,2018-04-01,outdoor,0,V0,Bishop Buttermilks,green,Hero Roof,jug,overhang,natural,
+200140,2018-04-02,outdoor,0,V0,Bishop Sad Boulders,green,"Big Brown Slab, East Center Face",crimp,face,natural,
+200141,2018-04-16,outdoor,3,V3,Bishop Happy Boulders,green,Slap Happy,jug,overhang,natural,Chris Tracy
+200142,2018-04-23,outdoor,2,V2,Castle Rock,green,Overhanging Lieback,jug,overhang,natural,
+200143,2018-04-23,outdoor,2,V2,Castle Rock,green,"The Direct, Nature Nazi Boulders",crimp,overhang,natural,
+200144,2018-04-23,outdoor,3,V3,Castle Rock,blue,Domino Arete,crimp,face,natural,
+200145,2018-04-29,outdoor,5,V5,Grizzly Peak,orange,Scary Overhang,crimp,overhang,natural,
+200146,2018-05-21,outdoor,4,V4,Berkeley Mortar Rock,blue,The Ramp,crimp,overhang,natural,Nat Smale?
+200147,2018-05-28,outdoor,5,V5,Black Mountain,orange,Boulder Basin Dyno,crimp,face,dyno,
+200148,2018-05-28,outdoor,4,V4,Black Mountain,blue,The Walrus,jug,overhang,natural,
+200149,2018-05-29,outdoor,0,V0,Joshua Tree,green,Dragon Scales,jug,slab,natural,
+200150,2018-06-23,outdoor,4,V4,"North Lake Tahoe, Rainbow",blue,"Rainbow Boulder B, Resolution",jug,overhang,natural,
+200151,2018-06-23,outdoor,2,V2,"North Lake Tahoe, Rainbow",green,"Rainbow Boulder B, Unnamed Traverse",crimp,face,natural,
+200152,2018-06-23,outdoor,4,V4,"North Lake Tahoe, Rainbow",blue,"Rainbow Boulder C, Wein’s Law","crimp, jug",face,natural,
+200153,2018-06-23,outdoor,7,V7,"North Lake Tahoe, Rainbow",orange,"Rainbow Boulder A, Continuum",crimp,arete,dyno,
+200154,2018-07-02,outdoor,0,V0,Goat Rock Beach,blue,Goat Rock,jug,slab,natural,
+200155,2018-07-02,outdoor,4,V4,Goat Rock Beach,blue,Lamb Boulder Traverse,"crimp, jug",overhang,natural,
+200156,2018-07-04,outdoor,4,V4,"Lizard’s Mouth, Santa Barbara",orange,Meilee Traverse,"crimp, jug",cave,natural,
+200157,2018-07-04,outdoor,2,V2,Stinson Beach,green,"Unnamed south face, sit-start",crimp,overhang,natural,
+200158,2018-07-31,outdoor,0,V0,Stinson Beach,green,Stinson Beach Warm Up,jug,slab,natural,
+200159,2018-07-31,outdoor,2,V2,Stinson Beach,green,Old Woman Crimp Traverse,crimp,face,natural,
+200160,2018-07-31,outdoor,3,V3,Stinson Beach,green,Are You Experienced Standard Route,"crimp, pinch",overhang,natural,
+200161,2018-08-03,outdoor,2,V2,Squamish,green,Big Bottoms,sloper,face,natural,
+200162,2018-08-03,outdoor,3,V3,Squamish,green,Titanic,crimp,face,natural,Nick Gibbs
+200163,2018-08-03,outdoor,4,V4,Squamish,blue,The Mantis,"sloper, crimp",overhang,natural,"Jack Fieldhouse, Scott Milton"
+200164,2018-08-03,outdoor,4,V4,Squamish,blue,Easy in an Easy Chair,jug,overhang,natural,Nick Gibbs
+200165,2018-08-03,outdoor,3,V3,Squamish,blue,Stupid Face,crimp,face,natural,Remy Larocque
+200166,2018-08-04,outdoor,0,V0,Squamish,green,Summer Vacation,jug,face,natural,Gord Ross
+200167,2018-08-04,outdoor,4,V4,Squamish,blue,Sloppy Poppy,crimp,variable,natural,Stu Worrall
+200168,2018-08-04,outdoor,2,V2,Squamish,green,Squamish Days,pinch,overhang,natural,
+200169,2018-08-04,outdoor,5,V5,Squamish,orange,The Viper,pinch,arete,natural,Peter Michaux
+200170,2018-08-04,outdoor,3,V3,Squamish,blue,American Gigolo,crimp,arete,natural,Tim Doyle
+200171,2018-08-05,outdoor,2,V2,Squamish,green,"The Silencer, Right Arete",jug,arete,natural,Jack Fieldhouse
+200172,2018-08-05,outdoor,4,V4,Squamish,blue,Shots Fired,"crimp, jug",overhang,natural,Jack Fieldhouse
+200173,2018-08-05,outdoor,2,V2,Squamish,green,Bang,crimp,face,dyno,Jack Fieldhouse
+200174,2018-08-05,outdoor,3,V3,Squamish,blue,Center Slab,crimp,slab,natural,Nick Gibbs
+200175,2018-08-06,outdoor,1,V1,Squamish,green,Detached Flake,"jug, pinch",face,natural,Tyrone Brett
+200176,2018-08-06,outdoor,1,V1,Squamish,green,Nadia’s Slab,crimp,slab,natural,Nadia Hallsworth
+200177,2018-08-06,outdoor,4,V4,Squamish,blue,"A Stroke of Luck, Right Exit",crimp,overhang,natural,Curtis Suave
+200178,2018-08-06,outdoor,4,V4,Squamish,blue,Ape Span,crimp,face,dyno,Greg Tos
+200179,2018-08-06,outdoor,5,V5,Squamish,orange,Space Monkey,"crimp, pinch",overhang,natural,Tyrone Brett
+200180,2018-08-06,outdoor,3,V3,Squamish,blue,Rhino Face,jug,overhang,mantle,Curtis Suave
+200181,2018-08-24,outdoor,2,V2,Mount Tamalpais,green,The Cheech and the Choss,crimp,face,natural,
+200182,2018-08-24,outdoor,4,V4,Mount Tamalpais,blue,"Intuition, Stand Start",crimp,face,dyno,Chris Summit
+200183,2018-08-24,outdoor,2,V2,Mount Tamalpais,green,Right Arete,"crimp, jug",face,natural,
+200184,2018-08-24,outdoor,6,V6,Mount Tamalpais,blue,Girl Power,crimp,face,natural,
+200185,2018-09-02,outdoor,5,V5,Red Rocks,orange,The Pearl,crimp,face,natural,Randal Grandstaff
+200186,2018-09-02,outdoor,4,V4,Red Rocks,green,Jenna’s Jewelry,jug,face,dyno,
+200187,2018-09-03,outdoor,1,V1,Mount Charleston,blue,"Thread Problem, Right Exit",crimp,face,natural,
+200188,2018-09-11,outdoor,1,V1,"Bishop, Sky Rock Area",green,Face climb,crimp,face,natural,FA
+200189,2018-09-23,outdoor,2,V2,Bishop Sad Boulders,green,Emma’s Problem,crimp,overhang,natural,
+200190,2018-09-23,outdoor,4,V4,Bishop Sad Boulders,blue,The Fang,crimp,cave,natural,Zach Shields
+200191,2018-09-24,outdoor,1,V1,"Bishop, Sky Rock Area",green,City of Daggers,crimp,face,natural,FA
+200192,2018-10-22,outdoor,6,V6,"Mitake Boulders, Japan",orange,"Dead End, Right Exit",crimp,face,natural,
+200193,2018-12-01,outdoor,0,V0,"Bishop, Sky Rock Area",green,Brittle Skidaddle,crimp,face,natural,FA
+200194,2018-12-08,outdoor,6,V6,Bishop Sad Boulders,orange,French Press,"crimp, sloper",slab,natural,Tim Medina
+200195,2018-12-10,outdoor,3,V3,Bishop Happy Boulders,blue,Black Magic,crimp,slab,natural,
+200196,2019-01-10,outdoor,6,V6,Bishop Buttermilks,orange,Seven Spanish Angels,pinch,face,dyno,"Jason Jackson, Greg Haverstock"
+200197,2019-01-27,outdoor,8,V8,Castle Rock,red,Static Reach,"crimp, pinch",overhang,natural,
+200198,2019-02-17,outdoor,3,V3,Henderson Boulders,blue,Warm Up Arete,crimp,arete,natural,
+200199,2019-02-18,outdoor,2,V2,Henderson Boulders,green,Unnamed Left Face on the Downstream Boulders,crimp,face,natural,
+200200,2019-02-18,outdoor,5,V5,Henderson Boulders,orange,Warm Enough,jug,cave,natural,
+200201,2019-02-18,outdoor,0,V0,Keyhole Canyon,green,Fleur de Lis,jug,slab,natural,
+200202,2019-02-18,outdoor,1,V1,Keyhole Canyon,green,Left Chunky Face,crimp,face,natural,
+200203,2019-02-18,outdoor,2,V2,Keyhole Canyon,green,Plastic Man,"crimp, jug",face,natural,
+200204,2019-02-19,outdoor,3,V3,Bishop Happy Boulders,blue,Joseph,crimp,face,natural,
+200205,2019-02-20,outdoor,7,V7,Red Rocks,orange,Angel Dyno,"crimp, jug",face,dyno,John Long
+200206,2019-03-10,outdoor,5,V5,Bishop Happy Boulders,orange,Slap Happy Traverse,pinch,overhang,natural,Rebecca Blakeslee
+200207,2019-03-10,outdoor,2,V2,Bishop Happy Boulders,green,Solarium Dyno,jug,face,dyno,
+200208,2019-03-10,outdoor,3,V3,Bishop Happy Boulders,green,Carrot Top,crimp,face,natural,
+200209,2019-03-16,outdoor,5,V5,Bishop Happy Boulders,orange,Groundwater,crimp,overhang,natural,
+200210,2019-03-28,outdoor,4,V4,Red Rocks,blue,Jones’n,crimp,face,natural,
+200211,2019-03-29,outdoor,1,V1,Red Rocks,green,Perfect Poser (The Cube),crimp,face,natural,
+200212,2019-03-29,outdoor,3,V3,Red Rocks,green,Sorange,crimp,face,natural,
+200213,2019-03-30,outdoor,4,V4,Red Rocks,blue,Jenna’s Jewelry,crimp,face,natural,
+200214,2019-04-08,outdoor,3,V3,Berkeley Indian Rock,blue,Center Overhang,crimp,overhang,natural,
+200215,2019-04-08,outdoor,3,V3,Berkeley Indian Rock,green,Flake Traverse,crimp,face,natural,
+200216,2019-05-12,outdoor,3,V3,Salt Point State Park,orange,Johnny Cash,sloper,variable,dyno,
+200217,2019-06-23,outdoor,3,V3,"South Lake Tahoe, California Alpine Club",green,Three Bangs,crimp,arete,natural,
+200218,2019-06-23,outdoor,3,V3,"South Lake Tahoe, California Alpine Club",green,Wood Nymph Early Exit,crimp,slab,natural,
+200219,2019-07-01,outdoor,3,V3,Mount Lassen,green,Got Surprised,crimp,face,natural,
+200220,2019-07-01,outdoor,4,V4,Mount Lassen,blue,Widebeast,crimp,overhang,natural,
+200221,2019-07-05,outdoor,5,V5,Black Mountain,orange,Gypsy’s Link Up,crimp,overhang,natural,
+200222,2019-07-05,outdoor,3,V3,Black Mountain,green,Central Basin Arete,crimp,arete,natural,
+200223,2019-07-05,outdoor,4,V4,Black Mountain,blue,Central Basin Traverse,crimp,face,natural,
+200224,2019-07-05,outdoor,3,V3,Black Mountain,blue,Pink Crack,"crimp, pinch",face,natural,
+200225,2019-07-06,outdoor,1,V1,Palm Springs Aerial Tramway,green,Line Dance,jug,overhang,natural,D. Roth
+200226,2019-07-06,outdoor,4,V4,Palm Springs Aerial Tramway,blue,Humping the Walrus,sloper,variable,natural,Chad Gilbert
+200227,2019-07-06,outdoor,3,V3,Palm Springs Aerial Tramway,green,Breakdance,jug,face,dyno,A. Dornan
+200228,2019-07-06,outdoor,7,V7,Palm Springs Aerial Tramway,orange,Swing Dance,crimp,overhang,dyno,A. Dornan
+200229,2019-07-07,outdoor,1,V1,Palm Springs Aerial Tramway,blue,Unnamed V1 (#374),"crimp, sloper",face,mantle,
+200230,2019-07-07,outdoor,5,V5,Palm Springs Aerial Tramway,orange,Dancing Queen (aka. The Cube),sloper,arete,natural,Frank Cornelius
+200231,2019-07-12,outdoor,6,V6,Stinson Beach,orange,Smiley Face,crimp,face,natural,
+200232,2019-08-15,outdoor,7,V7,Squamish,orange,The Fuzz,"crimp, sloper, pinch",face,natural,Nick Gibbs
+200233,2019-08-15,outdoor,4,V4,Squamish,blue,Titanic Dyno,jug,face,dyno,Nick Gibbs
+200234,2019-08-16,outdoor,7,V7,Squamish,orange,Anubis,crimp,overhang,natural,Brad Tkachuk
+200235,2019-08-17,outdoor,1,V1,Squamish,green,Cheese Grater,jug,slab,natural,Stu Worrall
+200236,2019-08-17,outdoor,2,V2,Squamish,blue,Slingshot,crimp,face,natural,Jack Fieldhouse
+200237,2019-08-17,outdoor,5,V5,Squamish,orange,Wafer Thin,crimp,face,natural,Nick Gibbs
+200238,2019-08-17,outdoor,4,V4,Squamish,green,Golden Bowl Stand,crimp,face,dyno,Nick Gibbs
+200239,2019-10-06,outdoor,4,V4,Tuolumne Meadows,blue,"The Arete, Right Exit",crimp,overhang,natural,
+200240,2019-10-06,outdoor,4,V4,Tuolumne Meadows,blue,Solar Flare,crimp,variable,natural,
+200241,2019-10-07,outdoor,2,V2,Tuolumne Meadows,green,Erik’s Picnic,crimp,face,natural,
+200242,2019-10-07,outdoor,3,V3,Tuolumne Meadows,green,Wood Deliverer,crimp,face,natural,
+200243,2019-10-07,outdoor,6,V6,Tuolumne Meadows,orange,G23 Arete,crimp,arete,natural,
+200244,2019-10-08,outdoor,4,V4,Tuolumne Meadows,blue,The Roof,"crimp, pinch",overhang,natural,
+200245,2019-10-21,outdoor,6,V6,Yosemite,orange,Munchkin Lunge,crimp,overhang,dyno,
+200246,2019-10-21,outdoor,3,V3,Yosemite,blue,No Fur,"crimp, sloper",face,natural,
+200247,2019-10-21,outdoor,6,V6,Yosemite,orange,Silent Spotter,crimp,overhang,natural,
+200248,2019-10-21,outdoor,4,V4,Yosemite,blue,Unnamed Lip Traverse,sloper,overhang,dyno,
+200249,2019-10-26,outdoor,5,V5,Yosemite,orange,Blue Suede Shoes,crimp,slab,natural,
+200250,2019-11-03,outdoor,1,V1,Bishop Happy Boulders,blue,"Loaded, Eliminate",crimp,slab,natural,
+200251,2019-11-03,outdoor,5,V5,Bishop Happy Boulders,orange,Molly,crimp,face,natural,Craig Smith
+200252,2019-11-11,outdoor,3,V3,Castle Rock,blue,Let’s Get Hurt,"jug, sloper",face,mantle,Mike Hernandez
+200253,2019-11-11,outdoor,4,V4,Castle Rock,blue,"Coz Daddy, Early Exit","crimp, pinch",overhang,natural,Scott Cosgrove
+200254,2019-11-11,outdoor,2,V2,Castle Rock,green,The Edge,crimp,face,dyno,
+200255,2019-11-11,outdoor,4,V4,Castle Rock,green,Mr. Clean,sloper,overhang,dyno,
+200256,2019-11-11,outdoor,4,V4,Castle Rock,blue,The Slope,"jug, sloper",face,mantle,
+200257,2019-12-21,outdoor,4,V4,Bishop Happy Boulders,blue,Burning Rubber Necklace,crimp,cave,natural,Russ Walling
+200258,2019-12-24,outdoor,6,V6,Joshua Tree,orange,"Chuckawalla, Sit Start",crimp,face,natural,Robert Miramontes
+200259,2019-12-25,outdoor,5,V5,Joshua Tree,orange,Black Streak Dyno,crimp,face,dyno,Robert Miramontes
+200260,2019-12-25,outdoor,4,V4,Joshua Tree,orange,Secret Samurai,sloper,overhang,natural,Kyle Owen
+200261,2019-12-28,outdoor,2,V2,Red Rocks,green,The Black Bitch,crimp,slab,natural,Wendell Broussard
+200262,2019-12-29,outdoor,5,V5,Red Rocks,orange,"Southeast Face of The Butt Crack Boulder, Sit Start",crimp,face,natural,
+200263,2019-12-31,outdoor,10,V10,Red Rocks,red,Red Wave,crimp,overhang,dyno,Dimitrius Fritz
+200264,2020-01-01,outdoor,4,V4,Red Rocks,orange,St. Louis,crimp,overhang,natural,
+200265,2020-01-02,outdoor,7,V7,Red Rocks,orange,Monkey Wrench,crimp,overhang,natural,
+200266,2020-01-02,outdoor,6,V6,Red Rocks,orange,Equinox,crimp,face,natural,
+200267,2020-01-03,outdoor,1,V1,Red Rocks,green,Arete V1 on the Sorange Boulder,jug,face,natural,
+200268,2020-01-03,outdoor,1,V1,Red Rocks,green,Heart and Sole Left V1/2,crimp,slab,natural,
+200269,2020-01-03,outdoor,1,V1,Red Rocks,green,Arete left V1/2 on the Warm Up Boulder,jug,face,natural,
+200270,2020-01-03,outdoor,5,V5,Red Rocks,orange,Welcome to Detroit,"crimp, jug",variable,mantle,
+200271,2020-01-04,outdoor,7,V7,Red Rocks,orange,Right Face of the My Tan Boulder V6/7 (#292),crimp,face,natural,
+200272,2020-01-04,outdoor,4,V4,Red Rocks,blue,Avian Flu,jug,cave,natural,
+200273,2020-01-19,outdoor,2,V2,"Lizard’s Mouth, Santa Barbara",blue,Unnamed V2 Cave,jug,cave,natural,FA?
+200274,2020-01-19,outdoor,0,V0,"Lizard’s Mouth, Santa Barbara",green,Yellow Belly,crimp,face,natural,
+200275,2020-02-01,outdoor,7,V7,Great Stoneface Park,red,Great Stoneface,crimp,overhang,natural,
+200276,2020-02-01,outdoor,6,V6,Great Stoneface Park,orange,Like Mike (Hoop Dreams Eliminate),jug,overhang,dyno,Eugene Ahn
+200277,2020-02-09,outdoor,7,V7,Castle Rock,red,Dark Side of the Moon,"crimp, sloper",face,natural,
+200278,2020-02-09,outdoor,7,V7,Castle Rock,orange,Asian Invasion,"crimp, sloper",overhang,natural,
+200279,2020-05-09,outdoor,2,V2,Nut Tree Boulders,blue,Might have been Jim’s,crimp,overhang,natural,
+200280,2020-05-09,outdoor,4,V4,Nut Tree Boulders,blue,Jimis Butt Crack,crimp,overhang,natural,
+200281,2020-05-23,outdoor,3,V3,Auburn Quarry,blue,Unnamed V3,crimp,overhang,natural,
+200282,2020-05-23,outdoor,4,V4,Auburn Quarry,blue,Unnamed V4 dyno,crimp,face,dyno,
+200283,2020-05-25,outdoor,4,V4,"South Lake Tahoe, Loon Lake",blue,Unnamed V4,crimp,arete,natural,
+200284,2020-05-25,outdoor,5,V5,"South Lake Tahoe, Loon Lake",orange,Unnamed V5,crimp,slab,natural,
+200285,2020-05-31,outdoor,5,V5,Mickey’s Beach,blue,Unnamed V5,crimp,overhang,natural,FA?
+200286,2020-05-31,outdoor,5,V5,Mickey’s Beach,orange,Grace Face,crimp,face,natural,
+200287,2020-05-31,outdoor,4,V4,Mickey’s Beach,blue,Gold Wall,pinch,overhang,natural,
+200288,2020-06-12,outdoor,4,V4,"North Lake Tahoe, Rainbow",blue,Raincheck,crimp,overhang,natural,
+200289,2020-06-12,outdoor,3,V3,"North Lake Tahoe, Rainbow",green,Unnamed V3,crimp,face,natural,
+200290,2020-06-12,outdoor,2,V2,"North Lake Tahoe, Rainbow",green,Unnamed V2,jug,face,natural,
+200291,2020-06-12,outdoor,2,V2,"North Lake Tahoe, Rainbow",green,Unnamed V2,crimp,face,natural,
+200292,2020-06-21,outdoor,7,V7,Mount Tamalpais,orange,The Little Adventure,crimp,overhang,natural,
+200293,2020-06-27,outdoor,4,V4,"South Lake Tahoe, The Freaks",green,One Hitter,crimp,overhang,natural,
+200294,2020-06-27,outdoor,3,V3,"South Lake Tahoe, The Freaks",blue,Fully Loaded,crimp,overhang,natural,
+200295,2020-06-27,outdoor,7,V7,"South Lake Tahoe, The Freaks",red,Morning Wood,crimp,overhang,natural,
+200296,2020-06-28,outdoor,3,V3,"South Lake Tahoe, Pie Shop",green,Unnamed V3 on Powersauce Boulder,crimp,face,natural,
+200297,2020-07-03,outdoor,7,V7,"South Lake Tahoe, Pie Shop",orange,Powersauce,crimp,overhang,mantle,
+200298,2020-07-03,outdoor,2,V2,"South Lake Tahoe, Pie Shop",green,Rubber Checker,crimp,slab,natural,
+200299,2020-07-03,outdoor,5,V5,"South Lake Tahoe, Pie Shop",blue,Flying Birdie,jug,face,dyno,
+200300,2020-07-04,outdoor,1,V1,"South Lake Tahoe, Erratica",blue,Left Unnamed V1 on Pumpkin Spice,crimp,slab,natural,
+200301,2020-07-04,outdoor,1,V1,"South Lake Tahoe, Erratica",blue,Middle Unnamed V1 on Pumpkin Spice,crimp,slab,natural,
+200302,2020-07-04,outdoor,2,V2,"South Lake Tahoe, Erratica",green,Unnamed V2 on Pumpkin Spice,crimp,slab,natural,
+200303,2020-07-04,outdoor,4,V4,"South Lake Tahoe, Erratica",blue,Unnamed V4 on Pumpkin Spice,crimp,slab,natural,
+200304,2020-07-04,outdoor,6,V6,"South Lake Tahoe, Erratica",orange,Vision Quest,"crimp, jug",overhang,natural,
+200305,2020-07-05,outdoor,4,V4,"South Lake Tahoe, Christmas Valley",blue,Toadstool Sandwich,crimp,face,natural,
+200306,2020-07-05,outdoor,5,V5,"South Lake Tahoe, Christmas Valley",blue,Arsenic Sauce,crimp,face,dyno,
+200307,2020-07-05,outdoor,7,V7,"South Lake Tahoe, Christmas Valley",red,You’re a Mean One,"crimp, sloper",face,natural,
+200308,2020-07-05,outdoor,4,V4,"South Lake Tahoe, Christmas Valley",orange,Tall Boy,crimp,face,natural,
+200309,2020-07-06,outdoor,4,V4,"South Lake Tahoe, Rainbow",black,Masterwork,crimp,variable,natural,
+200310,2020-07-08,outdoor,5,V5,Berkeley Mortar Rock,blue,The Boys’ Problem,crimp,face,natural,
+200311,2020-07-11,outdoor,6,V6,"South Lake Tahoe, Erratica",blue,Boing Dexter,crimp,overhang,dyno,
+200312,2020-07-11,outdoor,7,V7,"South Lake Tahoe, Erratica",orange,Boing Dexterity,crimp,overhang,natural,
+200313,2020-07-11,outdoor,5,V5,"South Lake Tahoe, The Freaks",orange,Bong Water,"crimp, jug",cave,natural,
+200314,2020-07-11,outdoor,7,V7,"South Lake Tahoe, The Freaks",orange,Subterranean,"crimp, jug",cave,natural,
+200315,2020-07-16,outdoor,6,V6,Grizzly Peak,orange,Baby Reverse Traverse,"crimp, jug",overhang,natural,
+200316,2020-07-18,outdoor,7,V7,Grizzly Peak,orange,Scott’s Arete,"crimp, jug, sloper",overhang,dyno,
+200317,2020-07-23,outdoor,2,V2,"Ring Mountain, Turtle Rock",green,"The Crimper, Right Variation",crimp,face,natural,
+200318,2020-07-23,outdoor,2,V2,"Ring Mountain, Turtle Rock",green,The Seam,crimp,face,natural,
+200319,2020-07-23,outdoor,2,V2,"Ring Mountain, Turtle Rock",green,The Flake,"crimp, jug",face,natural,
+200320,2020-07-23,outdoor,3,V3,"Ring Mountain, Turtle Rock",green,The Reach,crimp,face,natural,
+200321,2020-07-23,outdoor,2,V2,"Ring Mountain, Turtle Rock",green,Undercling,"crimp, jug",face,natural,
+200322,2020-07-23,outdoor,2,V2,"Ring Mountain, Turtle Rock",green,The Crimper,crimp,face,natural,
+200323,2020-07-23,outdoor,0,V0,"Ring Mountain, Turtle Rock",green,Sloper Route,sloper,face,mantle,
+200324,2020-07-23,outdoor,6,V6,"Ring Mountain, Turtle Rock",orange,Party Trick,"crimp, jug",face,comp,FA?
+200325,2020-07-25,outdoor,4,V4,Salt Point State Park,blue,Sabertooth,jug,overhang,natural,
+200326,2020-07-31,outdoor,4,V4,"South Lake Tahoe, Pie Shop",green,Liquid Metal,crimp,face,natural,
+200327,2020-08-01,outdoor,6,V6,"South Lake Tahoe, Beavers",orange,Cujo,"crimp, sloper",overhang,natural,
+200328,2020-08-01,outdoor,4,V4,"South Lake Tahoe, Beavers",orange,"Distilled Iron, Right Exit","crimp, sloper",face,natural,
+200329,2020-08-01,outdoor,6,V6,"South Lake Tahoe, DB Bliss",orange,Hole Punch,"crimp, jug",face,natural,
+200330,2020-08-02,outdoor,4,V4,"South Lake Tahoe, Clearview Boulders",blue,"Lovely Little Pond, Left Exit",crimp,face,natural,
+200331,2020-08-02,outdoor,3,V3,"South Lake Tahoe, Clearview Boulders",blue,Unnamed V3,crimp,arete,natural,
+200332,2020-08-02,outdoor,4,V4,"South Lake Tahoe, Clearview Boulders",blue,Land Trout,crimp,overhang,natural,
+200333,2020-08-15,outdoor,9,V9,"South Lake Tahoe, Pie Shop",red,American Gladiator,crimp,face,natural,
+200334,2020-08-16,outdoor,4,V4,"North Lake Tahoe, Rainbow",orange,Milano Munchkin,"crimp, sloper",variable,natural,
+200335,2020-09-05,outdoor,5,V5,"Priest Draw, Flagstaff",orange,The Whip and Cross,crimp,face,natural,
+200336,2020-09-06,outdoor,4,V4,"Priest Draw, Flagstaff",blue,Flexi Flake,crimp,face,natural,
+200337,2020-09-06,outdoor,4,V4,"Priest Draw, Flagstaff",blue,Mother of All Boulders (M.O.A.B),jug,cave,natural,
+200338,2020-09-06,outdoor,1,V1,"Priest Draw, Flagstaff",green,"The Fin, Bat Roof",jug,cave,natural,
+200339,2020-09-08,outdoor,2,V2,"Priest Draw, Flagstaff",green,Sister Beater,crimp,face,natural,
+200340,2020-09-10,outdoor,4,V4,"Priest Draw, Flagstaff",blue,Unnamed V4 Dyno,jug,face,dyno,
+200341,2020-09-12,outdoor,4,V4,"Priest Draw, Flagstaff",blue,The Yoker,"crimp, jug",overhang,natural,
+200342,2020-09-12,outdoor,4,V4,"Priest Draw, Flagstaff",blue,Dope Smoker,"crimp, jug",overhang,natural,
+200343,2020-09-12,outdoor,5,V5,"Priest Draw, Flagstaff",blue,Big Ed’s Flying Saucer,jug,cave,natural,
+200344,2020-09-12,outdoor,3,V3,"Priest Draw, Flagstaff",green,Unnamed V3,jug,cave,natural,
+200345,2020-09-13,outdoor,5,V5,"Priest Draw, Flagstaff",orange,The Hermit,jug,cave,natural,
+200346,2020-09-13,outdoor,5,V5,"Priest Draw, Flagstaff",orange,"Black Hole, Stand Start",crimp,overhang,natural,
+200347,2020-09-13,outdoor,6,V6,"Priest Draw, Flagstaff",orange,Disco Polly,crimp,overhang,natural,
+200348,2020-09-22,outdoor,1,V1,"Big Bend, Moab",blue,Center Start,crimp,face,natural,
+200349,2020-09-23,outdoor,3,V3,"Priest Draw, Flagstaff",blue,Bat Roof,"crimp, jug",cave,natural,
+200350,2020-09-23,outdoor,6,V6,"Priest Draw, Flagstaff",red,Anorexic Sacrifice,"crimp, jug, sloper",cave,natural,
+200351,2020-09-25,outdoor,5,V5,"Priest Draw, Flagstaff",green,F-Tard,crimp,face,natural,
+200352,2020-09-25,outdoor,9,V9,"Priest Draw, Flagstaff",red,Pelo Del Perro,crimp,face,dyno,
+200353,2020-09-25,outdoor,9,V9,"Priest Draw, Flagstaff",red,Carne Cabezo,crimp,face,dyno,
+200354,2020-10-18,outdoor,7,V7,"South Lake Tahoe, The Freaks",orange,Dave Rasta’s Hair,crimp,overhang,natural,
+200355,2020-10-19,outdoor,7,V7,"South Lake Tahoe, The Freaks",orange,"Girls on Film, Stand Start",crimp,face,dyno,
+200356,2020-10-25,outdoor,5,V5,"Joe’s Valley, Left Fork",blue,Kill by Numbers,crimp,overhang,natural,
+200357,2020-10-25,outdoor,7,V7,"Joe’s Valley, Left Fork",red,Big Joe,crimp,overhang,natural,
+200358,2020-10-26,outdoor,5,V5,Moe’s Valley,blue,The Goose,jug,overhang,natural,
+200359,2020-10-26,outdoor,6,V6,Moe’s Valley,orange,Pink Lady,jug,overhang,natural,
+200360,2020-10-26,outdoor,5,V5,Moe’s Valley,orange,Backhoe Traverse,crimp,variable,natural,
+200361,2020-10-27,outdoor,4,V4,"Joe’s Valley, Left Fork",green,K-Town,crimp,slab,natural,
+200362,2020-10-27,outdoor,4,V4,"Joe’s Valley, Left Fork",green,Unnamed V4,crimp,slab,natural,
+200363,2020-10-27,outdoor,4,V4,"Joe’s Valley, Left Fork",blue,Shit,crimp,slab,natural,
+200364,2020-10-28,outdoor,5,V5,"Joe’s Valley, New Joe’s",blue,Stumble Bum Traverse,jug,overhang,natural,
+200365,2020-10-28,outdoor,6,V6,"Joe’s Valley, New Joe’s",blue,Fart Fig,crimp,face,natural,
+200366,2020-10-28,outdoor,3,V3,"Joe’s Valley, New Joe’s",blue,Joe Cool,crimp,face,natural,
+200367,2020-10-28,outdoor,7,V7,"Joe’s Valley, New Joe’s",red,Big Boy,crimp,overhang,natural,
+200368,2020-10-28,outdoor,7,V7,"Joe’s Valley, New Joe’s",orange,Pocket Rocket,jug,face,dyno,
+200369,2020-10-29,outdoor,6,V6,"Joe’s Valley, Left Fork",orange,Wills of Fire,"crimp, sloper",overhang,natural,
+200370,2020-10-29,outdoor,4,V4,"Joe’s Valley, Right Fork",blue,Caveman,jug,overhang,natural,
+200371,2020-10-29,outdoor,4,V4,"Joe’s Valley, Right Fork",blue,Sling Blade,crimp,face,dyno,
+200372,2020-10-30,outdoor,2,V2,"Joe’s Valley, Left Fork",blue,The Angler,sloper,face,natural,
+200373,2020-10-30,outdoor,6,V6,"Joe’s Valley, Dairy Canyon",orange,Vertical Ice,crimp,face,natural,
+200374,2020-10-30,outdoor,3,V3,"Joe’s Valley, Dairy Canyon",blue,Vertical Limit,jug,face,mantle,
+200375,2020-11-11,outdoor,1,V1,Grizzly Peak,green,Tractor Pull Traverse,crimp,face,natural,
+200376,2020-11-11,outdoor,7,V7,Grizzly Peak,orange,Scott’s Roof,"crimp, sloper",overhang,dyno,
+200377,2020-12-21,outdoor,8,V8,Moe’s Valley,red,Spitting Venom,crimp,overhang,natural,
+200378,2020-12-22,outdoor,5,V5,Moe’s Valley,orange,Thundercats are Go,jug,cave,natural,
+200379,2020-12-23,outdoor,5,V5,Moe’s Valley,orange,Huntsman Graffiti,crimp,face,natural,
+200380,2020-12-23,outdoor,6,V6,Moe’s Valley,orange,A Word From Our Sponsor,crimp,face,natural,
+200381,2020-12-23,outdoor,3,V3,Moe’s Valley,blue,Hermione,crimp,face,natural,
+200382,2020-12-23,outdoor,5,V5,Moe’s Valley,orange,Solid Toad,crimp,face,natural,
+200383,2020-12-27,outdoor,7,V7,Moe’s Valley,red,Gravity Breach,crimp,overhang,natural,
+200384,2021-01-20,outdoor,4,V4,Castle Rock,blue,Tree Route,crimp,face,natural,

@@ -5,9 +5,7 @@ import plotly
 import plotly.graph_objs as go
 from climblog.etc.colors import warm
 
-# Objects included in this file:
-
-# Functions included in this file:
+# Functions
 # # export_fig_to_json
 # # plot_scatter
 # # plot_histogram

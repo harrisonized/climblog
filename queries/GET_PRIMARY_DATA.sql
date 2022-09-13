@@ -1,10 +1,7 @@
 SELECT
   date_,
-  CASE WHEN grade IN ('V6-V7', 'V6') THEN 'V6' 
-       WHEN grade IN ('V7-V8', 'V7') THEN 'V7'
-       ELSE grade END
-       AS grade_,
-  grade AS vgrade,
+  grade,
+  display_grade,
   location,
   setter,
   description,
@@ -14,5 +11,5 @@ SELECT
   LOWER(color) AS color
 FROM {datasource}
 WHERE location_type = '{location_type}'
-ORDER BY date_, grade_
+ORDER BY date_
 ;

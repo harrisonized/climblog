@@ -1,19 +1,39 @@
+import datetime as dt
 import numpy as np
 import matplotlib.dates as mdates
 import plotly.graph_objs as go
+from scipy.optimize import curve_fit
+
 from climblog.utils.plotting import plot_scatter, plot_bar, plot_heatmap
 from climblog.utils.handlers.data_handler import word_wrap
 from climblog.utils.curve_fit import logistic_func
 
-
 # Functions included in this file:
+# # curve_fit_new_grades
 # # hovertext_for_heatmap
 # # plot_fig_for_sends_by_date_scatter
 # # plot_fig_for_grades_histogram
-# # plot_fig_for_grades_by_year_heatmap
-# # plot_fig_for_grades_by_wall_heatmap
-# # plot_fig_for_grades_by_hold_heatmap
-# # plot_fig_for_grades_by_style_heatmap
+# # plot_fig_for_grades_by_heatmap
+
+
+def curve_fit_new_grades(df, grade='grade', date_='date_', p0=None):
+    """Get logistic function parameters for boundary
+    """
+
+    # filter non-increasing grades
+    while True:
+        num_rows = len(df)
+        df = df[(df[grade]-df[grade].shift().fillna(0) > 0)]
+        if len(df) == num_rows:
+            break
+
+    popt, pcov = curve_fit(
+        logistic_func,
+        df[date_].map(lambda x: dt.datetime.strptime(x, "%Y-%m-%d")).map(lambda x: mdates.date2num(x)),
+        df[grade],
+        p0=p0
+    )
+    return popt
 
 
 def hovertext_for_heatmap(df, column_list=None):
@@ -37,22 +57,22 @@ def hovertext_for_heatmap(df, column_list=None):
     # Hover text
     df[df.columns[0]] = df[df.columns[0]].apply(lambda x: int(x[1:]) if type(x) == str else x)
 
-    grade_table = df.pivot(index="grade_", columns=df.columns[1], values="grade_") \
+    grade_table = df.pivot(index="grade", columns=df.columns[1], values="grade") \
         .applymap(str).applymap(lambda x: x.replace('.0', '')) \
         .applymap(lambda x: 'V' + str(x)) \
         .applymap(lambda x: x.replace('Vnan', 'nan')) \
         .applymap(lambda x: float(x) if x == 'nan' else x)
 
     hover_text = 'FIRST RECORDED SEND<br>' \
-                 + 'Date: ' + df.pivot(index="grade_", columns=df.columns[1], values="date_").applymap(str) + '<br>' \
+                 + 'Date: ' + df.pivot(index="grade", columns=df.columns[1], values="date_").applymap(str) + '<br>' \
                  + 'Grade: ' + grade_table + '<br>' \
-                 + 'Location: ' + df.pivot(index="grade_", columns=df.columns[1], values="location").applymap(str) + '<br>' \
-                 + 'Setter: ' + df.pivot(index="grade_", columns=df.columns[1], values="setter").applymap(str) + '<br>' \
-                 + 'Wall-type: ' + df.pivot(index="grade_", columns=df.columns[1], values="wall_type").applymap(str) + '<br>' \
-                 + 'Hold-type: ' + df.pivot(index="grade_", columns=df.columns[1], values="hold_type").applymap(str) + '<br>' \
-                 + 'Style: ' + df.pivot(index="grade_", columns=df.columns[1], values="style").applymap(str) + '<br>' \
+                 + 'Location: ' + df.pivot(index="grade", columns=df.columns[1], values="location").applymap(str) + '<br>' \
+                 + 'Setter: ' + df.pivot(index="grade", columns=df.columns[1], values="setter").applymap(str) + '<br>' \
+                 + 'Wall-type: ' + df.pivot(index="grade", columns=df.columns[1], values="wall_type").applymap(str) + '<br>' \
+                 + 'Hold-type: ' + df.pivot(index="grade", columns=df.columns[1], values="hold_type").applymap(str) + '<br>' \
+                 + 'Style: ' + df.pivot(index="grade", columns=df.columns[1], values="style").applymap(str) + '<br>' \
                  + 'Description: ' + '<br>' \
-                 + df.pivot(index="grade_", columns=df.columns[1], values="description") + '<br>'
+                 + df.pivot(index="grade", columns=df.columns[1], values="description") + '<br>'
 
     hover_text.index = hover_text.index.map(lambda x: 'V' + str(x) if type(x) == int else x)
     df[df.columns[0]] = df[df.columns[0]].apply(lambda x: 'V' + str(x) if type(x) == int else x)
@@ -71,7 +91,7 @@ def hovertext_for_heatmap(df, column_list=None):
 def plot_fig_for_sends_by_date_scatter(scatter_df, logistic_params=None):
 
     # plot main figure
-    hover_text = 'Grade: ' + scatter_df['vgrade'].apply(str) + '<br>' \
+    hover_text = 'Grade: ' + scatter_df['display_grade'].apply(str) + '<br>' \
                  + 'Location: ' + scatter_df['location'].apply(str) + '<br>' \
                  + 'Setter: ' + scatter_df['setter'].apply(str) + '<br>' \
                  + 'Wall-type: ' + scatter_df['wall_type'].apply(str) + '<br>' \
@@ -80,7 +100,7 @@ def plot_fig_for_sends_by_date_scatter(scatter_df, logistic_params=None):
                  + 'Description:<br>' +scatter_df['description'].apply(lambda x: word_wrap(str(x), 10)) + '<br>'
     hover_template = "Date: %{x}<br>%{text}<br><extra></extra>"
 
-    fig = plot_scatter(scatter_df, x="date_", y="grade_", color='color',
+    fig = plot_scatter(scatter_df, x="date_", y="grade", color='color',
                        xlabel="Date", ylabel="Grade", title="Sends by Date",
                        hovertext=hover_text, hovertemplate=hover_template)
     if logistic_params is not None:
@@ -105,7 +125,7 @@ def plot_fig_for_grades_histogram(grades_histogram_df):
     # plot main figure
     hover_text = 'FIRST RECORDED SEND<br>' \
                  + 'Date: ' + grades_histogram_df['date_'].apply(str) + '<br>' \
-                 + 'Grade: ' + grades_histogram_df['grade'].apply(str) + '<br>' \
+                 + 'Grade: ' + grades_histogram_df['display_grade'].apply(str) + '<br>' \
                  + 'Location: ' + grades_histogram_df['location'].apply(str) + '<br>' \
                  + 'Setter: ' + grades_histogram_df['setter'].apply(str) + '<br>' \
                  + 'Wall-type: ' + grades_histogram_df['wall_type'].apply(str) + '<br>' \
@@ -115,10 +135,10 @@ def plot_fig_for_grades_histogram(grades_histogram_df):
                  + grades_histogram_df['description'].apply(str).apply(lambda x: word_wrap(str(x), 10)) + '<br>'
     hover_template = "Number of Recorded Sends: %{y}<br>%{text}<br><extra></extra>"
 
-    grades_histogram_df = grades_histogram_df.sort_values('grade_').reset_index(drop=True)
-    grades_histogram_df['grade_'] = grades_histogram_df['grade_'].apply(lambda x: 'V'+str(x))
+    grades_histogram_df = grades_histogram_df.sort_values('grade').reset_index(drop=True)
+    grades_histogram_df['grade'] = grades_histogram_df['grade'].apply(lambda x: 'V'+str(x))
 
-    fig = plot_bar(grades_histogram_df, x='grade_', y='count_', color='color',
+    fig = plot_bar(grades_histogram_df, x='grade', y='count_', color='color',
                    xlabel='Grades Histogram', ylabel='Grade', title='Number of Recorded Sends',
                    hovertext=hover_text, hovertemplate=hover_template)
 
@@ -135,53 +155,6 @@ def plot_fig_for_grades_by_heatmap(heatmap_input_df,
     hover_text, annotations = hovertext_for_heatmap(hovertext_input_df, columns)
     fig = plot_heatmap(heatmap_input_df,
                        xlabel=xlabel, ylabel=ylabel, title=f"Heatmap of {ylabel}s by {xlabel}",
-                       hovertext=hover_text, annotations=annotations)
-
-    return fig
-
-
-def plot_fig_for_grades_by_year_heatmap(year_table_df, year_df):
-
-    # plot main figure
-    hover_text, annotations = hovertext_for_heatmap(year_df)
-    fig = plot_heatmap(year_table_df,
-                       xlabel="Year", ylabel="Grade", title="Heatmap of Grades by Year",
-                       hovertext=hover_text, annotations=annotations)
-
-    return fig
-
-
-def plot_fig_for_grades_by_wall_heatmap(wall_table_df, wall_df):
-
-    # plot main figure
-    columns = ['cave', 'overhang', 'face', 'arete', 'slab', 'corner', 'variable']
-    hover_text, annotations = hovertext_for_heatmap(wall_df, columns)
-    fig = plot_heatmap(wall_table_df,
-                       xlabel="Wall-type", ylabel="Grade", title="Heatmap of Grades by Wall-type",
-                       hovertext=hover_text, annotations=annotations)
-
-    return fig
-
-
-def plot_fig_for_grades_by_hold_heatmap(hold_table_df, hold_df):
-
-    # plot main figure
-    columns = ['jug', 'crimp', 'sloper', 'pinch']
-    hover_text, annotations = hovertext_for_heatmap(hold_df, columns)
-    fig = plot_heatmap(hold_table_df,
-                       xlabel="Hold-type", ylabel="Grade", title="Heatmap of Grades by Hold-type",
-                       hovertext=hover_text, annotations=annotations)
-
-    return fig
-
-
-def plot_fig_for_grades_by_style_heatmap(style_table_df, style_df):
-
-    # plot main figure
-    columns = ['mantle', 'natural', 'dyno', 'comp']
-    hover_text, annotations = hovertext_for_heatmap(style_df, columns)
-    fig = plot_heatmap(style_table_df,
-                       xlabel="Style", ylabel="Grade", title="Heatmap of Grades by Style",
                        hovertext=hover_text, annotations=annotations)
 
     return fig
