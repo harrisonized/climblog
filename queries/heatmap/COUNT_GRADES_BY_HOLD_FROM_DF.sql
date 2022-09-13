@@ -15,17 +15,17 @@ WITH primary_data AS
  WHERE location_type = '{location_type}'),
 
 unnested_primary_data AS
-(WITH RECURSIVE SPLIT(date_, grade, location, setter, description, wall_type, style,
+(WITH RECURSIVE SPLIT(date_, grade, display_grade, location, setter, description, wall_type, style,
                       sep_hold_type, rest) AS
 
-   (SELECT date_, grade, location, setter, description, wall_type, style, 
+   (SELECT date_, grade, display_grade, location, setter, description, wall_type, style, 
       '',
       hold_type || ','
     FROM primary_data
        
     UNION ALL
   
-    SELECT date_, grade, location, setter, description, wall_type, style, 
+    SELECT date_, grade, display_grade, location, setter, description, wall_type, style, 
       TRIM(SUBSTR(rest, 0, INSTR(rest, ','))),  --sqlite only
       TRIM(SUBSTR(rest, INSTR(rest, ',')+1))  --sqlite only
     FROM split
@@ -34,6 +34,7 @@ unnested_primary_data AS
  SELECT
    date_,
    grade,
+   display_grade,
    location,
    setter,
    description,
@@ -64,6 +65,7 @@ SELECT
   f.hold_type,
   c.count_,
   f.date_,
+  p.display_grade,
   p.location,
   p.setter,
   p.description,

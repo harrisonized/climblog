@@ -37,6 +37,7 @@ SELECT
   f.year,
   c.count_,
   f.date_,
+  p.display_grade,
   p.location,
   p.setter,
   p.description, 

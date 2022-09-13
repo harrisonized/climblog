@@ -34,6 +34,7 @@ SELECT
   f.wall_type,
   c.count_,
   f.date_,
+  p.display_grade,
   p.location,
   p.setter,
   p.description,

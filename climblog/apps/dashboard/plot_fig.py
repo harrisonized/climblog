@@ -8,6 +8,7 @@ from climblog.utils.plotting import plot_scatter, plot_bar, plot_heatmap
 from climblog.utils.handlers.data_handler import word_wrap
 from climblog.utils.curve_fit import logistic_func
 
+
 # Functions included in this file:
 # # curve_fit_new_grades
 # # hovertext_for_heatmap
@@ -57,9 +58,8 @@ def hovertext_for_heatmap(df, column_list=None):
     # Hover text
     df[df.columns[0]] = df[df.columns[0]].apply(lambda x: int(x[1:]) if type(x) == str else x)
 
-    grade_table = df.pivot(index="grade", columns=df.columns[1], values="grade") \
+    grade_table = df.pivot(index="grade", columns=df.columns[1], values="display_grade") \
         .applymap(str).applymap(lambda x: x.replace('.0', '')) \
-        .applymap(lambda x: 'V' + str(x)) \
         .applymap(lambda x: x.replace('Vnan', 'nan')) \
         .applymap(lambda x: float(x) if x == 'nan' else x)
 
