@@ -20,8 +20,8 @@ from .plot_fig import (plot_fig_for_sends_by_date_scatter,
 
 # settings
 default_settings = read_section_from_ini()
-read_fig_from_cache = default_settings.getboolean('read_fig_from_cache')
 use_csv_backup = default_settings.getboolean('use_csv_backup')
+read_fig_from_cache = default_settings.getboolean('read_fig_from_cache')
 export_fig = default_settings.getboolean('export_fig')
 
 
