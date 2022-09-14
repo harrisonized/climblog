@@ -94,7 +94,7 @@ def delete():
 @guest_portal.route("/fig/guest_portal/<location_type>/<plot_type>", methods=["GET"])
 def plot(location_type, plot_type):
 
-    div = generate_fig_switch[plot_type](location_type, fig_dir=fig_dir, data_dir=data_dir)
+    div = generate_fig_switch[plot_type](location_type, fig_dir=fig_dir, data_dir=data_dir, query_db=False)
 
     return render_template(
         "fig.html",

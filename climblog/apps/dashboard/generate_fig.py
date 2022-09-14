@@ -37,7 +37,8 @@ export_fig = default_settings.getboolean('export_fig')
 def generate_sends_by_date_scatter(location_type,
                                    filename='sends-by-date',
                                    data_dir='data',
-                                   fig_dir='tmp/figures'
+                                   fig_dir='tmp/figures',
+                                   query_db=True,
                                    ):
 
     fig = read_json(f'{fig_dir}/{location_type}/{filename}.json') if read_fig_from_cache else None
@@ -46,7 +47,7 @@ def generate_sends_by_date_scatter(location_type,
 
         # vanilla scatterplot data
         scatter_df = query_sql_or_csv(
-            db_query=queries['GET_PRIMARY_DATA'].format(datasource='boulders', location_type=location_type),
+            db_query=queries['GET_PRIMARY_DATA'].format(datasource='boulders', location_type=location_type) if query_db else None,
             df_query=None,
             csv_filepath=f'{data_dir}/climbing-log.csv' if use_csv_backup else None,
             default_columns=sends_by_date_scatter_columns
@@ -84,14 +85,15 @@ def generate_sends_by_date_scatter(location_type,
 def generate_grades_histogram(location_type,
                               filename='grades-histogram',
                               data_dir='data',
-                              fig_dir='tmp/figures'
+                              fig_dir='tmp/figures',
+                              query_db=True,
                               ):
 
     fig = read_json(f'{fig_dir}/{location_type}/{filename}.json') if read_fig_from_cache else None
 
     if not fig:
         grades_histogram_df = query_sql_or_csv(
-            db_query=queries['histogram']['COUNT_GRADES'].format(datasource='boulders', location_type=location_type),
+            db_query=queries['histogram']['COUNT_GRADES'].format(datasource='boulders', location_type=location_type) if query_db else None,
             df_query=queries['histogram']['COUNT_GRADES'].format(datasource='dataframe', location_type=location_type),
             csv_filepath=f'{data_dir}/climbing-log.csv' if use_csv_backup else None,
             default_columns=sends_by_date_scatter_columns
@@ -118,7 +120,8 @@ def generate_grades_by_heatmap(location_type,
                                df_query_name,  # from params
                                columns=None,  # from params
                                data_dir='data',
-                               fig_dir='tmp/figures'
+                               fig_dir='tmp/figures',
+                               query_db=True,
                                ):
     """General function to plot all heatmaps
     """
@@ -130,7 +133,7 @@ def generate_grades_by_heatmap(location_type,
 
         # heatmap_df
         df = query_sql_or_csv(
-            db_query=queries['heatmap'][db_query_name].format(datasource='boulders', location_type=location_type),
+            db_query=queries['heatmap'][db_query_name].format(datasource='boulders', location_type=location_type) if query_db else None,
             df_query=queries['heatmap'][df_query_name].format(datasource='dataframe', location_type=location_type),
             csv_filepath=f'{data_dir}/climbing-log.csv' if use_csv_backup else None,
             default_columns=sends_by_date_scatter_columns
