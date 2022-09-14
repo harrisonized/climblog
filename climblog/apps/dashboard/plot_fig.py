@@ -1,7 +1,6 @@
 """Plotting functions specific to climblog data
 """
 
-import datetime as dt
 import numpy as np
 import plotly.graph_objs as go
 import matplotlib.dates as mdates
@@ -10,7 +9,6 @@ from climblog.utils.curve_fit import logistic_func
 from climblog.utils.plotting import plot_scatter, plot_bar, plot_heatmap
 from climblog.utils.handlers.data_handler import word_wrap
 from climblog.etc.colors import color_name_to_hex, color_grade_to_name
-
 
 # Functions included in this file:
 # # curve_fit_new_grades

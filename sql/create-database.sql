@@ -1,4 +1,9 @@
+-- run sudo su -l postgres
 -- run 'heroku pg:psql postgresql-regular-13122 --app harrisonized-climbing-app' to connect to heroku postgres
+
+-- optional
+CREATE DATABASE climblog
+\c climblog
 
 DROP TABLE boulders
 
@@ -17,4 +22,4 @@ CREATE TABLE boulders(
   setter TEXT
 );
 
-\copy boulders FROM '/home/harrisonized/github/python/climbing-app/climblog/data/climbing-log.csv' DELIMITER ',' CSV HEADER;
+\copy boulders FROM 'data/climbing-log.csv' DELIMITER ',' CSV HEADER;

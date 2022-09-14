@@ -16,9 +16,12 @@ Note that Heroku may take up to 30 seconds to come out of a [sleeping website st
 
 ## Getting Started
 
-1. Install the requirements
-2. Run the server:  `python climblog/main.py`
-3. Access the server: http://localhost:5000
+1. Install the requirements and this library
+2. Follow the instructions in `sql/create-database.sql` in your local postgres server to add the data in climbing-log.csv to your local database.
+3. Add an INI_KEY environmental variable to your bashrc. You can generate it via `from climblog.utils.auth.encryption_tools import generate_new_key` in your python terminal.
+4. Update the configs in `configs/cred.ini` with your postgres credentials. It may also be okay if you skip this step.
+5. Run the server:  `python climblog/main.py`
+6. Access the server: http://localhost:5000
 
 
 

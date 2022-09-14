@@ -1,6 +1,5 @@
 """Main functions for figure generation from the routes
 """
-import os
 from functools import partial
 import datetime as dt
 import plotly.offline as pyo

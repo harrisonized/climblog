@@ -6,7 +6,6 @@ Please follow the format set by climbing-log.csv
 import os
 import shutil
 from glob import glob
-import json
 import pandas as pd
 from flask import Blueprint, render_template, request, redirect, Markup
 from climblog.utils.handlers.data_handler import append_standard_df
