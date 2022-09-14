@@ -1,12 +1,15 @@
+"""Plotting functions specific to climblog data
+"""
+
 import datetime as dt
 import numpy as np
-import matplotlib.dates as mdates
 import plotly.graph_objs as go
-from scipy.optimize import curve_fit
+import matplotlib.dates as mdates
 
+from climblog.utils.curve_fit import logistic_func
 from climblog.utils.plotting import plot_scatter, plot_bar, plot_heatmap
 from climblog.utils.handlers.data_handler import word_wrap
-from climblog.utils.curve_fit import logistic_func
+from climblog.etc.colors import color_name_to_hex, color_grade_to_name
 
 
 # Functions included in this file:
@@ -15,26 +18,6 @@ from climblog.utils.curve_fit import logistic_func
 # # plot_fig_for_sends_by_date_scatter
 # # plot_fig_for_grades_histogram
 # # plot_fig_for_grades_by_heatmap
-
-
-def curve_fit_new_grades(df, grade='grade', date_='date_', p0=None):
-    """Get logistic function parameters for boundary
-    """
-
-    # filter non-increasing grades
-    while True:
-        num_rows = len(df)
-        df = df[(df[grade]-df[grade].shift().fillna(0) > 0)]
-        if len(df) == num_rows:
-            break
-
-    popt, pcov = curve_fit(
-        logistic_func,
-        df[date_].map(lambda x: dt.datetime.strptime(x, "%Y-%m-%d")).map(lambda x: mdates.date2num(x)),
-        df[grade],
-        p0=p0
-    )
-    return popt
 
 
 def hovertext_for_heatmap(df, column_list=None):
@@ -88,25 +71,28 @@ def hovertext_for_heatmap(df, column_list=None):
     return hover_text, annotations
 
 
-def plot_fig_for_sends_by_date_scatter(scatter_df, logistic_params=None):
+def plot_fig_for_sends_by_date_scatter(df, logistic_params=None):
+
+    df.loc[df['color'].isna(), 'color'] = df.loc[df['color'].isna(), 'grade'].replace(color_grade_to_name)  # add a color if null
+    df['color'] = df['color'].replace(color_name_to_hex)  # Replace colors with hex codes
 
     # plot main figure
-    hover_text = 'Grade: ' + scatter_df['display_grade'].apply(str) + '<br>' \
-                 + 'Location: ' + scatter_df['location'].apply(str) + '<br>' \
-                 + 'Setter: ' + scatter_df['setter'].apply(str) + '<br>' \
-                 + 'Wall-type: ' + scatter_df['wall_type'].apply(str) + '<br>' \
-                 + 'Hold-type: ' + scatter_df['hold_type'].apply(str) + '<br>' \
-                 + 'Style: ' + scatter_df['style'].apply(str) + '<br>' \
-                 + 'Description:<br>' +scatter_df['description'].apply(lambda x: word_wrap(str(x), 10)) + '<br>'
+    hover_text = 'Grade: ' + df['display_grade'].apply(str) + '<br>' \
+                 + 'Location: ' + df['location'].apply(str) + '<br>' \
+                 + 'Setter: ' + df['setter'].apply(str) + '<br>' \
+                 + 'Wall-type: ' + df['wall_type'].apply(str) + '<br>' \
+                 + 'Hold-type: ' + df['hold_type'].apply(str) + '<br>' \
+                 + 'Style: ' + df['style'].apply(str) + '<br>' \
+                 + 'Description:<br>' +df['description'].apply(lambda x: word_wrap(str(x), 10)) + '<br>'
     hover_template = "Date: %{x}<br>%{text}<br><extra></extra>"
 
-    fig = plot_scatter(scatter_df, x="date_", y="grade", color='color',
+    fig = plot_scatter(df, x="date_", y="grade", color='color',
                        xlabel="Date", ylabel="Grade", title="Sends by Date",
                        hovertext=hover_text, hovertemplate=hover_template)
     if logistic_params is not None:
         date_linspace = np.linspace(
-            mdates.date2num(scatter_df['date_'].min()),  # Date min
-            mdates.date2num(scatter_df['date_'].max()),  # Date max
+            mdates.date2num(df['date_'].min()),  # Date min
+            mdates.date2num(df['date_'].max()),  # Date max
             num=25)
         new_grades_scatter = go.Scatter(x=mdates.num2date(date_linspace),
                                         y=logistic_func(date_linspace, *logistic_params),
@@ -118,42 +104,45 @@ def plot_fig_for_sends_by_date_scatter(scatter_df, logistic_params=None):
     return fig
 
 
-def plot_fig_for_grades_histogram(grades_histogram_df):
+def plot_fig_for_grades_histogram(df):
     """df should look like the following:
     """
 
     # plot main figure
     hover_text = 'FIRST RECORDED SEND<br>' \
-                 + 'Date: ' + grades_histogram_df['date_'].apply(str) + '<br>' \
-                 + 'Grade: ' + grades_histogram_df['display_grade'].apply(str) + '<br>' \
-                 + 'Location: ' + grades_histogram_df['location'].apply(str) + '<br>' \
-                 + 'Setter: ' + grades_histogram_df['setter'].apply(str) + '<br>' \
-                 + 'Wall-type: ' + grades_histogram_df['wall_type'].apply(str) + '<br>' \
-                 + 'Hold-type: ' + grades_histogram_df['hold_type'].apply(str) + '<br>' \
-                 + 'Style: ' + grades_histogram_df['style'].apply(str) + '<br>' \
+                 + 'Date: ' + df['date_'].apply(str) + '<br>' \
+                 + 'Grade: ' + df['display_grade'].apply(str) + '<br>' \
+                 + 'Location: ' + df['location'].apply(str) + '<br>' \
+                 + 'Setter: ' + df['setter'].apply(str) + '<br>' \
+                 + 'Wall-type: ' + df['wall_type'].apply(str) + '<br>' \
+                 + 'Hold-type: ' + df['hold_type'].apply(str) + '<br>' \
+                 + 'Style: ' + df['style'].apply(str) + '<br>' \
                  + 'Description: ' + '<br>' \
-                 + grades_histogram_df['description'].apply(str).apply(lambda x: word_wrap(str(x), 10)) + '<br>'
+                 + df['description'].apply(str).apply(lambda x: word_wrap(str(x), 10)) + '<br>'
     hover_template = "Number of Recorded Sends: %{y}<br>%{text}<br><extra></extra>"
 
-    grades_histogram_df = grades_histogram_df.sort_values('grade').reset_index(drop=True)
-    grades_histogram_df['grade'] = grades_histogram_df['grade'].apply(lambda x: 'V'+str(x))
+    df = df.sort_values('grade').reset_index(drop=True)
+    df['grade'] = df['grade'].apply(lambda x: 'V'+str(x))
 
-    fig = plot_bar(grades_histogram_df, x='grade', y='count_', color='color',
+    df.loc[df['color'].isna(), 'color'] = df.loc[df['color'].isna(), 'grade'].replace(color_grade_to_name)
+    df['color'] = df['color'].replace(color_name_to_hex)
+
+    fig = plot_bar(df, x='grade', y='count_', color='color',
                    xlabel='Grades Histogram', ylabel='Grade', title='Number of Recorded Sends',
                    hovertext=hover_text, hovertemplate=hover_template)
 
     return fig
 
 
-def plot_fig_for_grades_by_heatmap(heatmap_input_df,
-                                   hovertext_input_df,
+def plot_fig_for_grades_by_heatmap(heatmap_df,
+                                   hovertext_df,
                                    xlabel,
                                    ylabel='Grade',
                                    columns=None):
 
     # columns = [col for col in columns if col in hovertext_input_df.columns]
-    hover_text, annotations = hovertext_for_heatmap(hovertext_input_df, columns)
-    fig = plot_heatmap(heatmap_input_df,
+    hover_text, annotations = hovertext_for_heatmap(hovertext_df, columns)
+    fig = plot_heatmap(heatmap_df,
                        xlabel=xlabel, ylabel=ylabel, title=f"Heatmap of {ylabel}s by {xlabel}",
                        hovertext=hover_text, annotations=annotations)
 

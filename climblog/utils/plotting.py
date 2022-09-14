@@ -1,9 +1,13 @@
+"""General plotting functions
+"""
+
 import os
 import json
 import random
 import plotly
 import plotly.graph_objs as go
 from climblog.etc.colors import warm
+
 
 # Functions
 # # export_fig_to_json

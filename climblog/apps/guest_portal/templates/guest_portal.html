@@ -26,13 +26,10 @@
 	<!-- Upload Form -->
     <article id="upload">
         <h2 class="major">Upload Your Data</h2>
-        <p>Upload climbing-log-indoor.csv, climbing-log-outdoor.csv, or both.<br>Only files with the correct filenames will be uploaded.</p>
+        <p>Upload climbing-log.csv. Must be named exactly.</p>
         <p>Uploaded files:
-        	{% if upload_indoor %}
-        	<br>{{upload_indoor | safe}}
-            {% endif %}
-            {% if upload_outdoor %}
-            <br>{{upload_outdoor | safe}}
+        	{% if upload_filename %}
+        	<br>{{upload_filename | safe}}
             {% endif %}
         </p>
         <form method="post" action="/upload" enctype="multipart/form-data">

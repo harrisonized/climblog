@@ -1,25 +1,18 @@
+"""Displays climbing data for Harrison Wang
+"""
+
 from flask import Blueprint, Markup
 from flask import render_template
-from climblog.apps.dashboard.retrieve_fig import (retrieve_sends_by_date_scatter,
-                                                  retrieve_grades_histogram,
-                                                  retrieve_grades_by_year_heatmap,
-                                                  retrieve_grades_by_wall_heatmap,
-                                                  retrieve_grades_by_hold_heatmap,
-                                                  retrieve_grades_by_style_heatmap)
-
-
-retrieve_plot = {'timeseries': retrieve_sends_by_date_scatter,
-                 'histogram': retrieve_grades_histogram,
-                 'year': retrieve_grades_by_year_heatmap,
-                 'wall': retrieve_grades_by_wall_heatmap,
-                 'hold': retrieve_grades_by_hold_heatmap,
-                 'style': retrieve_grades_by_style_heatmap}
+from climblog.apps.dashboard.generate_fig import generate_fig_switch
 
 
 dashboard = Blueprint('dashboard', __name__,
                       template_folder='templates',
                       static_folder='static')
 
+
+# ----------------------------------------------------------------------
+# Home pages
 
 @dashboard.route("/indoor", methods=["GET"])
 def indoor():
@@ -39,10 +32,13 @@ def outdoor():
     )
 
 
+# ----------------------------------------------------------------------
+# Figures
+
 @dashboard.route("/fig/<location_type>/<plot_type>", methods=["GET"])
 def plot(location_type, plot_type):
 
-    div = retrieve_plot[plot_type](location_type)
+    div = generate_fig_switch[plot_type](location_type)  # see generate_fig.py
 
     return render_template(
         "fig.html",

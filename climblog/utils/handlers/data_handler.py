@@ -1,14 +1,49 @@
+import os
+from os.path import dirname
 import collections
 import pandas as pd
 import pandasql as ps
 
 
 # Functions included in this file:
+# # dirname_n_times
+# # append_standard_df
+# # execute_query_on_df
 # # word_wrap
 # # build_nested_dict
 # # merge_dict_with_subdicts
-# # append_standard_df
-# # execute_query_on_df
+
+
+def dirname_n_times(path, n=1):
+    for i in range(n):
+        path = dirname(path)
+    return path
+
+
+def append_standard_df(df, columns):
+    """Forces a df to have the select_columns
+    If it doesn't fills a column of NA's
+    """
+    empty_df = pd.DataFrame(columns=columns)
+    df = empty_df.append(df)
+    return df[columns]
+
+
+def execute_query_on_df(query, dataframe,
+                        index_name=None, index_list=None):
+    """Convenience function
+    """
+    df = ps.sqldf(query, locals())
+
+    # Set index column
+    if index_name:
+        df = df.set_index(index_name)
+
+    # Reorder index column
+    if index_list:
+        df = df.reindex(index_list)
+
+    return df
 
 
 def word_wrap(string, n):
@@ -54,29 +89,3 @@ def merge_dict_with_subdicts(main_dict: dict, sub_dict: dict) -> dict:
                 d1[key] = val
 
     return main_dict
-
-
-def append_standard_df(df, columns):
-    """Forces a df to have the select_columns
-    If it doesn't fills a column of NA's
-    """
-    empty_df = pd.DataFrame(columns=columns)
-    df = empty_df.append(df)
-    return df[columns]
-
-
-def execute_query_on_df(query, dataframe,
-                        index_name=None, index_list=None):
-    """Convenience function
-    """
-    df = ps.sqldf(query, locals())
-
-    # Set index column
-    if index_name:
-        df = df.set_index(index_name)
-
-    # Reorder index column
-    if index_list:
-        df = df.reindex(index_list)
-
-    return df

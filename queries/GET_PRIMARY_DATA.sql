@@ -1,4 +1,5 @@
 SELECT
+  index_,
   date_,
   grade,
   display_grade,

@@ -26,7 +26,7 @@ Note that Heroku may take up to 30 seconds to come out of a [sleeping website st
 
 | Date       | Update                                                       |
 | ---------- | ------------------------------------------------------------ |
-| 2022-09-12 | Remove redundant functions by combining them and using config files to control execution |
+| 2022-09-13 | Make the application as compact as possible by removing redundant functions |
 | 2020-12-09 | Enable users to upload their own CSVs to generate their own figures |
 | 2020-12-07 | Add read-only SQL terminal                                   |
 | 2020-11-04 | Fix Google Chrome iframe axis scaling bug (See: [here](https://community.plotly.com/t/cant-show-heatmap-inside-div-error-something-went-wrong-with-axis-scaling/30616)) |
