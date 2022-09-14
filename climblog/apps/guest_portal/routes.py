@@ -27,10 +27,11 @@ guest_portal = Blueprint('guest_portal', __name__,
 
 @guest_portal.route("/guest_portal", methods=["GET", "POST"])
 def portal():
-    uploads = [file[9:] for file in glob(f'{data_dir}/*')]
+    uploads = [file[len(data_dir)+1:] for file in glob(f'{data_dir}/*')]
+    print(uploads)
     upload_filename = 'climbing-log.csv' if 'climbing-log.csv' in uploads else False
     return render_template("guest_portal.html",
-                           upload_file=upload_filename)
+                           upload_filename=upload_filename)
 
 
 @guest_portal.route("/guest_portal/indoor", methods=["GET"])

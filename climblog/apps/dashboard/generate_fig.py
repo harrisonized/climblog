@@ -41,8 +41,8 @@ def generate_sends_by_date_scatter(location_type,
                                    query_db=True,
                                    ):
 
-    fig = read_json(f'{fig_dir}/{location_type}/{filename}.json') if read_fig_from_cache else None
-
+    # fig = read_json(f'{fig_dir}/{location_type}/{filename}.json') if read_fig_from_cache else None
+    fig = None
     if not fig:
 
         # vanilla scatterplot data
@@ -54,11 +54,11 @@ def generate_sends_by_date_scatter(location_type,
         )
         scatter_df = scatter_df[(scatter_df['location_type'] == location_type)].copy()
         scatter_df['date_'] = scatter_df['date_'].apply(lambda date: dt.datetime.strptime(date, '%Y-%m-%d'))
-
+        
         # add boundary
         try:
             grades_histogram_df = query_sql_or_csv(
-                db_query=queries['histogram']['COUNT_GRADES'].format(datasource='boulders', location_type=location_type),
+                db_query=queries['histogram']['COUNT_GRADES'].format(datasource='boulders', location_type=location_type) if query_db else None,
                 df_query=queries['histogram']['COUNT_GRADES'].format(datasource='dataframe', location_type=location_type),
                 csv_filepath=f'{data_dir}/climbing-log.csv',
                 default_columns=sends_by_date_scatter_columns
