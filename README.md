@@ -29,6 +29,7 @@ Note that Heroku may take up to 30 seconds to come out of a [sleeping website st
 
 | Date       | Update                                                       |
 | ---------- | ------------------------------------------------------------ |
+| 2022-10-04 | Move settings and paths to files in the etc folder           |
 | 2022-09-13 | Make the application as compact as possible by removing redundant functions |
 | 2020-12-09 | Enable users to upload their own CSVs to generate their own figures |
 | 2020-12-07 | Add read-only SQL terminal                                   |
