@@ -1,8 +1,8 @@
 """imports queries from the queries folder
 
 Eg:
->>> from climblog.queries import queries
->>> from climblog.queries import counts
+>>> from climblog.etc.queries import queries
+>>> from climblog.etc.queries import counts
 """
 from os.path import abspath, sep
 from climblog.utils.handlers.data_handler import dirname_n_times

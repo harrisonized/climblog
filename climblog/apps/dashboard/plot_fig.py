@@ -10,7 +10,8 @@ from climblog.utils.plotting import plot_scatter, plot_bar, plot_heatmap
 from climblog.utils.handlers.data_handler import word_wrap
 from climblog.etc.colors import color_name_to_hex, color_grade_to_name
 
-# Functions included in this file:
+
+# Functions
 # # curve_fit_new_grades
 # # hovertext_for_heatmap
 # # plot_fig_for_sends_by_date_scatter

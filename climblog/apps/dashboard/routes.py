@@ -3,7 +3,7 @@
 
 from flask import Blueprint, Markup
 from flask import render_template
-from climblog.apps.dashboard.generate_fig import generate_fig_switch
+from .generate_fig import generate_fig_switch
 
 
 dashboard = Blueprint('dashboard', __name__,

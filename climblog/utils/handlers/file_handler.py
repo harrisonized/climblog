@@ -2,21 +2,21 @@
 """
 
 import os
-from os.path import abspath, dirname, sep
+from os.path import sep
+from collections import defaultdict
 import json
-import pandas as pd
-import pandas.io.sql as pd_sql
 from configparser import ConfigParser
-from climblog.etc.connections import connection_uri, config_filepath
-from .data_handler import execute_query_on_df, build_nested_dict, merge_dict_with_subdicts
+from .data_handler import build_nested_dict, merge_dict_with_subdicts
+from ..auth.encryption_tools import decrypt_message
 
 
 # Functions
 # # walk
-# # read_section_from_ini
 # # read_folder_as_dict
-# # read_sql_or_csv
 # # read_json
+# # read_section_from_ini
+# # read_ini_as_dict
+# # connection_uri_from_ini
 
 
 def walk(main_dir):
@@ -28,18 +28,6 @@ def walk(main_dir):
     for root, dirs, filenames in os.walk(main_dir, topdown=False):
         files.extend([f'{root}{sep}{filename}' for filename in filenames])
     return files
-
-
-def read_section_from_ini(section='default', cfg_path=config_filepath):
-    """To be used with conf/settings.ini"""
-    assert os.path.exists(cfg_path), f'Missing file at {cfg_path}'
-    
-    cfg = ConfigParser()
-    cfg.read(cfg_path)
-    
-    assert cfg.has_section(section), f'Missing section at [{section}]'
-
-    return cfg[section]
 
 
 def read_folder_as_dict(dirpath, ext='.sql'):
@@ -69,31 +57,6 @@ def read_folder_as_dict(dirpath, ext='.sql'):
     return text_dict
 
 
-def query_sql_or_csv(db_query,
-                     df_query=None,
-                     csv_filepath=None,
-                     default_columns=None,
-                     connection_uri=connection_uri):
-
-    """Swtich case to get data from database or csv
-    """
-
-    try:
-        df = pd_sql.read_sql(db_query, connection_uri)
-        assert df.empty is False, 'No data returned'
-    
-    except:
-        try:
-            df = pd.read_csv(csv_filepath)
-        except:
-            df = pd.DataFrame(columns=default_columns)  # empty data
-            
-        if df_query:
-            df = execute_query_on_df(df_query, df)
-
-    return df
-
-
 def read_json(filepath, debug=False):
     """Retrieves figure from hardcoded path
     """
@@ -106,3 +69,81 @@ def read_json(filepath, debug=False):
             print(f'{filename} generated from tmp')
 
         return fig
+
+
+def read_section_from_ini(filepath, section='default'):
+    """To be used with conf/settings.ini"""
+    assert os.path.exists(filepath), f'Missing file at {filepath}'
+    
+    cfg = ConfigParser()
+    cfg.read(filepath)
+    
+    assert cfg.has_section(section), f'Missing section at [{section}]'
+
+    return cfg[section]
+
+
+def read_ini_as_dict(filepath, ini_key=None, sections=[]):
+    
+    assert os.path.exists(filepath), f'Missing file at {filepath}'
+    
+    config_parser = ConfigParser()
+    config_parser.read(filepath)
+    all_sections = config_parser.sections()
+    
+    if not sections:
+        sections = all_sections
+    else:
+        sections = [section for section in sections if section in all_sections]
+
+    ini_dict = defaultdict(dict)
+    for section in sections:
+        for key in config_parser[section]:
+            val = config_parser[section][key]
+            if ini_key:
+                val = decrypt_message(val, ini_key)
+            ini_dict[section][key] = val
+
+    return ini_dict
+
+
+def connection_uri_from_ini(
+        filepath,
+        section='postgres',  # or 'heroku-postgres'
+        ini_key=None,  # enter if encrypted, otherwise leave blank
+        
+        # overwrite the original file
+        username=None,
+        password=None,
+        host=None,
+        port=None,
+        db_name=None,
+    ):
+    """Given an INI file with a ['postgres'] section
+    Returns the sqlalchemy connection args 
+
+    Make sure the config.ini file exists in your project
+    """
+    if db_name:
+        orig_db_name = db_name
+
+    ini_dict = read_ini_as_dict(filepath, ini_key, sections=[section]).get(section, {})
+
+    # get fields
+    if not username:
+        username = ini_dict.get('username')
+    if not password:
+        password = ini_dict.get('password')
+    if not host:
+        host = ini_dict.get('host')
+    if not port:
+        port = ini_dict.get('port')
+    if not db_name:
+        db_name = ini_dict.get('db_name')
+    
+    if db_name:
+        connection_uri = f'postgres://{username}:{password}@{host}:{port}/{db_name}'
+    else:
+        connection_uri = f'postgres://{username}:{password}@{host}:{port}'
+
+    return connection_uri

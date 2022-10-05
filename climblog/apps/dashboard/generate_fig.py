@@ -6,23 +6,17 @@ import plotly.offline as pyo
 import plotly.io as pio
 
 from climblog.utils.plotting import export_fig_to_json
-from climblog.utils.handlers.file_handler import read_section_from_ini, query_sql_or_csv, read_json
+from climblog.utils.handlers.file_handler import read_json
+from climblog.utils.auth.connections import query_sql_or_csv
 from climblog.utils.curve_fit import curve_fit_logistic_boundary
 from climblog.etc.columns import sends_by_date_scatter_columns
-from climblog.etc.factories import queries
 from climblog.etc.params import heatmap_params
+from climblog.etc.settings import use_csv_backup, read_fig_from_cache, export_fig
+from climblog.etc.queries import queries
 
 from .plot_fig import (plot_fig_for_sends_by_date_scatter,
                        plot_fig_for_grades_histogram,
                        plot_fig_for_grades_by_heatmap)
-
-
-# settings
-default_settings = read_section_from_ini()
-use_csv_backup = default_settings.getboolean('use_csv_backup')
-read_fig_from_cache = default_settings.getboolean('read_fig_from_cache')
-export_fig = default_settings.getboolean('export_fig')
-
 
 # Functions
 # # generate_sends_by_date_scatter
@@ -40,8 +34,8 @@ def generate_sends_by_date_scatter(location_type,
                                    query_db=True,
                                    ):
 
-    # fig = read_json(f'{fig_dir}/{location_type}/{filename}.json') if read_fig_from_cache else None
-    fig = None
+    fig = read_json(f'{fig_dir}/{location_type}/{filename}.json') if read_fig_from_cache else None
+    
     if not fig:
 
         # vanilla scatterplot data

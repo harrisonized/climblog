@@ -6,7 +6,7 @@ import json
 import random
 import plotly
 import plotly.graph_objs as go
-from climblog.etc.colors import warm
+from ..etc.colors import warm
 
 
 # Functions

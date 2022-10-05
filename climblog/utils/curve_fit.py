@@ -3,9 +3,11 @@ import numpy as np
 import matplotlib.dates as mdates
 from scipy.optimize import curve_fit
 
- 
-# Functions included in this file:
+
+# Functions
 # # logistic_func
+# # curve_fit_logistic_boundary
+
 
 def logistic_func(x, a, b, c, d):
     return a * np.log(b * x + c) + d

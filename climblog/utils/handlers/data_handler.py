@@ -4,8 +4,7 @@ import collections
 import pandas as pd
 import pandasql as ps
 
-
-# Functions included in this file:
+# Functions
 # # dirname_n_times
 # # append_standard_df
 # # execute_query_on_df

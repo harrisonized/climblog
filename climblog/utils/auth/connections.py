@@ -1,79 +1,20 @@
+"""Process ini files and postgres
+"""
+
 import os
 import pandas as pd
+import pandas.io.sql as pd_sql
 import psycopg2 as pg
-from os.path import abspath, dirname
-from configparser import ConfigParser
-from .encryption_tools import decrypt_message
+from ..handlers.data_handler import execute_query_on_df
+from ...etc.paths import postgres_connection_uri
 
-ROOT_DIR = dirname(dirname(dirname(dirname(abspath(__file__)))))
-INI_KEY = os.getenv('INI_KEY')  # Make sure this is in your ~/.bashrc
-assert INI_KEY, 'No INI_KEY'
 
-# Functions included in this file:
-# # postgres_connection
-# # heroku_postgres_connection
+# Functions
 # # postgres_connect_fetch_close
-
-
-def postgres_connection(database=None,
-                        section='postgres', cfg_path=f'{ROOT_DIR}/configs/cred.ini'):
-    """Given an INI file with a ['postgres'] section
-    Returns the sqlalchemy connection args 
-
-    Make sure the config.ini file exists in your project
-    """
-    assert os.path.exists(cfg_path), f'Missing file at {cfg_path}'
-    
-    cfg = ConfigParser()
-    cfg.read(cfg_path)
-    
-    assert cfg.has_section(section), f'Missing section at [{section}]'
-    
-    for key in ['username', 'password', 'host', 'port']:
-        assert cfg.has_option(section, key), f'Missing key at {key}'
-
-    username, password, host, port = (
-        decrypt_message(cfg.get(section, key), INI_KEY)
-        for key in ['username', 'password', 'host', 'port']
-    )
-
-    if database:
-        connection_uri = f'postgres://{username}:{password}@{host}:{port}/{database}'
-    else:
-        connection_uri = f'postgres://{username}:{password}@{host}:{port}'
-
-    return connection_uri
-
-
-def heroku_postgres_connection(section='heroku-postgres', cfg_path='configs/cred.ini'):
-    """Given an INI file with a ['heroku-postgres'] section
-    Returns the sqlalchemy connection args 
-
-    Make sure the config.ini file exists in your project
-    """
-    assert os.path.exists(cfg_path), f'Missing file at {cfg_path}'
-    
-    cfg = ConfigParser()
-    cfg.read(cfg_path)
-    
-    assert cfg.has_section(section), f'Missing section at [{section}]'
-    
-    for key in ['username', 'password', 'host', 'port', 'db_name']:
-        assert cfg.has_option(section, key), f'Missing key at {key}'
-
-    username, password, host, port, database = (
-        decrypt_message(cfg.get(section, key), INI_KEY)
-        for key in ['username', 'password', 'host', 'port', 'db_name']
-    )
-
-    connection_uri = f'postgres://{username}:{password}@{host}:{port}/{database}'
-
-    return connection_uri
-
-
+# # query_sql_or_csv
 
 def postgres_connect_fetch_close(query,
-                                 connection_uri=None,
+                                 connection_uri=os.getenv('DATABASE_URL') or postgres_connection_uri,
                                  dbname=None,
                                  read_only=True
                                  ):
@@ -81,11 +22,9 @@ def postgres_connect_fetch_close(query,
     Provide the connection_uri returned by postgres_connection
     Use dbname to change the database
     """
-    if not connection_uri:
-    	connection_uri = os.getenv('DATABASE_URL') or postgres_connection('climblog')  # test locally
-
     connection = pg.connect(dsn=connection_uri, dbname=dbname)  # connect
     connection.set_session(readonly=read_only)
+
     cursor = connection.cursor()
     cursor.execute(query)
 
@@ -94,5 +33,29 @@ def postgres_connect_fetch_close(query,
     df = pd.DataFrame(data, columns=cols)
 
     connection.close()
+
+    return df
+
+
+def query_sql_or_csv(db_query,
+                     df_query=None,
+                     csv_filepath=None,
+                     default_columns=None,
+                     connection_uri=None):
+    """Swtich case to get data from database or csv
+    """
+
+    try:
+        df = pd_sql.read_sql(db_query, connection_uri)
+        assert df.empty is False, 'No data returned'
+
+    except:
+        try:
+            df = pd.read_csv(csv_filepath)
+        except:
+            df = pd.DataFrame(columns=default_columns)  # empty data
+
+        if df_query:
+            df = execute_query_on_df(df_query, df)
 
     return df
